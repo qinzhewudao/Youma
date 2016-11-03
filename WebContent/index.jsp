@@ -72,8 +72,8 @@ background:url("8.jpg") no-repeat left top;color:#FFF;padding-bottom:4px}
                     <li><a href="/projects">估价</a></li>
                     <li><a href="/cases">案例</a></li>
                     <li><a href="/club">社区</a></li>
-                    <li class="login-zone"><a href="/login">登录</a></li>
-                    <li class="login-zone"><a href="/register">注册</a></li>
+                    <li class="login-zone"><a href="login.jsp">登录</a></li>
+                    <li class="login-zone"><a href="register.jsp">注册</a></li>
                     
                 </ul>
                 <div id="close-menu" class="nav-icon" style="position: absolute; top: 2.5rem; right: 0; display: none; z-index: 100">
