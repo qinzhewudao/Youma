@@ -23,11 +23,11 @@
 	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/lib/freemarker-2.3.23.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/lib/javassist-3.20.0-GA.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/lib/log4j-api-2.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/lib/mysql-connector-java-5.0.5-bin.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/lib/ognl-3.1.10.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/lib/slf4j-api-1.7.12.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/lib/struts2-convention-plugin-2.5.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/lib/struts2-core-2.5.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/lib/struts2-json-plugin-2.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/classes/mysql-connector-java-5.1.39-bin.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

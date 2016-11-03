@@ -18,19 +18,19 @@
     <div class="message">账户登录</div>
     <div id="darkbannerwrap"></div>
     
-    <!--<form method="post">-->
-		<input name="action" value="login" type="hidden">
-		<input name="username" placeholder="用户名" required="" type="text">
-		<hr class="hr15">
-		<input name="password" placeholder="密码" required="" type="password">
-		<hr class="hr15">
-		<a onClick="alert('请联系管理员')">忘记密码</a>
-		<input value="登陆"  style="width:100%;" type="submit">
-		<hr class="hr20">
-		<label><a href="register.jsp">还没有账户，马上注册</a></label>
-	<!-- </form>-->
-
-	
+    <form action="login">
+	<table align="center">
+	<tr>
+	<td>用户名：<input type="text" name="username" /></td>
+	</tr>
+	<tr>
+	<td>密码   ： <input type="text" name="password" /></td>
+	</tr>
+	<tr align="center">
+	<td colspan="2"><input type="submit" value="登陆"/></td>
+	</tr>
+	</table>
+	</form>
 </div>
 
 <div class="copyright">Copyright by <a href="http://www.mycodes.net/" target="_blank">codebeautifier</a></div>
