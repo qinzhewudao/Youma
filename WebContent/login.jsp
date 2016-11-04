@@ -33,7 +33,7 @@
 	</form>
 </div>
 
-<div class="copyright">Copyright by <a href="http://www.mycodes.net/" target="_blank">codebeautifier</a></div>
+<div class="copyright">Copyright by codebeautifier</div>
 
 </body>
 </html>
