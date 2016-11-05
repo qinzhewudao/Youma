@@ -59,8 +59,7 @@ background:url("8.jpg") no-repeat left top;color:#FFF;padding-bottom:4px}
 </head>
 <body>
  <body style="background:url('photos/10.jpg') ; background-size: cover;">
- 
-    <input type="hidden" value="" name="user_name">
+    <input type="hidden" value="" name="username">
     <input type="hidden" value="" name="user_phone">
     <input type="hidden" value="" name="user_email">
     <input type="hidden" value="" name="user_global_key">
@@ -72,9 +71,15 @@ background:url("8.jpg") no-repeat left top;color:#FFF;padding-bottom:4px}
                     <li><a href="/projects">估价</a></li>
                     <li><a href="/cases">案例</a></li>
                     <li><a href="/club">社区</a></li>
+                    <s:if test="#session.username!=null" > 
+                                                             欢迎你:<s:property value="#session.username"/>
+                    <a href="logout.action">安全退出</a>
+                    </s:if>
+                    <s:else> 
                     <li class="login-zone"><a href="login.jsp">登录</a></li>
                     <li class="login-zone"><a href="register.jsp">注册</a></li>
-                    
+                    </s:else>
+
                 </ul>
                 <div id="close-menu" class="nav-icon" style="position: absolute; top: 2.5rem; right: 0; display: none; z-index: 100">
                     <span><i class="fa fa-times"></i></span>

@@ -29,5 +29,6 @@
 	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/lib/struts2-core-2.5.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/lib/struts2-json-plugin-2.5.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/classes/mysql-connector-java-5.1.39-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/TomCat/apache-tomcat-7.0.70/lib/servlet-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

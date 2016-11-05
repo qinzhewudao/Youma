@@ -1,8 +1,5 @@
 package com;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
 import com.opensymphony.xwork2.ActionSupport;
 
 import dao.Dao;;
@@ -142,26 +139,6 @@ public class UserAction extends ActionSupport
     public void setUserid(String userid)
     {
         this.userid = userid;
-    }
-
-    public String login()
-    {
-        String sql = "select * from user where username='" + getUsername() + "' and password ='" + getPassword() + "'";
-        ResultSet rS = dao.executeQuery(sql);
-        try
-        {
-            if (rS.next())
-            {
-                return "loginin";
-            }
-            return "loginout";
-        }
-        catch (SQLException e)
-        {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-            return "loginout";
-        }
     }
 
     public String regist()

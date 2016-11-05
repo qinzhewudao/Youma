@@ -2,10 +2,13 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
 <package name="com" extends="struts-default">
-<action name="login" class="com.UserAction" method="login">
-<result name="loginout">/loginerror.jsp</result>
+<action name="login" class="com.LoginAction" method="login">
+<result name="error">/loginerror.jsp</result>
 <result name="loginin">/index.jsp</result>
 </action>
+<action name="logout" class="com.LoginAction" method="logout">  
+ <result name="success" type="redirect">/index.jsp</result>  
+</action>  
 <action name="regist" class="com.UserAction" method="regist">
 <result name="error">/loginerror.jsp</result>
 <result name="success">/login.jsp</result>
