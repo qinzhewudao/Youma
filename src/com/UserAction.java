@@ -1,5 +1,12 @@
 package com;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 import dao.Dao;;
@@ -141,20 +148,6 @@ public class UserAction extends ActionSupport
         this.userid = userid;
     }
 
-    public String regist()
-    {
-        String sql = "insert into user (username,password,isCheck) values ('" + getUsername() + "','" + getPassword()
-                + "','0')";
-        System.out.println(getUsername());
-        System.out.println(getPassword());
-        int i = dao.executeUpdate(sql);
-        if (i > -1)
-        {
-            return "success";
-        }
-        return "error";
-    }
-
     public String completefirm()
     {
         System.out.println(getFirmname());
@@ -193,13 +186,82 @@ public class UserAction extends ActionSupport
         return "error";
     }
 
-    /*
-     * public String checkfirmdata() { String sql =
-     * "update user set useremail = '" + getUseremail() + "',userskill = '" +
-     * getUserskill() + "',useraddress = '" + getUseraddress() + "',userphone='"
-     * + getUserphone() + "',userid='" + getUserid() +
-     * "' where username = 'sy'"; System.out.println("bug is here"); int i =
-     * dao.executeUpdate(sql); if (i > -1) { return "success"; } return "error";
-     * }
-     */
+    public String checkfirmdata()
+    {
+        String sql = "select user.firmname as firmname,user.firmaddress as firmaddress,user.firmcode as firmcode,user.firmmodel as firmmodel,firmtime as firmtime where user.username = '"
+                + getUsername() + "'";
+        ResultSet rS = dao.executeQuery(sql);
+        try
+        {
+            if (rS.next())
+            {
+                HttpSession session = ServletActionContext.getRequest().getSession();
+                session.setAttribute("firmname", rS.getString("firname"));
+                session.setAttribute("firmcode", rS.getString("firmcode"));
+                session.setAttribute("firmmodel", rS.getString("firmmodel"));
+                session.setAttribute("firmtime", rS.getString("firmtime"));
+                session.setAttribute("firmaddress", rS.getString("firmaddress"));
+                if ((session.getAttribute("firmname").toString() == null)
+                        || (session.getAttribute("firmcode").toString() == null)
+                        || (session.getAttribute("firmtime").toString() == null)
+                        || (session.getAttribute("firmaddress").toString() == null)
+                        || (session.getAttribute("firmmodel").toString() == null))
+                {
+                    return "pleaseaddif";
+                }
+                else
+                {
+                    return "publish";
+                }
+            }
+        }
+        catch (SQLException e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return "error";
+        }
+        return "publish";
+
+    }
+
+    public String checkpersondata()
+    {
+        String sql = "select user.useremail as useremail,user.userskill as userskill,user.userphone as userphone,user.userid as userid,useraddress as useraddress where user.username = '"
+                + getUsername() + "'";
+        ResultSet rS = dao.executeQuery(sql);
+        try
+        {
+            if (rS.next())
+            {
+                HttpSession session = ServletActionContext.getRequest().getSession();
+                session.setAttribute("useremail", rS.getString("useremail"));
+                session.setAttribute("userskill", rS.getString("userskill"));
+                session.setAttribute("userphone", rS.getString("userphone"));
+                session.setAttribute("userid", rS.getString("userid"));
+                session.setAttribute("useraddress", rS.getString("useraddress"));
+                if ((session.getAttribute("useremail").toString() == null)
+                        || (session.getAttribute("userskil").toString() == null)
+                        || (session.getAttribute("userphone").toString() == null)
+                        || (session.getAttribute("userid").toString() == null)
+                        || (session.getAttribute("useraddress").toString() == null))
+                {
+                    return "pleaseaddif";
+                }
+                else
+                {
+                    return "selectproject";
+                }
+            }
+        }
+        catch (SQLException e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return "error";
+        }
+        return "selectproject";
+
+    }
+
 }

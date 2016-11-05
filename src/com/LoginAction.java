@@ -84,4 +84,21 @@ public class LoginAction extends ActionSupport
         return SUCCESS;
     }
 
+    public String regist()
+    {
+        String sql = "insert into user (username,password,isCheck) values ('" + getUsername() + "','" + getPassword()
+                + "','0')";
+        System.out.println(getUsername());
+        System.out.println(getPassword());
+        int i = dao.executeUpdate(sql);
+        if (i > -1)
+        {
+            HttpSession session = ServletActionContext.getRequest().getSession();
+            session.setAttribute("username", getUsername());
+            session.setAttribute("password", getPassword());
+            return "success";
+        }
+        return "error";
+    }
+
 }

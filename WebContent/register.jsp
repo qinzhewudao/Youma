@@ -24,7 +24,7 @@
     <td>用户名：<input type="text" name="username" /></td>
     </tr>
     <tr>
-    <td>密码   ： <input type="text" name="password"/></td>
+    <td>密码   ： <input type="password" name="password"/></td>
     </tr>
     <tr align="center">
     <td colspan="2"><input type="submit" name = "submit" value="注册"/></td>

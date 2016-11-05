@@ -9,9 +9,9 @@
 <action name="logout" class="com.LoginAction" method="logout">  
  <result name="success" type="redirect">/index.jsp</result>  
 </action>  
-<action name="regist" class="com.UserAction" method="regist">
+<action name="regist" class="com.LoginAction" method="regist">
 <result name="error">/loginerror.jsp</result>
-<result name="success">/login.jsp</result>
+<result name="success">/index.jsp</result>
 </action>
 <action name="checkfirmdata" class="com.UserAction" method="checkfirmdata">
 <result name="error">/completefirmif.jsp</result>

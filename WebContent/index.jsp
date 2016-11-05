@@ -67,12 +67,13 @@ background:url("8.jpg") no-repeat left top;color:#FFF;padding-bottom:4px}
     <div class="mainpage">
                           
                 <ul class="nav">
-                    <li><a href="/projects">项目</a></li>
-                    <li><a href="/projects">估价</a></li>
-                    <li><a href="/cases">案例</a></li>
-                    <li><a href="/club">社区</a></li>
+                    <li><a href="/projects">找人</a></li>
+                    <li><a href="/projects">找项目</a></li>
+                    <li><a href="/cases">查看需求</a></li>
+                    <li><a href="/club">发布需求</a></li>
                     <s:if test="#session.username!=null" > 
                                                              欢迎你:<s:property value="#session.username"/>
+                    <a href="logout.action">个人中心</a>
                     <a href="logout.action">安全退出</a>
                     </s:if>
                     <s:else> 
