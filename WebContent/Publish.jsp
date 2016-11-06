@@ -29,10 +29,10 @@
 	
 	<tr>
 	<td>项目行业   ： </td>
-	<td><select name="select" id="select_k1" class="xla_k">
-    <option value="行业1">选择行业1</option>
-	<option value="行业2">选择行业2</option>
-	<option value="行业3">选择行业3</option>
+	<td><input type="checkbox" name="checkbox1" value="checkbox"> 行业1
+	<input type="checkbox" name="checkbox2" value="checkbox"> 行业2 
+	<input type="checkbox" name="checkbox3" value="checkbox"> 行业3
+	<input type="checkbox" name="checkbox4" value="checkbox"> 行业4
     </select>
     </td>
 	</tr>
@@ -41,7 +41,12 @@
 	
 	<tr>
 	<td>项目类型   ： </td>
-	<td><input type="text" name="project-type" /></td>
+	<td><select name="select" id="select_k2" class="xla_k">
+    <option value="类型1">选择类型1</option>
+	<option value="类型2">选择类型2</option>
+	<option value="类型3">选择类型3</option>
+    </select>
+    </td>
 	</tr>
 	
 	<tr></tr>
@@ -53,8 +58,10 @@
 	
 	<tr>
 	<td>项目描述   ： </td>
-	<td><input type="text" name="project-description" 
-		style="width:200px;//宽度 height:800px;//高度"/></td>
+	<td >
+		<input type="text" name="project-description" 
+		width="200" height="200"/>
+	</td>
 	</tr>
 	
 	<tr></tr>
