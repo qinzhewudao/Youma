@@ -73,7 +73,7 @@ background:url("8.jpg") no-repeat left top;color:#FFF;padding-bottom:4px}
                     <li><a href="/club">发布需求</a></li>
                     <s:if test="#session.username!=null" > 
                                                              欢迎你:<s:property value="#session.username"/>
-                    <a href="logout.action">个人中心</a>
+                    <a href="personaldata.jsp">个人中心</a>
                     <a href="logout.action">安全退出</a>
                     </s:if>
                     <s:else> 
