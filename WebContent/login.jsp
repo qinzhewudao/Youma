@@ -24,7 +24,7 @@
 	<td>用户名：<input type="text" name="username" /></td>
 	</tr>
 	<tr>
-	<td>密码   ： <input type="text" name="password" /></td>
+	<td>密码   ： <input type="password" name="password" /></td>
 	</tr>
 	<tr align="center">
 	<td colspan="2"><input type="submit" value="登陆"/></td>
@@ -33,7 +33,7 @@
 	</form>
 </div>
 
-<div class="copyright">Copyright by <a href="http://www.mycodes.net/" target="_blank">codebeautifier</a></div>
+<div class="copyright">Copyright by codebeautifier</div>
 
 </body>
 </html>
