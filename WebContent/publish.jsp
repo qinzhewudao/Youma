@@ -28,11 +28,12 @@
     <tr></tr>
     
     <tr>
-    <td>项目行业   ： </td>
-    <td><input type="checkbox" name="checkbox1" value="checkbox"> 行业1
-    <input type="checkbox" name="checkbox2" value="checkbox"> 行业2 
-    <input type="checkbox" name="checkbox3" value="checkbox"> 行业3
-    <input type="checkbox" name="checkbox4" value="checkbox"> 行业4
+    <td>项目类型   ： </td>
+    <td>
+    <input type="checkbox" name="checkbox1" value="checkbox"> 教育教学
+    <input type="checkbox" name="checkbox2" value="checkbox"> 工商管理
+    <input type="checkbox" name="checkbox3" value="checkbox"> 系统应用
+    <input type="checkbox" name="checkbox4" value="checkbox"> 影音播放
     </select>
     </td>
     </tr>
@@ -40,11 +41,11 @@
     <tr></tr>
     
     <tr>
-    <td>项目类型   ： </td>
+    <td>开发平台   ： </td>
     <td><select name="select" id="select_k2" class="xla_k">
-    <option value="类型1">选择类型1</option>
-    <option value="类型2">选择类型2</option>
-    <option value="类型3">选择类型3</option>
+    <option value="类型1">java</option>
+    <option value="类型2">C/C++</option>
+    <option value="类型3">python</option>
     </select>
     </td>
     </tr>
@@ -52,7 +53,7 @@
     <tr></tr>
 
     <tr>
-    <td>金额  (元) ： </td>
+    <td>预计投资  (元) ： </td>
     <td><input type="text" name="project-bonus" /></td>
     </tr>
     
@@ -73,7 +74,7 @@
     </form>
 </div>
 
-<div class="copyright">Copyright by <a href="http://www.mycodes.net/" target="_blank">codebeautifier</a></div>
+<div class="copyright">Copyright by <a href="index.jsp" target="_blank">codebeautifier</a></div>
 
 </body>
 </html>

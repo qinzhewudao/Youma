@@ -13,10 +13,6 @@
 <result name="error">/loginerror.jsp</result>
 <result name="success">/index.jsp</result>
 </action>
-<action name="checkfirmdata" class="com.UserAction" method="checkfirmdata">
-<result name="error">/completefirmif.jsp</result>
-<result name="success">/login.jsp</result>
-</action>
 <action name="checkpersondata" class="com.UserAction" method="checkfirmdata">
 <result name="error">/completepsif.jsp</result>
 <result name="success">/login.jsp</result>
@@ -28,6 +24,11 @@
 <action name="completeperson" class="com.UserAction" method="completeperson">
 <result name="error">/loginerror.jsp</result>
 <result name="success">/testsuccess.jsp</result>
+</action>
+<action name="checkfirmdata" class="com.UserAction" method="checkfirmdata">
+<result name="pleaseaddif">/completefirmif.jsp</result>
+<result name="publish">/publish.jsp</result>
+<result name="error">/loginerror.jsp</result>
 </action>
 </package>
 </struts>

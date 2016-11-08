@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>请完善公司资料</title>
 </head>
-<body style = "background:url('images/ocean-bg.jpg') no-repeat;">
+<body style = "background:url('photos/grass_bg.jpg') no-repeat;">
 
     <div class="message">完善公司方资料</div>
     

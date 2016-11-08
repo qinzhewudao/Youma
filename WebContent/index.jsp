@@ -57,25 +57,22 @@ a:hover,a:active{text-decoration:underline;color:#f60;}
   </style>  
 </head>
 <body>
+<%
+String userpassword=(String)session.getAttribute("password"); 
+String username=(String)session.getAttribute("username");
 
-	
-    <input type="hidden" value="" name="username">
-    <input type="hidden" value="" name="user_phone">
-    <input type="hidden" value="" name="user_email">
-    <input type="hidden" value="" name="user_global_key">
-    
+%>
      <li><a href="/projects">找人</a></li>
                     <li><a href="/projects">找项目</a></li>
                     <li><a href="/cases">查看需求</a></li>
-                    <li><a href="/club">发布需求</a></li>
+                    <li><a href="checkfirmdata.action">发布需求</a></li>
                     <s:if test="#session.username!=null" > 
-                                                             欢迎你:<s:property value="#session.username"/>
+                                                             欢迎你:<%=username%>
                     <a href="personaldata.jsp">个人中心</a>
                     <a href="logout.action">安全退出</a>
                     </s:if>
                     <s:else> 
-                    <li><a href="login.jsp">登录</a></li>
-                    <li><a href="register.jsp">注册</a></li>
+                    <li><a href="login.jsp">登录/注册</a></li>
                     </s:else>
   <!--热门项目  -->
     <c:forEach items="${itemList}" varStatus="status" begin="0" end="${itemList.size() }" step="1">

@@ -188,14 +188,18 @@ public class UserAction extends ActionSupport
 
     public String checkfirmdata()
     {
-        String sql = "select user.firmname as firmname,user.firmaddress as firmaddress,user.firmcode as firmcode,user.firmmodel as firmmodel,firmtime as firmtime where user.username = '"
-                + getUsername() + "'";
+        HttpSession session = ServletActionContext.getRequest().getSession();
+        String username = session.getAttribute("username").toString();
+        String sql = "select user.firmname as firmname,user.firmaddress as firmaddress,user.firmcode as firmcode,user.firmmodel as firmmodel,user.firmtime as firmtime where user.username = '"
+                + username + "'";
+        System.out.println("bug is here");
+        System.out.println(username);
         ResultSet rS = dao.executeQuery(sql);
         try
         {
-            if (rS.next())
+            while (rS.next())
             {
-                HttpSession session = ServletActionContext.getRequest().getSession();
+
                 session.setAttribute("firmname", rS.getString("firname"));
                 session.setAttribute("firmcode", rS.getString("firmcode"));
                 session.setAttribute("firmmodel", rS.getString("firmmodel"));

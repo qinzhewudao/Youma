@@ -8,7 +8,6 @@
  */
 package com;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -16,16 +15,11 @@ import com.opensymphony.xwork2.ActionSupport;
 public class ProjectAction extends ActionSupport
 {
     private static final long serialVersionUID = 1L;
-    private String            projectype;
-    private String            pid;
-    private String            pname;
-    private double            pprice;
+    private String            projectname;
+    private String            projectstyle;
+    private String            projectplat;
+    private double            projectprice;
     private Date              PublishDate;
     private String            Publisher;
-    private int               AuthorID;
-    private String            AbanISBN;
-
-    private String            BookTitle;
-    private ArrayList         srst, lrst, irst;
-
+    private String            username;
 }
