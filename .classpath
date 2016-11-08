@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_25">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_101">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
@@ -13,35 +13,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-<<<<<<< HEAD
-	<classpathentry kind="lib" path="H:/Eclipse/workspace/software-engineering/WebContent/WEB-INF/lib/asm-3.3.jar"/>
-	<classpathentry kind="lib" path="H:/Eclipse/workspace/software-engineering/WebContent/WEB-INF/lib/asm-commons-3.3.jar"/>
-	<classpathentry kind="lib" path="H:/Eclipse/workspace/software-engineering/WebContent/WEB-INF/lib/asm-tree-3.3.jar"/>
-	<classpathentry kind="lib" path="H:/Eclipse/workspace/software-engineering/WebContent/WEB-INF/lib/commons-fileupload-1.3.2.jar"/>
-	<classpathentry kind="lib" path="H:/Eclipse/workspace/software-engineering/WebContent/WEB-INF/lib/commons-io-2.4.jar"/>
-	<classpathentry kind="lib" path="H:/Eclipse/workspace/software-engineering/WebContent/WEB-INF/lib/commons-lang3-3.4.jar"/>
-	<classpathentry kind="lib" path="H:/Eclipse/workspace/software-engineering/WebContent/WEB-INF/lib/commons-logging-1.1.3.jar"/>
-	<classpathentry kind="lib" path="H:/Eclipse/workspace/software-engineering/WebContent/WEB-INF/lib/freemarker-2.3.23.jar"/>
-	<classpathentry kind="lib" path="H:/Eclipse/workspace/software-engineering/WebContent/WEB-INF/lib/javassist-3.20.0-GA.jar"/>
-	<classpathentry kind="lib" path="H:/Eclipse/workspace/software-engineering/WebContent/WEB-INF/lib/log4j-api-2.5.jar"/>
-	<classpathentry kind="lib" path="H:/Eclipse/workspace/software-engineering/WebContent/WEB-INF/lib/mysql-connector-java-5.1.39-bin.jar"/>
-	<classpathentry kind="lib" path="H:/Eclipse/workspace/software-engineering/WebContent/WEB-INF/lib/ognl-3.1.10.jar"/>
-	<classpathentry kind="lib" path="H:/Eclipse/workspace/software-engineering/WebContent/WEB-INF/lib/slf4j-api-1.7.12.jar"/>
-	<classpathentry kind="lib" path="H:/Eclipse/workspace/software-engineering/WebContent/WEB-INF/lib/struts2-convention-plugin-2.5.2.jar"/>
-	<classpathentry kind="lib" path="H:/Eclipse/workspace/software-engineering/WebContent/WEB-INF/lib/struts2-core-2.5.2.jar"/>
-	<classpathentry kind="lib" path="H:/Eclipse/workspace/software-engineering/WebContent/WEB-INF/lib/struts2-json-plugin-2.5.2.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_25/jre/lib/charsets.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_25/jre/lib/deploy.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_25/jre/lib/javaws.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_25/jre/lib/jce.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_25/jre/lib/jfr.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_25/jre/lib/jfxswt.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_25/jre/lib/jsse.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_25/jre/lib/management-agent.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_25/jre/lib/plugin.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_25/jre/lib/resources.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_25/jre/lib/rt.jar"/>
-=======
 	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/lib/asm-3.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/lib/asm-commons-3.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/lib/asm-tree-3.3.jar"/>
@@ -59,6 +30,5 @@
 	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/lib/struts2-json-plugin-2.5.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/hasee/Desktop/Git/software-engineering/WebContent/WEB-INF/classes/mysql-connector-java-5.1.39-bin.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/TomCat/apache-tomcat-7.0.70/lib/servlet-api.jar"/>
->>>>>>> refs/remotes/origin/branch_sy
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
