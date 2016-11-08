@@ -1,7 +1,24 @@
+<<<<<<< HEAD
 
    
 
 
 
 
+=======
+table {
+border: 1px solid black;
+border-collapse: collapse;
+margin: 10px auto; 
+}
+table thead tr th {
+border: 1px solid black;
+padding: 3px;
+background-color: #cccccc;
+}
+table tbody tr td {
+border: 1px solid black;
+padding: 3px;
+}
+>>>>>>> refs/remotes/origin/gg
  

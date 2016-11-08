@@ -95,6 +95,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
     </c:forEach>
 </div> 
+<<<<<<< HEAD
 
  <div class="panel-body">
     <c:forEach items="${itemList}" varStatus="status" begin="0" end="${itemList.size() }" step="1">
@@ -223,6 +224,136 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </c:forEach>
 </div> 
 
+=======
+<!--  
+ <div class="panel-body">
+    <c:forEach items="${itemList}" varStatus="status" begin="0" end="${itemList.size() }" step="1">
+       
+        <div style="float: left;width: 45%;margin:15px;height: 190px;">
+            <table class="table-detail" cellpadding="0" cellspacing="0" border="0" type="main" width="100%">    
+                <tr height="40">
+                    <td style="text-align: left;color:#6292BE;font-size:16px;border-width: 0;width: 70%">${itemList[status.index].name}项目名</td>
+                    <td style="text-align: right; border-width: 0;width: 30%">
+                        <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
+                    </td>
+                </tr>
+                <c:forEach items="" var="itemNews" varStatus="status">
+                    <tr height="30">
+                        <td style="text-align: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; border-width: 0;width: 100px"><a href="${ctx}/smart/itemsNews/itemsNews/get.ht?id=${itemNews.id}" style="text-decoration:none;text-align:center;color:#000000;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">${itemNews.title}价格</a></td>
+                        <td style="text-align: right; border-width: 0;width: 30%"><fmt:formatDate value="${itemNews.publishTime}" pattern="yyyy-MM-dd"/>工期</td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+    </c:forEach>
+</div> 
+<div class="panel-body">
+    <c:forEach items="${itemList}" varStatus="status" begin="0" end="${itemList.size() }" step="1">
+       
+       <div style="float: right;width: 40%;margin:8px;height: 190px;">
+            <table class="table-detail" cellpadding="0" cellspacing="0" border="0" type="main" width="100%">    
+                <tr height="40">
+                    <td style="text-align: left;color:#6292BE;font-size:16px;border-width: 0;width: 70%">${itemList[status.index].name}项目名</td>
+                    <td style="text-align: right; border-width: 0;width: 30%">
+                        <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
+                    </td>
+                </tr>
+                <c:forEach items="" var="itemNews" varStatus="status">
+                    <tr height="30">
+                        <td style="text-align: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; border-width: 0;width: 100px"><a href="${ctx}/smart/itemsNews/itemsNews/get.ht?id=${itemNews.id}" style="text-decoration:none;text-align:center;color:#000000;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">${itemNews.title}价格</a></td>
+                        <td style="text-align: right; border-width: 0;width: 30%"><fmt:formatDate value="${itemNews.publishTime}" pattern="yyyy-MM-dd"/>工期</td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+    </c:forEach>
+</div> 
+ <div class="panel-body">
+    <c:forEach items="${itemList}" varStatus="status" begin="0" end="${itemList.size() }" step="1">
+       
+        <div style="float: left;width: 45%;margin:15px;height: 190px;">
+            <table class="table-detail" cellpadding="0" cellspacing="0" border="0" type="main" width="100%">    
+                <tr height="40">
+                    <td style="text-align: left;color:#6292BE;font-size:16px;border-width: 0;width: 70%">${itemList[status.index].name}项目名</td>
+                    <td style="text-align: right; border-width: 0;width: 30%">
+                        <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
+                    </td>
+                </tr>
+                <c:forEach items="" var="itemNews" varStatus="status">
+                    <tr height="30">
+                        <td style="text-align: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; border-width: 0;width: 100px"><a href="${ctx}/smart/itemsNews/itemsNews/get.ht?id=${itemNews.id}" style="text-decoration:none;text-align:center;color:#000000;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">${itemNews.title}价格</a></td>
+                        <td style="text-align: right; border-width: 0;width: 30%"><fmt:formatDate value="${itemNews.publishTime}" pattern="yyyy-MM-dd"/>工期</td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+    </c:forEach>
+</div> 
+<div class="panel-body">
+    <c:forEach items="${itemList}" varStatus="status" begin="0" end="${itemList.size() }" step="1">
+       
+      <div style="float: right;width: 40%;margin:8px;height: 190px;">
+            <table class="table-detail" cellpadding="0" cellspacing="0" border="0" type="main" width="100%">    
+                <tr height="40">
+                    <td style="text-align: left;color:#6292BE;font-size:16px;border-width: 0;width: 70%">${itemList[status.index].name}项目名</td>
+                    <td style="text-align: right; border-width: 0;width: 30%">
+                        <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
+                    </td>
+                </tr>
+                <c:forEach items="" var="itemNews" varStatus="status">
+                    <tr height="30">
+                        <td style="text-align: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; border-width: 0;width: 100px"><a href="${ctx}/smart/itemsNews/itemsNews/get.ht?id=${itemNews.id}" style="text-decoration:none;text-align:center;color:#000000;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">${itemNews.title}价格</a></td>
+                        <td style="text-align: right; border-width: 0;width: 30%"><fmt:formatDate value="${itemNews.publishTime}" pattern="yyyy-MM-dd"/>工期</td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+    </c:forEach>
+</div> 
+ <div class="panel-body">
+    <c:forEach items="${itemList}" varStatus="status" begin="0" end="${itemList.size() }" step="1">
+       
+        <div style="float: left;width: 45%;margin:15px;height: 190px;">
+            <table class="table-detail" cellpadding="0" cellspacing="0" border="0" type="main" width="100%">    
+                <tr height="40">
+                    <td style="text-align: left;color:#6292BE;font-size:16px;border-width: 0;width: 70%">${itemList[status.index].name}项目名</td>
+                    <td style="text-align: right; border-width: 0;width: 30%">
+                        <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
+                    </td>
+                </tr>
+                <c:forEach items="" var="itemNews" varStatus="status">
+                    <tr height="30">
+                        <td style="text-align: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; border-width: 0;width: 100px"><a href="${ctx}/smart/itemsNews/itemsNews/get.ht?id=${itemNews.id}" style="text-decoration:none;text-align:center;color:#000000;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">${itemNews.title}价格</a></td>
+                        <td style="text-align: right; border-width: 0;width: 30%"><fmt:formatDate value="${itemNews.publishTime}" pattern="yyyy-MM-dd"/>工期</td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+    </c:forEach>
+</div> 
+<div class="panel-body">
+    <c:forEach items="${itemList}" varStatus="status" begin="0" end="${itemList.size() }" step="1">
+       
+        <div style="float: right;width: 40%;margin:8px;height: 190px;">
+            <table class="table-detail" cellpadding="0" cellspacing="0" border="0" type="main" width="100%">    
+                <tr height="40">
+                    <td style="text-align: left;color:#6292BE;font-size:16px;border-width: 0;width: 70%">${itemList[status.index].name}项目名</td>
+                    <td style="text-align: right; border-width: 0;width: 30%">
+                        <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
+                    </td>
+                </tr>
+                <c:forEach items="" var="itemNews" varStatus="status">
+                    <tr height="30">
+                        <td style="text-align: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; border-width: 0;width: 100px"><a href="${ctx}/smart/itemsNews/itemsNews/get.ht?id=${itemNews.id}" style="text-decoration:none;text-align:center;color:#000000;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">${itemNews.title}价格</a></td>
+                        <td style="text-align: right; border-width: 0;width: 30%"><fmt:formatDate value="${itemNews.publishTime}" pattern="yyyy-MM-dd"/>工期</td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+    </c:forEach>
+</div> 
+ -->
+>>>>>>> refs/remotes/origin/gg
 					<table class="table table-hover table-striped">
 						<thead>
 							<tr>

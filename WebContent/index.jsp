@@ -18,7 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <!--
     <link rel="stylesheet" type="text/css" href="styles.css">
     -->
- 
+ <title>mainpage</title>   
      <style> 
 html{width:100%;height:100%;} 
 body{background:#fff;font-size:18px;font-family:"Arial", "Tahoma", "微软雅黑", "雅黑";
@@ -26,48 +26,45 @@ line-height:18px;padding:0px;margin:0px;text-align:center}
 div{padding:18px} 
 img{border:0px;vertical-align:middle;padding:0;margin:0} 
 input, button{font-family:"Arial", "Tahoma", "微软雅黑", "雅黑";border:0;
-vertical-align:middle;margin:0px;line-height:18px;font-size:18px;color:#8080c0;font-weight:bolder;background:url("8.jpg");border-rirht-width:1px;
- border-right-style:solid;border-right-color:#000000} 
-.btn{width:140px;height:36px;line-height:18px;font-size:18px;
-background:url("8.jpg") no-repeat left top;color:#FFF;padding-bottom:4px} 
+vertical-align:middle;margin:8px;line-height:18px;font-size:18px} 
 </style>
-  <style type="text/css"> 
-  <!-- 
-   .STYLE1 {  
-   color: #990033;  
-   font-weight: bold;
-   padding-top:15px;
-   } 
-   --> 
-   </style> 
-   <style>  
-   a{TEXT-DECORATION:none}a:hover{TEXT-DECORATION:underline}.STYLE2 
-   {color: #000000} 
-   </style>
- <style> 
- li{font-size:12px;font-weight:bolder;background-color:#999999;border-rirht-width:1px;
- border-right-style:solid;border-right-color:#000000;
- float:left; list-style:none;align:center}
- li a{
- color:#FFFFFF;text-decoration:none;margin:0px;
- padding-top:8px;display:block;
- padding-right:50px;padding-bottom:8px;
- padding-left:50px;}
- li a:hover{
- background-color:#146C9C;}
- </style>   
+<style type="text/css">
+table {
+border: 1px solid black;
+ 
+}
+table thead tr th {
+border: 1px solid black;
+padding: 3px;
+background-color: #FFFFFF;
+}
+table tbody tr td {
+border: 1px solid black;
+padding: 3px;
+}
+</style>
+<style> 
+li{font-size:24px;
+  float:left;list-style:none; align:center}
+  li a{
+  color:#000000;text-decoration:none;margin:0px;
+  padding-top:50px;display:block;
+  padding-right:60px;padding-bottom:8px;
+  padding-left:60px;}
+  li a:hover{
+  background-color:#FFFFFF;}
+a:hover,a:active{text-decoration:underline;color:#f60;}
+  </style>  
 </head>
 <body>
- <body style="background:url('photos/10.jpg') ; background-size: cover;">
+
+	
     <input type="hidden" value="" name="username">
     <input type="hidden" value="" name="user_phone">
     <input type="hidden" value="" name="user_email">
     <input type="hidden" value="" name="user_global_key">
     
-    <div class="mainpage">
-                          
-                <ul class="nav">
-                    <li><a href="/projects">找人</a></li>
+     <li><a href="/projects">找人</a></li>
                     <li><a href="/projects">找项目</a></li>
                     <li><a href="/cases">查看需求</a></li>
                     <li><a href="/club">发布需求</a></li>
@@ -77,27 +74,111 @@ background:url("8.jpg") no-repeat left top;color:#FFF;padding-bottom:4px}
                     <a href="logout.action">安全退出</a>
                     </s:if>
                     <s:else> 
-                    <li class="login-zone"><a href="login.jsp">登录</a></li>
-                    <li class="login-zone"><a href="register.jsp">注册</a></li>
+                    <li><a href="login.jsp">登录</a></li>
+                    <li><a href="register.jsp">注册</a></li>
                     </s:else>
+  <!--热门项目  -->
+    <c:forEach items="${itemList}" varStatus="status" begin="0" end="${itemList.size() }" step="1">
+       
+        <div style="float: left;width: 20%;margin:auto;height: 450px;">
+            <table class="table-detail" cellpadding="0" cellspacing="0" border="0" type="main" width="100%">    
+                <tr height="40">
+                    <td style="text-align: left;color:#6292BE;font-size:16px;border-width: 0;width: 70%">${itemList[status.index].name}项目名1</td>
+                    <td style="text-align: right; border-width: 0;width: 30%">
+                        <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
+                    </td>
+                </tr>
+                <c:forEach items="" var="itemNews" varStatus="status">
+                    <tr height="30">
+                        <td style="text-align: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; border-width: 0;width: 100px"><a href="${ctx}/smart/itemsNews/itemsNews/get.ht?id=${itemNews.id}" style="text-decoration:none;text-align:center;color:#000000;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">${itemNews.title}价格</a></td>
+                        <td style="text-align: right; border-width: 0;width: 30%"><fmt:formatDate value="${itemNews.publishTime}" pattern="yyyy-MM-dd"/>工期</td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+    </c:forEach>
+    <c:forEach items="${itemList}" varStatus="status" begin="0" end="${itemList.size() }" step="1">
+       
+        <div style="float: left;width: 20%;margin:auto;height: 450px;">
+            <table class="table-detail" cellpadding="0" cellspacing="0" border="0" type="main" width="100%">    
+                <tr height="40">
+                    <td style="text-align: left;color:#6292BE;font-size:16px;border-width: 0;width: 70%">${itemList[status.index].name}项目名2</td>
+                    <td style="text-align: right; border-width: 0;width: 30%">
+                        <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
+                    </td>
+                </tr>
+                <c:forEach items="" var="itemNews" varStatus="status">
+                    <tr height="30">
+                        <td style="text-align: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; border-width: 0;width: 100px"><a href="${ctx}/smart/itemsNews/itemsNews/get.ht?id=${itemNews.id}" style="text-decoration:none;text-align:center;color:#000000;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">${itemNews.title}价格</a></td>
+                        <td style="text-align: right; border-width: 0;width: 30%"><fmt:formatDate value="${itemNews.publishTime}" pattern="yyyy-MM-dd"/>工期</td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+    </c:forEach>
 
-                </ul>
-                <div id="close-menu" class="nav-icon" style="position: absolute; top: 2.5rem; right: 0; display: none; z-index: 100">
-                    <span><i class="fa fa-times"></i></span>
-                </div>
-            </div><br>
-    
-                        <p class="top-motto">基于云技术的软件外包服务平台</p>
-                  
-                        <p class="sub-motto">提供您所需的全套软件开发服务<br>
-                        </p>
-                   
-                
-                    <form action="Launch">
-						<input type="submit" value="发布您的需求">
-					</form>
-				      <form action="List">
-						<input type="submit" value="查看项目列表">
-					</form>
-</body>
-</html>
+    <c:forEach items="${itemList}" varStatus="status" begin="0" end="${itemList.size() }" step="1">
+       
+        <div style="float: left;width: 20%;margin:2px;height: 450px;">
+            <table class="table-detail" cellpadding="0" cellspacing="0" border="0" type="main" width="100%">    
+                <tr height="40">
+                    <td style="text-align: left;color:#6292BE;font-size:16px;border-width: 0;width: 70%">${itemList[status.index].name}项目名3</td>
+                    <td style="text-align: right; border-width: 0;width: 30%">
+                        <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
+                    </td>
+                </tr>
+                <c:forEach items="" var="itemNews" varStatus="status">
+                    <tr height="30">
+                        <td style="text-align: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; border-width: 0;width: 100px"><a href="${ctx}/smart/itemsNews/itemsNews/get.ht?id=${itemNews.id}" style="text-decoration:none;text-align:center;color:#000000;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">${itemNews.title}价格</a></td>
+                        <td style="text-align: right; border-width: 0;width: 30%"><fmt:formatDate value="${itemNews.publishTime}" pattern="yyyy-MM-dd"/>工期</td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+    </c:forEach>
+
+<c:forEach items="${itemList}" varStatus="status" begin="0" end="${itemList.size() }" step="1">
+       
+        <div style="float: left;width: 20%;margin:auto;height: 450px;">
+            <table class="table-detail" cellpadding="0" cellspacing="0" border="0" type="main" width="100%">    
+                <tr height="40">
+                    <td style="text-align: left;color:#6292BE;font-size:16px;border-width: 0;width: 70%">${itemList[status.index].name}项目名4</td>
+                    <td style="text-align: right; border-width: 0;width: 30%">
+                        <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
+                    </td>
+                </tr>
+                <c:forEach items="" var="itemNews" varStatus="status">
+                    <tr height="30">
+                        <td style="text-align: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; border-width: 0;width: 100px"><a href="${ctx}/smart/itemsNews/itemsNews/get.ht?id=${itemNews.id}" style="text-decoration:none;text-align:center;color:#000000;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">${itemNews.title}价格</a></td>
+                        <td style="text-align: right; border-width: 0;width: 30%"><fmt:formatDate value="${itemNews.publishTime}" pattern="yyyy-MM-dd"/>工期</td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+    </c:forEach>
+
+<table cellspacing="0" align="center">
+<thead>
+<tr>
+<th>项目名</th>
+<th>发布时间</th>
+<th>发布者</th>
+<th>悬赏金额</th>
+<th>工期</th>
+</tr>
+</thead>
+<tbody>
+<ul>
+    <s:iterator value="lrst" >
+    <tr>
+     <td>  <s:property value=""/></td>
+      <td> <s:property value=""/></td>
+      <td><s:property value=""/></td>
+      <td><s:property value=""/></td>
+       <td><s:property value=""/></td>
+    </s:iterator>
+  </ul>
+</tbody>
+</table>  
+ </body>
+</html>  
