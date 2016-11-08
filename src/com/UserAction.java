@@ -150,6 +150,8 @@ public class UserAction extends ActionSupport
 
     public String completefirm()
     {
+        HttpSession session = ServletActionContext.getRequest().getSession();
+        String username = session.getAttribute("username").toString();
         System.out.println(getFirmname());
         System.out.println(getFirmaddress());
         System.out.println(getFirmcode());
@@ -157,7 +159,7 @@ public class UserAction extends ActionSupport
         System.out.println(getFirmtime());
         String sql = "update user set firmname = '" + getFirmname() + "',firmaddress = '" + getFirmaddress()
                 + "',firmcode = '" + getFirmcode() + "',firmmodel='" + getFirmmodel() + "',firmtime='" + getFirmtime()
-                + "' where username = 'sy'";
+                + "' where username = " + "'" + username + "'";
         System.out.println("bug is here");
         int i = dao.executeUpdate(sql);
         if (i > -1)
@@ -190,8 +192,8 @@ public class UserAction extends ActionSupport
     {
         HttpSession session = ServletActionContext.getRequest().getSession();
         String username = session.getAttribute("username").toString();
-        String sql = "select user.firmname as firmname,user.firmaddress as firmaddress,user.firmcode as firmcode,user.firmmodel as firmmodel,user.firmtime as firmtime where user.username = '"
-                + username + "'";
+        String sql = "select user.firmname as firmname,user.firmaddress as firmaddress,user.firmcode as firmcode,user.firmmodel as firmmodel,user.firmtime as firmtime from user where user.username = "
+                + "'" + username + "'";
         System.out.println("bug is here");
         System.out.println(username);
         ResultSet rS = dao.executeQuery(sql);
@@ -199,17 +201,20 @@ public class UserAction extends ActionSupport
         {
             while (rS.next())
             {
-
-                session.setAttribute("firmname", rS.getString("firname"));
+                System.out.println(rS.getString("firmname"));
+                session.setAttribute("firmname", rS.getString("firmname"));
+                if (session.getAttribute("firmname") == null)
+                {
+                    System.out.println("ming ming shi null le");
+                }
+                System.out.println(session.getAttribute("firmname"));
                 session.setAttribute("firmcode", rS.getString("firmcode"));
                 session.setAttribute("firmmodel", rS.getString("firmmodel"));
                 session.setAttribute("firmtime", rS.getString("firmtime"));
                 session.setAttribute("firmaddress", rS.getString("firmaddress"));
-                if ((session.getAttribute("firmname").toString() == null)
-                        || (session.getAttribute("firmcode").toString() == null)
-                        || (session.getAttribute("firmtime").toString() == null)
-                        || (session.getAttribute("firmaddress").toString() == null)
-                        || (session.getAttribute("firmmodel").toString() == null))
+                if ((session.getAttribute("firmname") == null) || (session.getAttribute("firmcode") == null)
+                        || (session.getAttribute("firmtime") == null) || (session.getAttribute("firmaddress") == null)
+                        || (session.getAttribute("firmmodel") == null))
                 {
                     return "pleaseaddif";
                 }

@@ -74,7 +74,7 @@
     </form>
 </div>
 
-<div class="copyright">Copyright by <a href="index.jsp" target="_blank">codebeautifier</a></div>
+<div class="copyright">Copyright by <a href="index.jsp" target="_blank">code beautifier</a></div>
 
 </body>
 </html>

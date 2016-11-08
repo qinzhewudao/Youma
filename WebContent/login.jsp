@@ -70,8 +70,11 @@
                         </div>
                         
                     </div>
+                    
                 </div>  
+                
             </section>
-        </div>
+            <div class="copyright">Copyright by <a href="index.jsp" target="_blank">code beautifier</a></div>
+        </div> 
     </body>
 </html>
