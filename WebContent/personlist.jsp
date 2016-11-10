@@ -11,14 +11,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <meta name="viewport"
           content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1">
             <title>有码-软件外包服务平台</title>
-                <meta name="Keywords" content="有码,外包,软件外包,众包,悬赏平台,软件项目需求,软件开发">  
+                <meta name="Keywords" content="有码,外包,软件外包,众包,悬赏平台,软件项目需求,软件开发">
                 <meta name="Description"
               content="有码是 Code Beautifier推出的软件众包平台，意在连接需求方与广大开发者。让项目的需求方快速的找到合适的开发者，完成项目开发工作。同时也帮助开发者找到合适的项目将技术变成财富。">
  
    
     <link rel="stylesheet" type="text/css" href="css/mainpage.css">
  
- <title>mainpage</title>      
+ <title>找人</title>      
 </head>
 <body>
  <div id="mainContainer">  
@@ -29,21 +29,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <input type="hidden" value="" name="user_email">
     <input type="hidden" value="" name="user_global_key">
     
-              <li><a href="personlist.jsp">找人</a></li>
-                    <li><a href="">找项目</a></li>
+              <li><a href="/projects">找人</a></li>
+                    <li><a href="/projects">找项目</a></li>
                     <li><a href="/cases">查看需求</a></li>
-                    <li><a href="publish.jsp">发布需求</a></li>
-                    <div class="login">
+                    <li><a href="/club">发布需求</a></li>
                     <s:if test="#session.username!=null" > 
                                                              欢迎你:<s:property value="#session.username"/>
-                    <a href="personaldata.jsp">个人中心</a>
+                    <a href="logout.action">个人中心</a>
                     <a href="logout.action">安全退出</a>
                     </s:if>
                     <s:else> 
-                    <li ><a href="login.jsp" style= "padding-right:10px;padding-left:150px">登录</a></li>
-                    <li><a href="register.jsp" style= "padding-right:0px;padding-left:0px">注册</a></li>
+                    <li><a href="login.jsp">登录</a></li>
+                    <li><a href="register.jsp">注册</a></li>
                     </s:else>
-                   </div>
                   
             </div> 
             </div>
@@ -55,7 +53,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class ="hotproject">
             <table>    
                 <tr >
-                    <td>${itemList[status.index].name}项目名1</td>
+                    <td>${itemList[status.index].name}人名</td>
                     <td style="text-align: right; border-width: 0;width: 30%">
                         <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
                     </td>
@@ -74,7 +72,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class ="hotproject">
             <table>    
                 <tr >
-                    <td>${itemList[status.index].name}项目名1</td>
+                    <td>${itemList[status.index].name}人名</td>
                     <td style="text-align: right; border-width: 0;width: 30%">
                         <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
                     </td>
@@ -93,7 +91,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class ="hotproject">
             <table>    
                 <tr >
-                    <td>${itemList[status.index].name}项目名1</td>
+                    <td>${itemList[status.index].name}人名</td>
                     <td style="text-align: right; border-width: 0;width: 30%">
                         <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
                     </td>
@@ -112,7 +110,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class ="hotproject">
             <table>    
                 <tr >
-                    <td>${itemList[status.index].name}项目名1</td>
+                    <td>${itemList[status.index].name}人名</td>
                     <td style="text-align: right; border-width: 0;width: 30%">
                         <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
                     </td>
@@ -130,11 +128,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <table> 
 <thead>
 <tr>
-<th>项目名</th>
-<th>发布时间</th>
-<th>发布者</th>
-<th>悬赏金额</th>
-<th>工期</th>
+<th>用户名</th>
+<th>技能</th>
+<th>价格/小时</th>
+<th>职位</th>
+<th>公司</th>
+<th>工作经验</th>
+<th>开发平台</th>
 </tr>
 </thead>
 <tbody>

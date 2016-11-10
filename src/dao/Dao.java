@@ -26,7 +26,7 @@ public class Dao
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/software?useUnicode=true&characterEncoding=utf-8&useSSL=false", "root",
-                    "19960814");
+                    "root");
             stat = con.createStatement();
         }
         catch (Exception e)
@@ -63,4 +63,6 @@ public class Dao
         }
         return -1;
     }
+   
+
 }

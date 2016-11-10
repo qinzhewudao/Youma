@@ -30,5 +30,8 @@
 <result name="publish">/publish.jsp</result>
 <result name="error">/loginerror.jsp</result>
 </action>
+<action name="PersonList" class="com.PersonAction" method="showlist">
+<result>/personaldata.jsp</result>
+</action>
 </package>
 </struts>

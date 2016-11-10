@@ -3,14 +3,13 @@
  * @Title: ProjectAction.java
  * @Package com
  * @Description: TODO
- * @date 2016年11月6日 下午6:39:02
+ * @date 2016骞�11鏈�6鏃� 涓嬪崍6:39:02
  * @version V1.0
  */
 package com;
-
-import java.util.Date;
-
 import com.opensymphony.xwork2.ActionSupport;
+import java.util.ArrayList;
+import java.util.Date;
 
 public class ProjectAction extends ActionSupport
 {
@@ -21,5 +20,21 @@ public class ProjectAction extends ActionSupport
     private double            projectprice;
     private Date              PublishDate;
     private String            Publisher;
-    private String            username;
+    private ArrayList srst,lrst,irst; 
+
+public String getprojectname() {
+	return projectname;
+	}
+public void setprojectname(String projectname) {
+	this.projectname = projectname;
+	}
+public String getprojectstyle() {
+	return projectstyle;
+	}
+public void setprojectstyle(String projectstyle) {
+	this.projectstyle = projectstyle;
+	}
+public String getprojectplay() {
+	return projectplat;
+	}
 }
