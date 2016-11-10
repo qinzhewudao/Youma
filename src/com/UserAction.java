@@ -194,20 +194,18 @@ public class UserAction extends ActionSupport
         String username = session.getAttribute("username").toString();
         String sql = "select user.firmname as firmname,user.firmaddress as firmaddress,user.firmcode as firmcode,user.firmmodel as firmmodel,user.firmtime as firmtime from user where user.username = "
                 + "'" + username + "'";
-        System.out.println("bug is here");
-        System.out.println(username);
         ResultSet rS = dao.executeQuery(sql);
         try
         {
             while (rS.next())
             {
-                System.out.println(rS.getString("firmname"));
+                // System.out.println(rS.getString("firmname"));
                 session.setAttribute("firmname", rS.getString("firmname"));
                 if (session.getAttribute("firmname") == null)
                 {
                     System.out.println("ming ming shi null le");
                 }
-                System.out.println(session.getAttribute("firmname"));
+                // System.out.println(session.getAttribute("firmname"));
                 session.setAttribute("firmcode", rS.getString("firmcode"));
                 session.setAttribute("firmmodel", rS.getString("firmmodel"));
                 session.setAttribute("firmtime", rS.getString("firmtime"));

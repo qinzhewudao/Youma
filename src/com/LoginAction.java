@@ -17,7 +17,7 @@ import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import dao.Dao;;
+import dao.Dao;
 
 /**
  * @ClassName LoginAction

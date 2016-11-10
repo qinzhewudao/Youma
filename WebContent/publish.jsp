@@ -18,11 +18,11 @@
     <div class="message">发布需求</div>
     <div id="darkbannerwrap"></div>
     
-    <form action="login">
+    <form action="publish">
     <table align="center">
     <tr>
     <td>项目名称：</td>
-    <td><input type="text" name="project-name" placeholder="30字符以内"/></td>
+    <td><input type="text" name="projectname" placeholder="30字符以内"/></td>
     </tr>
     
     <tr></tr>
@@ -30,10 +30,11 @@
     <tr>
     <td>项目类型   ： </td>
     <td>
-    <input type="checkbox" name="checkbox1" value="checkbox"> 教育教学
-    <input type="checkbox" name="checkbox2" value="checkbox"> 工商管理
-    <input type="checkbox" name="checkbox3" value="checkbox"> 系统应用
-    <input type="checkbox" name="checkbox4" value="checkbox"> 影音播放
+    <select name="projectstyle" id="select_k2" class="xla_k">
+    <option value="education">教育教学</option>
+    <option value="business">工商管理</option>
+    <option value="system">系统应用</option>
+    <option value="media">影音播放</option>
     </select>
     </td>
     </tr>
@@ -42,10 +43,11 @@
     
     <tr>
     <td>开发平台   ： </td>
-    <td><select name="select" id="select_k2" class="xla_k">
-    <option value="类型1">java</option>
-    <option value="类型2">C/C++</option>
-    <option value="类型3">python</option>
+    <td>
+    <select name="projectplat" id="select_k2" class="xla_k">
+    <option value="java">java</option>
+    <option value="c/c++">C/C++</option>
+    <option value="python">python</option>
     </select>
     </td>
     </tr>
@@ -54,19 +56,19 @@
 
     <tr>
     <td>预计投资  (元) ： </td>
-    <td><input type="text" name="project-bonus" /></td>
+    <td><input type="text" name="projectprice" /></td>
     </tr>
     
     <tr>
     <td>项目描述   ： </td>
     <td >
-        <input type="text" name="project-description" 
+        <input type="text" name="projectdescribe" 
         width="200" height="200"/>
     </td>
     </tr>
     
     <tr></tr>
-    
+ 
     <tr align="center">
     <td colspan="2"><input type="submit" value="发布需求"/></td>
     </tr>
