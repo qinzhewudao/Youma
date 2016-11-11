@@ -33,5 +33,9 @@
 <action name="PersonList" class="com.PersonAction" method="showlist">
 <result>/personaldata.jsp</result>
 </action>
+<action name="publish" class="com.PublishAction" method="publish">
+<result name="success">/publishsuccess.jsp</result>
+<result name="error">/loginerror.jsp</result>
+</action>
 </package>
 </struts>

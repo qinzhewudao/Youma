@@ -11,8 +11,11 @@ import com.opensymphony.xwork2.ActionSupport;
 import java.util.ArrayList;
 import java.util.Date;
 
+import dao.Dao;
+
 public class ProjectAction extends ActionSupport
 {
+    private Dao               dao              = new Dao();
     private static final long serialVersionUID = 1L;
     private String            projectname;
     private String            projectstyle;
@@ -38,3 +41,4 @@ public String getprojectplay() {
 	return projectplat;
 	}
 }
+  
