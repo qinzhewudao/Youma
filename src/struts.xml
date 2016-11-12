@@ -13,9 +13,10 @@
 <result name="error">/loginerror.jsp</result>
 <result name="success">/index.jsp</result>
 </action>
-<action name="checkpersondata" class="com.UserAction" method="checkfirmdata">
+<action name="checkpersondata" class="com.UserAction" method="checkpersondata">
 <result name="error">/completepsif.jsp</result>
 <result name="success">/login.jsp</result>
+<result name="pleaselogin">/pleaselogin.jsp</result>
 </action>
 <action name="completefirm" class="com.UserAction" method="completefirm">
 <result name="error">/loginerror.jsp</result>
@@ -33,7 +34,7 @@
 <action name="PersonList" class="com.PersonAction" method="showlist">
 <result>/personaldata.jsp</result>
 </action>
-<action name="publish" class="com.PublishAction" method="publish">
+<action name="publish" class="com.ProjectAction" method="publish">
 <result name="success">/publishsuccess.jsp</result>
 <result name="error">/loginerror.jsp</result>
 </action>

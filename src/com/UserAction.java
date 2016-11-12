@@ -159,7 +159,7 @@ public class UserAction extends ActionSupport
         System.out.println(getFirmtime());
         String sql = "update user set firmname = '" + getFirmname() + "',firmaddress = '" + getFirmaddress()
                 + "',firmcode = '" + getFirmcode() + "',firmmodel='" + getFirmmodel() + "',firmtime='" + getFirmtime()
-                + "' where username = " + "'" + username + "'";
+                + "' where username = '" + username + "'";
         System.out.println("bug is here");
         int i = dao.executeUpdate(sql);
         if (i > -1)
@@ -171,6 +171,8 @@ public class UserAction extends ActionSupport
 
     public String completeperson()
     {
+        HttpSession session = ServletActionContext.getRequest().getSession();
+        String username = session.getAttribute("username").toString();
         System.out.println(getUseremail());
         System.out.println(getUserskill());
         System.out.println(getUseraddress());
@@ -178,7 +180,7 @@ public class UserAction extends ActionSupport
         System.out.println(getUserid());
         String sql = "update user set useremail = '" + getUseremail() + "',userskill = '" + getUserskill()
                 + "',useraddress = '" + getUseraddress() + "',userphone='" + getUserphone() + "',userid='" + getUserid()
-                + "' where username = 'sy'";
+                + "' where username = '" + username + "'";
         System.out.println("bug is here");
         int i = dao.executeUpdate(sql);
         if (i > -1)
@@ -234,14 +236,28 @@ public class UserAction extends ActionSupport
 
     public String checkpersondata()
     {
-        String sql = "select user.useremail as useremail,user.userskill as userskill,user.userphone as userphone,user.userid as userid,useraddress as useraddress where user.username = '"
-                + getUsername() + "'";
+        System.out.println("bug is here");
+        HttpSession session = ServletActionContext.getRequest().getSession();
+        String username = session.getAttribute("username").toString();
+        System.out.println(username);
+        if (username == null)
+        {
+            return "pleaselogin";
+        }
+        String sql = "select user.useremail as useremail,user.userskill as userskill,user.userphone as userphone,user.userid as userid,useraddress as useraddress from user where user.username = '"
+                + username + "'";
         ResultSet rS = dao.executeQuery(sql);
         try
         {
-            if (rS.next())
+            while (rS.next())
             {
-                HttpSession session = ServletActionContext.getRequest().getSession();
+                System.out.println(rS.getString("usermail"));
+                session.setAttribute("useremail", rS.getString("useremail"));
+                if (session.getAttribute("usermail") == null)
+                {
+                    System.out.println("ming ming shi null le");
+                }
+                System.out.println(session.getAttribute("usermail"));
                 session.setAttribute("useremail", rS.getString("useremail"));
                 session.setAttribute("userskill", rS.getString("userskill"));
                 session.setAttribute("userphone", rS.getString("userphone"));
