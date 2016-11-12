@@ -38,5 +38,9 @@
 <result name="success">/publishsuccess.jsp</result>
 <result name="error">/loginerror.jsp</result>
 </action>
+<action name="bid" class="com.BidAction" method="bid">
+<result name="success">/publishsuccess.jsp</result>
+<result name="error">/loginerror.jsp</result>
+</action>
 </package>
 </struts>

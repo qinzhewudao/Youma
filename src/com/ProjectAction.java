@@ -8,7 +8,6 @@
  */
 package com;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 import javax.servlet.http.HttpSession;
@@ -32,17 +31,6 @@ public class ProjectAction extends ActionSupport
     private String            publisher;
     private String            username;
     private String            projectdescribe;
-    private ArrayList<String> bidders;
-
-    public ArrayList<String> getBidder()
-    {
-        return bidders;
-    }
-
-    public void setBidder(ArrayList<String> bidders)
-    {
-        this.bidders = bidders;
-    }
 
     public String getProjectname()
     {
@@ -122,32 +110,6 @@ public class ProjectAction extends ActionSupport
     public void setUsername(String username)
     {
         this.username = username;
-    }
-
-    public String bid()
-    {
-        Date utildate = new Date();
-        java.sql.Date publishdate = new java.sql.Date(utildate.getTime());
-        HttpSession session = ServletActionContext.getRequest().getSession();
-        String publisher = session.getAttribute("username").toString();
-        System.out.println(getProjectname());
-        System.out.println(getProjectstyle());
-        System.out.println(getProjectplat());
-        System.out.println(getProjectprice());
-        System.out.println(getProjectdescribe());
-        System.out.println(publishdate);
-        System.out.println(publisher);
-
-        String sql = "insert into project (projectname,projectstyle,projectplat,projectprice,publishdate,publisher,projectdescribe) values ('"
-                + getProjectname() + "','" + getProjectstyle() + "','" + getProjectplat() + "','" + getProjectprice()
-                + "','" + publishdate + "','" + publisher + "','" + getProjectdescribe() + "')";
-        int i = dao.executeUpdate(sql);
-        System.out.println("bug is here");
-        if (i > -1)
-        {
-            return "success";
-        }
-        return "error";
     }
 
     public String publish()

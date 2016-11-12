@@ -16,43 +16,40 @@
     <hr>
     
     <center>
+      <form action = "bid">
       <h1>项目详情</h1>
-      <table width="750" height="500" cellpadding="0" cellspacing="0" border="0">
-        <tr>
+      <br>
           <% 
              ProjectDao itemDao = new ProjectDao();
              ProjectAction item = itemDao.getProjectActionByname(request.getParameter("projectname"));
              if(item!=null)
              {
           %>
-          <td width="70%" valign="top">
              <table>
                <tr>
-               <td>项目名：<%=item.getProjectname()%></td>
+               <td>项目名：<input type="text"  name="projectname" readonly value = <%=item.getProjectname()%>></td>
                </tr>
                <tr>
-               <td>项目类型：<%=item.getProjectstyle()%></td> 
+               <td>项目类型<input type="text"  name="projectstyle" disabled value = <%=item.getProjectstyle()%>></td> 
                </tr>
                <tr>
-               <td>开发平台：<%=item.getProjectplat()%></td>
+               <td>开发平台：<input type="text" name="peojectplat" disabled value = <%=item.getProjectplat()%>></td>
                </tr>
                <tr>
-               <td>预计价格：<%=item.getProjectprice() %>￥</td>
+               <td>预计价格:<input type="text" name="projectprice" disabled value =<%=item.getProjectprice()%>>￥</td>
                </tr> 
-
+               <tr>
+               <td>发布者：<input type="text"  name="publisher"  readonly value   = <%=item.getPublisher()%>></td>
+               </tr> 
              </table>
-
-          </td>
-
           <% 
-
             }
-
           %>
-
-      </table>
-      <a href = "checkpersondata.action"><h2>投标该项目</h2></a>
+      <br>
+      <input type="submit" value="投标"  style=" color:red;" />
+      </form>
       </center>
+      
       </div>
 <div id="footer">Copyright by <a href = "index.jsp">codebeautifier</a></div>
 </body>
