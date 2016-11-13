@@ -8,11 +8,19 @@
  */
 package com;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.apache.struts2.ServletActionContext;
 
 import dao.Dao;
+import entity.Bid;
 
 /**
  * @ClassName BidAction
@@ -21,10 +29,22 @@ import dao.Dao;
  */
 public class BidAction
 {
-    private Dao    dao = new Dao();
-    private String bidder;
-    private String projectname;
-    private String publisher;
+    private Dao        dao   = new Dao();
+    private Connection conn  = null;
+    private String     bidder;
+    private String     projectname;
+    private String     publisher;
+    List<Bid>          lista = new ArrayList<Bid>();
+
+    public List<Bid> getLista()
+    {
+        return lista;
+    }
+
+    public void setLista(List<Bid> lista)
+    {
+        this.lista = lista;
+    }
 
     public String getBidder()
     {
@@ -82,4 +102,94 @@ public class BidAction
         }
         return "error";
     }
+
+    public String mypublish() throws Exception
+    {
+        lista = new ArrayList<Bid>();
+        HttpSession session = ServletActionContext.getRequest().getSession();
+        String publisher = session.getAttribute("username").toString();
+
+        conn = dao.GetConn();
+        Statement stat = conn.createStatement();
+        String sqlStatement = "SELECT * FROM project where publisher = '" + publisher + "'";
+        ResultSet set = stat.executeQuery(sqlStatement);
+        while (set.next())
+        {
+            Bid Bid = new Bid();
+            Bid.setProjectname(set.getString("projectname"));
+            lista.add(Bid);
+        }
+        this.setLista(lista);
+        if (lista.isEmpty())
+        {
+            return "emptypublish";
+        }
+        conn.close(); // close the connection
+
+        return "success";
+    }
+
+    public String mybid() throws Exception
+    {
+        lista = new ArrayList<Bid>();
+        HttpSession session = ServletActionContext.getRequest().getSession();
+        String bidder = session.getAttribute("username").toString();
+
+        conn = dao.GetConn();
+        Statement stat = conn.createStatement();
+        String sqlStatement = "SELECT * FROM bid where bidder = '" + bidder + "'";
+        ResultSet set = stat.executeQuery(sqlStatement);
+        while (set.next())
+        {
+            Bid Bid = new Bid();
+            Bid.setProjectname(set.getString("projectname"));
+            Bid.setPublisher(set.getString("publisher"));
+            lista.add(Bid);
+        }
+        this.setLista(lista);
+        if (lista.isEmpty())
+        {
+            return "emptybid";
+        }
+        conn.close(); // close the connection
+
+        return "success";
+    }
+
+    public String mypublishbid()
+    {
+        lista = new ArrayList<Bid>();
+        HttpSession session = ServletActionContext.getRequest().getSession();
+        String publisher = session.getAttribute("username").toString();
+
+        String sqlStatement = "SELECT bidder FROM bid where publisher = '" + publisher + "' and projectname = '"
+                + getProjectname() + "'";
+        System.out.println(getProjectname());
+        ResultSet rS = dao.executeQuery(sqlStatement);
+        try
+        {
+            while (rS.next())
+            {
+                Bid Bid = new Bid();
+                Bid.setBidder(rS.getString("bidder"));
+                System.out.println(Bid.getBidder());
+                Bid.setProjectname(getProjectname());
+                System.out.println(Bid.getProjectname());
+                lista.add(Bid);
+            }
+        }
+        catch (SQLException e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return "error";
+        }
+        this.setLista(lista);
+        if (lista.isEmpty())
+        {
+            return "emptybided";
+        }
+        return "success";
+    }
+
 }

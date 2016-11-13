@@ -42,5 +42,17 @@
 <result name="success">/publishsuccess.jsp</result>
 <result name="error">/loginerror.jsp</result>
 </action>
+<action name="mypublish" class="com.BidAction" method="mypublish">
+<result name="success">/mypublishlist.jsp</result>
+<result name="emptypublish">/loginerror.jsp</result>
+</action>
+<action name="mybid" class="com.BidAction" method="mybid">
+<result name="success">/mybidlist.jsp</result>
+<result name="emptybid">/loginerror.jsp</result>
+</action>
+<action name="mypublishbid" class="com.BidAction" method="mypublishbid">
+<result name="success">/mypublishbidlist.jsp</result>
+<result name="emptybided">/loginerror.jsp</result>
+</action>
 </package>
 </struts>
