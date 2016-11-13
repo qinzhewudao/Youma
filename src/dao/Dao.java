@@ -15,18 +15,27 @@ import java.sql.Statement;
 
 public class Dao
 {
-    Connection con  = null;
-    Statement  stat = null;
-    ResultSet  rs   = null;
+    Connection     con      = null;
+    Statement      stat     = null;
+    ResultSet      rs       = null;
+    private String url      = "jdbc:mysql://localhost:3306/software?useUnicode=true&characterEncoding=utf-8&useSSL=false";
+    private String username = "root";
+    private String password = "19960814";
+
+    public Connection GetConn() throws Exception
+    {
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection conn = null;
+        conn = DriverManager.getConnection(url, username, password);
+        return conn;
+    }
 
     public Dao()
     {
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/software?useUnicode=true&characterEncoding=utf-8&useSSL=false", "root",
-                    "19960814");
+            con = DriverManager.getConnection(url, username, password);
             stat = con.createStatement();
         }
         catch (Exception e)

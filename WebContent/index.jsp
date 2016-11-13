@@ -146,7 +146,7 @@ content="有码是 Code Beautifier推出的软件众包平台，意在连接需�
            %>  
               <table>    
                 <tr >
-                    <td><a href="projectdetail.jsp?projectname=<%=item.getProjectname()%>"><%=item.getProjectname()%></a> </td>
+                    <td><a href="projectdetail.jsp?projectname=<%=item.getProjectname()%>"><%=item.getProjectname()%></a></td>
                     <td><%=item.getPublishdate()%></td> 
                     <td><%=item.getPublisher()%></td>  
                     <td><%=item.getProjectprice()%></td>  
