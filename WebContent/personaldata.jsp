@@ -32,8 +32,8 @@ response.setHeader("refresh","5;url=login.jsp");
 <%}%>
 <a href="index.jsp">回到主页</a>
 完善个人资料
-<a href="completefirmif.jsp">我是开发者</a>
-<a href="completepsif.jsp">我是发布方</a>
+<a href="completefirmif.jsp">我是发布方</a>
+<a href="completepsif.jsp">我是开发者</a>
 <div class="copyright">Copyright by codebeautifier</div>
 </body>
 </html>

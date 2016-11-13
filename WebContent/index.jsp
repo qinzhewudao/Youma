@@ -32,12 +32,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               <li><a href="personlist.jsp">找人</a></li>
                     <li><a href="">找项目</a></li>
                     <li><a href="/cases">查看需求</a></li>
-                    <li><a href="publish.jsp">发布需求</a></li>
+                    <li><a href="checkfirmdata">发布需求</a></li>
                     <div class="login">
                     <s:if test="#session.username!=null" > 
                                                              欢迎你:<s:property value="#session.username"/>
-                    <a href="personaldata.jsp">个人中心</a>
-                    <a href="logout.action">安全退出</a>
+                     <li><a href="personaldata.jsp">个人中心</a></li>
+                    <li><a href="logout.action" >退出</a></li>
                     </s:if>
                     <s:else> 
                     <li ><a href="login.jsp" style= "padding-right:10px;padding-left:150px">登录</a></li>
