@@ -3,27 +3,29 @@ package entity;
 public class User
 {
     private String username;
-    private String userfield;
+
     private String userposition;
     private String usercompany;
     private int    userworkexperience;
     private String userskill;
-    private double userprice;
-
+    private int userprice;
+    private String userdescribe;
+    
     public User()
     {
     }
 
-    public User(String username, String userfield, String userposition, String usercompany, double userprice,
-            int userworkexperience, String userskill)
+    public User(String username, String userfield, String userposition, String usercompany, int userprice,
+            int userworkexperience, String userskill,String userdescribe)
     {
         this.username = username;
-        this.userfield = userfield;
+    
         this.userprice = userprice;
         this.userposition = userposition;
         this.usercompany = usercompany;
         this.userworkexperience = userworkexperience;
         this.userskill = userskill;
+        this.userdescribe = userdescribe;
 
     }
 
@@ -42,20 +44,12 @@ public class User
         return userprice;
     }
 
-    public void setprice(double userprice)
+    public void setprice(int userprice)
     {
         this.userprice = userprice;
     }
 
-    public String getfield()
-    {
-        return userfield;
-    }
-
-    public void setfield(String userfield)
-    {
-        this.userfield = userfield;
-    }
+  
 
     public String getposition()
     {
@@ -95,6 +89,15 @@ public class User
     public void setcompany(String usercompany)
     {
         this.usercompany = usercompany;
+    }
+    public String getdescribe()
+    {
+        return userdescribe;
+    }
+
+    public void setdescribe(String userdescribe)
+    {
+        this.userdescribe = userdescribe;
     }
 
 }

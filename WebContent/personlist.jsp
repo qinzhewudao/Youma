@@ -4,154 +4,100 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html lang="zh-cn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1">
-            <title>有码-软件外包服务平台</title>
-                <meta name="Keywords" content="有码,外包,软件外包,众包,悬赏平台,软件项目需求,软件开发">
-                <meta name="Description"
-              content="有码是 Code Beautifier推出的软件众包平台，意在连接需求方与广大开发者。让项目的需求方快速的找到合适的开发者，完成项目开发工作。同时也帮助开发者找到合适的项目将技术变成财富。">
  
-   
-    <link rel="stylesheet" type="text/css" href="css/mainpage.css">
- 
- <title>找人</title>      
-</head>
-<body>
- <div id="mainContainer">  
-      <div id="Header">
-    <div id="menu">
-    <input type="hidden" value="" name="username">
-    <input type="hidden" value="" name="user_phone">
-    <input type="hidden" value="" name="user_email">
-    <input type="hidden" value="" name="user_global_key">
-    
-              <li><a href="/projects">找人</a></li>
-                    <li><a href="/projects">找项目</a></li>
-                    <li><a href="/cases">查看需求</a></li>
-                    <li><a href="/club">发布需求</a></li>
+<!DOCTYPE html>
+<html lang="zh-cn" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>发现我需要的人才</title>
+		<meta name="description" content="A responsive, magazine-like website layout with a grid item animation effect when opening the content" />
+		<meta name="keywords" content="grid, layout, effect, animated, responsive, magazine, template, web design" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style4.css" />
+		<script src="js/modernizr.custom.js"></script>
+<style>
+* { margin: 0; padding: 0;}
+body{
+    background:url(../images/web_login_bg.jpg) no-repeat center;
+    background-size: cover;
+}
+body,html{
+    height:100%;
+    overflow:hidden;
+}
+ul { list-style-type: none;}
+li{float:left;}
+
+.Header{width:100%;margin:0 auto;/*页面得一居中*/height:100px;background:#fff;}
+#menu li{font-size:24px;float:left;list-style:none;cursor: pointer;}
+#menu a{color:#000000;text-decoration:none;margin:10px;/*<!--text-decoration:none去掉下划线-->*/padding-top:20px;/*display:block;*/display:block;padding-right:60px;padding-bottom:0px;padding-left:30px;}
+#menu a:hover,a:active{color: #0000ff;}
+#darkbannerwrap {
+    background: url(../images/aiwrap.png);
+    width: 18px;
+    height: 10px;
+    margin: 0 0 20px -58px;
+    position: relative;
+}
+</style>
+	</head>
+	<body>
+	
+	<div class ="Header">
+
+
+<div id="menu">
+              <li><a href="PersonList">找人</a></li>
+                    <li><a href="index.jsp">找项目</a></li>
+                    <li><a href="index1.jsp">查看需求</a></li>
+                    <li><a href="checkfirmdata">发布需求</a></li>
                     <s:if test="#session.username!=null" > 
-                                                             欢迎你:<s:property value="#session.username"/>
-                    <a href="logout.action">个人中心</a>
-                    <a href="logout.action">安全退出</a>
+                    <!--欢迎你:<s:property value="#session.username"/>  --> 
+                     <li><a href="personaldata.jsp">个人中心</a></li>
+                    <li><a href="logout.action" >退出</a></li>
                     </s:if>
                     <s:else> 
-                    <li><a href="login.jsp">登录</a></li>
-                    <li><a href="register.jsp">注册</a></li>
+                    <li ><a href="login.jsp" >登录/注册</a></li>
                     </s:else>
-                  
-            </div> 
-            </div>
-
-   <div id="center">
-  <!--热门项目  -->
-    <c:forEach items="${itemList}" varStatus="status" begin="0" end="${itemList.size() }" step="1">
-       
-        <div class ="hotproject">
-            <table>    
-                <tr >
-                    <td>${itemList[status.index].name}人名</td>
-                    <td style="text-align: right; border-width: 0;width: 30%">
-                        <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
-                    </td>
-                </tr>
-                <c:forEach items="" var="itemNews" varStatus="status">
-                    <tr height="30">
-                        <td style="text-align: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; border-width: 0;width: 100px"><a href="${ctx}/smart/itemsNews/itemsNews/get.ht?id=${itemNews.id}" style="text-decoration:none;text-align:center;color:#000000;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">${itemNews.title}价格</a></td>
-                        <td style="text-align: right; border-width: 0;width: 30%"><fmt:formatDate value="${itemNews.publishTime}" pattern="yyyy-MM-dd"/>工期</td>
-                    </tr>
-                </c:forEach>
-            </table>
-        </div>
-    </c:forEach>
-     <c:forEach items="${itemList}" varStatus="status" begin="0" end="${itemList.size() }" step="1">
-       
-        <div class ="hotproject">
-            <table>    
-                <tr >
-                    <td>${itemList[status.index].name}人名</td>
-                    <td style="text-align: right; border-width: 0;width: 30%">
-                        <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
-                    </td>
-                </tr>
-                <c:forEach items="" var="itemNews" varStatus="status">
-                    <tr height="30">
-                        <td style="text-align: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; border-width: 0;width: 100px"><a href="${ctx}/smart/itemsNews/itemsNews/get.ht?id=${itemNews.id}" style="text-decoration:none;text-align:center;color:#000000;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">${itemNews.title}价格</a></td>
-                        <td style="text-align: right; border-width: 0;width: 30%"><fmt:formatDate value="${itemNews.publishTime}" pattern="yyyy-MM-dd"/>工期</td>
-                    </tr>
-                </c:forEach>
-            </table>
-        </div>
-    </c:forEach>
-     <c:forEach items="${itemList}" varStatus="status" begin="0" end="${itemList.size() }" step="1">
-       
-        <div class ="hotproject">
-            <table>    
-                <tr >
-                    <td>${itemList[status.index].name}人名</td>
-                    <td style="text-align: right; border-width: 0;width: 30%">
-                        <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
-                    </td>
-                </tr>
-                <c:forEach items="" var="itemNews" varStatus="status">
-                    <tr height="30">
-                        <td style="text-align: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; border-width: 0;width: 100px"><a href="${ctx}/smart/itemsNews/itemsNews/get.ht?id=${itemNews.id}" style="text-decoration:none;text-align:center;color:#000000;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">${itemNews.title}价格</a></td>
-                        <td style="text-align: right; border-width: 0;width: 30%"><fmt:formatDate value="${itemNews.publishTime}" pattern="yyyy-MM-dd"/>工期</td>
-                    </tr>
-                </c:forEach>
-            </table>
-        </div>
-    </c:forEach>
-     <c:forEach items="${itemList}" varStatus="status" begin="0" end="${itemList.size() }" step="1">
-       
-        <div class ="hotproject">
-            <table>    
-                <tr >
-                    <td>${itemList[status.index].name}人名</td>
-                    <td style="text-align: right; border-width: 0;width: 30%">
-                        <a href="" style="text-decoration:none;text-align:center;color:#3D8E4A;">MORE >>></a>
-                    </td>
-                </tr>
-                <c:forEach items="" var="itemNews" varStatus="status">
-                    <tr height="30">
-                        <td style="text-align: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; border-width: 0;width: 100px"><a href="${ctx}/smart/itemsNews/itemsNews/get.ht?id=${itemNews.id}" style="text-decoration:none;text-align:center;color:#000000;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">${itemNews.title}价格</a></td>
-                        <td style="text-align: right; border-width: 0;width: 30%"><fmt:formatDate value="${itemNews.publishTime}" pattern="yyyy-MM-dd"/>工期</td>
-                    </tr>
-                </c:forEach>
-            </table>
-        </div>
-    </c:forEach>
-
-<table> 
-<thead>
-<tr>
-<th>用户名</th>
-<th>技能</th>
-<th>价格/小时</th>
-<th>职位</th>
-<th>公司</th>
-<th>工作经验</th>
-<th>开发平台</th>
-</tr>
-</thead>
-<tbody>
-<ul>
-    <s:iterator value="lrst" >
-    <tr>
-     <td>  <s:property value=""/></td>
-      <td> <s:property value=""/></td>
-      <td><s:property value=""/></td>
-      <td><s:property value=""/></td>
-       <td><s:property value=""/></td>
-    </s:iterator>
-  </ul>
-</tbody>
-</table> 
+                 
 </div> 
-<div id="footer">Copyright by codebeautifier</div>
 </div>
- </body>
-</html>  
+<div class="container">
+	
+			<button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
+			<div id="theSidebar" class="sidebar">
+				<button class="close-button fa fa-fw fa-close"></button>
+				<h1><span>Explore<span> who I want</h1>
+				<nav class="codrops-demos">
+					<a class="current-demo" href="Personlist">找人</a>
+					<a href="index.jsp">找项目</a>
+				</nav>
+			</div>
+			<div id="theGrid" class="main">
+			<div class="scroll-wrap">
+				<ul>  <s:iterator value="personlrst" var="c" >
+					<li><s:a class="grid__item" href="Information?UserName=%{#c.username}">
+						<h2 class="title title--preview"><s:property value="#c.username"/> </h2>
+						<div class="loader"></div>
+						<span class="category"> <s:property value="#c.userworkexperience"/></span>
+						<div class="meta meta--preview">
+							<img class="meta__avatar" src="img/authors/1.png" alt="author01" /> 
+							<span class="meta__date"><i class="fa fa-calendar-o"></i><s:property value="#c.userprice"/> </span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i><s:property value="#c.username"/></span>
+						</div>
+					</s:a></li>
+					</s:iterator>
+					</ul>
+				</div> 
+
+			</div>
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

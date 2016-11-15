@@ -6,9 +6,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登录或注册失败</title>
+<link rel="stylesheet" type="text/css" href="css/mainpage.css">
 </head>
 <body>
 <center>
+<button id="run" onclick="te()">按钮</button>
+function te(){
+	alert("这是一个function");
+}
 账号或密码错误 
  执行失败！！
 </center>

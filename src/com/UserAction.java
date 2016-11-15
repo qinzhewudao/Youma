@@ -27,7 +27,11 @@ public class UserAction extends ActionSupport
     private String useraddress;
     private String userskill;
     private String userphone;
-
+    private String userposition;
+    private String usercompany;
+    private int    userworkexperience;
+    private double userprice;
+    private String userdescribe;
     public String getUsername()
     {
         return username;
@@ -147,7 +151,55 @@ public class UserAction extends ActionSupport
     {
         this.userid = userid;
     }
+    public double getprice()
+    {
+        return userprice;
+    }
 
+    public void setprice(double userprice)
+    {
+        this.userprice = userprice;
+    }
+
+  
+
+    public String getposition()
+    {
+        return userposition;
+    }
+
+    public void setposition(String userposition)
+    {
+        this.userposition = userposition;
+    }
+
+    public int getworkexperience()
+    {
+        return userworkexperience;
+    }
+
+    public void setworkexperience(int userworkexperience)
+    {
+        this.userworkexperience = userworkexperience;
+    }
+    public String getcompany()
+    {
+        return usercompany;
+    }
+
+    public void setcompany(String usercompany)
+    {
+        this.usercompany = usercompany;
+    }
+    public String getdescribe()
+    {
+        return userdescribe;
+    }
+
+    public void setdescribe(String userdescribe)
+    {
+        this.userdescribe = userdescribe;
+    }
     public String completefirm()
     {
         HttpSession session = ServletActionContext.getRequest().getSession();
@@ -178,9 +230,9 @@ public class UserAction extends ActionSupport
         System.out.println(getUseraddress());
         System.out.println(getUserphone());
         System.out.println(getUserid());
-        String sql = "update user set useremail = '" + getUseremail() + "',userskill = '" + getUserskill()
-                + "',useraddress = '" + getUseraddress() + "',userphone='" + getUserphone() + "',userid='" + getUserid()
-                + "' where username = '" + username + "'";
+        String sql = "update user set usercompany = '"+ getcompany() + "',userworkexperience = '" + getworkexperience() + "',useremail = '" + getUseremail() + "',userposition = '" + getposition() + "',useraddress = '" + getUseraddress() + "',userprice = '" + getprice() + "',userskill = '" + getUserskill()
+                + "',userdescribe = '" + getdescribe() + "' where username = '" + username + "'";
+        System.out.println(getcompany());
         System.out.println("bug is here");
         int i = dao.executeUpdate(sql);
         if (i > -1)

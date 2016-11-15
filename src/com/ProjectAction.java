@@ -8,15 +8,20 @@
  */
 package com;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
 
 import javax.servlet.http.HttpSession;
 
 import org.apache.struts2.ServletActionContext;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 import dao.Dao;
+import entity.Project;
 
 public class ProjectAction extends ActionSupport
 {
@@ -31,7 +36,22 @@ public class ProjectAction extends ActionSupport
     private String            publisher;
     private String            username;
     private String            projectdescribe;
+    private String            ProjectName;
+    private ArrayList srst,projectlrst,irst; 
 
+    public String getProjectName()/*传参数*/
+    {
+        return ProjectName;
+    }
+
+    public void setProjectName(String ProjectName)
+    {
+        this.ProjectName = ProjectName;
+    }
+/**
+*/
+    
+    
     public String getProjectname()
     {
         return projectname;
@@ -137,4 +157,45 @@ public class ProjectAction extends ActionSupport
         }
         return "error";
     }
+    
+	 
+	
+    public static   ArrayList<Project> findsql(String sql)
+    {
+        ArrayList<Project> list=new ArrayList<Project>();
+         try
+         {
+             Dao connection=new Dao();
+          
+           
+             ResultSet set=connection.executeQuery(sql);  
+	            while(set.next())
+	            {    Project project=new Project();
+	            	 project.setProjectname(set.getString("projectname"));
+	                 project.setProjectstyle(set.getString("projectstyle"));
+	                 project.setProjectplat(set.getString("projectplat"));
+	                 project.setProjectprice(set.getInt("projectpice"));
+	                 project.setPublishdate(set.getDate("publishdate"));
+	                 project.setPublisher(set.getString("publisher"));
+	                 project.setProjectdescribe(set.getString("projectdescribe"));
+	                 list.add(project);
+	                 
+	                 System.out.println(set.getString("projectname")); 
+	                
+	            }
+	            
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	        return list;
+	    }
+
+    public String showinformation() throws SQLException
+	    {
+	    	  
+	           String sql ="select * from project where projectname = '"+ProjectName+"'" ;
+	           projectlrst = findsql(sql);
+	           ActionContext.getContext().put("projectlrst", projectlrst);
+	           return SUCCESS;
+	    }
 }

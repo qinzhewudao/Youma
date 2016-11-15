@@ -20,7 +20,7 @@ public class Dao
     ResultSet      rs       = null;
     private String url      = "jdbc:mysql://localhost:3306/software?useUnicode=true&characterEncoding=utf-8&useSSL=false";
     private String username = "root";
-    private String password = "19960814";
+    private String password = "root";
 
     public Connection GetConn() throws Exception
     {

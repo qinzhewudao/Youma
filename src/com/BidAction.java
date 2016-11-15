@@ -3,7 +3,7 @@
  * @Title: BidAction.java
  * @Package com
  * @Description: TODO
- * @date 2016年11月12日 下午6:49:03
+ * @date 2016骞�11鏈�12鏃� 涓嬪崍6:49:03
  * @version V1.0
  */
 package com;
@@ -25,7 +25,7 @@ import entity.Bid;
 /**
  * @ClassName BidAction
  * @Description TODO
- * @date 2016年11月12日
+ * @date 2016骞�11鏈�12鏃�
  */
 public class BidAction
 {
@@ -117,6 +117,7 @@ public class BidAction
         {
             Bid Bid = new Bid();
             Bid.setProjectname(set.getString("projectname"));
+            Bid.setPublisher(set.getString("publisher"));
             lista.add(Bid);
         }
         this.setLista(lista);
