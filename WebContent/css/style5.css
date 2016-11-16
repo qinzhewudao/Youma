@@ -301,6 +301,7 @@ button:focus {
   color: inherit;
   background: #fff;
   min-height: 300px;
+  min-weight:300px; 
   cursor: pointer;
   text-align: center;
   display: -webkit-box;

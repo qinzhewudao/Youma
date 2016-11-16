@@ -49,7 +49,7 @@ li{float:left;}
 
 
 <div id="menu">
-              <li><a href="Personlist">找人</a></li>
+              <li style="padding-left:30%"><a href="Personlist">找人</a></li>
                     <li><a href="index.jsp">找项目</a></li>
                     <li><a href="index1.jsp">查看需求</a></li>
                     <li><a href="checkfirmdata">发布需求</a></li>
@@ -66,34 +66,47 @@ li{float:left;}
 </div> 
 <div class="container">
 
+			<button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
+			<div id="theSidebar" class="sidebar">
+				<button class="close-button fa fa-fw fa-close"></button>
+				<h1><span>Explore<span> who I want</h1>
+				<nav class="codrops-demos">
+					<a class="current-demo" href="Personlist">推荐开发者</a>
+					<a href="index.jsp">推荐项目</a>
+				</nav>
+			</div>
+
 <div id="theGrid" class="main">
         <form action = "bid">
-      <h1>项目详情</h1>
+      <h1 style="padding-left:20%">项目详情</h1><br><br>
       <br>
           <% 
              ProjectDao itemDao = new ProjectDao();
              ProjectAction item = itemDao.getProjectActionByname(request.getParameter("projectname"));
              if(item!=null)
              {
-          %>              
-                            <h2>项目名： <input type="text" style="border:0px;BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none"  name="projectname" readonly value = <%=item.getProjectname()%>></h2><br>
-							<span>开发平台:<%=item.getProjectplat()%></span><br><br>
+          %>            
+						
+                            <h2 style="padding-left:20%">项目名： <input type="text" style="border:0px;BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none"  name="projectname" readonly value = <%=item.getProjectname()%>></h2><br>
+							<span style="padding-left:20%">开发平台:<%=item.getProjectplat()%></span><br><br>
 							
 						
-								<img  src="img/authors/1.png" alt="author01" />
+								<img style="padding-left:20%" src="img/authors/1.png" alt="author01" />
 								<span >发布者<input type="text" style="border:0px;BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none"  name="publisher"  readonly value   = <%=item.getPublisher()%>></span><br><br>
-								<span ><i class="fa fa-calendar-o"></i>预计价格:<%=item.getProjectprice()%>￥</span><br><br>
-								<span ><i class="fa fa-clock-o"></i>项目类型<%=item.getProjectstyle()%></span><br>
-						<h2>项目描述：</h2>
-							<p><%=item.getProjectdescribe()%></p>
+								<span style="padding-left:20%"><i class="fa fa-calendar-o"></i>预计价格:<%=item.getProjectprice()%>￥</span><br><br>
+								<span style="padding-left:20%"><i class="fa fa-clock-o"></i>项目类型<%=item.getProjectstyle()%></span><br><br>
+						<h2 style="padding-left:20%">项目描述： <input type="submit" value="投标"  style=" color:red;" /> </h2><br>
+							<p style="padding-left:20%"><%=item.getProjectdescribe()%></p>
+							 
+							
+							
               <% 
             }
           %>
-            <input type="submit" value="投标"  style=" color:red;" />
+          
+         
       </form>
-      	<footer class="page-meta">
-						<span>Load more...</span>
-					</footer>
+
 			
 			
 			</div>

@@ -29,73 +29,73 @@ public class User
 
     }
 
-    public String getusername()
+    public String getUsername()
     {
         return username;
     }
 
-    public void setusername(String username)
+    public void setUsername(String username)
     {
         this.username = username;
     }
 
-    public double getprice()
+    public double getUserprice()
     {
         return userprice;
     }
 
-    public void setprice(int userprice)
+    public void setUserprice(int userprice)
     {
         this.userprice = userprice;
     }
 
   
 
-    public String getposition()
+    public String getUserposition()
     {
         return userposition;
     }
 
-    public void setposition(String userposition)
+    public void setUserposition(String userposition)
     {
         this.userposition = userposition;
     }
 
-    public int getworkexperience()
+    public int getUserworkexperience()
     {
         return userworkexperience;
     }
 
-    public void setworkexperience(int userworkexperience)
+    public void setUserworkexperience(int userworkexperience)
     {
         this.userworkexperience = userworkexperience;
     }
 
-    public String getskill()
+    public String getUserskill()
     {
         return userskill;
     }
 
-    public void setskill(String userskill)
+    public void setUserskill(String userskill)
     {
         this.userskill = userskill;
     }
 
-    public String getcompany()
+    public String getUsercompany()
     {
         return usercompany;
     }
 
-    public void setcompany(String usercompany)
+    public void setUsercompany(String usercompany)
     {
         this.usercompany = usercompany;
     }
-    public String getdescribe()
+    public String getUserdescribe()
     {
         return userdescribe;
     }
 
-    public void setdescribe(String userdescribe)
+    public void setUserdescribe(String userdescribe)
     {
         this.userdescribe = userdescribe;
     }

@@ -31,7 +31,7 @@ ul { list-style-type: none;}
 li{float:left;}
 
 .Header{width:100%;margin:0 auto;/*页面得一居中*/height:100px;background:#fff;}
-#menu li{font-size:24px;float:left;list-style:none;cursor: pointer;}
+#menu li{font-size:24px;float:left;list-style:none;cursor: pointer;margin:0 auto;}
 #menu a{color:#000000;text-decoration:none;margin:10px;/*<!--text-decoration:none去掉下划线-->*/padding-top:20px;/*display:block;*/display:block;padding-right:60px;padding-bottom:0px;padding-left:30px;}
 #menu a:hover,a:active{color: #0000ff;}
 #darkbannerwrap {
@@ -49,9 +49,9 @@ li{float:left;}
 
 
 <div id="menu">
-              <li><a href="Personlist">找人</a></li>
-                    <li><a href="index.jsp">找项目</a></li>
-                    <li><a href="index1.jsp">查看需求</a></li>
+              <li style ="padding-left:30%;"><a href="Personlist">找人</a></li>
+                    <li ><a href="index.jsp">找项目</a></li>
+                    <li><a href="index1.jsp">作品与服务</a></li>
                     <li><a href="checkfirmdata">发布需求</a></li>
                     <s:if test="#session.username!=null" > 
                     <!--欢迎你:<s:property value="#session.username"/>  --> 
@@ -72,8 +72,8 @@ li{float:left;}
 				<button class="close-button fa fa-fw fa-close"></button>
 				<h1><span>Explore<span> who I want</h1>
 				<nav class="codrops-demos">
-					<a class="current-demo" href="Personlist">找人</a>
-					<a href="index.jsp">找项目</a>
+					<a class="current-demo" href="Personlist">推荐开发者</a>
+					<a href="index.jsp">推荐项目</a>
 				</nav>
 			</div>
 			<div id="theGrid" class="main">
@@ -91,10 +91,10 @@ li{float:left;}
 					<li><a class="grid__item" href = "projectdetail.jsp?projectname=<%=item.getProjectname()%>">
 						<h2 class="title title--preview"><%=item.getProjectname()%></h2>
 						<div class="loader"></div>
-						<span class="category"><%=item.getPublisher()%></span>
+						<span class="category">发布方：<%=item.getPublisher()%></span>
 						<div class="meta meta--preview">
 							<img class="meta__avatar" src="img/authors/1.png" alt="author01" /> 
-							<span class="meta__date"><i class="fa fa-calendar-o"></i><%=item.getProjectprice()%></span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i><%=item.getProjectprice()%>元</span>
 							<span class="meta__reading-time"><i class="fa fa-clock-o"></i><%=item.getPublishdate()%></span>
 						</div>
 					</a></li>

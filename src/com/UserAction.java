@@ -151,52 +151,51 @@ public class UserAction extends ActionSupport
     {
         this.userid = userid;
     }
-    public double getprice()
+    public double getUserprice()
     {
         return userprice;
     }
 
-    public void setprice(double userprice)
+    public void setUserprice(double userprice)
     {
         this.userprice = userprice;
     }
 
-  
-
-    public String getposition()
+    public String getUserposition()
     {
         return userposition;
     }
 
-    public void setposition(String userposition)
+    public void setUserposition(String userposition)
     {
         this.userposition = userposition;
     }
 
-    public int getworkexperience()
+    public int getUserworkexperience()
     {
         return userworkexperience;
     }
 
-    public void setworkexperience(int userworkexperience)
+    public void setUserworkexperience(int userworkexperience)
     {
         this.userworkexperience = userworkexperience;
     }
-    public String getcompany()
+    public String getUsercompany()
     {
         return usercompany;
     }
 
-    public void setcompany(String usercompany)
+    public void setUsercompany(String usercompany)
     {
         this.usercompany = usercompany;
     }
-    public String getdescribe()
+
+    public String getUserdescribe()
     {
         return userdescribe;
     }
 
-    public void setdescribe(String userdescribe)
+    public void setUserdescribe(String userdescribe)
     {
         this.userdescribe = userdescribe;
     }
@@ -230,9 +229,10 @@ public class UserAction extends ActionSupport
         System.out.println(getUseraddress());
         System.out.println(getUserphone());
         System.out.println(getUserid());
-        String sql = "update user set usercompany = '"+ getcompany() + "',userworkexperience = '" + getworkexperience() + "',useremail = '" + getUseremail() + "',userposition = '" + getposition() + "',useraddress = '" + getUseraddress() + "',userprice = '" + getprice() + "',userskill = '" + getUserskill()
-                + "',userdescribe = '" + getdescribe() + "' where username = '" + username + "'";
-        System.out.println(getcompany());
+        System.out.println(getUsercompany());
+        String sql = "update user set usercompany = '"+ getUsercompany() + "',userworkexperience = '" + getUserworkexperience() + "',useremail = '" + getUseremail() + "',userposition = '" + getUserposition() + "',useraddress = '" + getUseraddress() + "',userprice = '" + getUserprice() + "',userskill = '" + getUserskill()
+                + "',userdescribe = '" + getUserdescribe() + "' where username = '" + username + "'";
+        System.out.println(getUsercompany());
         System.out.println("bug is here");
         int i = dao.executeUpdate(sql);
         if (i > -1)

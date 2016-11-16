@@ -1,17 +1,12 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib uri="/struts-tags" prefix="s" %>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
- 
 <!DOCTYPE html>
 <html lang="zh-cn" class="no-js">
 	<head>
-		<meta charset="UTF-8" />
+<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>发现我需要的人才</title>
+		<title>发现我想开发的项目</title>
 		<meta name="description" content="A responsive, magazine-like website layout with a grid item animation effect when opening the content" />
 		<meta name="keywords" content="grid, layout, effect, animated, responsive, magazine, template, web design" />
 		<meta name="author" content="Codrops" />
@@ -20,7 +15,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/style4.css" />
 		<script src="js/modernizr.custom.js"></script>
-<style>
+		<style>
 * { margin: 0; padding: 0;}
 body{
     background:url(../images/web_login_bg.jpg) no-repeat center;
@@ -30,6 +25,7 @@ body,html{
     height:100%;
     overflow:hidden;
 }
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
 ul { list-style-type: none;}
 li{float:left;}
 
@@ -44,18 +40,54 @@ li{float:left;}
     margin: 0 0 20px -58px;
     position: relative;
 }
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  height: 0;
+  visibility: hidden;
+  z-index: 400;
+  overflow: hidden;
+}
+
+.content.content--show {
+  height: 100vh;
+  pointer-events: auto;
+  visibility: visible;
+}
+.scroll-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.content__item {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  padding: 60px 60px 80px 60px;
+  pointer-events: none;
+  font-size: 0.85em;
+}
 </style>
-	</head>
+
+</head>
 	<body>
 	
-		
 	<div class ="Header">
-
-
 <div id="menu">
-              <li style ="padding-left:30%;"><a href="Personlist">找人</a></li>
-                    <li ><a href="index.jsp">找项目</a></li>
-                    <li><a href="index1.jsp">作品与服务</a></li>
+              <li><a href="Personlist">找人</a></li>
+                    <li><a href="index.jsp">找项目</a></li>
+                    <li><a href="index1.jsp">查看需求</a></li>
                     <li><a href="checkfirmdata">发布需求</a></li>
                     <s:if test="#session.username!=null" > 
                     <!--欢迎你:<s:property value="#session.username"/>  --> 
@@ -68,37 +100,30 @@ li{float:left;}
                  
 </div> 
 </div>
-
-<div class="container">
-	
-			<button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
-			<div id="theSidebar" class="sidebar">
-				<button class="close-button fa fa-fw fa-close"></button>
-				<h1><span>Explore<span> who I want</h1>
-				<nav class="codrops-demos">
-					<a class="current-demo" href="Personlist">推荐开发者</a>
-					<a href="index.jsp">推荐项目</a>
-				</nav>
-			</div>
+		<div class="container">
 			<div id="theGrid" class="main">
-			<div class="scroll-wrap">
-				<ul>  <s:iterator value="personlrst" var="c" >
-					<li><s:a class="grid__item" href="Information?UserName=%{#c.username}">
-						<h2 class="title title--preview"><s:property value="#c.userposition"/> </h2>
-						<div class="loader"></div>
-						<span class="category"> <s:property value="#c.userworkexperience"/>年经验</span>
-						<div class="meta meta--preview">
-							<img class="meta__avatar" src="img/authors/1.png" alt="author01" /> 
-							<span class="meta__date"><i class="fa fa-calendar-o"></i><s:property value="#c.userprice"/>/8 hours</span>
-							<span class="meta__reading-time"><i class="fa fa-clock-o"></i><s:property value="#c.username"/></span>
-						</div>
-					</s:a></li>
-					</s:iterator>
-					</ul>
-				</div> 
+			
+				
+			 <ul><s:iterator value="irst" var ="c" >
+			 <h1>用户职位：<s:property value="#c.userposition"/></h1><br>	
+						<img  src="img/authors/1.png" alt="author01" />
+			            <h2>用户名：<s:property value="#c.username"/> </h2><br>
+			              <span ><i class="fa fa-calendar-o"></i>预估薪资： <s:property value="#c.userprice"/> </span><br><br>
+			             <span ><i class="fa fa-clock-o"></i>工作经验：<s:property value="#c.userworkexperience"/> </span><br><br>
+			             <span >个人技能：<s:property value="#c.userskill"/></span><br><br>
+						  <span >从业公司：<s:property value="#c.usercompany"/></span><br><br>
+						   <span >个人简历：<s:property value="#c.userdescribe"/></span><br> 
+					</s:iterator></ul>	
 
-			</div>
+	 	<footer class="page-meta">
+						<span>Load more...</span>
+					</footer>
+		
+			</div>	
 		</div><!-- /container -->
+			
+			
+			
 		<script src="js/classie.js"></script>
 		<script src="js/main.js"></script>
 	</body>
