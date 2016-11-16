@@ -3,20 +3,76 @@
 <%@page import="dao.ProjectDao"%>
 <%@page import="com.ProjectAction"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html lang="zh-cn" class="no-js">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>发现我想开发的项目</title>
+		<meta name="description" content="A responsive, magazine-like website layout with a grid item animation effect when opening the content" />
+		<meta name="keywords" content="grid, layout, effect, animated, responsive, magazine, template, web design" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style4.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<style>
+* { margin: 0; padding: 0;}
+body{
+    background:url(../images/web_login_bg.jpg) no-repeat center;
+    background-size: cover;
+}
+body,html{
+    height:100%;
+    overflow:hidden;
+}
+ul{ list-style-type: none;}
+li{float:left;}
+.button{
+ background-color:transparent;  /* 背景色透明 */
+ border:0px;       /* 边框取消 */
+ color:green;
+}
 
-<link rel="stylesheet" type="text/css" href="css/mainpage.css">
+.Header{width:100%;margin:0 auto;/*页面得一居中*/height:100px;background:#fff;}
+#menu li{font-size:24px;float:left;list-style:none;cursor: pointer;}
+#menu a{color:#000000;text-decoration:none;margin:10px;/*<!--text-decoration:none去掉下划线-->*/padding-top:20px;/*display:block;*/display:block;padding-right:60px;padding-bottom:0px;padding-left:30px;}
+#menu a:hover,a:active{color: #0000ff;}
+#darkbannerwrap {
+    background: url(../images/aiwrap.png);
+    width: 18px;
+    height: 10px;
+    margin: 0 0 20px -58px;
+    position: relative;
+}
+</style>
 
 </head>
 <body>
-    <div id="center">
-    <hr>
-    
-    <center>
-      <form action = "bid">
+<div class ="Header">
+
+
+<div id="menu">
+              <li><a href="Personlist">找人</a></li>
+                    <li><a href="index.jsp">找项目</a></li>
+                    <li><a href="index1.jsp">查看需求</a></li>
+                    <li><a href="checkfirmdata">发布需求</a></li>
+                    <s:if test="#session.username!=null" > 
+                    <!--欢迎你:<s:property value="#session.username"/>  --> 
+                     <li><a href="personaldata.jsp">个人中心</a></li>
+                    <li><a href="logout.action" >退出</a></li>
+                    </s:if>
+                    <s:else> 
+                    <li ><a href="login.jsp" >登录/注册</a></li>
+                    </s:else>
+                 
+</div> 
+</div> 
+<div class="container">
+
+<div id="theGrid" class="main">
+      <form action = "checkpersondata">
       <h1>项目详情</h1>
       <br>
           <% 
@@ -24,33 +80,32 @@
              ProjectAction item = itemDao.getProjectActionByname(request.getParameter("projectname"));
              if(item!=null)
              {
-          %>
-             <table>
-               <tr>
-               <td>项目名：<input type="text"  name="projectname" readonly value = <%=item.getProjectname()%>></td>
-               </tr>
-               <tr>
-               <td>项目类型<input type="text"  name="projectstyle" disabled value = <%=item.getProjectstyle()%>></td> 
-               </tr>
-               <tr>
-               <td>开发平台：<input type="text" name="peojectplat" disabled value = <%=item.getProjectplat()%>></td>
-               </tr>
-               <tr>
-               <td>预计价格:<input type="text" name="projectprice" disabled value =<%=item.getProjectprice()%>>￥</td>
-               </tr> 
-               <tr>
-               <td>发布者：<input type="text"  name="publisher"  readonly value   = <%=item.getPublisher()%>></td>
-               </tr> 
-             </table>
-          <% 
+          %>              
+                            <h2>项目名： <input type="text" style="border:0px;BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none"  name="projectname" readonly value = <%=item.getProjectname()%>></h2><br>
+							<span>开发平台:<%=item.getProjectplat()%></span><br><br>
+							
+						
+								<img  src="img/authors/1.png" alt="author01" />
+								<span >发布者<input type="text" style="border:0px;BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none"  name="publisher"  readonly value   = <%=item.getPublisher()%>></span><br><br>
+								<span ><i class="fa fa-calendar-o"></i>预计价格:<%=item.getProjectprice()%>￥</span><br><br>
+								<span ><i class="fa fa-clock-o"></i>项目类型<%=item.getProjectstyle()%></span><br>
+						<h2>项目描述：</h2>
+							<p><%=item.getProjectdescribe()%></p>
+              <% 
             }
           %>
-      <br>
-      <input type="submit" value="投标"  style=" color:red;" />
+          <br>
+            <input type="submit" value="投标" class = "button"  />
       </form>
-      </center>
-      
-      </div>
-<div id="footer">Copyright by <a href = "index.jsp">codebeautifier</a></div>
+      	<footer class="page-meta">
+						<span>Load more...</span>
+					</footer>
+			
+			
+			</div>
+			</div><!-- /container -->
+
+		<script src="js/classie.js"></script>
+		<script src="js/main.js"></script>
 </body>
 </html>

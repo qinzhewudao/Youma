@@ -27,6 +27,11 @@ public class UserAction extends ActionSupport
     private String useraddress;
     private String userskill;
     private String userphone;
+    private String userposition;
+    private String usercompany;
+    private int    userworkexperience;
+    private double userprice;
+    private String userdescribe;
 
     public String getUsername()
     {
@@ -148,6 +153,56 @@ public class UserAction extends ActionSupport
         this.userid = userid;
     }
 
+    public double getUserprice()
+    {
+        return userprice;
+    }
+
+    public void setUserprice(double userprice)
+    {
+        this.userprice = userprice;
+    }
+
+    public String getUserposition()
+    {
+        return userposition;
+    }
+
+    public void setUserposition(String userposition)
+    {
+        this.userposition = userposition;
+    }
+
+    public int getUserworkexperience()
+    {
+        return userworkexperience;
+    }
+
+    public void setUserworkexperience(int userworkexperience)
+    {
+        this.userworkexperience = userworkexperience;
+    }
+
+    public String getUsercompany()
+    {
+        return usercompany;
+    }
+
+    public void setUsercompany(String usercompany)
+    {
+        this.usercompany = usercompany;
+    }
+
+    public String getUserdescribe()
+    {
+        return userdescribe;
+    }
+
+    public void setUserdescribe(String userdescribe)
+    {
+        this.userdescribe = userdescribe;
+    }
+
     public String completefirm()
     {
         HttpSession session = ServletActionContext.getRequest().getSession();
@@ -173,14 +228,12 @@ public class UserAction extends ActionSupport
     {
         HttpSession session = ServletActionContext.getRequest().getSession();
         String username = session.getAttribute("username").toString();
-        System.out.println(getUseremail());
-        System.out.println(getUserskill());
-        System.out.println(getUseraddress());
-        System.out.println(getUserphone());
-        System.out.println(getUserid());
-        String sql = "update user set useremail = '" + getUseremail() + "',userskill = '" + getUserskill()
-                + "',useraddress = '" + getUseraddress() + "',userphone='" + getUserphone() + "',userid='" + getUserid()
-                + "' where username = '" + username + "'";
+        String sql = "update user set usercompany = '" + getUsercompany() + "',userworkexperience = '"
+                + getUserworkexperience() + "',useremail = '" + getUseremail() + "',userposition = '"
+                + getUserposition() + "',useraddress = '" + getUseraddress() + "',userprice = '" + getUserprice()
+                + "',userskill = '" + getUserskill() + "',userdescribe = '" + getUserdescribe() + "' where username = '"
+                + username + "'";
+        System.out.println(sql);
         System.out.println("bug is here");
         int i = dao.executeUpdate(sql);
         if (i > -1)
@@ -244,35 +297,31 @@ public class UserAction extends ActionSupport
         {
             return "pleaselogin";
         }
-        String sql = "select user.useremail as useremail,user.userskill as userskill,user.userphone as userphone,user.userid as userid,useraddress as useraddress from user where user.username = '"
+        String sql = "select user.useremail as useremail,user.userskill as userskill,usercompany as usercompany from user where user.username = '"
                 + username + "'";
         ResultSet rS = dao.executeQuery(sql);
         try
         {
             while (rS.next())
             {
-                System.out.println(rS.getString("usermail"));
+                System.out.println(rS.getString("useremail"));
                 session.setAttribute("useremail", rS.getString("useremail"));
-                if (session.getAttribute("usermail") == null)
+                if (session.getAttribute("useremail") == null)
                 {
                     System.out.println("ming ming shi null le");
                 }
-                System.out.println(session.getAttribute("usermail"));
                 session.setAttribute("useremail", rS.getString("useremail"));
                 session.setAttribute("userskill", rS.getString("userskill"));
-                session.setAttribute("userphone", rS.getString("userphone"));
-                session.setAttribute("userid", rS.getString("userid"));
-                session.setAttribute("useraddress", rS.getString("useraddress"));
+                session.setAttribute("usercompany", rS.getString("usercompany"));
                 if ((session.getAttribute("useremail").toString() == null)
-                        || (session.getAttribute("userskil").toString() == null)
-                        || (session.getAttribute("userphone").toString() == null)
-                        || (session.getAttribute("userid").toString() == null)
-                        || (session.getAttribute("useraddress").toString() == null))
+                        || (session.getAttribute("userskill").toString() == null)
+                        || (session.getAttribute("usercompany").toString() == null))
                 {
                     return "pleaseaddif";
                 }
                 else
                 {
+                    System.out.println("ming ming shi null le2");
                     return "selectproject";
                 }
             }

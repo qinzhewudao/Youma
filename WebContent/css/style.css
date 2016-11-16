@@ -4,7 +4,7 @@
 	 margin: 0;
 	 padding: 0;
 	 margin: 0 auto;
-	 font-family: "Trebuchet MS","Myriad Pro",Arial,sans-serif;
+	 font-family: "Trebuchet MS","MyriaFd Pro",Arial,sans-serif;
 }
 
 /** fonts used for the icons **/ 
@@ -358,8 +358,6 @@ p.change_link{
 	animation-timing-function: ease;
 	animation-fill-mode: both;
 }
-
-/** yerk some ugly IE fixes 'cause I know someone will ask "why does it look ugly in IE?", no matter how many warnings I will put in the article */
 
 .lt8 #wrapper input{
 	padding: 10px 5px 10px 32px;

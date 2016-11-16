@@ -14,9 +14,8 @@
 <result name="success">/index.jsp</result>
 </action>
 <action name="checkpersondata" class="com.UserAction" method="checkpersondata">
-<result name="error">/completepsif.jsp</result>
-<result name="success">/login.jsp</result>
-<result name="pleaselogin">/pleaselogin.jsp</result>
+<result name="pleaseaddif">/completepsif.jsp</result>
+<result name="selectproject" type="chain">bid</result>
 </action>
 <action name="completefirm" class="com.UserAction" method="completefirm">
 <result name="error">/loginerror.jsp</result>
@@ -31,8 +30,8 @@
 <result name="publish">/publish.jsp</result>
 <result name="error">/loginerror.jsp</result>
 </action>
-<action name="PersonList" class="com.PersonAction" method="showlist">
-<result>/personaldata.jsp</result>
+<action name="Personlist" class="com.PersonAction" method="showlist">
+<result name ="success">/personlist.jsp</result>
 </action>
 <action name="publish" class="com.ProjectAction" method="publish">
 <result name="success">/publishsuccess.jsp</result>
@@ -53,6 +52,9 @@
 <action name="mypublishbid" class="com.BidAction" method="mypublishbid">
 <result name="success">/mypublishbidlist.jsp</result>
 <result name="emptybided">/loginerror.jsp</result>
+</action>
+<action name="Information" class="com.PersonAction" method="showinformation" >
+<result name="success">/persondata.jsp</result>
 </action>
 </package>
 </struts>

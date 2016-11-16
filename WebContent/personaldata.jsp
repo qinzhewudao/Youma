@@ -10,6 +10,10 @@
 <%
 String userPassword=(String)session.getAttribute("password"); 
 String username=(String)session.getAttribute("username");
+/*String userskill=(String)session.getAttribute("userskill");
+String useraddress=(String)session.getAttribute("useraddress");
+String useremail=(String)session.getAttribute("useremail");
+*/
 
 if((username==null)||username.equals("")){
 %>
@@ -27,18 +31,26 @@ response.setHeader("refresh","5;url=login.jsp");
 <h1 align="center">欢迎您，<%=username%></h1><h3 align="center">您的个人信息如下：</h3>
 <table align="center">
 <tr><td>用户名：</td><td><%=username%></td></tr>
-<tr><td>密码：</td><td><%=userPassword%></td></tr>
+
+
+
 </table>
 <br><a href = "mypublish.action">我发布的项目</a></br>
 <br><a href = "mybid.action">我投标的项目</a></br>
 <%}%>
 <br></br>
 完善个人资料
+
 <br></br>
-<a href="completepsif.jsp">我想成为开发者</a>
-<br></br>
+
 <a href="completefirmif.jsp">我想成为发布方</a>
+
+<br></br>
+
+<a href="completepsif.jsp">我想成为开发者</a>
+
 <br></br>
 <div id="footer">Copyright by <a href = "index.jsp">codebeautifier</a></div>
+
 </body>
 </html>
