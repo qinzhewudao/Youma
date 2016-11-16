@@ -299,7 +299,7 @@ button:focus {
   padding: 45px 55px 30px;
   position: relative;
   color: inherit;
-  background: #fff;
+  background: url(images/web_login_bg.jpg);
   min-height: 300px;
   min-width:300px;
   cursor: pointer;

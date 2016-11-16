@@ -51,7 +51,7 @@ li{float:left;}
 
 
 <div id="menu">
-              <li><a href="Personlist">找人</a></li>
+              <li style="padding-left:30%;"><a href="Personlist">找人</a></li>
                     <li><a href="index.jsp">找项目</a></li>
                     <li><a href="index1.jsp">查看需求</a></li>
                     <li><a href="checkfirmdata">发布需求</a></li>

@@ -67,7 +67,15 @@ li{float:left;}
 
 
 <div class="container">
-	
+	<button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
+			<div id="theSidebar" class="sidebar">
+				<button class="close-button fa fa-fw fa-close"></button>
+				<h1><span>Explore<span> who I want</h1>
+				<nav class="codrops-demos">
+					<a class="current-demo" href="Personlist">推荐开发者</a>
+					<a href="index.jsp">推荐项目</a>
+				</nav>
+			</div>
 		
 			<div id="theGrid" class="main">
 			<div class="scroll-wrap">

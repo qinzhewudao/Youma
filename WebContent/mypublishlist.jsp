@@ -19,10 +19,7 @@
 		<script src="js/modernizr.custom.js"></script>
 		<style>
 * { margin: 0; padding: 0;}
-body{
-    background:url(../images/web_login_bg.jpg) no-repeat center;
-    background-size: cover;
-}
+
 body,html{
     height:100%;
     overflow:hidden;
@@ -30,26 +27,19 @@ body,html{
 ul { list-style-type: none;}
 li{float:left;}
 
-.Header{width:100%;margin:0 auto;/*页面得一居中*/height:100px;background:#fff;}
+.Header{width:100%;margin:0 auto;/*页面得一居中*/height:100px;}
 #menu li{font-size:24px;float:left;list-style:none;cursor: pointer;}
 #menu a{color:#000000;text-decoration:none;margin:10px;/*<!--text-decoration:none去掉下划线-->*/padding-top:20px;/*display:block;*/display:block;padding-right:60px;padding-bottom:0px;padding-left:30px;}
 #menu a:hover,a:active{color: #0000ff;}
-#darkbannerwrap {
-    background: url(../images/aiwrap.png);
-    width: 18px;
-    height: 10px;
-    margin: 0 0 20px -58px;
-    position: relative;
-}
+
 </style>
 
 </head>
 <body>
 <div class ="Header">
-
-
+ 
 <div id="menu">
-              <li><a href="Personlist">找人</a></li>
+              <li style="padding-left:30%;"><a href="Personlist">找人</a></li>
                     <li><a href="index.jsp">找项目</a></li>
                     <li><a href="index1.jsp">查看需求</a></li>
                     <li><a href="checkfirmdata">发布需求</a></li>
@@ -67,7 +57,15 @@ li{float:left;}
          
 
  <div class="container">
-	
+	<button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
+			<div id="theSidebar" class="sidebar">
+				<button class="close-button fa fa-fw fa-close"></button>
+				<h1><span>Explore<span> who I want</h1>
+				<nav class="codrops-demos">
+					<a class="current-demo" href="Personlist">推荐开发者</a>
+					<a href="index.jsp">推荐项目</a>
+				</nav>
+			</div>
 			
 			<div id="theGrid" class="main">  
 				<div class="scroll-wrap">
@@ -81,9 +79,7 @@ li{float:left;}
 					</s:iterator>
 					</ul>
 					</div>
-	<footer class="page-meta">
-						<span>Load more...</span>
-					</footer>
+	
 					
 			
 			
