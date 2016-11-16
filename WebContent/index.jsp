@@ -21,14 +21,14 @@ content="有码是 Code Beautifier推出的软件众包平台，意在连接需�
     <link rel="stylesheet" type="text/css" href="css/mainpage.css">
    
 </head>
-<body>
+<body >
  <div id="mainContainer">  
       <div id="Header">
       <div id="menu">
               <li><a href="personlist.jsp">找人</a></li>
                     <li><a href="">找项目</a></li>
                     <li><a href="index.jsp">查看需求</a></li>
-                    <li><a href="publish.jsp">发布需求</a></li>
+                    <li><a href="checkfirmdata">发布需求</a></li>
                     <div class="login">
                     <s:if test="#session.username!=null" > 
                                                              欢迎你:<s:property value="#session.username"/>
