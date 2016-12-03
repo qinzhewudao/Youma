@@ -95,6 +95,7 @@ public class BidAction
         String sql = "insert into bid (projectname,bidder,publisher) values ('" + getProjectname() + "','" + bidder
                 + "','" + getPublisher() + "')";
         int i = dao.executeUpdate(sql);
+        dao.close();
         System.out.println("bug is here");
         if (i > -1)
         {
@@ -164,7 +165,7 @@ public class BidAction
 
         String sqlStatement = "SELECT bidder FROM bid where publisher = '" + publisher + "' and projectname = '"
                 + getProjectname() + "'";
-        System.out.println(getProjectname());
+        System.out.println(sqlStatement);
         ResultSet rS = dao.executeQuery(sqlStatement);
         try
         {
@@ -177,11 +178,13 @@ public class BidAction
                 System.out.println(Bid.getProjectname());
                 lista.add(Bid);
             }
+            dao.close();
         }
         catch (SQLException e)
         {
             // TODO Auto-generated catch block
             e.printStackTrace();
+            dao.close();
             return "error";
         }
         this.setLista(lista);

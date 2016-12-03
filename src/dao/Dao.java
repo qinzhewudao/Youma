@@ -73,4 +73,18 @@ public class Dao
         return -1;
     }
 
+    public int close()
+    {
+        try
+        {
+            stat.close();
+            return 0;
+        }
+        catch (Exception e)
+        {
+            // TODO: handle exception
+        }
+        return -1;
+    }
+
 }

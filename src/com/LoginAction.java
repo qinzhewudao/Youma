@@ -65,6 +65,7 @@ public class LoginAction extends ActionSupport
                 session.setAttribute("password", getPassword());
                 return "loginin";
             }
+            dao.close();
             return "error";
         }
         catch (SQLException e)
@@ -98,6 +99,7 @@ public class LoginAction extends ActionSupport
             session.setAttribute("password", getPassword());
             return "success";
         }
+        dao.close();
         return "error";
     }
 

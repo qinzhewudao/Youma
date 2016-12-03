@@ -52,9 +52,9 @@ li{float:left;}
 
 
 <div id="menu">
-                    <li><a href="PersonList">找人</a></li>
-                    <li><a href="index.jsp">找项目</a></li>
-                    <li><a href="index1.jsp">查看需求</a></li>
+
+
+                    <li style ="padding-left:20%;"><a href="index1.jsp">作品与服务</a></li>
                     <li><a href="checkfirmdata">发布需求</a></li>
                     <s:if test="#session.username!=null" > 
                     <!--欢迎你:<s:property value="#session.username"/>  --> 
@@ -69,15 +69,16 @@ li{float:left;}
 </div>
 <div class="container">
 	
-			<button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
-			<div id="theSidebar" class="sidebar">
-				<button class="close-button fa fa-fw fa-close"></button>
-				<h1><span>Explore<span> who I want</h1>
-				<nav class="codrops-demos">
-					<h2><a class="current-demo"href="Personlist">找人</a></h2>
-                    <h2><a href="index.jsp">找项目</a></h2>
-				</nav>
-			</div>
+            <button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
+            <div id="theSidebar" class="sidebar">
+                <button class="close-button fa fa-fw fa-close"></button>
+                <h1><span>Explore<span> which I want</h1>
+                <nav class="codrops-demos">
+                    <h2><a class="current-demo" href="Personlist">发现人才</a></h2>
+                    <br>
+                    <h2><a href="index.jsp">探索项目</a></h2>
+                </nav>
+            </div>
 			<div id="theGrid" class="main">
 			<div class="scroll-wrap">
 				<ul>  <s:iterator value="personlrst" var="c" >

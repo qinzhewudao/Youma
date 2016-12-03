@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="GB2312"%>
 <%@taglib uri="/struts-tags" prefix="s" %>
 <%@page import="dao.ProjectDao"%>
 <%@page import="com.ProjectAction"%>
@@ -6,18 +6,18 @@
 <html lang="zh-cn" class="no-js">
 <head>
 <meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>å‘ç°æˆ‘æƒ³å¼€å‘çš„é¡¹ç›®</title>
-		<meta name="description" content="A responsive, magazine-like website layout with a grid item animation effect when opening the content" />
-		<meta name="keywords" content="grid, layout, effect, animated, responsive, magazine, template, web design" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/style4.css" />
-		<script src="js/modernizr.custom.js"></script>
-		<style>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>·¢ÏÖÎÒÏë¿ª·¢µÄÏîÄ¿</title>
+        <meta name="description" content="A responsive, magazine-like website layout with a grid item animation effect when opening the content" />
+        <meta name="keywords" content="grid, layout, effect, animated, responsive, magazine, template, web design" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style4.css" />
+        <script src="js/modernizr.custom.js"></script>
+        <style>
 * { margin: 0; padding: 0;}
 body{
     background:url(../images/web_login_bg.jpg) no-repeat center;
@@ -32,9 +32,9 @@ li{float:left;}
 .input_div{width:100%;}
 .input_div label{width:200px;float:left;text-align:left;}
 .input_div input{width:200px;float:left;}
-.Header{width:100%;margin:0 auto;/*é¡µé¢å¾—ä¸€å±…ä¸­*/height:100px;background:#fff;}
+.Header{width:100%;margin:0 auto;/*Ò³ÃæµÃÒ»¾ÓÖĞ*/height:100px;background:#fff;}
 #menu li{font-size:24px;float:left;list-style:none;cursor: pointer;}
-#menu a{color:#000000;text-decoration:none;margin:10px;/*<!--text-decoration:noneå»æ‰ä¸‹åˆ’çº¿-->*/padding-top:20px;/*display:block;*/display:block;padding-right:60px;padding-bottom:0px;padding-left:30px;}
+#menu a{color:#000000;text-decoration:none;margin:10px;/*<!--text-decoration:noneÈ¥µôÏÂ»®Ïß-->*/padding-top:20px;/*display:block;*/display:block;padding-right:60px;padding-bottom:0px;padding-left:30px;}
 #menu a:hover,a:active{color: #0000ff;}
 #darkbannerwrap {
     background: url(../images/aiwrap.png);
@@ -51,68 +51,83 @@ li{float:left;}
 
 
 <div id="menu">
-              <li><a href="Personlist">æ‰¾äºº</a></li>
-                    <li><a href="index.jsp">æ‰¾é¡¹ç›®</a></li>
-                    <li><a href="index1.jsp">æŸ¥çœ‹éœ€æ±‚</a></li>
-                    <li><a href="checkfirmdata">å‘å¸ƒéœ€æ±‚</a></li>
+                    <li style ="padding-left:20%;"><a href="index1.jsp">×÷Æ·Óë·şÎñ</a></li>
+                    <li><a href="checkfirmdata">·¢²¼ĞèÇó</a></li>
                     <s:if test="#session.username!=null" > 
-                    <!--æ¬¢è¿ä½ :<s:property value="#session.username"/>  --> 
-                     <li><a href="personaldata.jsp">ä¸ªäººä¸­å¿ƒ</a></li>
-                    <li><a href="logout.action" >é€€å‡º</a></li>
+                    <!--»¶Ó­Äã:<s:property value="#session.username"/>  --> 
+                    <li><a href="personaldata.jsp">¸öÈËÖĞĞÄ</a></li>
+                    <li><a href="logout.action" >ÍË³ö</a></li>
                     </s:if>
                     <s:else> 
-                    <li ><a href="login.jsp" >ç™»å½•/æ³¨å†Œ</a></li>
+                    <li ><a href="login.jsp" >µÇÂ¼/×¢²á</a></li>
                     </s:else>
                  
+</div>
 </div> 
-</div> 
-<div class="container">
+  <div class="container">
+            <button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
+            <div id="theSidebar" class="sidebar">
+                <button class="close-button fa fa-fw fa-close"></button>
+                <h1><span>Explore<span> which I want</h1>
+                <nav class="codrops-demos">
+                    <h2><a href="Personlist">·¢ÏÖÈË²Å</a></h2>
+                    <h2><a class="current-demo"href="index.jsp">Ì½Ë÷ÏîÄ¿</a></h2>
+                </nav>
+            </div>
 
 <div id="theGrid" class="main">
-   <h1>å®Œå–„å¼€å‘è€…èµ„æ–™</h1>
+
+   <h1 style="padding-left:30%;">ÍêÉÆ¿ª·¢Õß×ÊÁÏ</h1>
    <form action="completeperson">
    <div class="input_div">
    
 
-                                <p> 
-                                    <label for="usercompany" class="uname" data-icon="u" >      å…¬å¸åç§°ï¼š</label>
-                                    <input id="username" name="usercompany" required="required" type="text" placeholder="å»ºè®®å¡«å†™å·¥ä½œè¿‡çš„æœ€è‘—åçš„å…¬å¸"/>
-                                </p><br><br>
+                                <p style="padding-left:30%;"> 
+                                    <label for="usercompany" class="uname" data-icon="u" >      ¹«Ë¾Ãû³Æ£º</label>
+                                    <input id="username" name="usercompany" required="required" type="text" placeholder="½¨ÒéÌîĞ´¹¤×÷¹ıµÄ×îÖøÃûµÄ¹«Ë¾"/>
+                                </p ><br><br>
                                 
-                                <p> 
-                                    <label for="userworkexperience" class="uname" data-icon="u" > å·¥ä½œå¹´é™ï¼š</label>
-                                    <input id="username" name="userworkexperience" required="required" type="text" placeholder="3å¹´"/>
+                                <p style="padding-left:30%;"> 
+                                    <label for="userworkexperience" class="uname" data-icon="u" > ¹¤×÷ÄêÏŞ£º</label>
+                                    <input id="username" name="userworkexperience" required="required" type="text" placeholder="3Äê"/>
                                 </p><br><br>
-                                <p> 
-                                    <label for="useremail" class="youpasswd" data-icon="p">    é‚®ç®±        ï¼š   </label>
-                                    <input id="password" name="useremail" required="required" type="text" placeholder="469975732@qqã€‚com" /> 
+                                <p style="padding-left:30%;"> 
+                                    <label for="useremail" class="youpasswd" data-icon="p">    ÓÊÏä        £º   </label>
+                                    <input id="password" name="useremail" required="required" type="text" placeholder="469975732@qq¡£com" /> 
                                 </p><br><br>
-                                 <p> 
-                                    <label for="userposition" class="youpasswd" data-icon="p">     å²—ä½       ï¼š </label>
+                                 <p style="padding-left:30%;"> 
+                                    <label for="userposition" class="youpasswd" data-icon="p">     ¸ÚÎ»       £º </label>
                                     <input id="password" name="userposition" required="required" type="text" placeholder="FullStack Developer" /> 
-                                </p><br><br>
-                                  <p> 
-                                    <label for="useraddress" class="youpasswd" data-icon="p">     æ‰€åœ¨åœ°ï¼š  </label>
+                                </p ><br><br>
+                                  <p style="padding-left:30%;"> 
+                                    <label for="useraddress" class="youpasswd" data-icon="p">     ËùÔÚµØ£º  </label>
                                     <input id="password" name="useraddress" required="required" type="text" placeholder="Harbin" /> 
                                 </p><br><br>
-                                 <p> 
-                                    <label for="userprice" class="youpasswd" data-icon="p">       æ—¥è–ªï¼š  </label>
+                                 <p style="padding-left:30%;"> 
+                                    <label for="userprice" class="youpasswd" data-icon="p">       ÈÕĞ½£º  </label>
                                     <input id="password" name="userprice" required="required" type="text" placeholder="for 8 hours" /> 
                                 </p><br><br>
-                                  <p> 
-                                    <label for="userskill" class="youpasswd" data-icon="p">        ä¸ªäººæŠ€èƒ½ï¼š </label>
+                                  <p style="padding-left:30%;"> 
+                                    <label for="userskill" class="youpasswd" data-icon="p">        ¸öÈË¼¼ÄÜ£º </label>
                                     <input id="password" name="userskill" required="required" type="text" placeholder="Java EE/Anroid" /> 
                                 </p><br><br>
-                                  <p> 
-                                    <label for="userdescribe" class="youpasswd" data-icon="p">  é¡¹ç›®ç»éªŒï¼š</label>
-                                    <input id="password" name="userdescribe" required="true" type="text" placeholder="è¯·è¯¦ç»†å¡«å†™ä½ åœ¨å·¥ä½œä¸­åŠä¸šä½™æ—¶é—´å‚ä¸çš„é¡¹ç›®ï¼Œä»¥åŠæ‚¨åœ¨é¡¹ç›®ä¸­å®Œæˆçš„å·¥ä½œ" /> 
+                                  <p style="padding-left:30%;"> 
+                                    <label for="userdescribe" class="youpasswd" data-icon="p">  ÏîÄ¿¾­Ñé£º</label>
+                                    <input id="password" name="userdescribe" required="required" type="text" placeholder="ÇëÏêÏ¸ÌîĞ´ÄãÔÚ¹¤×÷ÖĞ¼°ÒµÓàÊ±¼ä²ÎÓëµÄÏîÄ¿£¬ÒÔ¼°ÄúÔÚÏîÄ¿ÖĞÍê³ÉµÄ¹¤×÷" /><br><br>
+                                    <input type="submit" align="center" value="Ìá½»ĞÅÏ¢"/> 
                                 </p><br><br>
-                                <input type="submit" align = "right"value="æäº¤ä¿¡æ¯"/>
                          </div>     
                                 
-  </form>
-  </div>
+                                    
+
+   
   
+
+   
+    </form>
+    
+  </div>
+<div id="footer">    
 <div class="copyright">Copyright by codebeautifier</div>
 
 </body>

@@ -217,6 +217,7 @@ public class UserAction extends ActionSupport
                 + "' where username = '" + username + "'";
         System.out.println("bug is here");
         int i = dao.executeUpdate(sql);
+        dao.close();
         if (i > -1)
         {
             return "success";
@@ -236,6 +237,7 @@ public class UserAction extends ActionSupport
         System.out.println(sql);
         System.out.println("bug is here");
         int i = dao.executeUpdate(sql);
+        dao.close();
         if (i > -1)
         {
             return "success";
@@ -246,6 +248,10 @@ public class UserAction extends ActionSupport
     public String checkfirmdata()
     {
         HttpSession session = ServletActionContext.getRequest().getSession();
+        if (session.getAttribute("username") == null)
+        {
+            return "pleaselogin";
+        }
         String username = session.getAttribute("username").toString();
         String sql = "select user.firmname as firmname,user.firmaddress as firmaddress,user.firmcode as firmcode,user.firmmodel as firmmodel,user.firmtime as firmtime from user where user.username = "
                 + "'" + username + "'";
@@ -276,6 +282,7 @@ public class UserAction extends ActionSupport
                     return "publish";
                 }
             }
+            dao.close();
         }
         catch (SQLException e)
         {
@@ -289,8 +296,11 @@ public class UserAction extends ActionSupport
 
     public String checkpersondata()
     {
-        System.out.println("bug is here");
         HttpSession session = ServletActionContext.getRequest().getSession();
+        if (session.getAttribute("username") == null)
+        {
+            return "pleaselogin";
+        }
         String username = session.getAttribute("username").toString();
         System.out.println(username);
         if (username == null)
@@ -317,14 +327,17 @@ public class UserAction extends ActionSupport
                         || (session.getAttribute("userskill").toString() == null)
                         || (session.getAttribute("usercompany").toString() == null))
                 {
+                    dao.close();
                     return "pleaseaddif";
                 }
                 else
                 {
                     System.out.println("ming ming shi null le2");
+                    dao.close();
                     return "selectproject";
                 }
             }
+            dao.close();
         }
         catch (SQLException e)
         {
@@ -334,6 +347,33 @@ public class UserAction extends ActionSupport
         }
         return "selectproject";
 
+    }
+
+    public String userdata()
+    {
+        HttpSession session = ServletActionContext.getRequest().getSession();
+        String username = session.getAttribute("username").toString();
+        String sql = "select * from user where username='" + username + "'";
+        ResultSet rS = dao.executeQuery(sql);
+        try
+        {
+            if (rS.next())
+            {
+                session.setAttribute("username", getUsername());
+                session.setAttribute("username", getUserskill());
+                session.setAttribute("username", getUseraddress());
+                session.setAttribute("username", getUseremail());
+                return "success";
+            }
+            dao.close();
+            return "error";
+        }
+        catch (SQLException e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return "loginout";
+        }
     }
 
 }

@@ -15,6 +15,7 @@
 </action>
 <action name="checkpersondata" class="com.UserAction" method="checkpersondata">
 <result name="pleaseaddif">/completepsif.jsp</result>
+<result name="pleaselogin">/login.jsp</result>
 <result name="selectproject" type="chain">bid</result>
 </action>
 <action name="completefirm" class="com.UserAction" method="completefirm">
@@ -28,7 +29,12 @@
 <action name="checkfirmdata" class="com.UserAction" method="checkfirmdata">
 <result name="pleaseaddif">/completefirmif.jsp</result>
 <result name="publish">/publish.jsp</result>
+<result name="pleaselogin">/login.jsp</result>
 <result name="error">/loginerror.jsp</result>
+</action>
+<action name="userdata" class="com.UserAction" method="userdata">
+
+<result name="success">/personaldata.jsp</result>
 </action>
 <action name="Personlist" class="com.PersonAction" method="showlist">
 <result name ="success">/personlist.jsp</result>

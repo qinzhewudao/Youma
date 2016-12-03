@@ -14,17 +14,22 @@
 </head>
 <div id="mainContainer">  
       <div id="Header">
-      <div id="menu">
-              <li><a href="personlist.jsp">找人</a></li>
-                    <li ><a href="index.jsp">找项目</a></li>
-
-                    <li><a href="index.jsp">查看需求</a></li>
+<div id="menu">
+                    <li style ="padding-left:20%;"><a href="index1.jsp">作品与服务</a></li>
                     <li><a href="checkfirmdata">发布需求</a></li>
-                     <li><a href="personaldata.jsp">个人中心</a></li>
+                    <s:if test="#session.username!=null" > 
+                    <!--欢迎你:<s:property value="#session.username"/>  --> 
+                    <li><a href="personaldata.jsp">个人中心</a></li>
                     <li><a href="logout.action" >退出</a></li>
-                </div>
+                    </s:if>
+                    <s:else> 
+                    <li ><a href="login.jsp" >登录/注册</a></li>
+                    </s:else>
+                 
+</div>
                   
-            </div> 
+</div> 
+
 
     <div class="message">完善公司方资料</div>
     <div id="center">

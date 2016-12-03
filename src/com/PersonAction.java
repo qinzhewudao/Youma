@@ -1,9 +1,7 @@
 package com;
 
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -153,6 +151,7 @@ public class PersonAction extends ActionSupport
                 System.out.println(set.getString("userskill"));
 
             }
+            connection.close();
 
         }
         catch (SQLException e)
@@ -167,7 +166,6 @@ public class PersonAction extends ActionSupport
 
         String sql = "select * from user where username = '" + UserName + "'";
         irst = findsql(sql);
-        ActionContext.getContext().put("irst", irst);
         return SUCCESS;
     }
 
