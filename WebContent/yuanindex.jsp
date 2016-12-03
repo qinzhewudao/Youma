@@ -6,28 +6,45 @@
 <html lang="zh-cn" class="no-js">
 	<head>
 		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>发现我想开发的项目</title>
+		<meta name="description" content="A responsive, magazine-like website layout with a grid item animation effect when opening the content" />
+		<meta name="keywords" content="grid, layout, effect, animated, responsive, magazine, template, web design" />
+		<meta name="author" content="Codrops" />
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/style4.css" />
-		<!-- CSS Bootstrap & Custom -->
-        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
-		<link href="css/animate.css" rel="stylesheet" media="screen">
-        <link href="css/templatemo_style.css" rel="stylesheet" media="screen">
-       
-        <!-- JavaScripts -->
-     
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script src="js/jquery-1.10.2.min.js"></script>
-        <script src="js/modernizr.js"></script>
-        <script type="text/javascript" src="js/script.js"></script>
 		<script src="js/modernizr.custom.js"></script>
 		<style>
+* { margin: 0; padding: 0;}
+body{
+    background:url(../images/web_login_bg.jpg) no-repeat center;
+    background-size: cover;
+}
+body,html{
+    height:100%;
+    overflow:hidden;
+}
+ul { list-style-type: none;}
+li{float:left;}
 
+.Header{width:100%;margin:0 auto;/*页面得一居中*/height:100px;background:#fff;}
+#menu li{font-size:24px;float:left;list-style:none;cursor: pointer;margin:0 auto;}
+#menu a{color:#000000;text-decoration:none;margin:10px;/*<!--text-decoration:none去掉下划线-->*/padding-top:20px;/*display:block;*/display:block;padding-right:60px;padding-bottom:0px;padding-left:30px;}
+#menu a:hover,a:active{color: #0000ff;}
+#darkbannerwrap {
+    background: url(../images/aiwrap.png);
+    width: 18px;
+    height: 10px;
+    margin: 0 0 20px -58px;
+    position: relative;
+}
 </style>
-</head>
-<body>
+	</head>
+	<body>
+	
 	<div class ="Header">
 
 
@@ -48,47 +65,17 @@
 </div> 
 </div>
 
-  <div class="container">	
-	<div class="scroll-wrap">     
-			<ul class="select">
-		<li class="select-list">
-			<dl id="select1">
-				<dt>项目分类：</dt>
-				<dd class="select-all selected"><a href="#">全部</a></dd>
-				<dd><a href="#">网站开发</a></dd>
-				<dd><a href="#">HTML5应用</a></dd>
-				<dd><a href="#">微信应用</a></dd>
-				<dd><a href="#">移动开发</a></dd>
-				<dd><a href="#">SDK/API开发</a></dd>
-				<dd><a href="#">文档翻译</a></dd>
-			</dl>
-		</li>
-		<li class="select-list">
-			<dl id="select2">
-				<dt>项目状态：</dt>
-				<dd class="select-all selected"><a href="#">全部</a></dd>
-				<dd><a href="#">报名中</a></dd>
-				<dd><a href="#">实施中</a></dd>
-				<dd><a href="#">已完成</a></dd>
-			</dl>
-		</li>
-		<li class="select-list">
-			<dl id="select3">
-				<dt>项目金额：</dt>
-				<dd class="select-all selected"><a href="#">全部</a></dd>
-				<dd><a href="#">1K以下</a></dd>
-				<dd><a href="#">1K~3K</a></dd>
-				<dd><a href="#">3K~10K</a></dd>
-				<dd><a href="#">10K以上</a></dd>
-			</dl>
-		</li>
-		<li class="select-result">
-			<dl>
-				<dt>已选条件：</dt>
-				<dd class="select-no">暂时没有选择过滤条件</dd>
-			</dl>
-		</li>
-	</ul>
+<div class="container">
+	
+			<button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
+			<div id="theSidebar" class="sidebar">
+				<button class="close-button fa fa-fw fa-close"></button>
+				<h1><span>Explore<span> who I want</h1>
+				<nav class="codrops-demos">
+					<a class="current-demo" href="Personlist">推荐开发者</a>
+					<a href="index.jsp">推荐项目</a>
+				</nav>
+			</div>
 			<div id="theGrid" class="main">
 				<ul><%
                ProjectDao itemsDao = new ProjectDao(); 
@@ -98,7 +85,9 @@
                 for(int i=0;i<list.size();i++)
                 {
                    ProjectAction item = list.get(i);
-           %>  	
+           %>  
+				
+	
 					<li><a class="grid__item" href = "projectdetail.jsp?projectname=<%=item.getProjectname()%>">
 						<h2 class="title title--preview"><%=item.getProjectname()%></h2>
 						<div class="loader"></div>
@@ -108,7 +97,8 @@
 							<span class="meta__date"><i class="fa fa-calendar-o"></i><%=item.getProjectprice()%>元</span>
 							<span class="meta__reading-time"><i class="fa fa-clock-o"></i><%=item.getPublishdate()%></span>
 						</div>
-					</a></li>						
+					</a></li>
+						
            <%       
                   }
            %>
@@ -116,12 +106,22 @@
            <%
               } 
            %>  
-</ul>	
-	    </div>			
+</ul>
+					
+					
+					<footer class="page-meta">
+						<span>Load more...</span>
+					</footer>
+					
+			
+			
+			</div>
+			
+			
 		</div><!-- /container -->
+
 		<script src="js/classie.js"></script>
 		<script src="js/main.js"></script>
-		</div>
 	</body>
 </html>
 >

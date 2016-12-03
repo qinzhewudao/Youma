@@ -51,7 +51,7 @@ li{float:left;}
 
 
 <div id="menu">
-              <li style="padding-left:30%;"><a href="Personlist">找人</a></li>
+              <li style="padding-left:20%;"><a href="Personlist">找人</a></li>
                     <li><a href="index.jsp">找项目</a></li>
                     <li><a href="index1.jsp">查看需求</a></li>
                     <li><a href="checkfirmdata">发布需求</a></li>
@@ -67,53 +67,63 @@ li{float:left;}
 </div> 
 </div> 
   <div class="container">
+  <button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
+			<div id="theSidebar" class="sidebar">
+				<button class="close-button fa fa-fw fa-close"></button>
+				<h1><span>Explore<span> who I want</h1>
+				<nav class="codrops-demos">
+					<a class="current-demo" href="Personlist">推荐开发者</a>
+					<a href="index.jsp">推荐项目</a>
+				</nav>
+			</div>
 
 <div id="theGrid" class="main">
 
-   <h1>完善开发者资料</h1>
+   <h1 style="padding-left:30%;">完善开发者资料</h1>
    <form action="completeperson">
    <div class="input_div">
    
 
-                                <p> 
+                                <p style="padding-left:30%;"> 
                                     <label for="usercompany" class="uname" data-icon="u" >      公司名称：</label>
                                     <input id="username" name="usercompany" required="required" type="text" placeholder="建议填写工作过的最著名的公司"/>
-                                </p><br><br>
+                                </p ><br><br>
                                 
-                                <p> 
+                                <p style="padding-left:30%;"> 
                                     <label for="userworkexperience" class="uname" data-icon="u" > 工作年限：</label>
                                     <input id="username" name="userworkexperience" required="required" type="text" placeholder="3年"/>
                                 </p><br><br>
-                                <p> 
+                                <p style="padding-left:30%;"> 
                                     <label for="useremail" class="youpasswd" data-icon="p">    邮箱        ：   </label>
                                     <input id="password" name="useremail" required="required" type="text" placeholder="469975732@qq。com" /> 
                                 </p><br><br>
-                                 <p> 
+                                 <p style="padding-left:30%;"> 
                                     <label for="userposition" class="youpasswd" data-icon="p">     岗位       ： </label>
                                     <input id="password" name="userposition" required="required" type="text" placeholder="FullStack Developer" /> 
-                                </p><br><br>
-                                  <p> 
+                                </p ><br><br>
+                                  <p style="padding-left:30%;"> 
                                     <label for="useraddress" class="youpasswd" data-icon="p">     所在地：  </label>
                                     <input id="password" name="useraddress" required="required" type="text" placeholder="Harbin" /> 
                                 </p><br><br>
-                                 <p> 
+                                 <p style="padding-left:30%;"> 
                                     <label for="userprice" class="youpasswd" data-icon="p">       日薪：  </label>
                                     <input id="password" name="userprice" required="required" type="text" placeholder="for 8 hours" /> 
                                 </p><br><br>
-                                  <p> 
+                                  <p style="padding-left:30%;"> 
                                     <label for="userskill" class="youpasswd" data-icon="p">        个人技能： </label>
                                     <input id="password" name="userskill" required="required" type="text" placeholder="Java EE/Anroid" /> 
                                 </p><br><br>
-                                  <p> 
+                                  <p style="padding-left:30%;"> 
                                     <label for="userdescribe" class="youpasswd" data-icon="p">  项目经验：</label>
-                                    <input id="password" name="userdscribe" required="required" type="text" placeholder="请详细填写你在工作中及业余时间参与的项目，以及您在项目中完成的工作" /> 
+                                    <input id="password" name="userdscribe" required="required" type="text" placeholder="请详细填写你在工作中及业余时间参与的项目，以及您在项目中完成的工作" /><br><br>
+                                    <input type="submit" align="center" value="提交信息"/> 
                                 </p><br><br>
                          </div>     
                                 
                                     
 
    
-  <input type="submit" align="center" value="提交信息"/>
+  
 
    
     </form>
