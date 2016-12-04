@@ -2,12 +2,10 @@
 <<<<<<<=HEAD
 >>>>>>>=refs/remotes/origin/gg
 eclipse.preferences.version=1
-encoding//WebContent/index.jsp=UTF-8
-encoding//WebContent/index1.jsp=UTF-8
-encoding//WebContent/index3.jsp=UTF-8
 encoding//WebContent/persondata.jsp=UTF-8
 encoding//WebContent/personlist.jsp=UTF-8
 encoding//WebContent/register.jsp=UTF-8
+encoding//WebContent/yuanindex2.jsp=UTF-8
 encoding//src/com/BidAction.java=UTF-8
 encoding//src/com/ProjectAction.java=UTF-8
 encoding//src/dao/Dao.java=UTF-8

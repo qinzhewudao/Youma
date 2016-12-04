@@ -153,9 +153,9 @@ public class ProjectAction extends ActionSupport
         System.out.println("bug is here");
         if (i > -1)
         {
-            return "success";
+            return 	SUCCESS;
         }
-        return "error";
+         return ERROR;
     }
     
 	 
