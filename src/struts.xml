@@ -47,6 +47,10 @@
 <result name="success">/publishsuccess.jsp</result>
 <result name="error">/loginerror.jsp</result>
 </action>
+<action name="contract" class="com.ContractAction" method="contract">
+<result name="success">/publishsuccess.jsp</result>
+<result name="error">/loginerror.jsp</result>
+</action>
 <action name="mypublish" class="com.BidAction" method="mypublish">
 <result name="success">/mypublishlist.jsp</result>
 <result name="emptypublish">/loginerror.jsp</result>

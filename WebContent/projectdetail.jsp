@@ -87,8 +87,7 @@ li{float:left;}
                         
                             <h2 style="padding-left:20%">项目名： <input type="text" style="border:0px;BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none"  name="projectname" readonly value = <%=item.getProjectname()%>></h2><br>
                             <span style="padding-left:20%">开发平台:<%=item.getProjectplat()%></span><br><br>
-                            
-                        
+
                                 <img style="padding-left:20%" src="img/authors/1.png" alt="author01" />
                                 <span >发布者<input type="text" style="border:0px;BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none"  name="publisher"  readonly value   = <%=item.getPublisher()%>></span><br><br>
                                 <span style="padding-left:20%"><i class="fa fa-calendar-o"></i>预计价格:<%=item.getProjectprice()%>￥</span><br><br>
@@ -100,13 +99,8 @@ li{float:left;}
                             
               <% 
             }
-          %>
-          
-         
+          %> 
       </form>
-
-            
-            
             </div>
             </div><!-- /container -->
 

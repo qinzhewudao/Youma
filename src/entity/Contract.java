@@ -1,23 +1,26 @@
 /**
  * @Project: software-engineering
- * @Title: Bid.java
+ * @Title: Contract.java
  * @Package entity
  * @Description: TODO
- * @date 2016年11月13日 下午3:39:01
+ * @date 2016年12月5日 下午2:51:45
  * @version V1.0
  */
 package entity;
 
+import java.util.Date;
+
 /**
- * @ClassName Bid
+ * @ClassName Contract
  * @Description TODO
- * @date 2016年11月13日
+ * @date 2016年12月5日
  */
-public class Bid
+public class Contract
 {
     private String bidder;
     private String projectname;
     private String publisher;
+    private Date   contractdate;
 
     public String getBidder()
     {
@@ -47,5 +50,15 @@ public class Bid
     public void setPublisher(String publisher)
     {
         this.publisher = publisher;
+    }
+
+    public Date getContractdate()
+    {
+        return contractdate;
+    }
+
+    public void setContractdate(Date contractdate)
+    {
+        this.contractdate = contractdate;
     }
 }

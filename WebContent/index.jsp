@@ -83,7 +83,6 @@ li{float:left;}
                 {
                    ProjectAction item = list.get(i);
            %>  
-                
     
                     <li><a class="grid__item" href = "projectdetail.jsp?projectname=<%=item.getProjectname()%>">
                         <h2 class="title title--preview"><%=item.getProjectname()%></h2>
@@ -94,8 +93,7 @@ li{float:left;}
                             <span class="meta__date"><i class="fa fa-calendar-o"></i><%=item.getProjectprice()%>元</span>
                             <span class="meta__reading-time"><i class="fa fa-clock-o"></i><%=item.getPublishdate()%></span>
                         </div>
-                    </a></li>
-                        
+                    </a></li>               
            <%       
                   }
            %>
@@ -104,17 +102,13 @@ li{float:left;}
               } 
            %>  
 </ul>
-                    
-                    
+                
                     <footer class="page-meta">
                         <span>Load more...</span>
                     </footer>
-                    
-            
-            
+
             </div>
-            
-            
+
         </div><!-- /container -->
 
         <script src="js/classie.js"></script>

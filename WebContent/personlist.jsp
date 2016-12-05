@@ -81,7 +81,7 @@ li{float:left;}
             </div>
 			<div id="theGrid" class="main">
 			<div class="scroll-wrap">
-				<ul>  <s:iterator value="personlrst" var="c" >
+				<ul><s:iterator value="personlrst" var="c" >
 					<li><s:a class="grid__item" href="Information?UserName=%{#c.username}">
 						<h2 class="title title--preview"><s:property value="#c.username"/> </h2>
 						<div class="loader"></div>

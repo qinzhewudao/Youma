@@ -76,7 +76,7 @@ li{float:left;list-style:none;}
             
             <div id="theGrid" class="main">  
     <s:iterator value="lista" var="c"> 
-    <li><a class="grid__item" href = "makecontract.action">
+    <li><a class="grid__item" href = "contract.action?projectname=<s:property value="#c.projectname"/>&bidder=<s:property value="#c.bidder"/>">
                         <h2 class="title title--preview">项目名: <s:property value="#c.projectname"/></h2>
                         <pr>
                         <span class="category">投标者：<s:property value="#c.bidder" /></span>

@@ -173,9 +173,7 @@ public class BidAction
             {
                 Bid Bid = new Bid();
                 Bid.setBidder(rS.getString("bidder"));
-                System.out.println(Bid.getBidder());
                 Bid.setProjectname(getProjectname());
-                System.out.println(Bid.getProjectname());
                 lista.add(Bid);
             }
             dao.close();

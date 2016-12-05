@@ -74,15 +74,14 @@ li{float:left;}
                 
              <ul><s:iterator value="irst" var ="c" >
             
-             <h1 style="padding-left:20%">用户职位：<s:property value="#c.userposition"/></h1><br>   
-                        
+                        <h1 style="padding-left:20%">用户职位：<s:property value="#c.userposition"/></h1><br>
                         <h2 style="padding-left:20%">用户名：<s:property value="#c.username"/> </h2><br>
-                          <span style="padding-left:20%"><i class="fa fa-calendar-o"></i>预估薪资： <s:property value="#c.userprice"/> </span><br><br>
-                         <span style="padding-left:20%"><i class="fa fa-clock-o"></i>工作经验：<s:property value="#c.userworkexperience"/> </span><br><br>
-                          <img style="padding-left:20%" src="img/authors/1.png" alt="author01" />
-                          <span >个人技能：<s:property value="#c.userskill"/></span><br><br>
-                          <span style="padding-left:20%">从业公司：<s:property value="#c.usercompany"/></span><br><br>
-                           <span style="padding-left:20%">个人简历：<s:property value="#c.userdescribe"/></span><br> 
+                        <span style="padding-left:20%"><i class="fa fa-calendar-o"></i>预估薪资： <s:property value="#c.userprice"/> </span><br><br>
+                        <span style="padding-left:20%"><i class="fa fa-clock-o"></i>工作经验：<s:property value="#c.userworkexperience"/> </span><br><br>
+                        <img style="padding-left:20%" src="img/authors/1.png" alt="author01" />
+                        <span >个人技能：<s:property value="#c.userskill"/></span><br><br>
+                        <span style="padding-left:20%">从业公司：<s:property value="#c.usercompany"/></span><br><br>
+                        <span style="padding-left:20%">个人简历：<s:property value="#c.userdescribe"/></span><br> 
                     </s:iterator></ul>  
 
     

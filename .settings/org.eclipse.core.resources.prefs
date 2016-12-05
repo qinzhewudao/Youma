@@ -2,6 +2,7 @@
 <<<<<<<=HEAD
 >>>>>>>=refs/remotes/origin/gg
 eclipse.preferences.version=1
+encoding//WebContent/jquery.jsp=UTF-8
 encoding//WebContent/register.jsp=UTF-8
 encoding//src/com/ProjectAction.java=UTF-8
 encoding//src/dao/Dao.java=UTF-8

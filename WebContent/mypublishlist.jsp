@@ -72,18 +72,12 @@ li{float:left;}
     <li><a class="grid__item" href = "mypublishbid?projectname=<s:property value="#c.projectname"/>">
                         <h2 class="title title--preview">项目名:<s:property value="#c.projectname"/></h2>
                         <span class="category">发布者：<s:property value="#c.publisher"/></span>
-                        <span class="category">投标详情</span>
-                        </a></li>
-                    </s:iterator>
-                    </ul>
-                    </div>
-    
-                    
-            
-            
-            </div>
-            
-            
+                        <span class="category">投标详情</span></a>
+     </li>
+     </s:iterator>
+           </ul>
+                </div>
+           </div>
         </div><!-- /container -->
 
         <script src="js/classie.js"></script>
