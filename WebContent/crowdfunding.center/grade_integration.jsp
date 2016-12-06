@@ -11,7 +11,7 @@
 <meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
 <!-- 搜索关键字 -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>某经融公司股权众筹站点</title>
+<title>星级和积分介绍</title>
 
 <!-- Bootstrap -->
 <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -27,10 +27,11 @@
 <div class="my_info_title">星级和积分介绍</div>
 <div class="grade_integration_content">
   <p class="grade_integration_content_title">一、会员级别说明如下</p>
-  <p class="grade_integration_content_content"> 某经融公司众筹平台的会员级别共分为5个等级，分别为：一星会员（注册会员）、二星会员、三星会员、四星会员、五星会员，五星级领人则为最高等级上限，跟投人升级到五星后再升级时，则为一星级领投人，通过积分或投资经验等条逐步升级。<br>
-    用户类别分为：注册会员、项目方、领投人、跟投人四种角色。<br>
-    领投人星级不是单由投资金额和活跃度来确定，如是知名投资人、投资机构、机构投资人可通过相应的条件项直接设置为相应星级投资人，如五星基础积分就是100万分。<br>
-    项目方也是通过创业经验和相关条件来设定标准。<a href="" target="_blank">（查看领投人规则说明）</a><br>
+  <p class="grade_integration_content_content"> 本众包平台的会员级别共分为5个等级，分别为：一星会员（注册会员）、二星会员、三星会员、四星会员、五星会员则为最高等级上限。<br>
+    用户类别分为：注册会员、项目方、开发者三种角色。<br>
+ <br>
+    开发者通过开发经验和相关条件来设定标准。<br>
+  项目方通过发布项目的可靠性，真实性及信誉度等来设定标准<br>
     会员级别的升降均由系统自动处理，无需申请。<br>
     会员级别由成长值决定，成长值越高会员等级越高，享受到的会员权益越大。<br>
     <br>
@@ -39,19 +40,19 @@
 </div>
 <div class="grade_integration_content">
   <p class="grade_integration_content_title">二、会员级别规则</p>
-  <p class="grade_integration_content_content">某经融公司众筹平台货币简称T币，天使积分不能折现。<br>
+  <p class="grade_integration_content_content"><br>
     会员级别的升降均由系统自动处理，无需申请。<br>
     所有的会员都需要是认证会员。<br>
     会员级别由成长值决定，成长值越高会员等级越高，享受到的会员权利越大。<br>
-    一星级会员不能兑换T币。<br>
-    会员例如使用优惠券、电子优惠卡、话费充值值卡的部分不加入到成长值中。<br>
-    会员账号禁止转借或转让他人使用，如因转借或转让他人使用所带来的一切后果，某经融公司众筹平台概不负责，如被某经融公司众筹平台发现有转借或转让使用情况，某经融公司众筹平台则有权立即取消此会员账号的相应级别资格。<br>
-    <br>
+<br>
+<br>
+ 项目方的成长值与发布项目的真实性，款项结算时效，及开发者的评价和反馈相关<br>
+ 开发者的成长值与投标项目的网站的活跃度，投标项目个数的合理性，及投标成功交付代码的质量及项目方的评价与反馈相关   <br>
     会员级别是以三个维度增长：<br>
-    一是通过投资额度和发布的项目数来加增加成长值。<br>
+    一是通过投标和发布的项目数来加增加成长值。<br>
     二是您的操作行为来加增加成长值。<br>
-    三是通过项目方和投资人本身的投资从业经验，资源、人脉等确定<a href="" target="_blank">（查看领投人规则说明）</a></p>
-  <p class="grade_integration_content_table">
+    三是通过项目方和开发者本身的项目经验，人员反馈、评价等确定</p>
+  <!-- <p class="grade_integration_content_table">
   <table class="table table-bordered text-center">
     <tr class="active">
       <td width="110">会员等级划分</td>
@@ -181,8 +182,8 @@
   <p class="grade_integration_content_title">五、会员积分有什么用？</p>
   <p class="grade_integration_content_content">布项目越多，评级越高；<br>
     投资额度越大，评级越高；<br>
-    信息越全，评论越多评级越高即活跃度越高，评级越高</p>
-</div>
+    信息越全，评论越多评级越高即活跃度越高，评级越高</p>-->
+</div> 
 
 <!-- 结束 --> 
 <script src="../js/jquery-2.1.1.min.js"></script> 

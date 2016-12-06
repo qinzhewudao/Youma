@@ -245,6 +245,10 @@ public class UserAction extends ActionSupport
     public String checkfirmdata()
     {
         HttpSession session = ServletActionContext.getRequest().getSession();
+        if (session.getAttribute("username") == null)
+        {
+            return "pleaselogin";
+        }
         String username = session.getAttribute("username").toString();
         String sql = "select user.firmname as firmname,user.firmaddress as firmaddress,user.firmcode as firmcode,user.firmmodel as firmmodel,user.firmtime as firmtime from user where user.username = "
                 + "'" + username + "'";
@@ -275,6 +279,7 @@ public class UserAction extends ActionSupport
                     return "publish";
                 }
             }
+           /* dao.close();*/
         }
         catch (SQLException e)
         {
@@ -285,6 +290,7 @@ public class UserAction extends ActionSupport
         return "publish";
 
     }
+
 
     public String checkpersondata()
     {

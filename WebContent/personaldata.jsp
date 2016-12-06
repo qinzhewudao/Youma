@@ -89,17 +89,7 @@
         </ul>
       </div>
     </div>
-    <div class="menu">
-      <div class="menu_title"> 我的星级和积分 </div>
-      <div class="menu_list">
-        <ul class="list-unstyled">
-          <li id="listClick11" class="" onClick="listClick(11)"><img src="img/member_center/left_icon_9.png"> 星级和积分介绍</li>
-       <!--  <li id="listClick12" class="" onClick="listClick(12)"> <img src="img/member_center/left_icon_12.png"> 积分纪录</li> -->  
-          <li id="listClick13" class="" onClick="listClick(13)"> <img src="img/member_center/left_icon_13.png"> 积分规则</li><br>
-        </ul>
-      </div>
-    </div>
-  <!--  -->  <div class="menu">
+     <div class="menu">
       <div class="menu_title"> 我的消息 </div>
       <div class="menu_list">
         <ul class="list-unstyled">
@@ -109,6 +99,17 @@
         </ul>
       </div>
     </div>
+    <div class="menu">
+      <div class="menu_title"> 我的星级和积分 </div>
+      <div class="menu_list">
+        <ul class="list-unstyled">
+          <li id="listClick11" class="" onClick="listClick(11)"><img src="img/member_center/left_icon_9.png"> 星级和积分介绍</li><br><br><br>
+       <!--  <li id="listClick12" class="" onClick="listClick(12)"> <img src="img/member_center/left_icon_12.png"> 积分纪录</li> -->  
+         <!--  <li id="listClick13" class="" onClick="listClick(13)"> <img src="img/member_center/left_icon_13.png"> 积分规则</li><br> -->
+        </ul>
+      </div>
+    </div>
+  <!--  --> 
   </div>
   <div class="col-lg-9">
   	<iframe name="left" id="crowdfunding_iframe" src="crowdfunding.center/my_info.jsp" frameborder="false" scrolling="no" style="border:none;" width="100%" height="1045" allowtransparency="true"></iframe>
@@ -158,7 +159,7 @@
 <span class="back_top_jt_span">返回顶部</span>
 <img id="back_top_wx" class="back_top2" onMouseMove="float_call_me(5)" onMouseOut="float_call_me(6)" src="img/index/back_top_wx.png">
 <span class="back_top_wx_span"><img src="img/index/bottom_QRcode.png"></span>
-<a href="tencent://message/?uin=666666&Site=&Menu=yes"><img id="back_top_qq" class="back_top3" onMouseMove="float_call_me(3)" onMouseOut="float_call_me(4)" src="img/index/back_top_qq.png"></a>
+<a href="tencent://message/?uin=1686290133&Site=&Menu=yes"><img id="back_top_qq" class="back_top3" onMouseMove="float_call_me(3)" onMouseOut="float_call_me(4)" src="img/index/back_top_qq.png"></a>
 <span class="back_top_qq_span"><font class="glyphicon glyphicon-hand-right">&nbsp;QQ咨询热线</font></span>
 <img id="back_top_call" class="back_top4" onMouseMove="float_call_me(1)" onMouseOut="float_call_me(2)" src="img/index/back_top_call.png">
 <span class="back_top_call_span"><font class="glyphicon glyphicon-phone-alt">&nbsp;131-1560-1178</font></span>
