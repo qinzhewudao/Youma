@@ -59,6 +59,10 @@
 <result name="success">/mybidlist.jsp</result>
 <result name="emptybid">/loginerror.jsp</result>
 </action>
+<action name="mycontract" class="com.ContractAction" method="mycontract">
+<result name="success">/mycontractlist.jsp</result>
+<result name="emptycontract">/loginerror.jsp</result>
+</action>
 <action name="mypublishbid" class="com.BidAction" method="mypublishbid">
 <result name="success">/mypublishbidlist.jsp</result>
 <result name="emptybided">/loginerror.jsp</result>

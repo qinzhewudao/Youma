@@ -38,8 +38,6 @@
 	</div>
 	<!-- End Preloader -->
 	
-	
-
         <!-- Header -->
         <header id="header" class="site-header" role="banner">
 	    <div class="container">

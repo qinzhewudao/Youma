@@ -3,14 +3,27 @@
 >>>>>>>=refs/remotes/origin/gg
 eclipse.preferences.version=1
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+encoding//WebContent/crowdfunding.center/apply_lingtou.jsp=UTF-8
+encoding//WebContent/crowdfunding.center/apply_refund.jsp=UTF-8
+encoding//WebContent/crowdfunding.center/grade_integration.jsp=UTF-8
+encoding//WebContent/crowdfunding.center/integration_rule.jsp=UTF-8
+encoding//WebContent/crowdfunding.center/my_account.jsp=UTF-8
+encoding//WebContent/crowdfunding.center/my_info.jsp=UTF-8
+encoding//WebContent/personaldata.jsp=UTF-8
+>>>>>>> refs/remotes/origin/final_sy
 encoding//WebContent/persondata.jsp=UTF-8
 encoding//WebContent/personlist.jsp=UTF-8
 >>>>>>> refs/remotes/origin/final_sy
 encoding//WebContent/register.jsp=UTF-8
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 encoding//WebContent/yuanindex2.jsp=UTF-8
+=======
+>>>>>>> refs/remotes/origin/final_sy
 encoding//src/com/BidAction.java=UTF-8
 >>>>>>> refs/remotes/origin/final_sy
 encoding//src/com/ProjectAction.java=UTF-8

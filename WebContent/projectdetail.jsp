@@ -2,6 +2,7 @@
 <%@taglib uri="/struts-tags" prefix="s" %>
 <%@page import="dao.ProjectDao"%>
 <%@page import="com.ProjectAction"%>
+<%@page import="com.ContractAction"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="zh-cn" class="no-js">
 <head>
@@ -83,8 +84,7 @@ li{float:left;}
              ProjectAction item = itemDao.getProjectActionByname(request.getParameter("projectname"));
              if(item!=null)
              {
-          %>            
-                        
+          %>                
                             <h2 style="padding-left:20%">项目名： <input type="text" style="border:0px;BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none"  name="projectname" readonly value = <%=item.getProjectname()%>></h2><br>
                             <span style="padding-left:20%">开发平台:<%=item.getProjectplat()%></span><br><br>
 
