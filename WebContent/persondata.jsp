@@ -39,6 +39,7 @@ li{float:left;}
     margin: 0 0 20px -58px;
     position: relative;
 }
+
 </style>
 
 </head>
@@ -46,7 +47,13 @@ li{float:left;}
     
     <div class ="Header">
 <div id="menu">
+<<<<<<< HEAD
                     <li style ="padding-left:20%;"><a href="index1.jsp">作品与服务</a></li>
+=======
+              <li style="padding-left:30%"><a href="Personlist">找人</a></li>
+                    <li><a href="index.jsp">找项目</a></li>
+                    <li><a href="index1.jsp">查看需求</a></li>
+>>>>>>> refs/remotes/origin/final_sy
                     <li><a href="checkfirmdata">发布需求</a></li>
                     <s:if test="#session.username!=null" > 
                     <!--欢迎你:<s:property value="#session.username"/>  --> 
@@ -69,9 +76,7 @@ li{float:left;}
                     <h2><a href="index.jsp">探索项目</a></h2>
                 </nav>
             </div>
-            <div id="theGrid" class="main">
-            
-                
+            <div id="theGrid" class="main">   
              <ul><s:iterator value="irst" var ="c" >
             
                         <h1 style="padding-left:20%">用户职位：<s:property value="#c.userposition"/></h1><br>
@@ -83,7 +88,6 @@ li{float:left;}
                         <span style="padding-left:20%">从业公司：<s:property value="#c.usercompany"/></span><br><br>
                         <span style="padding-left:20%">个人简历：<s:property value="#c.userdescribe"/></span><br> 
                     </s:iterator></ul>  
-
     
             </div>  
         </div><!-- /container -->
@@ -93,4 +97,5 @@ li{float:left;}
         <script src="js/classie.js"></script>
         <script src="js/main.js"></script>
     </body>
+
 </html>

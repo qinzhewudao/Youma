@@ -6,6 +6,7 @@
 <html lang="zh-cn" class="no-js">
 <head>
 <meta charset="UTF-8" />
+<<<<<<< HEAD
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>发现我想开发的项目</title>
@@ -18,6 +19,20 @@
         <link rel="stylesheet" type="text/css" href="css/style4.css" />
         <script src="js/modernizr.custom.js"></script>
         <style>
+=======
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>发现我想开发的项目</title>
+		<meta name="description" content="A responsive, magazine-like website layout with a grid item animation effect when opening the content" />
+		<meta name="keywords" content="grid, layout, effect, animated, responsive, magazine, template, web design" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style4.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<style>
+>>>>>>> refs/remotes/origin/final_sy
 * { margin: 0; padding: 0;}
 body{
     background:url(../images/web_login_bg.jpg) no-repeat center;
@@ -51,11 +66,21 @@ li{float:left;}
 
 
 <div id="menu">
+<<<<<<< HEAD
                     <li style ="padding-left:20%;"><a href="index1.jsp">作品与服务</a></li>
+=======
+              <li style="padding-left:20%;"><a href="Personlist">找人</a></li>
+                    <li><a href="index.jsp">找项目</a></li>
+                    <li><a href="index1.jsp">查看需求</a></li>
+>>>>>>> refs/remotes/origin/final_sy
                     <li><a href="checkfirmdata">发布需求</a></li>
                     <s:if test="#session.username!=null" > 
                     <!--欢迎你:<s:property value="#session.username"/>  --> 
+<<<<<<< HEAD
                     <li><a href="personaldata.jsp">个人中心</a></li>
+=======
+                     <li><a href="personaldata.jsp">个人中心</a></li>
+>>>>>>> refs/remotes/origin/final_sy
                     <li><a href="logout.action" >退出</a></li>
                     </s:if>
                     <s:else> 
@@ -65,6 +90,7 @@ li{float:left;}
 </div>
 </div> 
   <div class="container">
+<<<<<<< HEAD
             <button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
             <div id="theSidebar" class="sidebar">
                 <button class="close-button fa fa-fw fa-close"></button>
@@ -74,6 +100,17 @@ li{float:left;}
                     <h2><a class="current-demo"href="index.jsp">探索项目</a></h2>
                 </nav>
             </div>
+=======
+  <button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
+			<div id="theSidebar" class="sidebar">
+				<button class="close-button fa fa-fw fa-close"></button>
+				<h1><span>Explore<span> who I want</h1>
+				<nav class="codrops-demos">
+					<a class="current-demo" href="Personlist">推荐开发者</a>
+					<a href="index.jsp">推荐项目</a>
+				</nav>
+			</div>
+>>>>>>> refs/remotes/origin/final_sy
 
 <div id="theGrid" class="main">
 
@@ -113,7 +150,11 @@ li{float:left;}
                                 </p><br><br>
                                   <p style="padding-left:30%;"> 
                                     <label for="userdescribe" class="youpasswd" data-icon="p">  项目经验：</label>
+<<<<<<< HEAD
                                     <input id="password" name="userdescribe" required="required" type="text" placeholder="请详细填写你在工作中及业余时间参与的项目，以及您在项目中完成的工作" /><br><br>
+=======
+                                    <input id="password" name="userdscribe" required="required" type="text" placeholder="请详细填写你在工作中及业余时间参与的项目，以及您在项目中完成的工作" /><br><br>
+>>>>>>> refs/remotes/origin/final_sy
                                     <input type="submit" align="center" value="提交信息"/> 
                                 </p><br><br>
                          </div>     

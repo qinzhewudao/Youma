@@ -2,6 +2,16 @@
 <<<<<<<=HEAD
 >>>>>>>=refs/remotes/origin/gg
 eclipse.preferences.version=1
+<<<<<<< HEAD
+=======
+encoding//WebContent/persondata.jsp=UTF-8
+encoding//WebContent/personlist.jsp=UTF-8
+>>>>>>> refs/remotes/origin/final_sy
 encoding//WebContent/register.jsp=UTF-8
+<<<<<<< HEAD
+=======
+encoding//WebContent/yuanindex2.jsp=UTF-8
+encoding//src/com/BidAction.java=UTF-8
+>>>>>>> refs/remotes/origin/final_sy
 encoding//src/com/ProjectAction.java=UTF-8
 encoding//src/dao/Dao.java=UTF-8

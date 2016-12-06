@@ -59,7 +59,7 @@ li{float:left;}
                     <s:else> 
                     <li ><a href="login.jsp" >登录/注册</a></li>
                     </s:else>
-                 
+               
 </div>  
 </div> 
 <div class="container">
@@ -95,14 +95,16 @@ li{float:left;}
                         <h2 style="padding-left:20%">项目描述： <input type="submit" value="投标"  style=" color:red;" /> </h2><br>
                             <p style="padding-left:20%"><%=item.getProjectdescribe()%></p>
                              
-                            
-                            
               <% 
             }
+
           %> 
+
       </form>
+
             </div>
             </div><!-- /container -->
+
 
         <script src="js/classie.js"></script>
         <script src="js/main.js"></script>

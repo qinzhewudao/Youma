@@ -39,16 +39,16 @@ li{float:left;}
 <div class ="Header">
  
 <div id="menu">
-                    <li style ="padding-left:20%;"><a href="index1.jsp">作品与服务</a></li>
-                    <li><a href="checkfirmdata">发布需求</a></li>
-                    <s:if test="#session.username!=null" > 
-                    <!--欢迎你:<s:property value="#session.username"/>  --> 
-                    <li><a href="personaldata.jsp">个人中心</a></li>
-                    <li><a href="logout.action" >退出</a></li>
-                    </s:if>
-                    <s:else> 
-                    <li ><a href="login.jsp" >登录/注册</a></li>
-                    </s:else>
+            <li style ="padding-left:20%;"><a href="index1.jsp">作品与服务</a></li>
+            <li><a href="checkfirmdata">发布需求</a></li>
+            <s:if test="#session.username!=null" > 
+            <!--欢迎你:<s:property value="#session.username"/>  --> 
+            <li><a href="personaldata.jsp">个人中心</a></li>
+            <li><a href="logout.action" >退出</a></li>
+            </s:if>
+            <s:else> 
+            <li ><a href="login.jsp" >登录/注册</a></li>
+            </s:else>
                  
 </div> 
 </div> 
@@ -70,15 +70,18 @@ li{float:left;}
             <ul>
     <s:iterator value="lista" var="c"> 
     <li><a class="grid__item" href = "mypublishbid?projectname=<s:property value="#c.projectname"/>">
-                        <h2 class="title title--preview">项目名:<s:property value="#c.projectname"/></h2>
-                        <span class="category">发布者：<s:property value="#c.publisher"/></span>
-                        <span class="category">投标详情</span></a>
-     </li>
-     </s:iterator>
-           </ul>
-                </div>
-           </div>
-        </div><!-- /container -->
+			<h2 class="title title--preview">项目名<s:property value="#c.projectname"/></h2>
+			<span class="category">发布者：<s:property value="#c.publisher"/></span>
+			<span class="category">投标详情</span>
+			</a></li>
+	</s:iterator>
+	</ul>
+	</div>
+	
+
+			</div>
+
+		</div><!-- /container -->
 
         <script src="js/classie.js"></script>
         <script src="js/main.js"></script>

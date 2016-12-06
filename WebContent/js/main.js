@@ -1,211 +1,126 @@
-/**
- * main.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2015, Codrops
- * http://www.codrops.com
- */
-(function() {
+$(document).ready(function() {
 
-	var bodyEl = document.body,
-		docElem = window.document.documentElement,
-		support = { transitions: Modernizr.csstransitions },
-		// transition end event name
-		transEndEventNames = { 'WebkitTransition': 'webkitTransitionEnd', 'MozTransition': 'transitionend', 'OTransition': 'oTransitionEnd', 'msTransition': 'MSTransitionEnd', 'transition': 'transitionend' },
-		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
-		onEndTransition = function( el, callback ) {
-			var onEndCallbackFn = function( ev ) {
-				if( support.transitions ) {
-					if( ev.target != this ) return;
-					this.removeEventListener( transEndEventName, onEndCallbackFn );
-				}
-				if( callback && typeof callback === 'function' ) { callback.call(this); }
-			};
-			if( support.transitions ) {
-				el.addEventListener( transEndEventName, onEndCallbackFn );
-			}
-			else {
-				onEndCallbackFn();
-			}
-		},
-		gridEl = document.getElementById('theGrid'),
-		sidebarEl = document.getElementById('theSidebar'),
-		gridItemsContainer = gridEl.querySelector('section.grid'),
-		contentItemsContainer = gridEl.querySelector('section.content'),
-		gridItems = gridItemsContainer.querySelectorAll('.grid__item'),
-		contentItems = contentItemsContainer.querySelectorAll('.content__item'),
-		closeCtrl = contentItemsContainer.querySelector('.close-button'),
-		current = -1,
-		lockScroll = false, xscroll, yscroll,
-		isAnimating = false,
-		menuCtrl = document.getElementById('menu-toggle'),
-		menuCloseCtrl = sidebarEl.querySelector('.close-button');
+    $('#example1').bind('click', function(e) {
+        e.preventDefault();
+        $.Zebra_Dialog('<strong>Zebra_Dialog</strong>, a small, compact and highly configurable dialog box plugin for jQuery');
+    });
 
-	/**
-	 * gets the viewport width and height
-	 * based on http://responsejs.com/labs/dimensions/
-	 */
-	function getViewport( axis ) {
-		var client, inner;
-		if( axis === 'x' ) {
-			client = docElem['clientWidth'];
-			inner = window['innerWidth'];
-		}
-		else if( axis === 'y' ) {
-			client = docElem['clientHeight'];
-			inner = window['innerHeight'];
-		}
-		
-		return client < inner ? inner : client;
-	}
-	function scrollX() { return window.pageXOffset || docElem.scrollLeft; }
-	function scrollY() { return window.pageYOffset || docElem.scrollTop; }
+    $('#example2_1').bind('click', function(e) {
+        e.preventDefault();
+        $.Zebra_Dialog('<strong>Zebra_Dialog</strong> has no dependencies other than <em>jQuery 1.5.2+</em> and works in all major' +
+            ' browsers like<br>- Firefox<br>- Opera<br>- Safari<br>- Chrome<br>- Internet Explorer 6+', {
+            'type':     'error',
+            'title':    'Error'
+        });
+    });
 
-	function init() {
-		initEvents();
-	}
+    $('#example2_2').bind('click', function(e) {
+        e.preventDefault();
+        $.Zebra_Dialog('<strong>Zebra_Dialog</strong> is meant to replace JavaScript\'s <em>alert</em> and <em>confirmation</em>' +
+            ' dialog boxes. <br><br> Can also be used as a notification widget - when configured to show no buttons and to close' +
+            ' automatically - for updates or errors, without distracting users from their browser experience by displaying obtrusive alerts.', {
+            'type':     'warning',
+            'title':    'Warning'
+        });
+    });
 
-	function initEvents() {
-		[].slice.call(gridItems).forEach(function(item, pos) {
-			// grid item click event
-			item.addEventListener('click', function(ev) {
-				ev.preventDefault();
-				if(isAnimating || current === pos) {
-					return false;
-				}
-				isAnimating = true;
-				// index of current item
-				current = pos;
-				// simulate loading time..
-				classie.add(item, 'grid__item--loading');
-				setTimeout(function() {
-					classie.add(item, 'grid__item--animate');
-					// reveal/load content after the last element animates out (todo: wait for the last transition to finish)
-					setTimeout(function() { loadContent(item); }, 500);
-				}, 1000);
-			});
-		});
+    $('#example2_3').bind('click', function(e) {
+        e.preventDefault();
+        $.Zebra_Dialog('<strong>Zebra_Dialog</strong> can generate 5 types of dialog boxes: confirmation, information, ' +
+            ' warning, error and question.<br><br>The appearance of the dialog boxes is easily customizable by changing the CSS file ', {
+            'type':     'question',
+            'title':    'Question'
+        });
+    });
 
-		closeCtrl.addEventListener('click', function() {
-			// hide content
-			hideContent();
-		});
+    $('#example2_4').bind('click', function(e) {
+        e.preventDefault();
+        $.Zebra_Dialog('<strong>Zebra_Dialog</strong> dialog boxes can be positioned anywhere on the screen - not just in the middle!' +
+            '<br><br>By default, dialog boxes can be closed by pressing the ESC key or by clicking anywhere on the overlay.', {
+            'type':     'information',
+            'title':    'Information'
+        });
+    });
 
-		// keyboard esc - hide content
-		document.addEventListener('keydown', function(ev) {
-			if(!isAnimating && current !== -1) {
-				var keyCode = ev.keyCode || ev.which;
-				if( keyCode === 27 ) {
-					ev.preventDefault();
-					if ("activeElement" in document)
-    					document.activeElement.blur();
-					hideContent();
-				}
-			}
-		} );
+    $('#example2_5').bind('click', function(e) {
+        e.preventDefault();
+        $.Zebra_Dialog('<strong>Zebra_Dialog</strong> is a small (6KB minified), compact (one JS file, no dependencies other than jQuery 1.5.2+)' +
+            ' and highly configurable dialog box plugin for jQuery meant to replace JavaScript\'s <em>alert</em> and <em>confirmation</em> dialog boxes.', {
+            'type':     'confirmation',
+            'title':    'Confirmation'
+        });
+    });
 
-		// hamburger menu button (mobile) and close cross
-		menuCtrl.addEventListener('click', function() {
-			if( !classie.has(sidebarEl, 'sidebar--open') ) {
-				classie.add(sidebarEl, 'sidebar--open');	
-			}
-		});
+    $('#example3').bind('click', function(e) {
+        e.preventDefault();
+        $.Zebra_Dialog('<strong>Zebra_Dialog</strong>, a small, compact and highly configurable dialog box plugin for jQuery', {
+            'type':     'question',
+            'title':    'Custom buttons',
+            'buttons':  ['Yes', 'No', 'Help'],
+            'onClose':  function(caption) {
+                alert((caption != '' ? '"' + caption + '"' : 'nothing') + ' was clicked');
+            }
+        });
+    });
 
-		menuCloseCtrl.addEventListener('click', function() {
-			if( classie.has(sidebarEl, 'sidebar--open') ) {
-				classie.remove(sidebarEl, 'sidebar--open');
-			}
-		});
-	}
+    $('#example31').bind('click', function(e) {
+        e.preventDefault();
+        $.Zebra_Dialog('<strong>Zebra_Dialog</strong>, a small, compact and highly configurable dialog box plugin for jQuery', {
+            'type':     'question',
+            'title':    'Custom buttons',
+            'buttons':  [
+                            {caption: 'Yes', callback: function() { alert('"Yes" was clicked')}},
+                            {caption: 'No', callback: function() { alert('"No" was clicked')}},
+                            {caption: 'Cancel', callback: function() { alert('"Cancel" was clicked')}}
+                        ]
+        });
+    });
 
-	function loadContent(item) {
-		// add expanding element/placeholder 
-		var dummy = document.createElement('div');
-		dummy.className = 'placeholder';
+    $('#example4').bind('click', function(e) {
+        e.preventDefault();
+        $.Zebra_Dialog('<strong>Zebra_Dialog</strong>, a small, compact and highly configurable dialog box plugin for jQuery', {
+            'title':    'Custom positioning',
+            'position': ['right - 20', 'top + 20']
+        });
+    });
 
-		// set the width/heigth and position
-		dummy.style.WebkitTransform = 'translate3d(' + (item.offsetLeft - 5) + 'px, ' + (item.offsetTop - 5) + 'px, 0px) scale3d(' + item.offsetWidth/gridItemsContainer.offsetWidth + ',' + item.offsetHeight/getViewport('y') + ',1)';
-		dummy.style.transform = 'translate3d(' + (item.offsetLeft - 5) + 'px, ' + (item.offsetTop - 5) + 'px, 0px) scale3d(' + item.offsetWidth/gridItemsContainer.offsetWidth + ',' + item.offsetHeight/getViewport('y') + ',1)';
+    $('#example5').bind('click', function(e) {
+        e.preventDefault();
+        new $.Zebra_Dialog('<strong>Zebra_Dialog</strong>, a small, compact and highly configurable dialog box plugin for jQuery', {
+            'buttons':  false,
+            'modal': false,
+            'position': ['right - 20', 'top + 20'],
+            'auto_close': 2000
+        });
+    });
 
-		// add transition class 
-		classie.add(dummy, 'placeholder--trans-in');
+    $('#example6').bind('click', function(e) {
+        e.preventDefault();
+        $.Zebra_Dialog('<strong>Some dummy content:</strong><br><br>', {
+            source: {'ajax': 'ajax.html'},
+            width: 600,
+            title:  'External content loaded via AJAX'
+        });
+    });
 
-		// insert it after all the grid items
-		gridItemsContainer.appendChild(dummy);
-		
-		// body overlay
-		classie.add(bodyEl, 'view-single');
+    $('#example61').bind('click', function(e) {
+        e.preventDefault();
+        $.Zebra_Dialog('<strong>A Wikipedia page</strong><br><br>', {
+            source: {'iframe': {
+                'src':  'http://en.m.wikipedia.org/wiki/Dialog_box',
+                'height': 500
+            }},
+            width: 800,
+            title:  'External content loaded in an iFrame'
+        });
+    });
 
-		setTimeout(function() {
-			// expands the placeholder
-			dummy.style.WebkitTransform = 'translate3d(-5px, ' + (scrollY() - 5) + 'px, 0px)';
-			dummy.style.transform = 'translate3d(-5px, ' + (scrollY() - 5) + 'px, 0px)';
-			// disallow scroll
-			window.addEventListener('scroll', noscroll);
-		}, 25);
+    $('#example7').bind('click', function(e) {
+        e.preventDefault();
+        new $.Zebra_Dialog('Buy me a coffee if you like this plugin!', {
+            'custom_class': 'myclass',
+            'title': 'Customizing the appearance'
+        });
+    });
 
-		onEndTransition(dummy, function() {
-			// add transition class 
-			classie.remove(dummy, 'placeholder--trans-in');
-			classie.add(dummy, 'placeholder--trans-out');
-			// position the content container
-			contentItemsContainer.style.top = scrollY() + 'px';
-			// show the main content container
-			classie.add(contentItemsContainer, 'content--show');
-			// show content item:
-			classie.add(contentItems[current], 'content__item--show');
-			// show close control
-			classie.add(closeCtrl, 'close-button--show');
-			// sets overflow hidden to the body and allows the switch to the content scroll
-			classie.addClass(bodyEl, 'noscroll');
-
-			isAnimating = false;
-		});
-	}
-
-	function hideContent() {
-		var gridItem = gridItems[current], contentItem = contentItems[current];
-
-		classie.remove(contentItem, 'content__item--show');
-		classie.remove(contentItemsContainer, 'content--show');
-		classie.remove(closeCtrl, 'close-button--show');
-		classie.remove(bodyEl, 'view-single');
-
-		setTimeout(function() {
-			var dummy = gridItemsContainer.querySelector('.placeholder');
-
-			classie.removeClass(bodyEl, 'noscroll');
-
-			dummy.style.WebkitTransform = 'translate3d(' + gridItem.offsetLeft + 'px, ' + gridItem.offsetTop + 'px, 0px) scale3d(' + gridItem.offsetWidth/gridItemsContainer.offsetWidth + ',' + gridItem.offsetHeight/getViewport('y') + ',1)';
-			dummy.style.transform = 'translate3d(' + gridItem.offsetLeft + 'px, ' + gridItem.offsetTop + 'px, 0px) scale3d(' + gridItem.offsetWidth/gridItemsContainer.offsetWidth + ',' + gridItem.offsetHeight/getViewport('y') + ',1)';
-
-			onEndTransition(dummy, function() {
-				// reset content scroll..
-				contentItem.parentNode.scrollTop = 0;
-				gridItemsContainer.removeChild(dummy);
-				classie.remove(gridItem, 'grid__item--loading');
-				classie.remove(gridItem, 'grid__item--animate');
-				lockScroll = false;
-				window.removeEventListener( 'scroll', noscroll );
-			});
-			
-			// reset current
-			current = -1;
-		}, 25);
-	}
-
-	function noscroll() {
-		if(!lockScroll) {
-			lockScroll = true;
-			xscroll = scrollX();
-			yscroll = scrollY();
-		}
-		window.scrollTo(xscroll, yscroll);
-	}
-
-	init();
-
-})();
+});

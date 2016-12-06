@@ -154,9 +154,9 @@ public class ProjectAction extends ActionSupport
         dao.close();
         if (i > -1)
         {
-            return "success";
+            return 	SUCCESS;
         }
-        return "error";
+         return ERROR;
     }
 
     public static ArrayList<Project> findsql(String sql)

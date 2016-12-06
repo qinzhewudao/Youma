@@ -48,12 +48,11 @@ li{float:left;}
 	</head>
 	<body>
 	
+		
 	<div class ="Header">
 
 
 <div id="menu">
-
-
                     <li style ="padding-left:20%;"><a href="index1.jsp">作品与服务</a></li>
                     <li><a href="checkfirmdata">发布需求</a></li>
                     <s:if test="#session.username!=null" > 
@@ -67,6 +66,7 @@ li{float:left;}
                  
 </div> 
 </div>
+
 <div class="container">
 	
             <button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
@@ -79,16 +79,17 @@ li{float:left;}
                     <h2><a href="index.jsp">探索项目</a></h2>
                 </nav>
             </div>
+
 			<div id="theGrid" class="main">
 			<div class="scroll-wrap">
 				<ul><s:iterator value="personlrst" var="c" >
 					<li><s:a class="grid__item" href="Information?UserName=%{#c.username}">
-						<h2 class="title title--preview"><s:property value="#c.username"/> </h2>
+						<h2 class="title title--preview"><s:property value="#c.userposition"/> </h2>
 						<div class="loader"></div>
-						<span class="category"> <s:property value="#c.userworkexperience"/></span>
+						<span class="category"> <s:property value="#c.userworkexperience"/>年经验</span>
 						<div class="meta meta--preview">
 							<img class="meta__avatar" src="img/authors/1.png" alt="author01" /> 
-							<span class="meta__date"><i class="fa fa-calendar-o"></i><s:property value="#c.userprice"/> </span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i><s:property value="#c.userprice"/>/8 hours</span>
 							<span class="meta__reading-time"><i class="fa fa-clock-o"></i><s:property value="#c.username"/></span>
 						</div>
 					</s:a></li>

@@ -64,6 +64,7 @@ li{float:left;list-style:none;}
 </div>  
 </div>
  <div class="container">
+<<<<<<< HEAD
             <button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
             <div id="theSidebar" class="sidebar">
                 <button class="close-button fa fa-fw fa-close"></button>
@@ -75,6 +76,19 @@ li{float:left;list-style:none;}
             </div>
             
             <div id="theGrid" class="main">  
+=======
+	<button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
+			<div id="theSidebar" class="sidebar">
+				<button class="close-button fa fa-fw fa-close"></button>
+				<h1><span>Explore<span> who I want</h1>
+				<nav class="codrops-demos">
+					<a class="current-demo" href="Personlist">推荐开发者</a>
+					<a href="index.jsp">推荐项目</a>
+				</nav>
+			</div>
+			
+			<div id="theGrid" class="main">  
+>>>>>>> refs/remotes/origin/final_sy
     <s:iterator value="lista" var="c"> 
     <li><a class="grid__item" href = "contract.action?projectname=<s:property value="#c.projectname"/>&bidder=<s:property value="#c.bidder"/>">
                         <h2 class="title title--preview">项目名: <s:property value="#c.projectname"/></h2>

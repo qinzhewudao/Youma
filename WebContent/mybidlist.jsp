@@ -86,12 +86,9 @@ li{float:left;}
                         </a></li>
                     </s:iterator>
                     </ul>
-                </div>  
+             </div>  
                     
-                    
-            
-            
-            </div>
+             </div>
             
             
         </div><!-- /container -->
