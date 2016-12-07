@@ -84,13 +84,13 @@ li{float:left;}
 			<div class="scroll-wrap">
 				<ul><s:iterator value="personlrst" var="c" >
 					<li><s:a class="grid__item" href="Information?UserName=%{#c.username}">
-						<h2 class="title title--preview"><s:property value="#c.userposition"/> </h2>
+						<h2 class="title title--preview"><s:property value="#c.username"/> </h2>
 						<div class="loader"></div>
 						<span class="category"> <s:property value="#c.userworkexperience"/>年经验</span>
 						<div class="meta meta--preview">
 							<img class="meta__avatar" src="img/authors/1.png" alt="author01" /> 
 							<span class="meta__date"><i class="fa fa-calendar-o"></i><s:property value="#c.userprice"/>/8 hours</span>
-							<span class="meta__reading-time"><i class="fa fa-clock-o"></i><s:property value="#c.username"/></span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i><s:property value="#c.userposition"/></span>
 						</div>
 					</s:a></li>
 					</s:iterator>

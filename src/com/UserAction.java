@@ -16,6 +16,10 @@ public class UserAction extends ActionSupport
 {
     private Dao    dao = new Dao();
     private String username;
+    private String userrealname;
+    private String usersex;
+    private String userinterest;
+    private String usermoney;
     private String password;
     private String firmname;
     private String firmtime;
@@ -25,6 +29,7 @@ public class UserAction extends ActionSupport
     private String useremail;
     private String userid;
     private String useraddress;
+    private String usercity;
     private String userskill;
     private String userphone;
     private String userposition;
@@ -41,6 +46,46 @@ public class UserAction extends ActionSupport
     public void setUsername(String username)
     {
         this.username = username;
+    }
+
+    public String getUsermoney()
+    {
+        return usermoney;
+    }
+
+    public void setUsermoney(String usermoney)
+    {
+        this.usermoney = usermoney;
+    }
+
+    public String getUserinterest()
+    {
+        return userinterest;
+    }
+
+    public void setUserinterest(String interest)
+    {
+        this.userinterest = userinterest;
+    }
+
+    public String getUsersex()
+    {
+        return usersex;
+    }
+
+    public void setUsersex(String usersex)
+    {
+        this.usersex = usersex;
+    }
+
+    public String getUserrealname()
+    {
+        return userrealname;
+    }
+
+    public void setUserrealname(String userrealname)
+    {
+        this.userrealname = userrealname;
     }
 
     public String getPassword()

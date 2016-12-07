@@ -11,6 +11,7 @@ package com;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
@@ -22,6 +23,7 @@ import org.apache.struts2.ServletActionContext;
 
 import dao.Dao;
 import entity.Contract;
+import entity.User;
 
 /**
  * @ClassName ContractAction
@@ -143,4 +145,46 @@ public class ContractAction
 
         return "success";
     }
+
+    public String contractdetail()
+    {
+        try
+        {
+            Dao connection = new Dao();
+            String sql = "select * from user where username = '" + publisher + "'";
+            String sql1 = "select * from user where username = '" + bidder + "'";
+
+            ResultSet set = connection.executeQuery(sql);
+            while (set.next())
+            {
+                User user = new User();
+                user.setUsername(set.getString("username"));
+                user.setUserprice(set.getInt("userprice"));
+                user.setUserposition(set.getString("userposition"));
+                user.setUserworkexperience(set.getInt("userworkexperience"));
+                user.setUserskill(set.getString("userskill"));
+                user.setUsercompany(set.getString("usercompany"));
+                user.setUserdescribe(set.getString("userdescribe"));
+            }
+            ResultSet set1 = connection.executeQuery(sql);
+            while (set1.next())
+            {
+                User user1 = new User();
+                user1.setUsername(set.getString("username"));
+                user1.setUserprice(set.getInt("userprice"));
+                user1.setUserposition(set.getString("userposition"));
+                user1.setUserworkexperience(set.getInt("userworkexperience"));
+                user1.setUserskill(set.getString("userskill"));
+                user1.setUsercompany(set.getString("usercompany"));
+                user1.setUserdescribe(set.getString("userdescribe"));
+            }
+            connection.close();
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return "success";
+    }
+
 }
