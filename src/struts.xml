@@ -26,6 +26,10 @@
 <result name="error">/loginerror.jsp</result>
 <result name="success">/testsuccess.jsp</result>
 </action>
+<action name="updatemydata" class="com.UserAction" method="updatemydata">
+<result name="error">/loginerror.jsp</result>
+<result name="success">/testsuccess.jsp</result>
+</action>
 <action name="checkfirmdata" class="com.UserAction" method="checkfirmdata">
 <result name="pleaseaddif">/completefirmif.jsp</result>
 <result name="publish">/publish.jsp</result>
@@ -34,7 +38,7 @@
 </action>
 <action name="userdata" class="com.UserAction" method="userdata">
 
-<result name="success">/personaldata.jsp</result>
+<result name="success">/crowdfunding.center/my_info.jsp</result>
 </action>
 <action name="Personlist" class="com.PersonAction" method="showlist">
 <result name ="success">/personlist.jsp</result>

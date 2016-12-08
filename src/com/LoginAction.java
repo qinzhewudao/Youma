@@ -26,9 +26,13 @@ import dao.Dao;
  */
 public class LoginAction extends ActionSupport
 {
-    private Dao    dao = new Dao();
-    private String username;
-    private String password;
+    /**
+     * @Fields serialVersionUID : TODO
+     */
+    private static final long serialVersionUID = 1L;
+    private Dao               dao              = new Dao();
+    private String            username;
+    private String            password;
 
     public String getUsername()
     {
@@ -63,6 +67,18 @@ public class LoginAction extends ActionSupport
                 HttpSession session = ServletActionContext.getRequest().getSession();
                 session.setAttribute("username", getUsername());
                 session.setAttribute("password", getPassword());
+                session.setAttribute("userid", rS.getString("userid"));
+                session.setAttribute("usersex", rS.getString("usersex"));
+                session.setAttribute("userrealname", rS.getString("userrealname"));
+                session.setAttribute("userrecommend", rS.getString("userrecommend"));
+                session.setAttribute("userrecommendphone", rS.getString("userrecommendphone"));
+                session.setAttribute("useremail", rS.getString("useremail"));
+                session.setAttribute("city", rS.getString("city"));
+                session.setAttribute("dist", rS.getString("dist"));
+                session.setAttribute("useraddress", rS.getString("useraddress"));
+                session.setAttribute("usermoneymax", rS.getString("usermoneymax"));
+                session.setAttribute("usermoneymin", rS.getString("usermoneymin"));
+                session.setAttribute("userinterest", rS.getString("userinterest"));
                 return "loginin";
             }
             dao.close();

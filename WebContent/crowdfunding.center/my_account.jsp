@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -24,6 +25,105 @@
 </head>
 <body>
 <!-- 开始 -->
+<table class="my_info_content_care_table">
+    <tbody>
+      <tr>
+        <td width="90" align="right" class="color555">用户名：</td>
+        <td class="color555"><s:property value="#session.username"/></td>
+        <br>
+        <br>
+      </tr>
+      <tr>
+        <td align="right" class="color555">手机号码：</td>
+        <td class="color555"><s:property value="#session.userphone"/></td>
+        <br>
+        <br>
+      </tr>
+      <tr>
+        <td align="right" class="color555">真实姓名：</td>
+        <td class="color555"><s:property value="#session.userrealname"/></td> 
+        <br>
+        <br>
+      </tr>
+      <tr>
+        <td align="right" class="color555">性别：</td>
+        <td class="color555"><s:property value="#session.usersex"/></td> 
+        <br>
+        <br>
+      </tr>
+      <br>
+      <tr>
+        <td align="right" class="color555">邮箱：</td>
+        <td class="color555"><s:property value="#session.useremail"/></td> 
+        <br>
+        <br>     
+       </tr>
+      <tr>
+        <td align="right" class="color555">身份证号：</td>
+        <td class="color555"><s:property value="#session.userid"/></td> 
+        <br>
+        <br>    
+      </tr>
+    
+      <tr>
+        <td align="right" class="color555">关注领域：</td>
+        <td class="color555"><s:property value="#session.userinterest"/></td> 
+        <br>
+        <br>
+      </tr>
+      <tr>
+        <td align="right" class="color555">最小悬赏金额：</td>
+        <td class="color555"><s:property value="#session.usermoneymin"/></td> 
+        <br>
+        <br>
+      </tr>
+      <tr>
+        <td align="right" class="color555">最大悬赏金额：</td>
+        <td class="color555"><s:property value="#session.usermoneymax"/></td> 
+        <br>
+        <br>
+      <tr>
+        <td align="right" class="color555">所在城市：</td>
+        <td class="color555"><s:property value="#session.prov"/></td> 
+        <br>
+        <br>
+      </tr>
+      <tr>
+        <td align="right" class="color555">所在地区：</td>
+        <td class="color555"><s:property value="#session.city"/></td> 
+        <br>
+        <br>
+      </tr>
+      <tr>
+        <td align="right" class="color555">所在城区：</td>
+        <td class="color555"><s:property value="#session.dist"/></td> 
+        <br>
+        <br>
+      </tr>
+      <tr>
+        <td align="right" class="color555">通讯地址：</td>
+        <td class="color555"><s:property value="#session.useraddress"/></td> 
+        <br>
+        <br>      
+      </tr>
+      <tr>
+        <td align="right" class="color555">&nbsp;</td>
+        <td class="color555"><span class="color959595 margin_left10 font_size12">友好提示：网站前台页面不会显示您的地址，用于纸质合同的邮寄</span></td>
+      </tr>
+      <tr>
+        <td align="right" class="color555">推荐人姓名：</td>
+        <td class="color555"><s:property value="#session.userrecommend"/></td> 
+        <br>
+        <br>
+       </tr>
+      <tr>
+        <td align="right" class="color555">推荐人电话：</td>
+        <td class="color555"><s:property value="#session.userrecommendphone"/></td> 
+        <br>
+        <br>     
+        </tr>
+    </tbody>
+  </table>
 <div class="my_info_title">我的账户总览</div>
 <div class="my_info_content">
   <div class="my_info_content_care">有码众包平台郑重承诺：<br>
