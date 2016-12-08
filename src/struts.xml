@@ -6,6 +6,10 @@
 <result name="error">/loginerror.jsp</result>
 <result name="loginin">/index.jsp</result>
 </action>
+<action name="updatepassword" class="com.LoginAction" method="updatepassword">
+<result name="success">/testsuccess.jsp</result>
+<result name="unequalpassword">/loginerror.jsp</result>
+</action>
 <action name="logout" class="com.LoginAction" method="logout">  
  <result name="success" type="redirect">/index.jsp</result>  
 </action>  
@@ -35,10 +39,6 @@
 <result name="publish">/publish.jsp</result>
 <result name="pleaselogin">/login.jsp</result>
 <result name="error">/loginerror.jsp</result>
-</action>
-<action name="userdata" class="com.UserAction" method="userdata">
-
-<result name="success">/crowdfunding.center/my_info.jsp</result>
 </action>
 <action name="Personlist" class="com.PersonAction" method="showlist">
 <result name ="success">/personlist.jsp</result>

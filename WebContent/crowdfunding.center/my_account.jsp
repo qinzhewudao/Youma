@@ -25,10 +25,10 @@
 </head>
 <body>
 <!-- 开始 -->
-<table class="my_info_content_care_table">
+<table>
     <tbody>
       <tr>
-        <td width="90" align="right" class="color555">用户名：</td>
+        <td width="300" align="right" class="color555">用户名：</td>
         <td class="color555"><s:property value="#session.username"/></td>
         <br>
         <br>
@@ -107,10 +107,6 @@
         <br>      
       </tr>
       <tr>
-        <td align="right" class="color555">&nbsp;</td>
-        <td class="color555"><span class="color959595 margin_left10 font_size12">友好提示：网站前台页面不会显示您的地址，用于纸质合同的邮寄</span></td>
-      </tr>
-      <tr>
         <td align="right" class="color555">推荐人姓名：</td>
         <td class="color555"><s:property value="#session.userrecommend"/></td> 
         <br>
@@ -124,56 +120,6 @@
         </tr>
     </tbody>
   </table>
-<div class="my_info_title">我的账户总览</div>
-<div class="my_info_content">
-  <div class="my_info_content_care">有码众包平台郑重承诺：<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、您的所有资金都在第三方支付平台存放，某经融公司众筹平台不参与款项的收支；<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、转帐时的开户名必须与您在第三方支付的真实性名一致；<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、多次转帐必须用同一张卡，以便于退款时保障您资金的安全。<br>
-    <br>
-    绑卡成功时效：<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大行T+1天完成（不受节假日影响）；<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小行T+1天完成（受节假日影响）；<br>
-    <br>
-    提现操作时效：<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大行T+1天完成（受节假日影响）；<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小行T+1天完成（受节假日影响）；<br>
-    <br>
-    12家大行（个人）：工商、农业、中国、建设、交通、招商、平安、光大、中信、北京、民生、兴业。<br>
-    7家大行（企业）：工商、农业、建设、交通、平安、民生、兴业。 </div>
-</div>
-<div class="my_info_tbybzh">
-  <div class="my_info_tbybzh_title"> 同步易宝帐号 </div>
-  <div class="my_info_tbybzh_content">
-    <input type="button" class="but" value="同步易宝帐号">
-  </div>
-</div>
-<div class="my_info_czytx">
-  <div class="my_info_czytx_title"> 充值与提现 </div>
-  <div class="my_info_czytx_content">
-    <table class="table table-bordered text-center">
-      <tr class="active">
-        <td>账户可用金额(元)</td>
-        <td>已投资金额(元)</td>
-        <td>已充值金额(元)</td>
-        <td>已提现金额(元)</td>
-      </tr>
-      <tr>
-        <td>0</td>
-        <td>0</td>
-        <td>0<input type="button" class="but_cz" value="充值"></td>
-        <td>0<input type="button" class="but_cz" value="提现"></td>
-      </tr>
-    </table>
-  </div>
-</div>
-<div class="my_info_tbybzh">
-  <div class="my_info_tbybzh_title"> 绑定银行卡 </div>
-  <div class="my_info_tbybzh_content">
-    <input type="button" class="but" value="绑定银行卡">
-  </div>
-</div>
-
 <!-- 结束 --> 
 <script src="../js/jquery-2.1.1.min.js"></script> 
 <script src="../js/my_info.js"></script>

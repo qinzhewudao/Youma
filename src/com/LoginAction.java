@@ -33,6 +33,7 @@ public class LoginAction extends ActionSupport
     private Dao               dao              = new Dao();
     private String            username;
     private String            password;
+    private String            newpassword;
 
     public String getUsername()
     {
@@ -54,6 +55,16 @@ public class LoginAction extends ActionSupport
         this.password = password;
     }
 
+    public String getNewpassword()
+    {
+        return newpassword;
+    }
+
+    public void setNewpassword(String newpassword)
+    {
+        this.newpassword = newpassword;
+    }
+
     public String login()
     {
         String sql = "select * from user where username='" + getUsername() + "' and password ='" + getPassword() + "'";
@@ -73,10 +84,12 @@ public class LoginAction extends ActionSupport
                 session.setAttribute("userrecommend", rS.getString("userrecommend"));
                 session.setAttribute("userrecommendphone", rS.getString("userrecommendphone"));
                 session.setAttribute("useremail", rS.getString("useremail"));
+                session.setAttribute("prov", rS.getString("prov"));
                 session.setAttribute("city", rS.getString("city"));
                 session.setAttribute("dist", rS.getString("dist"));
                 session.setAttribute("useraddress", rS.getString("useraddress"));
                 session.setAttribute("usermoneymax", rS.getString("usermoneymax"));
+                session.setAttribute("userphone", rS.getString("userphone"));
                 session.setAttribute("usermoneymin", rS.getString("usermoneymin"));
                 session.setAttribute("userinterest", rS.getString("userinterest"));
                 return "loginin";
@@ -117,6 +130,34 @@ public class LoginAction extends ActionSupport
         }
         dao.close();
         return "error";
+    }
+
+    public String updatepassword()
+    {
+        HttpSession session = ServletActionContext.getRequest().getSession();
+        String username = session.getAttribute("username").toString();
+        String sql = "update user set password = '" + getNewpassword() + "' where username = '" + username + "'";
+        System.out.println(sql);
+        if (getPassword().equals(session.getAttribute("password").toString()))
+        {
+            System.out.println(getPassword());
+            System.out.println(session.getAttribute("password").toString());
+            int i = dao.executeUpdate(sql);
+            if (i > -1)
+            {
+                session.setAttribute("password", getNewpassword());
+                return "success";
+            }
+            dao.close();
+        }
+        else
+        {
+            System.out.println("budeng ya");
+            System.out.println(getPassword());
+            System.out.println(session.getAttribute("password").toString());
+            return "unequalpassword";
+        }
+        return "success";
     }
 
 }
