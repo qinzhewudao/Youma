@@ -14,6 +14,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>修改密码</title>
 <script language="javascript" type="text/javascript"> 
+function check(form)
+{
+if (form.password.value==""){
+alert("请输入登录密码!");
+return false;
+}
+if (form.newpassword.value==""){
+alert("请输入重复密码!");
+return false;
+}
+if (form.newpassword.value!=form.newpasswordagain.value){
+alert("对不起!重复密码不等于登录密码");
+return false;
+}
+return true; 
+}
+</script>
 
 <!-- Bootstrap -->
 <link href="../css/crowdfunding.center/my_info.css" rel="stylesheet">
@@ -37,7 +54,7 @@
   <div class="my_info_content_care">友好提示：您的个人信息只做发布需求和投标时使用，感谢您对本众包平台的信任和支持！</div>
   
   
-  <form action="updatepassword" method="post" >
+  <form action="updatepassword" method="post"onsubmit="return check(this)" >
   <table class="my_info_content_care_table">
     <tbody>
       <tr>
@@ -58,7 +75,7 @@
           <span class="colorCA1E37 margin_left10 font_size12">请再次输入</span></td>
       </tr>
       <tr>
-        <td align="center" class="color555" colspan="2"><input class="my_info_content_care_table_submit" type="submit" value="申请认证"></td>
+        <td align="center" class="color555" colspan="2"><input class="my_info_content_care_table_submit" type="submit" value="申请认证" onclick="false"></td>
       </tr>
     </tbody>
   </table>
