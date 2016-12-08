@@ -34,7 +34,7 @@ public class ProjectDao
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/software?useUnicode=true&characterEncoding=utf-8&useSSL=false", "root",
-                    "root");
+                    "19960814");
             stat = con.createStatement();
             String sql = "select * from project;"; // SQL语句
             rs = stat.executeQuery(sql);

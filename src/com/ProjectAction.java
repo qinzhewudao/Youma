@@ -154,9 +154,9 @@ public class ProjectAction extends ActionSupport
         dao.close();
         if (i > -1)
         {
-            return 	SUCCESS;
+            return SUCCESS;
         }
-         return ERROR;
+        return ERROR;
     }
 
     public static ArrayList<Project> findsql(String sql)
@@ -200,4 +200,11 @@ public class ProjectAction extends ActionSupport
         ActionContext.getContext().put("projectlrst", projectlrst);
         return SUCCESS;
     }
+<<<<<<< HEAD
+
+    
+    
 }
+
+}
+

@@ -13,6 +13,24 @@
 <!-- 搜索关键字 -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>修改密码</title>
+<script language="javascript" type="text/javascript"> 
+function check(form)
+{
+if (form.password.value==""){
+alert("请输入登录密码!");
+return false;
+}
+if (form.newpassword.value==""){
+alert("请输入重复密码!");
+return false;
+}
+if (form.newpassword.value!=form.newpasswordagain.value){
+alert("对不起!重复密码不等于登录密码");
+return false;
+}
+return true; 
+}
+</script>
 
 <!-- Bootstrap -->
 <link href="../css/crowdfunding.center/my_info.css" rel="stylesheet">
@@ -34,33 +52,34 @@
 </div>
 <div class="my_info_content">
   <div class="my_info_content_care">友好提示：您的个人信息只做发布需求和投标时使用，感谢您对本众包平台的信任和支持！</div>
+  
+  
+  <form action="updatepassword" method="post"onsubmit="return check(this)" >
   <table class="my_info_content_care_table">
     <tbody>
       <tr>
         <td width="300" align="right" class="color555">旧密码：</td>
-        <td class="color555"><input class="my_info_content_care_table_text" name="" type="text">
+        <td class="color555"><input class="my_info_content_care_table_text" name="password" type="text">
           <span class="colorCA1E37 margin_left10 font_size12">请输入旧密码</span></td>
       </tr>
       <tr>
+      </tr>
+      <tr>
         <td align="right" class="color555">新密码：</td>
-        <td class="color555"><input class="my_info_content_care_table_text" name="" type="text">
+        <td class="color555"><input class="my_info_content_care_table_text" name="newpassword" type="password">
           <span class="colorCA1E37 margin_left10 font_size12">请输入新密码</span></td>
       </tr>
       <tr>
         <td align="right" class="color555">确认新密码：</td>
-        <td class="color555"><input class="my_info_content_care_table_text" name="" type="text">
+        <td class="color555"><input class="my_info_content_care_table_text" name="newpasswordagain" type="password">
           <span class="colorCA1E37 margin_left10 font_size12">请再次输入</span></td>
       </tr>
-    <!--   <tr>
-        <td align="right" class="color555">验证码：</td>
-        <td class="color555"><input class="my_info_content_care_table_text" name="" type="text">
-            <span class="color959595 margin_left10 font_size12">请输入验证码</span></td>
-      </tr> -->
       <tr>
-        <td align="center" class="color555" colspan="2"><input class="my_info_content_care_table_submit" name="" type="submit" value="申请认证"></td>
+        <td align="center" class="color555" colspan="2"><input class="my_info_content_care_table_submit" type="submit" value="申请认证" onclick="false"></td>
       </tr>
     </tbody>
   </table>
+  </form>
 </div>
 
 <!-- 结束 --> 

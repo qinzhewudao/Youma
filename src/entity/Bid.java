@@ -48,4 +48,8 @@ public class Bid
     {
         this.publisher = publisher;
     }
+
+    
+    
 }
+>>>>>>> final_sy1

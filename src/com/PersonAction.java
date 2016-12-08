@@ -177,4 +177,8 @@ public class PersonAction extends ActionSupport
         ActionContext.getContext().put("personlrst", personlrst);
         return SUCCESS;
     }
+
+    
+    
 }
+>>>>>>> final_sy1
