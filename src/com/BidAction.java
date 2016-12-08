@@ -3,7 +3,7 @@
  * @Title: BidAction.java
  * @Package com
  * @Description: TODO
- * @date 2016骞�11鏈�12鏃� 涓嬪崍6:49:03
+ * @date 2016年11月12日 下午6:49:03
  * @version V1.0
  */
 package com;
@@ -25,7 +25,7 @@ import entity.Bid;
 /**
  * @ClassName BidAction
  * @Description TODO
- * @date 2016骞�11鏈�12鏃�
+ * @date 2016年11月12日
  */
 public class BidAction
 {
@@ -95,6 +95,7 @@ public class BidAction
         String sql = "insert into bid (projectname,bidder,publisher) values ('" + getProjectname() + "','" + bidder
                 + "','" + getPublisher() + "')";
         int i = dao.executeUpdate(sql);
+        dao.close();
         System.out.println("bug is here");
         if (i > -1)
         {
@@ -117,7 +118,6 @@ public class BidAction
         {
             Bid Bid = new Bid();
             Bid.setProjectname(set.getString("projectname"));
-            Bid.setPublisher(set.getString("publisher"));
             lista.add(Bid);
         }
         this.setLista(lista);
@@ -165,7 +165,7 @@ public class BidAction
 
         String sqlStatement = "SELECT bidder FROM bid where publisher = '" + publisher + "' and projectname = '"
                 + getProjectname() + "'";
-        System.out.println(getProjectname());
+        System.out.println(sqlStatement);
         ResultSet rS = dao.executeQuery(sqlStatement);
         try
         {
@@ -173,16 +173,16 @@ public class BidAction
             {
                 Bid Bid = new Bid();
                 Bid.setBidder(rS.getString("bidder"));
-                System.out.println(Bid.getBidder());
                 Bid.setProjectname(getProjectname());
-                System.out.println(Bid.getProjectname());
                 lista.add(Bid);
             }
+            dao.close();
         }
         catch (SQLException e)
         {
             // TODO Auto-generated catch block
             e.printStackTrace();
+            dao.close();
             return "error";
         }
         this.setLista(lista);

@@ -3,7 +3,7 @@
  * @Title: LoginAction.java
  * @Package com
  * @Description: TODO
- * @date 2016å¹´11æœˆ5æ—¥ ä¸Šåˆ10:48:59
+ * @date 2016Äê11ÔÂ5ÈÕ ÉÏÎç10:48:59
  * @version V1.0
  */
 package com;
@@ -22,7 +22,7 @@ import dao.Dao;
 /**
  * @ClassName LoginAction
  * @Description TODO
- * @date 2016å¹´11æœˆ5æ—¥
+ * @date 2016Äê11ÔÂ5ÈÕ
  */
 public class LoginAction extends ActionSupport
 {
@@ -65,6 +65,7 @@ public class LoginAction extends ActionSupport
                 session.setAttribute("password", getPassword());
                 return "loginin";
             }
+            dao.close();
             return "error";
         }
         catch (SQLException e)
@@ -98,6 +99,7 @@ public class LoginAction extends ActionSupport
             session.setAttribute("password", getPassword());
             return "success";
         }
+        dao.close();
         return "error";
     }
 

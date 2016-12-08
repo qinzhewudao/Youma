@@ -3,7 +3,7 @@
  * @Title: ProjectDao.java
  * @Package dao
  * @Description: TODO
- * @date 2016骞�11鏈�12鏃� 涓嬪崍2:23:26
+ * @date 2016年11月12日 下午2:23:26
  * @version V1.0
  */
 package dao;
@@ -19,16 +19,16 @@ import com.ProjectAction;
 /**
  * @ClassName ProjectDao
  * @Description TODO
- * @date 2016骞�11鏈�12鏃�
+ * @date 2016年11月12日
  */
 public class ProjectDao
-{   
+{
     public ArrayList<ProjectAction> getAllProjectAction()
-    {   
+    {
         Connection con = null;
         Statement stat = null;
         ResultSet rs = null;
-        ArrayList<ProjectAction> list = new ArrayList<ProjectAction>(); // 鍟嗗搧闆嗗悎
+        ArrayList<ProjectAction> list = new ArrayList<ProjectAction>(); // 商品集合
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
@@ -36,7 +36,7 @@ public class ProjectDao
                     "jdbc:mysql://localhost:3306/software?useUnicode=true&characterEncoding=utf-8&useSSL=false", "root",
                     "root");
             stat = con.createStatement();
-            String sql = "select * from project;"; // SQL璇彞
+            String sql = "select * from project;"; // SQL语句
             rs = stat.executeQuery(sql);
             while (rs.next())
             {
@@ -48,9 +48,9 @@ public class ProjectDao
                 item.setPublishdate(rs.getDate("publishdate"));
                 item.setPublisher(rs.getString("publisher"));
                 item.setProjectdescribe(rs.getString("projectdescribe"));
-                list.add(item);// 鎶婁竴涓晢鍝佸姞鍏ラ泦鍚�
+                list.add(item);// 把一个商品加入集合
             }
-            return list; // 杩斿洖闆嗗悎銆�
+            return list; // 返回集合。
         }
         catch (Exception ex)
         {
@@ -59,7 +59,7 @@ public class ProjectDao
         }
         finally
         {
-            // 閲婃斁鏁版嵁闆嗗璞�
+            // 释放数据集对象
             if (rs != null)
             {
                 try
@@ -72,7 +72,7 @@ public class ProjectDao
                     ex.printStackTrace();
                 }
             }
-            // 閲婃斁璇彞瀵硅薄
+            // 释放语句对象
             if (stat != null)
             {
                 try
@@ -88,9 +88,9 @@ public class ProjectDao
         }
     }
 
-    // 鏍规嵁椤圭洰鍚嶇О鍙疯幏寰楀晢鍝佽祫鏂�
+    // 根据项目名称号获得商品资料
     public ProjectAction getProjectActionByname(String projectname)
-    {   System.out.println(projectname);
+    {
         Connection con = null;
         Statement stat = null;
         ResultSet rs = null;
@@ -99,9 +99,9 @@ public class ProjectDao
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/software?useUnicode=true&characterEncoding=utf-8&useSSL=false", "root",
-                    "root");
+                    "19960814");
             stat = con.createStatement();
-            String sql = "select * from project where projectname='" + projectname + "';"; // SQL璇彞
+            String sql = "select * from project where projectname='" + projectname + "';"; // SQL语句
             rs = stat.executeQuery(sql);
             if (rs.next())
             {
@@ -127,7 +127,7 @@ public class ProjectDao
         }
         finally
         {
-            // 閲婃斁鏁版嵁闆嗗璞�
+            // 释放数据集对象
             if (rs != null)
             {
                 try
@@ -140,7 +140,7 @@ public class ProjectDao
                     ex.printStackTrace();
                 }
             }
-            // 閲婃斁璇彞瀵硅薄
+            // 释放语句对象
             if (stat != null)
             {
                 try

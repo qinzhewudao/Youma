@@ -5,6 +5,7 @@
 <action name="login" class="com.LoginAction" method="login">
 <result name="error">/loginerror.jsp</result>
 <result name="loginin">/index.jsp</result>
+<result name="loginout">/1oginerror.jsp</result>
 </action>
 <action name="logout" class="com.LoginAction" method="logout">  
  <result name="success" type="redirect">/index.jsp</result>  
@@ -14,9 +15,9 @@
 <result name="success">/index.jsp</result>
 </action>
 <action name="checkpersondata" class="com.UserAction" method="checkpersondata">
-<result name="error">/completepsif.jsp</result>
-<result name="success">/login.jsp</result>
-<result name="pleaselogin">/pleaselogin.jsp</result>
+<result name="pleaseaddif">/completepsif.jsp</result>
+<result name="pleaselogin">/login.jsp</result>
+<result name="selectproject" type="chain">bid</result>
 </action>
 <action name="completefirm" class="com.UserAction" method="completefirm">
 <result name="error">/loginerror.jsp</result>
@@ -27,10 +28,14 @@
 <result name="success">/testsuccess.jsp</result>
 </action>
 <action name="checkfirmdata" class="com.UserAction" method="checkfirmdata">
-<result name="pleaseaddif">/loginerror.jsp</result>
+<result name="pleaseaddif">/testsuccess.jsp</result>
 <result name="publish">/publish.jsp</result>
 <result name="pleaselogin">/login.jsp</result>
 <result name="error">/loginerror.jsp</result>
+</action>
+<action name="userdata" class="com.UserAction" method="userdata">
+
+<result name="success">/personaldata.jsp</result>
 </action>
 <action name="Personlist" class="com.PersonAction" method="showlist">
 <result name ="success">/personlist.jsp</result>
@@ -43,19 +48,27 @@
 <result name="success">/publishsuccess.jsp</result>
 <result name="error">/loginerror.jsp</result>
 </action>
+<action name="contract" class="com.ContractAction" method="contract">
+<result name="success">/publishsuccess.jsp</result>
+<result name="error">/loginerror.jsp</result>
+</action>
 <action name="mypublish" class="com.BidAction" method="mypublish">
-<result name="success">/project_manage.jsp</result>
+<result name="success">/mypublishlist.jsp</result>
 <result name="emptypublish">/loginerror.jsp</result>
 </action>
 <action name="mybid" class="com.BidAction" method="mybid">
 <result name="success">/mybidlist.jsp</result>
 <result name="emptybid">/loginerror.jsp</result>
 </action>
+<action name="mycontract" class="com.ContractAction" method="mycontract">
+<result name="success">/mycontractlist.jsp</result>
+<result name="emptycontract">/loginerror.jsp</result>
+</action>
 <action name="mypublishbid" class="com.BidAction" method="mypublishbid">
 <result name="success">/mypublishbidlist.jsp</result>
 <result name="emptybided">/loginerror.jsp</result>
 </action>
-<action name="Information" class="com.PersonAction" method="showinformation" >
+<action name="Information" class="com.PersonAction" method="showinformation">
 <result name="success">/persondata.jsp</result>
 </action>
 </package>

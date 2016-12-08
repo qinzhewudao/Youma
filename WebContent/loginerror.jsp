@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -30,7 +30,7 @@ p{color:#fff;margin-top:40px;font-size:24px;}
 
 <body onLoad="redirect();">
 <div class="whole">
-	<img src="images/back.jpg" />
+	<img src="images/slides/slide1.jpg" />
     <div class="mask"></div>
 </div>
 <div class="b">

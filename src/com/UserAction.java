@@ -32,6 +32,7 @@ public class UserAction extends ActionSupport
     private int    userworkexperience;
     private double userprice;
     private String userdescribe;
+
     public String getUsername()
     {
         return username;
@@ -151,6 +152,7 @@ public class UserAction extends ActionSupport
     {
         this.userid = userid;
     }
+
     public double getUserprice()
     {
         return userprice;
@@ -180,6 +182,7 @@ public class UserAction extends ActionSupport
     {
         this.userworkexperience = userworkexperience;
     }
+
     public String getUsercompany()
     {
         return usercompany;
@@ -199,6 +202,7 @@ public class UserAction extends ActionSupport
     {
         this.userdescribe = userdescribe;
     }
+
     public String completefirm()
     {
         HttpSession session = ServletActionContext.getRequest().getSession();
@@ -213,6 +217,7 @@ public class UserAction extends ActionSupport
                 + "' where username = '" + username + "'";
         System.out.println("bug is here");
         int i = dao.executeUpdate(sql);
+        dao.close();
         if (i > -1)
         {
             return "success";
@@ -224,17 +229,15 @@ public class UserAction extends ActionSupport
     {
         HttpSession session = ServletActionContext.getRequest().getSession();
         String username = session.getAttribute("username").toString();
-        System.out.println(getUseremail());
-        System.out.println(getUserskill());
-        System.out.println(getUseraddress());
-        System.out.println(getUserphone());
-        System.out.println(getUserid());
-        System.out.println(getUsercompany());
-        String sql = "update user set usercompany = '"+ getUsercompany() + "',userworkexperience = '" + getUserworkexperience() + "',useremail = '" + getUseremail() + "',userposition = '" + getUserposition() + "',useraddress = '" + getUseraddress() + "',userprice = '" + getUserprice() + "',userskill = '" + getUserskill()
-                + "',userdescribe = '" + getUserdescribe() + "' where username = '" + username + "'";
-        System.out.println(getUsercompany());
+        String sql = "update user set usercompany = '" + getUsercompany() + "',userworkexperience = '"
+                + getUserworkexperience() + "',useremail = '" + getUseremail() + "',userposition = '"
+                + getUserposition() + "',useraddress = '" + getUseraddress() + "',userprice = '" + getUserprice()
+                + "',userskill = '" + getUserskill() + "',userdescribe = '" + getUserdescribe() + "' where username = '"
+                + username + "'";
+        System.out.println(sql);
         System.out.println("bug is here");
         int i = dao.executeUpdate(sql);
+        dao.close();
         if (i > -1)
         {
             return "success";
@@ -279,7 +282,7 @@ public class UserAction extends ActionSupport
                     return "publish";
                 }
             }
-           /* dao.close();*/
+            dao.close();
         }
         catch (SQLException e)
         {
@@ -291,49 +294,50 @@ public class UserAction extends ActionSupport
 
     }
 
-
     public String checkpersondata()
     {
-        System.out.println("bug is here");
         HttpSession session = ServletActionContext.getRequest().getSession();
+        if (session.getAttribute("username") == null)
+        {
+            return "pleaselogin";
+        }
         String username = session.getAttribute("username").toString();
         System.out.println(username);
         if (username == null)
         {
             return "pleaselogin";
         }
-        String sql = "select user.useremail as useremail,user.userskill as userskill,user.userphone as userphone,user.userid as userid,useraddress as useraddress from user where user.username = '"
+        String sql = "select user.useremail as useremail,user.userskill as userskill,usercompany as usercompany from user where user.username = '"
                 + username + "'";
         ResultSet rS = dao.executeQuery(sql);
         try
         {
             while (rS.next())
             {
-                System.out.println(rS.getString("usermail"));
+                System.out.println(rS.getString("useremail"));
                 session.setAttribute("useremail", rS.getString("useremail"));
-                if (session.getAttribute("usermail") == null)
+                if (session.getAttribute("useremail") == null)
                 {
                     System.out.println("ming ming shi null le");
                 }
-                System.out.println(session.getAttribute("usermail"));
                 session.setAttribute("useremail", rS.getString("useremail"));
                 session.setAttribute("userskill", rS.getString("userskill"));
-                session.setAttribute("userphone", rS.getString("userphone"));
-                session.setAttribute("userid", rS.getString("userid"));
-                session.setAttribute("useraddress", rS.getString("useraddress"));
+                session.setAttribute("usercompany", rS.getString("usercompany"));
                 if ((session.getAttribute("useremail").toString() == null)
-                        || (session.getAttribute("userskil").toString() == null)
-                        || (session.getAttribute("userphone").toString() == null)
-                        || (session.getAttribute("userid").toString() == null)
-                        || (session.getAttribute("useraddress").toString() == null))
+                        || (session.getAttribute("userskill").toString() == null)
+                        || (session.getAttribute("usercompany").toString() == null))
                 {
+                    dao.close();
                     return "pleaseaddif";
                 }
                 else
                 {
+                    System.out.println("ming ming shi null le2");
+                    dao.close();
                     return "selectproject";
                 }
             }
+            dao.close();
         }
         catch (SQLException e)
         {
@@ -343,6 +347,33 @@ public class UserAction extends ActionSupport
         }
         return "selectproject";
 
+    }
+
+    public String userdata()
+    {
+        HttpSession session = ServletActionContext.getRequest().getSession();
+        String username = session.getAttribute("username").toString();
+        String sql = "select * from user where username='" + username + "'";
+        ResultSet rS = dao.executeQuery(sql);
+        try
+        {
+            if (rS.next())
+            {
+                session.setAttribute("username", getUsername());
+                session.setAttribute("username", getUserskill());
+                session.setAttribute("username", getUseraddress());
+                session.setAttribute("username", getUseremail());
+                return "success";
+            }
+            dao.close();
+            return "error";
+        }
+        catch (SQLException e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return "loginout";
+        }
     }
 
 }

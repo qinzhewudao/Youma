@@ -54,8 +54,8 @@
 		    <div class="col-md-8">
 			<nav id="navigation" class="hidden-sm hidden-xs">
 			    <ul id="main-nav" class="main-navigation">
-				<li class="current"><a href="Personlist">找人 </a></li>
-				<li><a href="yuanindex2.jsp">找项目</a></li>
+				<li class="current"><a href="personlist.jsp">找人 </a></li>
+				<li><a href="findproject.jsp">找项目</a></li>
 				<li><a href="#portfolio">合同</a></li>
 				<li><a href="checkfirmdata">发布需求</a></li>
 				 <s:if test="#session.username!=null" > 

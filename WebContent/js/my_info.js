@@ -37,7 +37,7 @@ function listClick(value){
 		$("#listClick4", window.parent.document).attr("class","menu_list_on");
 	}
 	if(value == 6){
-		$("#crowdfunding_iframe", window.parent.document).attr("src","mypublish");
+		$("#crowdfunding_iframe", window.parent.document).attr("src","mypublish");    
 		$("#crowdfunding_iframe", window.parent.document).attr("height",1045);
 		$("#listClick6", window.parent.document).attr("class","menu_list_on");
 		$("#listClick7", window.parent.document).attr("class","");
