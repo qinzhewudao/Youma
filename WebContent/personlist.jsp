@@ -29,7 +29,6 @@
 	
 	
 
-<<<<<<< HEAD
         <!-- Header -->
         <header id="header" class="site-header" role="banner">
 	    <div class="container">
@@ -49,12 +48,6 @@
 				<li><a href="#portfolio">合同</a></li>
 				<li><a href="checkfirmdata">发布需求</a></li>
 				 <s:if test="#session.username!=null" > 
-=======
-<div id="menu">
-                    <li style ="padding-left:20%;"><a href="index1.jsp">作品与服务</a></li>
-                    <li><a href="checkfirmdata">发布需求</a></li>
-                    <s:if test="#session.username!=null" > 
->>>>>>> final_sy1
                     <!--欢迎你:<s:property value="#session.username"/>  --> 
                      <li><a href="personaldata.jsp">个人中心</a></li>
                     <li><a href="logout.action" >退出</a></li>
@@ -144,7 +137,6 @@
 	<!-- End Introduction Section -->
 	<div class="copyrights">Collect from <a href="https://github.com/qinzhewudao/software-engineering" title="GITHUB">GITHUB</a></div>
 
-<<<<<<< HEAD
 	
 	<!-- Portfolio Section -->
 	<section id="portfolio" class="content-section clearfix">
@@ -723,38 +715,6 @@
 			</div>
 			<div class="col-md-2 partner-logo">
 			    <img data-toggle="tooltip" title="注意事项" src="images/partner-logo.png" alt="">
-=======
-<div class="container">
-	
-            <button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
-            <div id="theSidebar" class="sidebar">
-                <button class="close-button fa fa-fw fa-close"></button>
-                <h1><span>Explore<span> which I want</h1>
-                <nav class="codrops-demos">
-                    <h2><a class="current-demo" href="Personlist">发现人才</a></h2>
-                    <br>
-                    <h2><a href="index.jsp">探索项目</a></h2>
-                </nav>
-            </div>
-
-			<div id="theGrid" class="main">
-			<div class="scroll-wrap">
-				<ul><s:iterator value="personlrst" var="c" >
-					<li><s:a class="grid__item" href="Information?UserName=%{#c.username}">
-						<h2 class="title title--preview"><s:property value="#c.username"/> </h2>
-						<div class="loader"></div>
-						<span class="category"> <s:property value="#c.userworkexperience"/>年经验</span>
-						<div class="meta meta--preview">
-							<img class="meta__avatar" src="img/authors/1.png" alt="author01" /> 
-							<span class="meta__date"><i class="fa fa-calendar-o"></i><s:property value="#c.userprice"/>/8 hours</span>
-							<span class="meta__reading-time"><i class="fa fa-clock-o"></i><s:property value="#c.userposition"/></span>
-						</div>
-					</s:a></li>
-					</s:iterator>
-					</ul>
-				</div> 
-
->>>>>>> final_sy1
 			</div>
 			<div class="col-md-2 partner-logo">
 			    <img data-toggle="tooltip" title="帮助" src="images/partner-logo.png" alt="">

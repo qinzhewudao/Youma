@@ -11,7 +11,7 @@
 response.setHeader("refresh", "3;URL=index.jsp");//这里的3,是你要确定的时间秒URL是要跳转的地址
 %>
 <font color="red" size="5">success<br> <br>
-三秒后将跳转到主页面 <br> <br> 如果没有跳转,请按 <a href="../my_account.jsp">这里</a>!!!
+三秒后将跳转到主页面 <br> <br> 如果没有跳转,请按 <a href="index.jsp">这里</a>!!!
 <br> </font>
 </body>
 </html>

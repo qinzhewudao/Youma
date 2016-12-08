@@ -7,10 +7,6 @@
 <result name="loginin">/index.jsp</result>
 <result name="loginout">/1oginerror.jsp</result>
 </action>
-<action name="updatepassword" class="com.LoginAction" method="updatepassword">
-<result name="success">/testsuccess.jsp</result>
-<result name="unequalpassword">/loginerror.jsp</result>
-</action>
 <action name="logout" class="com.LoginAction" method="logout">  
  <result name="success" type="redirect">/index.jsp</result>  
 </action>  
@@ -31,15 +27,15 @@
 <result name="error">/loginerror.jsp</result>
 <result name="success">/testsuccess.jsp</result>
 </action>
-<action name="updatemydata" class="com.UserAction" method="updatemydata">
-<result name="error">/loginerror.jsp</result>
-<result name="success">/testsuccess.jsp</result>
-</action>
 <action name="checkfirmdata" class="com.UserAction" method="checkfirmdata">
 <result name="pleaseaddif">/testsuccess.jsp</result>
 <result name="publish">/publish.jsp</result>
 <result name="pleaselogin">/login.jsp</result>
 <result name="error">/loginerror.jsp</result>
+</action>
+<action name="userdata" class="com.UserAction" method="userdata">
+
+<result name="success">/personaldata.jsp</result>
 </action>
 <action name="Personlist" class="com.PersonAction" method="showlist">
 <result name ="success">/personlist.jsp</result>
@@ -54,10 +50,6 @@
 </action>
 <action name="contract" class="com.ContractAction" method="contract">
 <result name="success">/publishsuccess.jsp</result>
-<result name="error">/loginerror.jsp</result>
-</action>
-<action name="contractdetail" class="com.ContractAction" method="contractdetail">
-<result name="success">/contractdetail.jsp</result>
 <result name="error">/loginerror.jsp</result>
 </action>
 <action name="mypublish" class="com.BidAction" method="mypublish">

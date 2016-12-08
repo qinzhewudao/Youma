@@ -1,14 +1,17 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib uri="/struts-tags" prefix="s" %>
-<%@page import="dao.ProjectDao"%>
-<%@page import="com.ProjectAction"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+ 
+<!DOCTYPE html>
 <html lang="zh-cn" class="no-js">
-<head>
-<meta charset="UTF-8" />
+	<head>
+		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>mypublishbidlist</title>
+		<title>发现我需要的人才</title>
 		<meta name="description" content="A responsive, magazine-like website layout with a grid item animation effect when opening the content" />
 		<meta name="keywords" content="grid, layout, effect, animated, responsive, magazine, template, web design" />
 		<meta name="author" content="Codrops" />
@@ -17,7 +20,7 @@
 		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/style4.css" />
 		<script src="js/modernizr.custom.js"></script>
-		<style>
+<style>
 * { margin: 0; padding: 0;}
 body{
     background:url(../images/web_login_bg.jpg) no-repeat center;
@@ -28,7 +31,7 @@ body,html{
     overflow:hidden;
 }
 ul { list-style-type: none;}
-li{float:left;list-style:none;}
+li{float:left;}
 
 .Header{width:100%;margin:0 auto;/*页面得一居中*/height:100px;background:#fff;}
 #menu li{font-size:24px;float:left;list-style:none;cursor: pointer;}
@@ -42,17 +45,17 @@ li{float:left;list-style:none;}
     position: relative;
 }
 </style>
-
-</head>
-<body>
-
-     <div class ="Header">
+	</head>
+	<body>
+	
+		
+	<div class ="Header">
 
 
 <div id="menu">
-              <li><a href="Personlist">找人</a></li>
-                    <li><a href="index.jsp">找项目</a></li>
-                    <li><a href="index1.jsp">查看需求</a></li>
+              <li style ="padding-left:30%;"><a href="Personlist">找人</a></li>
+                    <li ><a href="index.jsp">找项目</a></li>
+                    <li><a href="index1.jsp">作品与服务</a></li>
                     <li><a href="checkfirmdata">发布需求</a></li>
                     <s:if test="#session.username!=null" > 
                     <!--欢迎你:<s:property value="#session.username"/>  --> 
@@ -65,8 +68,10 @@ li{float:left;list-style:none;}
                  
 </div> 
 </div>
- <div class="container">
-	<button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
+
+<div class="container">
+	
+			<button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
 			<div id="theSidebar" class="sidebar">
 				<button class="close-button fa fa-fw fa-close"></button>
 				<h1><span>Explore<span> who I want</h1>
@@ -75,27 +80,26 @@ li{float:left;list-style:none;}
 					<a href="index.jsp">推荐项目</a>
 				</nav>
 			</div>
-			
-			<div id="theGrid" class="main">  
-    <s:iterator value="lista" var="c"> 
-    <li><a class="grid__item" href = "makecontract.action">
-						<h2 class="title title--preview">项目名<s:property value="#c.projectname"/></h2>
-						<span class="category">投标者：<s:property value="#c.bidder" /></span>
-						<h2 >同意该投标</h2>
-						</a></li>
+			<div id="theGrid" class="main">
+			<div class="scroll-wrap">
+				<ul>  <s:iterator value="personlrst" var="c" >
+					<li><s:a class="grid__item" href="Information?UserName=%{#c.username}">
+						<h2 class="title title--preview"><s:property value="#c.userposition"/> </h2>
+						<div class="loader"></div>
+						<span class="category"> <s:property value="#c.userworkexperience"/>年经验</span>
+						<div class="meta meta--preview">
+							<img class="meta__avatar" src="img/authors/1.png" alt="author01" /> 
+							<span class="meta__date"><i class="fa fa-calendar-o"></i><s:property value="#c.userprice"/>/8 hours</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i><s:property value="#c.username"/></span>
+						</div>
+					</s:a></li>
 					</s:iterator>
-	<footer class="page-meta">
-						<span>Load more...</span>
-					</footer>
-					
-			
-			
-			</div>
-			
-			
-		</div><!-- /container -->
+					</ul>
+				</div> 
 
+			</div>
+		</div><!-- /container -->
 		<script src="js/classie.js"></script>
 		<script src="js/main.js"></script>
-</body>
+	</body>
 </html>

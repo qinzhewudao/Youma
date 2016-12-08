@@ -3,11 +3,7 @@
  * @Title: Contract.java
  * @Package entity
  * @Description: TODO
-<<<<<<< HEAD
- * @date 2016å¹´12æœˆ5æ—¥ ä¸‹åˆ2:51:45
-=======
- * @date 2016éªï¿½12éˆï¿½5éƒï¿½ æ¶“å¬ªå´2:51:45
->>>>>>> final_sy1
+ * @date 2016Äê12ÔÂ5ÈÕ ÏÂÎç2:51:45
  * @version V1.0
  */
 package entity;
@@ -17,11 +13,7 @@ import java.util.Date;
 /**
  * @ClassName Contract
  * @Description TODO
-<<<<<<< HEAD
- * @date 2016å¹´12æœˆ5æ—¥
-=======
- * @date 2016éªï¿½12éˆï¿½5éƒï¿½
->>>>>>> final_sy1
+ * @date 2016Äê12ÔÂ5ÈÕ
  */
 public class Contract
 {
@@ -69,8 +61,4 @@ public class Contract
     {
         this.contractdate = contractdate;
     }
-
-    
-    
 }
->>>>>>> final_sy1

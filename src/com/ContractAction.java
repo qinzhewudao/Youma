@@ -4,18 +4,13 @@
  * @Title: ContractAction.java
  * @Package com
  * @Description: TODO
-<<<<<<< HEAD
- * @date 2016å¹´11æœˆ12æ—¥ ä¸‹åˆ5:30:10
-=======
- * @date 2016éªžï¿½11éˆï¿½12éƒï¿½ æ¶“å¬ªå´5:30:10
->>>>>>> final_sy1
+ * @date 2016Äê11ÔÂ12ÈÕ ÏÂÎç5:30:10
  * @version V1.0
  */
 package com;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
@@ -27,12 +22,11 @@ import org.apache.struts2.ServletActionContext;
 
 import dao.Dao;
 import entity.Contract;
-import entity.User;
 
 /**
  * @ClassName ContractAction
  * @Description TODO
- * @date 2016å¹´11æœˆ12æ—¥
+ * @date 2016Äê11ÔÂ12ÈÕ
  */
 public class ContractAction
 {
@@ -149,50 +143,4 @@ public class ContractAction
 
         return "success";
     }
-
-<<<<<<< HEAD
-=======
-    public String contractdetail()
-    {
-        try
-        {
-            Dao connection = new Dao();
-            String sql = "select * from user where username = '" + publisher + "'";
-            String sql1 = "select * from user where username = '" + bidder + "'";
-
-            ResultSet set = connection.executeQuery(sql);
-            while (set.next())
-            {
-                User user = new User();
-                user.setUsername(set.getString("username"));
-                user.setUserprice(set.getInt("userprice"));
-                user.setUserposition(set.getString("userposition"));
-                user.setUserworkexperience(set.getInt("userworkexperience"));
-                user.setUserskill(set.getString("userskill"));
-                user.setUsercompany(set.getString("usercompany"));
-                user.setUserdescribe(set.getString("userdescribe"));
-            }
-            ResultSet set1 = connection.executeQuery(sql);
-            while (set1.next())
-            {
-                User user1 = new User();
-                user1.setUsername(set.getString("username"));
-                user1.setUserprice(set.getInt("userprice"));
-                user1.setUserposition(set.getString("userposition"));
-                user1.setUserworkexperience(set.getInt("userworkexperience"));
-                user1.setUserskill(set.getString("userskill"));
-                user1.setUsercompany(set.getString("usercompany"));
-                user1.setUserdescribe(set.getString("userdescribe"));
-            }
-            connection.close();
-        }
-        catch (SQLException e)
-        {
-            e.printStackTrace();
-        }
-        return "success";
-    }
-
->>>>>>> final_sy1
 }
-
