@@ -56,15 +56,14 @@
 <div class="container border1 nopadding margin10">
   <div id="vertical_navigation" class="col-lg-3 background831312 nopadding">
     <div class="dead_pic"><img src="img/member_center/nopic.jpg.png"><br>
-      <span class="username">用户名</span></div><!-- 传用户名 -->
+      <span class="username"><s:property value="#session.username"/></span></div><!-- 传用户名 -->
     <!--  --><div class="usertype"><br>
-      会员等级：<img style="margin-right:0px;" src="img/member_center/star.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> </div><br>
+            会员等级：<img style="margin-right:0px;" src="img/member_center/star.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> </div><br>
     <div class="menu">
       <div class="menu_title"> 修改资料 </div>
       <div class="menu_list">
         <ul class="list-unstyled">
-          <li id="listClick1" class="menu_list_on" onClick="listClick(1)"><img src="img/member_center/left_icon_1.png"> 基本信息</li>
-      
+          <li id="listClick1" class=""  onClick="listClick(1)"><img src="img/member_center/left_icon_1.png"> 基本信息</li>
           <li id="listClick4" class="" onClick="listClick(4)"> <img src="img/member_center/left_icon_3.png"> 修改密码</li>
         <!--   <li id="listClick5" class="" onClick="listClick(5)"> <img src="img/member_center/left_icon_5.png"> 申请发布资格</li><br> -->
         </ul>
@@ -75,7 +74,8 @@
       <div class="menu_list">
         <ul class="list-unstyled">
           <li id="listClick6" class="" onClick="listClick(6)"><img src="img/member_center/left_icon_6.png"> 我发布的</li>
-          <li id="listClick7" class="" onClick="listClick(7)"> <img src="img/member_center/left_icon_6.png"> 我投标的</li><br>
+          <li id="listClick7" class="" onClick="listClick(7)"> <img src="img/member_center/left_icon_6.png"> 我投标的</li>
+          <a href = "mycontract.action"><li id="listClick7" class=""> <img src="img/member_center/left_icon_6.png"> 我的合同</li></a><br>
         </ul>
       </div>
     </div>
@@ -83,13 +83,23 @@
       <div class="menu_title"> 我的信息 </div>
       <div class="menu_list">
         <ul class="list-unstyled">
-          <li id="listClick8" class="" onClick="listClick(8)"><img src="img/member_center/left_icon_8.png"> 我的资料</li>
+          <li id="listClick8" class="menu_list_on" onClick="listClick(8)"><img src="img/member_center/left_icon_8.png"> 我的资料</li>
           <li id="listClick9" class="" onClick="listClick(9)"> <img src="img/member_center/left_icon_9.png"> 我是开发者</li>
           <li id="listClick10" class="" onClick="listClick(10)"> <img src="img/member_center/left_icon_10.png">我是发布方</li><br>
         </ul>
       </div>
     </div>
-     <div class="menu">
+    <div class="menu">
+      <div class="menu_title"> 我的星级和积分 </div>
+      <div class="menu_list">
+        <ul class="list-unstyled">
+          <li id="listClick11" class="" onClick="listClick(11)"><img src="img/member_center/left_icon_9.png"> 星级和积分介绍</li>
+       <!--  <li id="listClick12" class="" onClick="listClick(12)"> <img src="img/member_center/left_icon_12.png"> 积分纪录</li> -->  
+          <li id="listClick13" class="" onClick="listClick(13)"> <img src="img/member_center/left_icon_13.png"> 积分规则</li><br>
+        </ul>
+      </div>
+    </div>
+  <!--  -->  <div class="menu">
       <div class="menu_title"> 我的消息 </div>
       <div class="menu_list">
         <ul class="list-unstyled">
@@ -99,20 +109,9 @@
         </ul>
       </div>
     </div>
-    <div class="menu">
-      <div class="menu_title"> 我的星级和积分 </div>
-      <div class="menu_list">
-        <ul class="list-unstyled">
-          <li id="listClick11" class="" onClick="listClick(11)"><img src="img/member_center/left_icon_9.png"> 星级和积分介绍</li><br><br><br>
-       <!--  <li id="listClick12" class="" onClick="listClick(12)"> <img src="img/member_center/left_icon_12.png"> 积分纪录</li> -->  
-         <!--  <li id="listClick13" class="" onClick="listClick(13)"> <img src="img/member_center/left_icon_13.png"> 积分规则</li><br> -->
-        </ul>
-      </div>
-    </div>
-  <!--  --> 
   </div>
   <div class="col-lg-9">
-  	<iframe name="left" id="crowdfunding_iframe" src="crowdfunding.center/my_info.jsp" frameborder="false" scrolling="no" style="border:none;" width="100%" height="1045" allowtransparency="true"></iframe>
+  	<iframe name="left" id="crowdfunding_iframe" src="crowdfunding.center/my_account.jsp" frameborder="false" scrolling="no" style="border:none;" width="100%" height="1045" allowtransparency="true"></iframe>
   </div>
 </div>
 <!-- 核心 结束 -->  

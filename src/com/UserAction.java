@@ -16,6 +16,13 @@ public class UserAction extends ActionSupport
 {
     private Dao    dao = new Dao();
     private String username;
+    private String userrealname;
+    private String usersex;
+    private String userinterest;
+    private String usermoneymin;
+    private String usermoneymax;
+    private String userrecommend;
+    private String userrecommendphone;
     private String password;
     private String firmname;
     private String firmtime;
@@ -25,6 +32,9 @@ public class UserAction extends ActionSupport
     private String useremail;
     private String userid;
     private String useraddress;
+    private String city;
+    private String prov;
+    private String dist;
     private String userskill;
     private String userphone;
     private String userposition;
@@ -41,6 +51,106 @@ public class UserAction extends ActionSupport
     public void setUsername(String username)
     {
         this.username = username;
+    }
+
+    public String getUserrecommendphone()
+    {
+        return userrecommendphone;
+    }
+
+    public void setUserrecommendphone(String userrecommendphone)
+    {
+        this.userrecommendphone = userrecommendphone;
+    }
+
+    public String getUserrecommend()
+    {
+        return userrecommend;
+    }
+
+    public void setUserrecommend(String userrecommend)
+    {
+        this.userrecommend = userrecommend;
+    }
+
+    public String getCity()
+    {
+        return city;
+    }
+
+    public void setCity(String city)
+    {
+        this.city = city;
+    }
+
+    public void setProv(String prov)
+    {
+        this.prov = prov;
+    }
+
+    public String getProv()
+    {
+        return prov;
+    }
+
+    public void setDist(String dist)
+    {
+        this.dist = dist;
+    }
+
+    public String getDist()
+    {
+        return dist;
+    }
+
+    public String getUsermoneymin()
+    {
+        return usermoneymin;
+    }
+
+    public void setUsermoneymin(String usermoneymin)
+    {
+        this.usermoneymin = usermoneymin;
+    }
+
+    public String getUsermoneymax()
+    {
+        return usermoneymax;
+    }
+
+    public void setUsermoneymax(String usermoneymax)
+    {
+        this.usermoneymax = usermoneymax;
+    }
+
+    public String getUserinterest()
+    {
+        return userinterest;
+    }
+
+    public void setUserinterest(String interest)
+    {
+        this.userinterest = userinterest;
+    }
+
+    public String getUsersex()
+    {
+        return usersex;
+    }
+
+    public void setUsersex(String usersex)
+    {
+        this.usersex = usersex;
+    }
+
+    public String getUserrealname()
+    {
+        return userrealname;
+    }
+
+    public void setUserrealname(String userrealname)
+    {
+        this.userrealname = userrealname;
     }
 
     public String getPassword()
@@ -235,7 +345,41 @@ public class UserAction extends ActionSupport
                 + "',userskill = '" + getUserskill() + "',userdescribe = '" + getUserdescribe() + "' where username = '"
                 + username + "'";
         System.out.println(sql);
-        System.out.println("bug is here");
+        int i = dao.executeUpdate(sql);
+        dao.close();
+        if (i > -1)
+        {
+            return "success";
+        }
+        return "error";
+    }
+
+    public String updatemydata()
+    {
+        HttpSession session = ServletActionContext.getRequest().getSession();
+        String username = session.getAttribute("username").toString();
+        String sql = "update user set useremail = '" + getUseremail() + "',userphone = '" + getUserphone()
+                + "',useraddress = '" + getUseraddress() + "',userinterest = '" + getUserinterest() + "',userid = '"
+                + getUserid() + "',usersex = '" + getUsersex() + "',prov = '" + getProv() + "',dist = '" + getDist()
+                + "',city = '" + getCity() + "',usermoneymax = '" + getUsermoneymax() + "',usermoneymin = '"
+                + getUsermoneymin() + "',userrecommendphone = '" + getUserrecommendphone() + "',userrecommend = '"
+                + getUserrecommend() + "',userrealname = '" + getUserrealname() + "' where username = '" + username
+                + "'";
+        session.setAttribute("userid", getUserid());
+        session.setAttribute("usersex", getUsersex());
+        session.setAttribute("userphone", getUserphone());
+        session.setAttribute("userrealname", getUserrealname());
+        session.setAttribute("userrecommend", getUserrecommend());
+        session.setAttribute("userrecommendphone", getUserrecommendphone());
+        session.setAttribute("useremail", getUseremail());
+        session.setAttribute("city", getCity());
+        session.setAttribute("dist", getDist());
+        session.setAttribute("prov", getProv());
+        session.setAttribute("useraddress", getUseraddress());
+        session.setAttribute("usermoneymax", getUsermoneymax());
+        session.setAttribute("usermoneymin", getUsermoneymin());
+        session.setAttribute("userinterest", getUserinterest());
+        System.out.println(sql);
         int i = dao.executeUpdate(sql);
         dao.close();
         if (i > -1)
@@ -355,14 +499,25 @@ public class UserAction extends ActionSupport
         String username = session.getAttribute("username").toString();
         String sql = "select * from user where username='" + username + "'";
         ResultSet rS = dao.executeQuery(sql);
+        System.out.println(rS);
         try
         {
             if (rS.next())
             {
                 session.setAttribute("username", getUsername());
-                session.setAttribute("username", getUserskill());
-                session.setAttribute("username", getUseraddress());
-                session.setAttribute("username", getUseremail());
+                session.setAttribute("password", getPassword());
+                session.setAttribute("userid", rS.getString("userid"));
+                session.setAttribute("usersex", rS.getString("usersex"));
+                session.setAttribute("userrealname", rS.getString("userrealname"));
+                session.setAttribute("userrecommend", rS.getString("userrecommend"));
+                session.setAttribute("userrecommendphone", rS.getString("userrecommendphone"));
+                session.setAttribute("useremail", rS.getString("useremail"));
+                session.setAttribute("city", rS.getString("city"));
+                session.setAttribute("dist", rS.getString("dist"));
+                session.setAttribute("useraddress", rS.getString("useraddress"));
+                session.setAttribute("usermoneymax", rS.getString("usermoneymax"));
+                session.setAttribute("usermoneymin", rS.getString("usermoneymin"));
+                session.setAttribute("userinterest", rS.getString("userinterest"));
                 return "success";
             }
             dao.close();
