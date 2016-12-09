@@ -33,10 +33,6 @@
 <result name="pleaselogin">/login.jsp</result>
 <result name="error">/loginerror.jsp</result>
 </action>
-<action name="userdata" class="com.UserAction" method="userdata">
-
-<result name="success">/personaldata.jsp</result>
-</action>
 <action name="Personlist" class="com.PersonAction" method="showlist">
 <result name ="success">/personlist.jsp</result>
 </action>
