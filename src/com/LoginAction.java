@@ -140,8 +140,6 @@ public class LoginAction extends ActionSupport
         System.out.println(sql);
         if (getPassword().equals(session.getAttribute("password").toString()))
         {
-            System.out.println(getPassword());
-            System.out.println(session.getAttribute("password").toString());
             int i = dao.executeUpdate(sql);
             if (i > -1)
             {
@@ -152,9 +150,6 @@ public class LoginAction extends ActionSupport
         }
         else
         {
-            System.out.println("budeng ya");
-            System.out.println(getPassword());
-            System.out.println(session.getAttribute("password").toString());
             return "unequalpassword";
         }
         return "success";
