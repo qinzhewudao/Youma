@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -59,6 +60,16 @@
       <span class="username"><s:property value="#session.username"/></span></div><!-- 传用户名 -->
     <!--  --><div class="usertype"><br>
             会员等级：<img style="margin-right:0px;" src="img/member_center/star.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> </div><br>
+              <div class="menu">
+      <div class="menu_title"> 我的信息 </div>
+      <div class="menu_list">
+        <ul class="list-unstyled">
+          <li id="listClick8" class="menu_list_on" onClick="listClick(8)"><img src="img/member_center/left_icon_8.png"> 我的资料</li>
+          <li id="listClick9" class="" onClick="listClick(9)"> <img src="img/member_center/left_icon_9.png"> 我是开发者</li>
+          <li id="listClick10" class="" onClick="listClick(10)"> <img src="img/member_center/left_icon_10.png">我是发布方</li><br>
+        </ul>
+      </div>
+    </div>
     <div class="menu">
       <div class="menu_title"> 修改资料 </div>
       <div class="menu_list">
@@ -75,20 +86,11 @@
         <ul class="list-unstyled">
           <li id="listClick6" class="" onClick="listClick(6)"><img src="img/member_center/left_icon_6.png"> 我发布的</li>
           <li id="listClick7" class="" onClick="listClick(7)"> <img src="img/member_center/left_icon_6.png"> 我投标的</li>
-          <a href = "mycontract.action"><li id="listClick7" class=""> <img src="img/member_center/left_icon_6.png"> 我的合同</li></a><br>
+          <a href = "mycontract.action"><li id="listClick(7)" class=""> <img src="img/member_center/left_icon_6.png"> 我的合同</li></a><br>
         </ul>
       </div>
     </div>
-    <div class="menu">
-      <div class="menu_title"> 我的信息 </div>
-      <div class="menu_list">
-        <ul class="list-unstyled">
-          <li id="listClick8" class="menu_list_on" onClick="listClick(8)"><img src="img/member_center/left_icon_8.png"> 我的资料</li>
-          <li id="listClick9" class="" onClick="listClick(9)"> <img src="img/member_center/left_icon_9.png"> 我是开发者</li>
-          <li id="listClick10" class="" onClick="listClick(10)"> <img src="img/member_center/left_icon_10.png">我是发布方</li><br>
-        </ul>
-      </div>
-    </div>
+  
     <div class="menu">
       <div class="menu_title"> 我的星级和积分 </div>
       <div class="menu_list">

@@ -27,6 +27,10 @@
 <result name="error">/loginerror.jsp</result>
 <result name="success">/testsuccess.jsp</result>
 </action>
+<action name="updatemydata" class="com.UserAction" method="updatemydata">
+<result name="error">/loginerror.jsp</result>
+<result name="success">/testsuccess.jsp</result>
+</action>
 <action name="checkfirmdata" class="com.UserAction" method="checkfirmdata">
 <result name="pleaseaddif">/testsuccess.jsp</result>
 <result name="publish">/publish.jsp</result>
@@ -46,6 +50,10 @@
 </action>
 <action name="contract" class="com.ContractAction" method="contract">
 <result name="success">/publishsuccess.jsp</result>
+<result name="error">/loginerror.jsp</result>
+</action>
+<action name="contractdetail" class="com.ContractAction" method="contractdetail">
+<result name="success">/contractdetail.jsp</result>
 <result name="error">/loginerror.jsp</result>
 </action>
 <action name="mypublish" class="com.BidAction" method="mypublish">

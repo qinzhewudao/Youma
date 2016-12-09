@@ -14,16 +14,17 @@
 <title>完善开发者资料</title>
 
 <!-- Bootstrap -->
-<link href="../css/crowdfunding.center/investment_inquiry.css" rel="stylesheet">
+
 <link href="../css/bootstrap.css" rel="stylesheet">
 <link href="../css/font-awesome.min.css" rel="stylesheet">
 <link href="../css/summernote.css" rel="stylesheet">
 <link href="../css/crowdfunding.center/apply_lingtou.css" rel="stylesheet">
+<link href="../css/crowdfunding.center/my_info.css" rel="stylesheet">
 
 
     <style>
  .input_div{width:100%;}
-.input_div label{width:200px;float:left;text-align:left;}
+.input_div label{width:400px;float:left;text-align:left;}
 .input_div input{width:200px;float:left;}</style>
 </head>
 <body>
