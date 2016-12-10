@@ -138,19 +138,12 @@ public class ProjectAction extends ActionSupport
         java.sql.Date publishdate = new java.sql.Date(utildate.getTime());
         HttpSession session = ServletActionContext.getRequest().getSession();
         String publisher = session.getAttribute("username").toString();
-        System.out.println(getProjectname());
-        System.out.println(getProjectstyle());
-        System.out.println(getProjectplat());
-        System.out.println(getProjectprice());
-        System.out.println(getProjectdescribe());
-        System.out.println(publishdate);
-        System.out.println(publisher);
 
         String sql = "insert into project (projectname,projectstyle,projectplat,projectprice,publishdate,publisher,projectdescribe) values ('"
                 + getProjectname() + "','" + getProjectstyle() + "','" + getProjectplat() + "','" + getProjectprice()
                 + "','" + publishdate + "','" + publisher + "','" + getProjectdescribe() + "')";
         int i = dao.executeUpdate(sql);
-        System.out.println("bug is here");
+        System.out.println(sql);
         dao.close();
         if (i > -1)
         {

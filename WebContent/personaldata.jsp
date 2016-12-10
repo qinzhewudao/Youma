@@ -42,8 +42,8 @@
   <div class="container"> <img src="images/logo.png">
     <ul class="list-inline">
       <li><a href="index.jsp" target="_self">首页</a></li>
-      <li><a href="yuanindex2.jsp" target="_self">查看项目</a></li>
-      <li><a href="Personlist.jsp" target="_self">寻找人才</a></li>
+      <li><a href="findproject.jsp" target="_self">查看项目</a></li>
+      <li><a href="personlist.jsp" target="_self">寻找人才</a></li>
       <li><a href="checkfirmdata" target="_self">发布需求</a></li>
       <li><a href="service_page.jsp" target="_self">服务</a></li>
       <li><a href="" target="_self">新手指南</a></li>
@@ -85,8 +85,8 @@
         <ul class="list-unstyled">
           <li id="listClick6" class="" onClick="listClick(6)"><img src="img/member_center/left_icon_6.png"> 我发布的</li>
           <li id="listClick7" class="" onClick="listClick(7)"> <img src="img/member_center/left_icon_6.png"> 我投标的</li>
-          <a href = "mycontract.action"><li id="listClick(7)" class=""> <img src="img/member_center/left_icon_6.png"> 我的合同</li></a><br>
-        </ul>
+          <a href = "mycontract.action"><li id="listClick12" class=""> <img src="img/member_center/left_icon_6.png"> 我的合同</li><br>
+        </ul></a>
       </div>
     </div>
     <div class="menu">

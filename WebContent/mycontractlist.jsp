@@ -42,40 +42,6 @@ li{float:left;}
 }
 </style>
 
-</head>
-<body><div class ="Header">
-
-
-<div id="menu">
-                    <li style ="padding-left:20%;"><a href="index1.jsp">作品与服务</a></li>
-                    <li><a href="checkfirmdata">发布需求</a></li>
-                    <s:if test="#session.username!=null" > 
-                    <!--欢迎你:<s:property value="#session.username"/>  --> 
-                    <li><a href="personaldata.jsp">个人中心</a></li>
-                    <li><a href="logout.action" >退出</a></li>
-                    </s:if>
-                    <s:else> 
-                    <li ><a href="login.jsp" >登录/注册</a></li>
-                    </s:else>
-                 
-</div>  
-</div>
-
-
-
-<div class="container">
-            <button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
-            <div id="theSidebar" class="sidebar">
-                <button class="close-button fa fa-fw fa-close"></button>
-                <h1><span>Explore<span> which I want</h1>
-                <nav class="codrops-demos">
-                    <h2><a href="Personlist">发现人才</a></h2>
-                    <h2><a class="current-demo"href="index.jsp">探索项目</a></h2>
-                </nav>
-            </div>
-        
-            <div id="theGrid" class="main">
-            <div class="scroll-wrap">
             <ul>
                 <s:iterator value="lista" var="c">  
                 <li><a class="grid__item" href = "contractdetail.action?projectname=<s:property value="#c.projectname"/>&publisher=<s:property value="#c.projectname"/>&bidder=<s:property value="#c.bidder" />">
@@ -93,12 +59,7 @@ li{float:left;}
                         </a></li>
                     </s:iterator>
                     </ul>
-             </div>  
-                    
-             </div>
-            
-            
-        </div><!-- /container -->
+             </div>                       
 
         <script src="js/classie.js"></script>
         <script src="js/main.js"></script>

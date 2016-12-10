@@ -128,7 +128,7 @@ public class UserAction extends ActionSupport
         return userinterest;
     }
 
-    public void setUserinterest(String interest)
+    public void setUserinterest(String userinterest)
     {
         this.userinterest = userinterest;
     }
@@ -341,10 +341,10 @@ public class UserAction extends ActionSupport
         String username = session.getAttribute("username").toString();
         String sql = "update user set usercompany = '" + getUsercompany() + "',userworkexperience = '"
                 + getUserworkexperience() + "',useremail = '" + getUseremail() + "',userposition = '"
-                + getUserposition() + "',useraddress = '" + getUseraddress() + "',userprice = '" + getUserprice()
-                + "',userskill = '" + getUserskill() + "',userdescribe = '" + getUserdescribe() + "' where username = '"
-                + username + "'";
+                + getUserposition() + "',userprice = '" + getUserprice() + "',userskill = '" + getUserskill()
+                + "',userdescribe = '" + getUserdescribe() + "' where username = '" + username + "'";
         System.out.println(sql);
+        session.setAttribute("useremail", getUseremail());
         int i = dao.executeUpdate(sql);
         dao.close();
         if (i > -1)
@@ -373,7 +373,14 @@ public class UserAction extends ActionSupport
         session.setAttribute("userrecommendphone", getUserrecommendphone());
         session.setAttribute("useremail", getUseremail());
         session.setAttribute("city", getCity());
-        session.setAttribute("dist", getDist());
+        if (getDist().equals("null"))
+        {
+            session.setAttribute("dist", "");
+        }
+        else
+        {
+            session.setAttribute("dist", getDist());
+        }
         session.setAttribute("prov", getProv());
         session.setAttribute("useraddress", getUseraddress());
         session.setAttribute("usermoneymax", getUsermoneymax());

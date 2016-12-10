@@ -1,11 +1,9 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags"%>
-
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<%@taglib uri="/struts-tags" prefix="s" %>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<meta charset="utf-8">
 <meta http-equiv="Pragma" content="no-cache"> 
 <meta http-equiv="Cache-Control" content="no-cache"> 
 <meta http-equiv="Expires" content="0"> 
@@ -47,7 +45,7 @@ function firm()
     <div class="message">发布需求</div>
     <div id="darkbannerwrap"></div>
     
-    <form action="publish">
+    <form action="publish" method="post">
     <table align="center">
     <tr>
     <td>项目名称：</td>
@@ -60,10 +58,10 @@ function firm()
     <td>项目类型   ： </td>
     <td>
     <select name="projectstyle" id="select_k2" class="xla_k">
-    <option value="education">教育教学</option>
-    <option value="business">工商管理</option>
-    <option value="system">系统应用</option>
-    <option value="media">影音播放</option>
+    <option value="网站开发">网站开发</option>
+    <option value="HTML5应用">HTML5应用</option>
+    <option value="移动开发">移动开发</option>
+    <option value="微信应用">微信应用</option>
     </select>
     </td>
     </tr>
@@ -74,9 +72,10 @@ function firm()
     <td>开发平台   ： </td>
     <td>
     <select name="projectplat" id="select_k2" class="xla_k">
-    <option value="java">java</option>
+    <option value="java">JAVA</option>
     <option value="c/c++">C/C++</option>
-    <option value="python">python</option>
+    <option value="python">Python</option>
+    <option value="other">Other</option>
     </select>
     </td>
     </tr>
@@ -101,7 +100,6 @@ function firm()
     <tr></tr>
  
     <tr align="center">
- <!-- <td colspan="2"><input type="submit" value="发布需求"/></td> -->   
     <td colspan="2"><input type="submit" name="Submit2" value="发布需求" onclick="firm()" /></td>
     </tr>
     </table>
