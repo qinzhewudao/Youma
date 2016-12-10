@@ -39,34 +39,32 @@
  
 </div>
  
-   <form action="completefirm">
+   <form action="completefirm" method="post">
    <div class="input_div">
-   
-
-                                <p style="padding-left:10%;"> 
-                                    <label for="firmname" class="uname" data-icon="u" >      公司/个人名称：</label>
-                                    <input id="username" name="firmname" required="required" type="text" placeholder="填写较有效力的公司或个人"/>
-                                </p ><br><br>
-                                
-                                <p style="padding-left:10%;"> 
-                                    <label for="firmaddress" class="uname" data-icon="u" > 发布方地址：</label>
-                                    <input id="username" name="firmaddress" required="required" type="text" placeholder="发布需求方的联系地址"/>
-                                </p><br><br>
-                                <p style="padding-left:10%;"> 
-                                    <label for="firmcode" class="youpasswd" data-icon="p">    邮箱        ：   </label>
-                                    <input id="password" name="firmcode" required="required" type="text" placeholder="用于发布项目的联系沟通" /> 
-                                </p><br><br>
-                                 <p style="padding-left:10%;"> 
-                                    <label for="firmmodel" class="youpasswd" data-icon="p">   公司类型      ： </label>
-                                    <input id="password" name="firmmodel" required="required" type="text" placeholder="例：多媒体/实业" /> 
-                                </p ><br><br>
-                                  <p style="padding-left:10%;"> 
-                                    <label for="firmtime" class="youpasswd" data-icon="p">   公司建立时间：  </label>
-                                    <input id="password" name="firmtime" required="required" type="text" placeholder="" /> 
-                                </p><br><br>
-                                   <p style="padding-left:10%;"> 
-                                     <div class="make_head_lingtou_industry">请填写个人简介：</div>
-<div class="make_head_concerned_industry">
+        <p style="padding-left:10%;"> 
+            <label for="firmname" class="uname" data-icon="u" >      公司/个人名称：</label>
+            <input id="username" name="firmname" required="required" type="text" placeholder="填写较有效力的公司或个人"/>
+        </p ><br><br>
+        
+        <p style="padding-left:10%;"> 
+            <label for="firmaddress" class="uname" data-icon="u" > 发布方地址：</label>
+            <input id="username" name="firmaddress" required="required" type="text" placeholder="发布需求方的联系地址"/>
+        </p><br><br>
+        <p style="padding-left:10%;"> 
+            <label for="firmcode" class="youpasswd" data-icon="p">    邮箱        ：   </label>
+            <input id="password" name="firmcode" required="required" type="text" placeholder="用于发布项目的联系沟通" /> 
+        </p><br><br>
+         <p style="padding-left:10%;"> 
+            <label for="firmmodel" class="youpasswd" data-icon="p">   公司类型      ： </label>
+            <input id="password" name="firmmodel" required="required" type="text" placeholder="例：多媒体/实业" /> 
+        </p ><br><br>
+          <p style="padding-left:10%;"> 
+            <label for="firmtime" class="youpasswd" data-icon="p">   公司建立时间：  </label>
+            <input id="password" name="firmtime" required="required" type="text" placeholder="" /> 
+        </p><br><br>
+           <p style="padding-left:10%;"> 
+             <div class="make_head_lingtou_industry">请填写个人简介：</div>
+  <div class="make_head_concerned_industry">
   <div class="make_head_concerned_industry"> 要求写明个人能力、工作、创业、项目经验。请具体到年月、学校专业学历、公司名称部门职务、完成过项目名称等，便于我们做真实性背景调查，否则将不予以受理。
     <div style="height:15px;"></div>
     <div id="editor"></div>

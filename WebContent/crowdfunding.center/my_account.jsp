@@ -90,7 +90,7 @@
       <label for="usercompany" class="uname" data-icon="u" >    
   推荐人姓名：<s:property value="#session.userrecommend"/></label></p ><br><br>
      <p style="padding-left:10%;"> 
-         <label for="usercompany" class="uname" data-icon="u" > 推荐人电话<s:property value="#session.userrecommendphone"/></label></p ><br><br>
+         <label for="usercompany" class="uname" data-icon="u" > 推荐人电话：<s:property value="#session.userrecommendphone"/></label></p ><br><br>
  
   </div>
 <!-- 结束 --> 

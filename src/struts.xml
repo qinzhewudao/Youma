@@ -25,7 +25,7 @@
 </action>
 <action name="completefirm" class="com.UserAction" method="completefirm">
 <result name="error">/loginerror.jsp</result>
-<result name="success">/publish.jsp</result>
+<result name="success">/testsuccess.jsp</result>
 </action>
 <action name="completeperson" class="com.UserAction" method="completeperson">
 <result name="error">/loginerror.jsp</result>

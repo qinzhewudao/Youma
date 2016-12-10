@@ -177,7 +177,7 @@
 			    </div> <!-- //.folio-thumb -->
 			    <div class="folio-desc">
 				<span class="folio-tail"></span>
-				<h4><a href="#">WMS仓库管理系统</a></h4>
+				<h4><a href="projectdetail.jsp?projectname=WMS仓库管理系统">WMS仓库管理系统</a></h4>
 				<h6>金额 ￥50,000</h6>
 			    </div> <!-- //.folio-desc -->
 			</div> <!-- folio-item -->

@@ -126,7 +126,6 @@
 			<img src="images/slides/slide3.jpg" alt="slide-03">    
 		    </li>
 		</ul>
->>>>>>> refs/remotes/origin/final_sy
 
 		<div class="slide-navigation">
 		    <a href="#" class="slide-prev"><i class="fa fa-arrow-left"></i></a>
@@ -153,8 +152,8 @@
 			    <li class="current"><a href="#" data-filter="*">人才列表</a></li>
 			    <li class=""><a href="#" data-filter=".webdesign">IOS工程师</a></li>
 			    <li class=""><a href="#" data-filter=".photography">Android工程师</a></li>
-			    <li class=""><a href="#" data-filter=".branding">前段工程师</a></li>
-			    <li class=""><a href="#" data-filter=".marketing">后端工程师</a></li>
+			    <li class=""><a href="#" data-filter=".branding">前端工程师</a></li>
+			    <li class=""><a href="#" data-filter=".marketing">后台工程师</a></li>
 			    <li class=""><a href="#" data-filter=".product">产品经理</a></li>
 			    <li class=""><a href="#" data-filter=".uidesign">UI设计师</a></li>
 			</ul>
@@ -174,8 +173,8 @@
 			    </div> <!-- //.folio-thumb -->
 			    <div class="folio-desc">
 				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/2622023">IOS负责人</a></h4>
-				<h6>金额 ￥600/8小时</h6>
+				<h4><a href="Information.action?username=qinzhewudao">qinzhewudao</a></h4>
+				<h6>金额 ￥900/8小时</h6>
 			    </div> <!-- //.folio-desc -->
 			</div> <!-- folio-item -->
 			<div class="col-md-3 col-sm-6 folio-item webdesign">

@@ -4,6 +4,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.ServletActionContext;
+
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -15,7 +19,6 @@ public class PersonAction extends ActionSupport
     private static final long serialVersionUID = 1L;
     private String            UserName;
     private String            username;
-
     private String            userposition;
     private String            usercompany;
     private int               userworkexperience;
@@ -54,7 +57,7 @@ public class PersonAction extends ActionSupport
         this.UserName = UserName;
     }
 
-    public String getusername()
+    public String getUsername()
     {
         return username;
     }
@@ -134,21 +137,16 @@ public class PersonAction extends ActionSupport
             ResultSet set = connection.executeQuery(sql);
             while (set.next())
             {
+                HttpServletRequest request = ServletActionContext.getRequest();
                 User user = new User();
-                user.setUsername(set.getString("username"));
-
-                user.setUserprice(set.getInt("userprice"));
-                user.setUserposition(set.getString("userposition"));
-                user.setUserworkexperience(set.getInt("userworkexperience"));
-
-                user.setUserskill(set.getString("userskill"));
-                user.setUsercompany(set.getString("usercompany"));
-                user.setUserdescribe(set.getString("userdescribe"));
+                request.setAttribute("username", set.getString("username"));
+                request.setAttribute("userprice", set.getInt("userprice"));
+                request.setAttribute("userposition", set.getString("userposition"));
+                request.setAttribute("userworkexperience", set.getInt("userworkexperience"));
+                request.setAttribute("userskill", set.getString("userskill"));
+                request.setAttribute("usercompany", set.getString("usercompany"));
+                request.setAttribute("userdescribe", set.getString("userdescribe"));
                 list.add(user);
-
-                System.out.println(set.getString("username"));
-                System.out.println(set.getString("password"));
-                System.out.println(set.getString("userskill"));
 
             }
             connection.close();
@@ -164,7 +162,8 @@ public class PersonAction extends ActionSupport
     public String showinformation() throws SQLException
     {
 
-        String sql = "select * from user where username = '" + UserName + "'";
+        String sql = "select * from user where username = '" + getUsername() + "'";
+        System.out.println(sql);
         irst = findsql(sql);
         return SUCCESS;
     }

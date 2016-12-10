@@ -102,6 +102,7 @@ public class ProjectDao
                     "19960814");
             stat = con.createStatement();
             String sql = "select * from project where projectname='" + projectname + "';"; // SQL语句
+            System.out.println(sql);
             rs = stat.executeQuery(sql);
             if (rs.next())
             {

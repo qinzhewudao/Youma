@@ -77,22 +77,22 @@
       <tr>
         <td align="right" class="color555">关注领域：</td>
         <td class="color555"><label>
-            <input name="userinterest" type="checkbox" value="生活消费" />
+            <input name="userinterest" type="radio" value="生活消费" />
             生活消费</label>
           <label>
-            <input name="userinterest" type="checkbox" value="TMT" />
+            <input name="userinterest" type="radio" value="TMT" />
     TMT </label>
           <label>
-            <input name="userinterest" type="checkbox" value="互联网金融" />
+            <input name="userinterest" type="radio" value="互联网金融" />
             互联网金融 </label>
           <label>
-            <input name="userinterest" type="checkbox" value="房产" />
+            <input name="userinterest" type="radio" value="房产" />
             房产</label>
           <label>
-            <input name="userinterest" type="checkbox" value="社区" />
+            <input name="userinterest" type="radio" value="社区" />
             社区</label>
           <label>
-            <input name="userinterest" type="checkbox" value="城市基础设施" />
+            <input name="userinterest" type="radio" value="城市基础设施" />
             城市基础设施</label></td>
       </tr>
       <tr>

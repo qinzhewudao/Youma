@@ -26,11 +26,10 @@ function listClick(value){
 		$("#listClick4", window.parent.document).attr("class","menu_list_on");
 	}
 	if(value == 6){
-		$("#crowdfunding_iframe", window.parent.document).attr("src","mypublish");    
+		$("#crowdfunding_iframe", window.parent.document).attr("src","http://localhost:8080/software-engineering/mypublish.action");    
 		$("#crowdfunding_iframe", window.parent.document).attr("height",1045);
 		$("#listClick6", window.parent.document).attr("class","menu_list_on");
 		$("#listClick7", window.parent.document).attr("class","");
-		/*$("#listClick4", window.parent.document).attr("class","");*/
 	}
 	if(value == 7){
 		$("#crowdfunding_iframe", window.parent.document).attr("src","crowdfunding.center/touhou_manage.jsp");
@@ -69,14 +68,14 @@ function listClick(value){
 		$("#listClick12", window.parent.document).attr("class","");
 		$("#listClick13", window.parent.document).attr("class","");
 	}
-	/*if(value == 12){
-		$("#crowdfunding_iframe", window.parent.document).attr("src","crowdfunding.center/integration_record.jsp");
+	if(value == 12){
+		$("#crowdfunding_iframe", window.parent.document).attr("src","http://localhost:8080/software-engineering/mycontract.action");
 		$("#crowdfunding_iframe", window.parent.document).attr("height",1045);
 		$("#listClick11", window.parent.document).attr("class","");
 		$("#listClick12", window.parent.document).attr("class","menu_list_on");
 		$("#listClick13", window.parent.document).attr("class","");
 	}
-	if(value == 13){
+	/*if(value == 13){
 		$("#crowdfunding_iframe", window.parent.document).attr("src","crowdfunding.center/integration_rule.jsp");
 		$("#crowdfunding_iframe", window.parent.document).attr("height",1045);
 		$("#listClick11", window.parent.document).attr("class","");
