@@ -1,17 +1,24 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+//¶àÖÖ×ÖÌå´óĞ¡ÏÔÊ¾
+<%@ page language="java" %>
+<%@ page contentType="text/html; charset=GB2312"%>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Hello World</title>
+<meta http-equiv="Content-Type" content="content=text/html; charset=gb2312">
 </head>
-<body>
-<%
-response.setHeader("refresh", "3;URL=index.jsp");//è¿™é‡Œçš„3,æ˜¯ä½ è¦ç¡®å®šçš„æ—¶é—´ç§’URLæ˜¯è¦è·³è½¬çš„åœ°å€
+<body bgcolor="#FFFFFF">
+<center>
+<font size= 5 color=blue>¶àÖÖ×ÖÌå´óĞ¡ÏÔÊ¾</font>
+<center>
+<br>
+<hr>
+<br>
+<div align="center">
+<% 
+//¿ØÖÆÎÄ×Ö´óĞ¡µÄÑ­»·Óï¾ä
+for( int i=1; i<=6; i++ )
+out.println( "<h" + i + ">Hello World!</h" + i + ">" );
 %>
-<font color="red" size="5">success<br> <br>
-ä¸‰ç§’åå°†è·³è½¬åˆ°ä¸»é¡µé¢ <br> <br> å¦‚æœæ²¡æœ‰è·³è½¬,è¯·æŒ‰ <a href="index.jsp">è¿™é‡Œ</a>!!!
-<br> </font>
+</div>
 </body>
 </html>
