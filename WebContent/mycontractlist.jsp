@@ -29,7 +29,6 @@ body,html{
 }
 ul { list-style-type: none;}
 li{float:left;}
-
 .Header{width:100%;margin:0 auto;/*页面得一居中*/height:100px;background:#fff;}
 #menu li{font-size:24px;float:left;list-style:none;cursor: pointer;}
 #menu a{color:#000000;text-decoration:none;margin:10px;/*<!--text-decoration:none去掉下划线-->*/padding-top:20px;/*display:block;*/display:block;padding-right:60px;padding-bottom:0px;padding-left:30px;}

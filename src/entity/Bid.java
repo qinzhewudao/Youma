@@ -3,7 +3,7 @@
  * @Title: Bid.java
  * @Package entity
  * @Description: TODO
- * @date 2016年11月13日 下午3:39:01
+ * @date 2016��11��13�� ����3:39:01
  * @version V1.0
  */
 package entity;
@@ -11,7 +11,7 @@ package entity;
 /**
  * @ClassName Bid
  * @Description TODO
- * @date 2016年11月13日
+ * @date 2016��11��13��
  */
 public class Bid
 {

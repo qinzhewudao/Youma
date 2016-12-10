@@ -19,7 +19,7 @@
 </head>
 <body>
 <!-- 开始 -->
-<div class="my_info_title">我的资料</div>
+<div class="my_info_title">修改基本信息</div>
 <div class="my_info_title_3">
   <ul>
     <li id="listClick_1" onClick="listClick(1)" style="border-bottom: 1px solid #C40521; color: #C40521;">基本资料</li>

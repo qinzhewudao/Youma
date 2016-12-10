@@ -16,110 +16,83 @@
 
 <!-- Bootstrap -->
 <link href="../css/bootstrap.min.css" rel="stylesheet">
-<link href="../css/crowdfunding.center/my_account.css" rel="stylesheet">
-
-<!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<link href="../css/crowdfunding.center/my_info.css" rel="stylesheet">
+       <style>
+ .input_div{width:100%;}
+.input_div label{width:600px;float:left;text-align:left;font-size: 16px;}
+.input_div input{width:200px;float:left;}</style>
 </head>
 <body>
 <!-- 开始 -->
-<table>
-    <tbody>
-      <tr>
-        <td width="300" align="right" class="color555">用户名：</td>
-        <td class="color555"><s:property value="#session.username"/></td>
-        <br>
-        <br>
-      </tr>
-      <tr>
-        <td align="right" class="color555">手机号码：</td>
-        <td class="color555"><s:property value="#session.userphone"/></td>
-        <br>
-        <br>
-      </tr>
-      <tr>
-        <td align="right" class="color555">真实姓名：</td>
-        <td class="color555"><s:property value="#session.userrealname"/></td> 
-        <br>
-        <br>
-      </tr>
-      <tr>
-        <td align="right" class="color555">性别：</td>
-        <td class="color555"><s:property value="#session.usersex"/></td> 
-        <br>
-        <br>
-      </tr>
-      <br>
-      <tr>
-        <td align="right" class="color555">邮箱：</td>
-        <td class="color555"><s:property value="#session.useremail"/></td> 
-        <br>
-        <br>     
-       </tr>
-      <tr>
-        <td align="right" class="color555">身份证号：</td>
-        <td class="color555"><s:property value="#session.userid"/></td> 
-        <br>
-        <br>    
-      </tr>
+<div class="my_info_title">我的资料</div>
+
+<div class="my_info_title_3">
+  <ul>
+    <li id="listClick_8" onClick="listClick(8)" style="border-bottom: 1px solid #C40521; color: #C40521;">我的资料</li>
+    <li id="listClick_9" onClick="listClick(9)">我是开发者</li>
+    <li id="listClick_10" onClick="listClick(10)">我是发布方</li>
+  </ul>
+</div>
+<br><br>
+
+ <div class="input_div">
+
+       <p style="padding-left:10%;"> 
+      <label for="usercompany" class="uname" data-icon="u" >    
+                         用户名：<s:property value="#session.username"/></label></p ><br><br>
+                         
+  
+        <p style="padding-left:10%;"> 
+      <label for="usercompany" class="uname" data-icon="u" >    
+                      手机号码：<s:property value="#session.userphone"/></label></p ><br><br>
     
-      <tr>
-        <td align="right" class="color555">关注领域：</td>
-        <td class="color555"><s:property value="#session.userinterest"/></td> 
-        <br>
-        <br>
-      </tr>
-      <tr>
-        <td align="right" class="color555">最小悬赏金额：</td>
-        <td class="color555"><s:property value="#session.usermoneymin"/></td> 
-        <br>
-        <br>
-      </tr>
-      <tr>
-        <td align="right" class="color555">最大悬赏金额：</td>
-        <td class="color555"><s:property value="#session.usermoneymax"/></td> 
-        <br>
-        <br>
-      <tr>
-        <td align="right" class="color555">所在城市：</td>
-        <td class="color555"><s:property value="#session.prov"/></td> 
-        <br>
-        <br>
-      </tr>
-      <tr>
-        <td align="right" class="color555">所在地区：</td>
-        <td class="color555"><s:property value="#session.city"/></td> 
-        <br>
-        <br>
-      </tr>
-      <tr>
-        <td align="right" class="color555">所在城区：</td>
-        <td class="color555"><s:property value="#session.dist"/></td> 
-        <br>
-        <br>
-      </tr>
-      <tr>
-        <td align="right" class="color555">通讯地址：</td>
-        <td class="color555"><s:property value="#session.useraddress"/></td> 
-        <br>
-        <br>      
-      </tr>
-      <tr>
-        <td align="right" class="color555">推荐人姓名：</td>
-        <td class="color555"><s:property value="#session.userrecommend"/></td> 
-        <br>
-        <br>
-       </tr>
-      <tr>
-        <td align="right" class="color555">推荐人电话：</td>
-        <td class="color555"><s:property value="#session.userrecommendphone"/></td> 
-        <br>
-        <br>     
-        </tr>
-    </tbody>
-  </table>
+     
+       <p style="padding-left:10%;"> 
+      <label for="usercompany" class="uname" data-icon="u" >    
+                    真实姓名：<s:property value="#session.userrealname"/></label></p ><br><br>
+  
+        <p style="padding-left:10%;"> 
+      <label for="usercompany" class="uname" data-icon="u" >    
+                  性别：<s:property value="#session.usersex"/></label></p ><br><br>
+    
+         <p style="padding-left:10%;"> 
+      <label for="usercompany" class="uname" data-icon="u" >    
+ 邮箱：<s:property value="#session.useremail"/></label></p ><br><br>
+ 
+       <p style="padding-left:10%;"> 
+      <label for="usercompany" class="uname" data-icon="u" >    
+        身份证号：<s:property value="#session.userid"/></label></p ><br><br>
+    
+   
+       <p style="padding-left:10%;"> 
+      <label for="usercompany" class="uname" data-icon="u" >    
+               关注领域：<s:property value="#session.userinterest"/></label></p ><br><br>
+    
+       <p style="padding-left:10%;"> 
+      <label for="usercompany" class="uname" data-icon="u" >    
+           最小悬赏金额：<s:property value="#session.usermoneymin"/></label></p ><br><br>
+  
+       <p style="padding-left:10%;"> 
+      <label for="usercompany" class="uname" data-icon="u" >    
+          最大悬赏金额：<s:property value="#session.usermoneymax"/></label></p ><br><br>
+     
+       <p style="padding-left:10%;"> 
+      <label for="usercompany" class="uname" data-icon="u" >    
+        所在城市：<s:property value="#session.prov"/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp所在地区：<s:property value="#session.city"/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp所在城区：<s:property value="#session.dist"/></label></p ><br><br>
+    
+      <p style="padding-left:10%;"> 
+      <label for="usercompany" class="uname" data-icon="u" >    
+      通讯地址：<s:property value="#session.useraddress"/></label></p ><br>
+     
+          <p style="padding-left:10%;"> 友好提示：网站前台页面不会显示您的地址，用于纸质合同的邮寄</p ><br>
+  
+         <p style="padding-left:10%;"> 
+      <label for="usercompany" class="uname" data-icon="u" >    
+  推荐人姓名：<s:property value="#session.userrecommend"/></label></p ><br><br>
+     <p style="padding-left:10%;"> 
+         <label for="usercompany" class="uname" data-icon="u" > 推荐人电话<s:property value="#session.userrecommendphone"/></label></p ><br><br>
+ 
+  </div>
 <!-- 结束 --> 
 <script src="../js/jquery-2.1.1.min.js"></script> 
 <script src="../js/my_info.js"></script>

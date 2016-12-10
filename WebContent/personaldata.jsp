@@ -59,6 +59,16 @@
       <span class="username"><s:property value="#session.username"/></span></div><!-- 传用户名 -->
     <!--  --><div class="usertype"><br>
             会员等级：<img style="margin-right:0px;" src="img/member_center/star.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> </div><br>
+              <div class="menu">
+      <div class="menu_title"> 我的信息 </div>
+      <div class="menu_list">
+        <ul class="list-unstyled">
+          <li id="listClick8" class="menu_list_on" onClick="listClick(8)"><img src="img/member_center/left_icon_8.png"> 我的资料</li>
+          <li id="listClick9" class="" onClick="listClick(9)"> <img src="img/member_center/left_icon_9.png"> 我是开发者</li>
+          <li id="listClick10" class="" onClick="listClick(10)"> <img src="img/member_center/left_icon_10.png">我是发布方</li><br>
+        </ul>
+      </div>
+    </div>
     <div class="menu">
       <div class="menu_title"> 修改资料 </div>
       <div class="menu_list">
@@ -75,17 +85,7 @@
         <ul class="list-unstyled">
           <li id="listClick6" class="" onClick="listClick(6)"><img src="img/member_center/left_icon_6.png"> 我发布的</li>
           <li id="listClick7" class="" onClick="listClick(7)"> <img src="img/member_center/left_icon_6.png"> 我投标的</li>
-          <a href = "mycontract.action"><li id="listClick7" class=""> <img src="img/member_center/left_icon_6.png"> 我的合同</li></a><br>
-        </ul>
-      </div>
-    </div>
-    <div class="menu">
-      <div class="menu_title"> 我的信息 </div>
-      <div class="menu_list">
-        <ul class="list-unstyled">
-          <li id="listClick8" class="menu_list_on" onClick="listClick(8)"><img src="img/member_center/left_icon_8.png"> 我的资料</li>
-          <li id="listClick9" class="" onClick="listClick(9)"> <img src="img/member_center/left_icon_9.png"> 我是开发者</li>
-          <li id="listClick10" class="" onClick="listClick(10)"> <img src="img/member_center/left_icon_10.png">我是发布方</li><br>
+          <a href = "mycontract.action"><li id="listClick(7)" class=""> <img src="img/member_center/left_icon_6.png"> 我的合同</li></a><br>
         </ul>
       </div>
     </div>
@@ -158,7 +158,7 @@
 <span class="back_top_jt_span">返回顶部</span>
 <img id="back_top_wx" class="back_top2" onMouseMove="float_call_me(5)" onMouseOut="float_call_me(6)" src="img/index/back_top_wx.png">
 <span class="back_top_wx_span"><img src="img/index/bottom_QRcode.png"></span>
-<a href="tencent://message/?uin=666666&Site=&Menu=yes"><img id="back_top_qq" class="back_top3" onMouseMove="float_call_me(3)" onMouseOut="float_call_me(4)" src="img/index/back_top_qq.png"></a>
+<a href="tencent://message/?uin=1686290133&Site=&Menu=yes"><img id="back_top_qq" class="back_top3" onMouseMove="float_call_me(3)" onMouseOut="float_call_me(4)" src="img/index/back_top_qq.png"></a>
 <span class="back_top_qq_span"><font class="glyphicon glyphicon-hand-right">&nbsp;QQ咨询热线</font></span>
 <img id="back_top_call" class="back_top4" onMouseMove="float_call_me(1)" onMouseOut="float_call_me(2)" src="img/index/back_top_call.png">
 <span class="back_top_call_span"><font class="glyphicon glyphicon-phone-alt">&nbsp;131-1560-1178</font></span>

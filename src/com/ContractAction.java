@@ -28,7 +28,7 @@ import entity.User;
 /**
  * @ClassName ContractAction
  * @Description TODO
- * @date 2016年11月12日
+ * @date 2016��11��12��
  */
 public class ContractAction
 {
