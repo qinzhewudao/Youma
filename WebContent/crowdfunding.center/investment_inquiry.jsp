@@ -25,7 +25,7 @@
     <style>
  .input_div{width:100%;}
 .input_div label{width:400px;float:left;text-align:left;}
-.input_div input{width:200px;float:left;}</style>
+.input_div input{width:400px;float:left;}</style>
 </head>
 <body>
 

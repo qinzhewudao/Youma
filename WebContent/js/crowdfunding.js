@@ -146,9 +146,13 @@ function listClick(value){
 		$("#listClick16").attr("class","");
 	}
 	if(value == 6){
-		$("#crowdfunding_iframe").attr("src","crowdfunding.center/project_manage.jsp");
+		$("#crowdfunding_iframe").attr("src","http://localhost:8080/software-engineering/mypublish.action");
 		$("#crowdfunding_iframe").attr("height","1045");
 		$("#vertical_navigation").css("height","1050px");
+		/*$("#action_iframe").attr("src","mypublish.action");
+		$("#action_iframe").attr("height","1045");
+		$("#vertical_navigation").css("height","1050px");*/
+		
 		
 		$("#listClick1").attr("class","");
 		$("#listClick2").attr("class","");

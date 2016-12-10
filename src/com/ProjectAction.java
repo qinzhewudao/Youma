@@ -151,6 +151,7 @@ public class ProjectAction extends ActionSupport
                 + "','" + publishdate + "','" + publisher + "','" + getProjectdescribe() + "')";
         int i = dao.executeUpdate(sql);
         System.out.println("bug is here");
+        System.out.println(sql);
         dao.close();
         if (i > -1)
         {

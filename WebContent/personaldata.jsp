@@ -84,7 +84,9 @@
       <div class="menu_title"> 我相关的项目 </div>
       <div class="menu_list">
         <ul class="list-unstyled">
-          <li id="listClick6" class="" onClick="listClick(6)"><img src="img/member_center/left_icon_6.png"> 我发布的</li>
+        <!--  a href=""-->
+       <!--  <a href = "mypublish.action"> -->
+          <li id="listClick6" class="" onClick="listClick(6)"><!-- <a href="mypublish"  onclick="mypublish"> --><img src="img/member_center/left_icon_6.png"> 我发布的</li>  <!--  </a> -->
           <li id="listClick7" class="" onClick="listClick(7)"> <img src="img/member_center/left_icon_6.png"> 我投标的</li>
           <a href = "mycontract.action"><li id="listClick(7)" class=""> <img src="img/member_center/left_icon_6.png"> 我的合同</li></a><br>
         </ul>
@@ -114,6 +116,7 @@
   </div>
   <div class="col-lg-9">
   	<iframe name="left" id="crowdfunding_iframe" src="crowdfunding.center/my_account.jsp" frameborder="false" scrolling="no" style="border:none;" width="100%" height="1045" allowtransparency="true"></iframe>
+    <!--  <iframe name="left" id="action_iframe" src="./page/archive.action" frameborder="false" scrolling="no" style="border:none;" width="100%" height="1045" allowtransparency="true"></iframe> -->
   </div>
 </div>
 <!-- 核心 结束 -->  

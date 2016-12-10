@@ -12,33 +12,6 @@
 <title>发布需求</title> 
 <link href="css/login.css" type="text/css" rel="stylesheet"> 
 <script language="javascript">
-function firm()
-
-{
- 
-        //利用对话框返回的值 （true 或者 false）
- 
-    if(confirm("你确信要发布该项目"))
- 
-    {
- 
-            //如果是true ，那么就把页面转向thcjp.cnblogs.com
- 
-        location.href="index。jsp";
- 
-     }
- 
-    else
- 
-    {
- 
-        //否则说明下了，赫赫
- 
-      alert("你按了取消，那就是返回false");
- 
-    }
- 
-}
 </script>
 </head> 
 <body> 
@@ -101,8 +74,8 @@ function firm()
     <tr></tr>
  
     <tr align="center">
- <!-- <td colspan="2"><input type="submit" value="发布需求"/></td> -->   
-    <td colspan="2"><input type="submit" name="Submit2" value="发布需求" onclick="firm()" /></td>
+           <td colspan="2"><input type="submit" value="发布需求"/></td> 
+   
     </tr>
     </table>
     </form>
