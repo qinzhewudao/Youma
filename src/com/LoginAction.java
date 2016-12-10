@@ -3,7 +3,7 @@
  * @Title: LoginAction.java
  * @Package com
  * @Description: TODO
- * @date 2016年11月5日 上午10:48:59
+ * @date 2016��11��5�� ����10:48:59
  * @version V1.0
  */
 package com;
@@ -22,7 +22,7 @@ import dao.Dao;
 /**
  * @ClassName LoginAction
  * @Description TODO
- * @date 2016年11月5日
+ * @date 2016��11��5��
  */
 public class LoginAction extends ActionSupport
 {

@@ -3,6 +3,12 @@
 <%@page import="dao.ProjectDao"%>
 <%@page import="com.ProjectAction"%>
 <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> 
+<![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> 
+<![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
     <head>
 
         <title>软件众包</title>
@@ -43,7 +49,7 @@
 		    <div class="col-md-8">
 			<nav id="navigation" class="hidden-sm hidden-xs">
 			    <ul id="main-nav" class="main-navigation">
-				<li class="current"><a href="personlist">找人 </a></li>
+				<li class="current"><a href="personlist.jsp">找人 </a></li>
 				<li><a href="findproject.jsp">找项目</a></li>
 				<li><a href="#portfolio">合同</a></li>
 				<li><a href="checkfirmdata">发布需求</a></li>
@@ -126,7 +132,6 @@
 			<img src="images/slides/slide3.jpg" alt="slide-03">    
 		    </li>
 		</ul>
->>>>>>> refs/remotes/origin/final_sy
 
 		<div class="slide-navigation">
 		    <a href="#" class="slide-prev"><i class="fa fa-arrow-left"></i></a>
@@ -137,7 +142,7 @@
 	</section>
 	<!-- End Introduction Section -->
 	<div class="copyrights">Collect from <a href="https://github.com/qinzhewudao/software-engineering" title="GITHUB">GITHUB</a></div>
-
+	
 	
 	<!-- Portfolio Section -->
 	<section id="portfolio" class="content-section clearfix">
@@ -150,13 +155,11 @@
 		<div class="row">
 		    <div class="col-md-12">
 			<ul id="filters" class="folio-filters">
-			    <li class="current"><a href="#" data-filter="*">人才列表</a></li>
-			    <li class=""><a href="#" data-filter=".webdesign">IOS工程师</a></li>
-			    <li class=""><a href="#" data-filter=".photography">Android工程师</a></li>
-			    <li class=""><a href="#" data-filter=".branding">前段工程师</a></li>
-			    <li class=""><a href="#" data-filter=".marketing">后端工程师</a></li>
-			    <li class=""><a href="#" data-filter=".product">产品经理</a></li>
-			    <li class=""><a href="#" data-filter=".uidesign">UI设计师</a></li>
+			    <li class="current"><a href="#" data-filter="*">案例分享</a></li>
+			    <li class=""><a href="#" data-filter=".webdesign">网站开发</a></li>
+			    <li class=""><a href="#" data-filter=".photography">HTML5应用</a></li>
+			    <li class=""><a href="#" data-filter=".branding">移动开发</a></li>
+			    <li class=""><a href="#" data-filter=".marketing">微信应用</a></li>
 			</ul>
 		    </div>
 		</div>
@@ -174,8 +177,8 @@
 			    </div> <!-- //.folio-thumb -->
 			    <div class="folio-desc">
 				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/2622023">IOS负责人</a></h4>
-				<h6>金额 ￥600/8小时</h6>
+				<h4><a href="#">WMS仓库管理系统</a></h4>
+				<h6>金额 ￥50,000</h6>
 			    </div> <!-- //.folio-desc -->
 			</div> <!-- folio-item -->
 			<div class="col-md-3 col-sm-6 folio-item webdesign">
@@ -190,8 +193,8 @@
 			    </div> <!-- //.folio-thumb -->
 			    <div class="folio-desc">
 				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/2889553">iOS开发工程师</a></h4>
-				<h6>500/8小时</h6>
+				<h4><a href="#">远程会诊系统</a></h4>
+				<h6>金额 ￥12,000</h6>
 			    </div> <!-- //.folio-desc -->
 			</div> <!-- folio-item -->
 			<div class="col-md-3 col-sm-6 folio-item webdesign">
@@ -206,8 +209,8 @@
 			    </div> <!-- //.folio-thumb -->
 			    <div class="folio-desc">
 				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/1380899">iOS主管</a></h4>
-				<h6>300/8小时</h6>
+				<h4><a href="#">Discuz论坛定制开发</a></h4>
+				<h6>金额 ￥1,500</h6>
 			    </div> <!-- //.folio-desc -->
 			</div> <!-- folio-item -->
 			<div class="col-md-3 col-sm-6 folio-item webdesign">
@@ -222,16 +225,212 @@
 			    </div> <!-- //.folio-thumb -->
 			    <div class="folio-desc">
 				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/228341">iOS主管</a></h4>
-				<h6>400/8小时</h6>
+				<h4><a href="#">web应用开发</a></h4>
+				<h6>金额 ￥3,500</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			
+			<div class="col-md-3 col-sm-6 folio-item photography">
+			    <div class="folio-thumb">
+				<img src="images/post2.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post2.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">广告销售管理平台</a></h4>
+				<h6>金额￥30,000</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			<div class="col-md-3 col-sm-6 folio-item photography">
+			    <div class="folio-thumb">
+				<img src="images/post2.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post2.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">微信网站</a></h4>
+				<h6>金额￥3,000</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			<div class="col-md-3 col-sm-6 folio-item photography">
+			    <div class="folio-thumb">
+				<img src="images/post2.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post2.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">视频直播应用</a></h4>
+				<h6>金额￥11,200</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			<div class="col-md-3 col-sm-6 folio-item photography">
+			    <div class="folio-thumb">
+				<img src="images/post2.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post2.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">网站美工UI</a></h4>
+				<h6>金额￥1,5000</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			
+			
+			<div class="col-md-3 col-sm-6 folio-item branding">
+			    <div class="folio-thumb item-h2">
+				<img src="images/post3.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post3.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">基于Android，用来实现手机多媒体阅读</a></h4>
+				<h6>金额￥25,000</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			<div class="col-md-3 col-sm-6 folio-item branding">
+			    <div class="folio-thumb item-h2">
+				<img src="images/post3.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post3.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">基于Android的OCR识别功能</a></h4>
+				<h6>金额￥2,500</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			<div class="col-md-3 col-sm-6 folio-item branding">
+			    <div class="folio-thumb item-h2">
+				<img src="images/post3.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post3.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">APP 开发，安卓和IOS</a></h4>
+				<h6>金额￥15,000</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			<div class="col-md-3 col-sm-6 folio-item branding">
+			    <div class="folio-thumb item-h2">
+				<img src="images/post3.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post3.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">手机App界面软件设计</a></h4>
+				<h6>金额￥4,000</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			
+			<div class="col-md-3 col-sm-6 folio-item marketing">
+			    <div class="folio-thumb">
+				<img src="images/post4.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post4.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">微信淘宝客系统</a></h4>
+				<h6>金额￥40,000</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			<div class="col-md-3 col-sm-6 folio-item marketing">
+			    <div class="folio-thumb">
+				<img src="images/post4.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post4.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">公众号前端二次开发</a></h4>
+				<h6>金额￥7,00</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			<div class="col-md-3 col-sm-6 folio-item marketing">
+			    <div class="folio-thumb">
+				<img src="images/post4.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post4.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">微信商家管理</a></h4>
+				<h6>金额￥5,000</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			<div class="col-md-3 col-sm-6 folio-item marketing">
+			    <div class="folio-thumb">
+				<img src="images/post4.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post4.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">微信公众平台lbs开发</a></h4>
+				<h6>金额￥4,00</h6>
 			    </div> <!-- //.folio-desc -->
 			</div> <!-- folio-item -->
 			
 			<div class="col-md-3 col-sm-6 folio-item webdesign">
 			    <div class="folio-thumb">
-				<img src="images/post2.jpg" alt="">
+				<img src="images/post5.jpg" alt="">
 				    <div class="folio-overlay">
-					<a href="images/big-post2.jpg" class="folio-zoom">
+					<a href="images/big-post5.jpg" class="folio-zoom">
 					    <i class="fa fa-plus"></i>
 					</a>
 				    </div> <!-- //.folio-overlay -->
@@ -239,191 +438,11 @@
 			    </div> <!-- //.folio-thumb -->
 			    <div class="folio-desc">
 				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/1045846">全栈工程师</a></h4>
-				<h6>800/8小时</h6>
+				<h4><a href="#">影视类工作协作网站</a></h4>
+				<h6>金额￥15,000</h6>
 			    </div> <!-- //.folio-desc -->
 			</div> <!-- folio-item -->
-			<div class="col-md-3 col-sm-6 folio-item photography">
-			    <div class="folio-thumb">
-				<img src="images/post2.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post2.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/2377487">android程序员</a></h4>
-				<h6>300/8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			<div class="col-md-3 col-sm-6 folio-item photography">
-			    <div class="folio-thumb">
-				<img src="images/post2.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post2.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/1866689">Android 开发员</a></h4>
-				<h6>1000/8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			<div class="col-md-3 col-sm-6 folio-item photography">
-			    <div class="folio-thumb">
-				<img src="images/post2.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post2.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/1426583">android移动平台研发</a></h4>
-				<h6>500/8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			
-			
-			<div class="col-md-3 col-sm-6 folio-item photography">
-			    <div class="folio-thumb item-h2">
-				<img src="images/post3.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post3.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/1377710">Android 高级工程师 </a></h4>
-				<h6>800/8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			<div class="col-md-3 col-sm-6 folio-item photography">
-			    <div class="folio-thumb item-h2">
-				<img src="images/post3.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post3.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/141103">Android工程师</a></h4>
-				<h6>400/8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			<div class="col-md-3 col-sm-6 folio-item photography">
-			    <div class="folio-thumb item-h2">
-				<img src="images/post3.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post3.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/2859415">研发部门-android工程师</a></h4>
-				<h6>500/8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			<div class="col-md-3 col-sm-6 folio-item branding">
-			    <div class="folio-thumb item-h2">
-				<img src="images/post3.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post3.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/2264138">前端开发部 苏宁易购  前端工程师</a></h4>
-				<h6>300/8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			
-			<div class="col-md-3 col-sm-6 folio-item branding">
-			    <div class="folio-thumb">
-				<img src="images/post4.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post4.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/2337744">前端工程师 开源中国 </a></h4>
-				<h6>500/8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			<div class="col-md-3 col-sm-6 folio-item brangding">
-			    <div class="folio-thumb">
-				<img src="images/post4.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post4.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/699171">web前端工程师</a></h4>
-				<h6>800/8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			<div class="col-md-3 col-sm-6 folio-item branding">
-			    <div class="folio-thumb">
-				<img src="images/post4.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post4.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/2913989">Web前端工程师 </a></h4>
-				<h6>300/8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			<div class="col-md-3 col-sm-6 folio-item branding">
-			    <div class="folio-thumb">
-				<img src="images/post4.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post4.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/223744">前端工程师</a></h4>
-				<h6>600/8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			
-			<div class="col-md-3 col-sm-6 folio-item branding">
+			<div class="col-md-3 col-sm-6 folio-item webdesign">
 			    <div class="folio-thumb">
 				<img src="images/post5.jpg" alt="">
 				    <div class="folio-overlay">
@@ -435,11 +454,11 @@
 			    </div> <!-- //.folio-thumb -->
 			    <div class="folio-desc">
 				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/125950">火车网前端工程师</a></h4>
-				<h6>800/8小时</h6>
+				<h4><a href="#">寻找重构项目架构师</a></h4>
+				<h6>金额￥33,000</h6>
 			    </div> <!-- //.folio-desc -->
 			</div> <!-- folio-item -->
-			<div class="col-md-3 col-sm-6 folio-item marketing">
+			<div class="col-md-3 col-sm-6 folio-item webdesign">
 			    <div class="folio-thumb">
 				<img src="images/post5.jpg" alt="">
 				    <div class="folio-overlay">
@@ -451,11 +470,12 @@
 			    </div> <!-- //.folio-thumb -->
 			    <div class="folio-desc">
 				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/924832">Java高级工程师</a></h4>
-				<h6>500元/8小时</h6>
+				<h4><a href="#">对网站项目做长期持续的维护和开发</a></h4>
+				<h6>金额￥2,000</h6>
 			    </div> <!-- //.folio-desc -->
 			</div> <!-- folio-item -->
-			<div class="col-md-3 col-sm-6 folio-item marketing">
+				
+			<div class="col-md-3 col-sm-6 folio-item webdesign">
 			    <div class="folio-thumb">
 				<img src="images/post5.jpg" alt="">
 				    <div class="folio-overlay">
@@ -467,16 +487,16 @@
 			    </div> <!-- //.folio-thumb -->
 			    <div class="folio-desc">
 				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/1000024">后端工程师 中软国际 4年工作经验</a></h4>
-				<h6>400 元 /8小时</h6>
+				<h4><a href="#">大型综合门户平台</a></h4>
+				<h6>金额￥10,000 </h6>
 			    </div> <!-- //.folio-desc -->
 			</div> <!-- folio-item -->
-				
-			<div class="col-md-3 col-sm-6 folio-item marketing">
-			    <div class="folio-thumb">
-				<img src="images/post5.jpg" alt="">
+			
+			<div class="col-md-3 col-sm-6 folio-item photography">
+			    <div class="folio-thumb item-h2">
+				<img src="images/post6.jpg" alt="">
 				    <div class="folio-overlay">
-					<a href="images/big-post5.jpg" class="folio-zoom">
+					<a href="images/big-post6.jpg" class="folio-zoom">
 					    <i class="fa fa-plus"></i>
 					</a>
 				    </div> <!-- //.folio-overlay -->
@@ -484,16 +504,130 @@
 			    </div> <!-- //.folio-thumb -->
 			    <div class="folio-desc">
 				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/2483727">软件研发工程师 三星电子（中国）研发中心 8年工作经验</a></h4>
-				<h6>400 元 /8小时</h6>
+				<h4><a href="#">HTML5 线上麻将</a></h4>
+				<h6>金额￥30,000</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			<div class="col-md-3 col-sm-6 folio-item photography">
+			    <div class="folio-thumb item-h2">
+				<img src="images/post6.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post6.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">H5即时聊天页面</a></h4>
+				<h6>金额￥5,000</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			<div class="col-md-3 col-sm-6 folio-item photography">
+			    <div class="folio-thumb item-h2">
+				<img src="images/post6.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post6.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">年会邀请函H5报名系统</a></h4>
+				<h6>金额￥1,000</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			<div class="col-md-3 col-sm-6 folio-item photography">
+			    <div class="folio-thumb item-h2">
+				<img src="images/post6.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post6.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">仿墨迹天气的html5页面</a></h4>
+				<h6>金额￥6,00</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			
+			<div class="col-md-3 col-sm-6 folio-item branding">
+			    <div class="folio-thumb">
+				<img src="images/post7.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post7.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">医疗咨询问诊O2O应用</a></h4>
+				<h6>金额￥400,000</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			<div class="col-md-3 col-sm-6 folio-item branding">
+			    <div class="folio-thumb">
+				<img src="images/post7.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post7.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">七色方块app项目开发</a></h4>
+				<h6>金额￥49,000</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			<div class="col-md-3 col-sm-6 folio-item branding">
+			    <div class="folio-thumb">
+				<img src="images/post7.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post7.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">手机APP（Android&iOS）录制语音，变声、降噪、音频合并处理</a></h4>
+				<h6>金额￥60,000</h6>
+			    </div> <!-- //.folio-desc -->
+			</div> <!-- folio-item -->
+			
+			<div class="col-md-3 col-sm-6 folio-item branding">
+			    <div class="folio-thumb">
+				<img src="images/post7.jpg" alt="">
+				    <div class="folio-overlay">
+					<a href="images/big-post7.jpg" class="folio-zoom">
+					    <i class="fa fa-plus"></i>
+					</a>
+				    </div> <!-- //.folio-overlay -->
+				
+			    </div> <!-- //.folio-thumb -->
+			    <div class="folio-desc">
+				<span class="folio-tail"></span>
+				<h4><a href="#">Android手机定位小系统</a></h4>
+				<h6>金额￥1,000</h6>
 			    </div> <!-- //.folio-desc -->
 			</div> <!-- folio-item -->
 			
 			<div class="col-md-3 col-sm-6 folio-item marketing">
-			    <div class="folio-thumb item-h2">
-				<img src="images/post6.jpg" alt="">
+			    <div class="folio-thumb">
+				<img src="images/post8.jpg" alt="">
 				    <div class="folio-overlay">
-					<a href="images/big-post6.jpg" class="folio-zoom">
+					<a href="images/big-post8.jpg" class="folio-zoom">
 					    <i class="fa fa-plus"></i>
 					</a>
 				    </div> <!-- //.folio-overlay -->
@@ -501,126 +635,11 @@
 			    </div> <!-- //.folio-thumb -->
 			    <div class="folio-desc">
 				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/241263">软件工程师 上海外高桥造船有限公司 8年工作经验</a></h4>
-				<h6>200 元 /8小时</h6>
+				<h4><a href="#">微信前端设计出图</a></h4>
+				<h6>金额￥14,000</h6>
 			    </div> <!-- //.folio-desc -->
 			</div> <!-- folio-item -->
 			<div class="col-md-3 col-sm-6 folio-item marketing">
-			    <div class="folio-thumb item-h2">
-				<img src="images/post6.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post6.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/2930192">大数据开发、python前后端开发</a></h4>
-				<h6>400 元 /8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			<div class="col-md-3 col-sm-6 folio-item product">
-			    <div class="folio-thumb item-h2">
-				<img src="images/post6.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post6.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/157853">高级系统架构师 上海复旦微电子集团股份有限公司 10年工作经验</a></h4>
-				<h6>2000 元 /8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			<div class="col-md-3 col-sm-6 folio-item uidesign">
-			    <div class="folio-thumb item-h2">
-				<img src="images/post6.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post6.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/2526138">UI设计 鸿合科技有限公司 5年工作经验</a></h4>
-				<h6>600 元 /8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			
-			<div class="col-md-3 col-sm-6 folio-item uidesign">
-			    <div class="folio-thumb">
-				<img src="images/post7.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post7.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/2810209">UI设计师 炎黄新星网络科技有限公司 2年工作经验</a></h4>
-				<h6>200 元 /8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			<div class="col-md-3 col-sm-6 folio-item uidesign">
-			    <div class="folio-thumb">
-				<img src="images/post7.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post7.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/2832493">UI设计师 北京北龙青云软件有限公司 1年工作经验</a></h4>
-				<h6>200 元 /8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			<div class="col-md-3 col-sm-6 folio-item uidesign">
-			    <div class="folio-thumb">
-				<img src="images/post7.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post7.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/2695545">UI设计师 北京喜事蜜科技有限公司 2年工作经验</a></h4>
-				<h6>300 元 /8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			
-			<div class="col-md-3 col-sm-6 folio-item uidesign">
-			    <div class="folio-thumb">
-				<img src="images/post7.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post7.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/2668257">高级UI设计师 高德 7年工作经验</a></h4>
-				<h6>800 元 /8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-			
-			<div class="col-md-3 col-sm-6 folio-item product">
 			    <div class="folio-thumb">
 				<img src="images/post8.jpg" alt="">
 				    <div class="folio-overlay">
@@ -632,11 +651,11 @@
 			    </div> <!-- //.folio-thumb -->
 			    <div class="folio-desc">
 				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/3070249">网建经理 陕西畅通网络科技有限公司 10年工作经验</a></h4>
-				<h6>300 元 /8小时</h6>
+				<h4><a href="#">微信企业号开发--项目管理系统对接</a></h4>
+				<h6>金额￥10,000</h6>
 			    </div> <!-- //.folio-desc -->
 			</div> <!-- folio-item -->
-			<div class="col-md-3 col-sm-6 folio-item product">
+			<div class="col-md-3 col-sm-6 folio-item marketing">
 			    <div class="folio-thumb">
 				<img src="images/post8.jpg" alt="">
 				    <div class="folio-overlay">
@@ -648,11 +667,11 @@
 			    </div> <!-- //.folio-thumb -->
 			    <div class="folio-desc">
 				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/3078140">产品经理 阿里巴巴移动事业群 7年工作经验</a></h4>
-				<h6>900 元 /8小时</h6>
+				<h4><a href="#">企业内部订餐微信公众号开发</a></h4>
+				<h6>金额￥45,000</h6>
 			    </div> <!-- //.folio-desc -->
 			</div> <!-- folio-item -->
-			<div class="col-md-3 col-sm-6 folio-item product">
+				<div class="col-md-3 col-sm-6 folio-item marketing">
 			    <div class="folio-thumb">
 				<img src="images/post8.jpg" alt="">
 				    <div class="folio-overlay">
@@ -664,24 +683,8 @@
 			    </div> <!-- //.folio-thumb -->
 			    <div class="folio-desc">
 				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/3004121">产品经理 北京水牛科技有限公司 3年工作经验</a></h4>
-				<h6>800 元 /8小时</h6>
-			    </div> <!-- //.folio-desc -->
-			</div> <!-- folio-item -->
-				<div class="col-md-3 col-sm-6 folio-item product">
-			    <div class="folio-thumb">
-				<img src="images/post8.jpg" alt="">
-				    <div class="folio-overlay">
-					<a href="images/big-post8.jpg" class="folio-zoom">
-					    <i class="fa fa-plus"></i>
-					</a>
-				    </div> <!-- //.folio-overlay -->
-				
-			    </div> <!-- //.folio-thumb -->
-			    <div class="folio-desc">
-				<span class="folio-tail"></span>
-				<h4><a href="https://zb.oschina.net/developer/2932517">高级产品经理 搜房网 5年工作经验</a></h4>
-				<h6>700 元 /8小时</h6>
+				<h4><a href="#">运动微信服务号开发</a></h4>
+				<h6>金额￥5,000</h6>
 			    </div> <!-- //.folio-desc -->
 			</div> <!-- folio-item -->
 			
