@@ -21,10 +21,7 @@ a:hover {
 	color: #fff;
 	text-decoration: none;
 } 
-.demo {
-	width: 360px;
-	margin: 52px auto 0;
-}
+
 
 
 .menu-function {
@@ -35,30 +32,7 @@ a:hover {
 	float: left;
 	height: 50px;
 }
-.menu-function li a {
-	position: relative;
-	display: block;
-	padding: 0 30px 0 50px;
-	line-height: 50px;
-}
-.menu-function li:not(:last-child) span {
-	display: inline-block;
-	padding: 0 3px;
-	height: 15px;
-	line-height: 15px;
-	color: #fff;
-	border-radius: 3px;
-	box-shadow: 0 -9px 0 #6cb6e9,0 9px 0 #35558e;
-	background-image: -*-linear-gradient(top,#3b95e0,#3925d2);
-}
-.menu-function li:not(:last-child) a {
-	line-height: 30px;
-	border-left: 9px solid #333a30;
-	border-top: 90px solid transparent;
-	border-bottom: 90px solid transparent;
-	transition: all .3s ease-out;
-	transform-style: preserve-3d;
-}
+
 .menu-function li:last-child {
 	float: right;
 }
