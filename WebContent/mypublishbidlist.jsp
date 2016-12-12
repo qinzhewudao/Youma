@@ -90,8 +90,7 @@ table th{background-color:#EEE;border-right:1px solid #D5D5D5;font-size:13.5px;l
      <tr>
     <td><s:property value="#c.projectname"/></td>
 						 <td><s:property value="#c.bidder"/></td>
-						 <td> <a href ="contract.action">同意该投标
-						</a></td>
+						 <td> <a href = "contract.action?projectname=<s:property value="#c.projectname"/>&bidder=<s:property value="#c.bidder"/>">同意该投标</a></td>
 					</s:iterator>
 					</ul>
 						</tr>

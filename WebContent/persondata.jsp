@@ -3,99 +3,114 @@
 <!DOCTYPE html>
 <html lang="zh-cn" class="no-js">
 	<head>
-<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>发现我想开发的项目</title>
-		<meta name="description" content="A responsive, magazine-like website layout with a grid item animation effect when opening the content" />
-		<meta name="keywords" content="grid, layout, effect, animated, responsive, magazine, template, web design" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/style4.css" />
-		<script src="js/modernizr.custom.js"></script>
-		<style>
-* { margin: 0; padding: 0;}
-body{
-    background:url(../images/web_login_bg.jpg) no-repeat center;
-    background-size: cover;
-}
-body,html{
-    height:100%;
-    overflow:hidden;
-}
-html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
-ul { list-style-type: none;}
-li{float:left;}
+<meta charset="utf-8">
+		<meta name="keywords" content="Java开发工程师，简历模板，在线制作，免费下载" />
+		<meta name="description" content="本人做事稳重，对待工作认真，责任心较强，待人真诚，善于沟通，时刻保持学习，积极拥抱变化。喜
 
-.Header{width:100%;margin:0 auto;/*页面得一居中*/height:100px;background:#fff;}
-#menu li{font-size:24px;float:left;list-style:none;cursor: pointer;}
-#menu a{color:#000000;text-decoration:none;margin:10px;/*<!--text-decoration:none去掉下划线-->*/padding-top:20px;/*display:block;*/display:block;padding-right:60px;padding-bottom:0px;padding-left:30px;}
-#menu a:hover,a:active{color: #0000ff;}
-#darkbannerwrap {
-    background: url(../images/aiwrap.png);
-    width: 18px;
-    height: 10px;
-    margin: 0 0 20px -58px;
-    position: relative;
-}
+欢java 开发，具备一定的软件分析、设计、开发和应用能力，拥有较强的学习能力与团队精神，能够
 
+很快的适应工作环境。" />
+		<title>项目详情</title>
+		<link rel="stylesheet" type="text/css" href="css/style2.css" />
+		<link rel="stylesheet" type="text/css" href="css/new.css" media="all"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css?v=2159" />
+		<link rel="stylesheet" href="css/zxbj_base.css?v=2818" />
+		<link rel="stylesheet" href="css/jm0203.css" />
+		<style> 
+.m-nav-ul .nav_li:nth-child(3) a.erji_a {
+	color: #F66000;
+}
+.m-nav-ul .nav_li:nth-child(3) a.triangle {
+	border-color: #F66000;
+}
+.m-top_user li a {
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+}
+.m-erjinav-ul {
+	margin-top: 25px;
+}
 </style>
-
 </head>
-	<body>
-	
-	<div class ="Header">
-<div id="menu">
-              <li style="padding-left:30%"><a href="Personlist">找人</a></li>
-                    <li><a href="index.jsp">找项目</a></li>
-                    <li><a href="index1.jsp">查看需求</a></li>
-                    <li><a href="checkfirmdata">发布需求</a></li>
-                    <s:if test="#session.username!=null" > 
-                    <!--欢迎你:<s:property value="#session.username"/>  --> 
-                     <li><a href="personaldata.jsp">个人中心</a></li>
-                    <li><a href="logout.action" >退出</a></li>
-                    </s:if>
-                    <s:else> 
-                    <li ><a href="login.jsp" >登录/注册</a></li>
-                    </s:else>
+<body style="height:auto;background:#f8f8f8;">
+
+<div class="n_dispage_jm">
+          <div class="n_dispage_jm_in resetEditStyle"> 
+    
+    <!--编辑区域-->
+ <div class="baseStyle clearfix jm0203_j1" id="resume_body">
+              <div class="divLeft clearfix" id="bar"> 
+        
+        <!--头像-->
+        
+        <div data-toggle="modal" data-target="#myModalHead" class="headDiv" id="resume_head"> <img class="resume_head" src="images/default_head.png" height="200" /> </div>
+    
+        
+        <!--基本信息-->
+        
+        <div class="msgDiv positonDiv resume_add_area resume_sort" id="resume_msg">
                  
-</div> 
-</div>
-		<div class="container">
-		<button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
-			<div id="theSidebar" class="sidebar">
-				<button class="close-button fa fa-fw fa-close"></button>
-				<h1><span>Explore<span> who I want</h1>
-				<nav class="codrops-demos">
-					<a class="current-demo" href="Personlist">推荐开发者</a>
-					<a href="index.jsp">推荐项目</a>
-				</nav>
-			</div>
-			<div id="theGrid" class="main">
+                  <div class="baseAge baseMsg baseDel" id="resume_age"> 
+                 <!--  就是这个div的位置 在这里写的数据 会出现在左边栏 -->	
+
 			
 				
 			 <ul><s:iterator value="irst" var ="c" >
 			
-			 <h1 style="padding-left:20%">用户职位：<s:property value="#c.userposition"/></h1><br>	
+		
 						
-			            <h2 style="padding-left:20%">用户名：<s:property value="#c.username"/> </h2><br>
-			              <span style="padding-left:20%"><i class="fa fa-calendar-o"></i>预估薪资： <s:property value="#c.userprice"/> </span><br><br>
-			             <span style="padding-left:20%"><i class="fa fa-clock-o"></i>工作经验：<s:property value="#c.userworkexperience"/> </span><br><br>
-			              <img style="padding-left:20%" src="img/authors/1.png" alt="author01" />
-			              <span >个人技能：<s:property value="#c.userskill"/></span><br><br>
-						  <span style="padding-left:20%">从业公司：<s:property value="#c.usercompany"/></span><br><br>
-						   <span style="padding-left:20%">个人简历：<s:property value="#c.userdescribe"/></span><br> 
-					</s:iterator></ul>	
+			            用户名：<s:property value="#c.username"/> 
+			             预估薪资： <s:property value="#c.userprice"/> 
+			         工作经验：<s:property value="#c.userworkexperience"/>
+			             
+			             个人技能：<s:property value="#c.userskill"/>
+			            从业公司：<s:property value="#c.usercompany"/>
 
+						 
+				
+  </div>
+                </div>
+      
+     
+      </div>
+      <!--姓名、求职意向-->
+              <div class="divRight clearfix resume_main" id="foo"> 
+        
+        
+        
+        <div class="nameDiv positonDiv" id="resume_name">
+    <!--     用户职位位置 -->
+                  <h1>
+            <div class="resume_msg baseBorder resume_notice resume_lang_name" notice-key="msg" for-key="name" for-value="html" contenteditable="true">用户职位：<s:property value="#c.userposition"/></div>
+          </h1>               
+                </div>
+        <div id="foo_sort"></div>
+           <!--项目描述-->
+        
+        <div class="selfDiv baseItem positonDiv resume_item resume_sort resume_notice" notice-key="self" id="resume_self" for-key="self">
+             
+                  <dl>
+            <dt> <a class="resume_icon_diy icon wbdfont" for-id="self" style="font-size:none"></a> <span><!-- 加粗作用 -->
+              <div class="resume_lang_self">项目描述</div>
+              <div class="Border resume_line" for-id="self" style="width:668px;border-top-style:solid;border-top-width:2px;"></div><!-- 下划线 -->
+              </dt>
+            <dd>
+                      
+                          <p>个人简历：<s:property value="#c.userdescribe"/></p>
+             
+                    </dd>
+          </dl>
+                </div>
+                	</s:iterator></ul>	
+           <!--END项目描述-->
+
+      </div>
+       </div>
+  </div>
+        </div>
+        
 	
-			</div>	
-		</div><!-- /container -->
-			
-			
-			
-		<script src="js/classie.js"></script>
-		<script src="js/main.js"></script>
+	
 	</body>
 </html>

@@ -14,7 +14,7 @@ $(document).ready(function(){
  * @return {null} 无
  */
 var win = window.opener; // 表示打开本window的那个页面的window 
-function listClick(value){
+function listClick(value,value1){
 	if(value == 1){
 		$("#crowdfunding_iframe", window.parent.document).attr("src","crowdfunding.center/my_info.jsp");
 		$("#crowdfunding_iframe", window.parent.document).attr("height",1045);
@@ -36,8 +36,8 @@ function listClick(value){
 		$("#listClick3", window.parent.document).attr("class","");
 		$("#listClick4", window.parent.document).attr("class","menu_list_on");
 	}
-	if(value == 5){
-		$("#crowdfunding_iframe", window.parent.document).attr("src","http://localhost:8080/software-engineering/mypublish.action");    
+	if(value == 5 ){
+		$("#crowdfunding_iframe", window.parent.document).attr("src","http://localhost:8080/software-engineering/contract.action");    
 		$("#crowdfunding_iframe", window.parent.document).attr("height",1045);
 		$("#listClick5", window.parent.document).attr("class","menu_list_on");
 		$("#listClick6", window.parent.document).attr("class","");
