@@ -1,9 +1,20 @@
+/*!
+ * jRaiser 2 Javascript Library
+ * Yaolongfei - v1.0.0 (2015-07-28T17:30:00+0800)
+ */
+
 $(document).ready(function(){
  
 });
-
+/**
+ * 用于众筹个人中心左侧竖型菜单的动态样式切换
+ * @method listClick
+ * @for 无
+ * @param {int} value 标记所点击的菜单
+ * @return {null} 无
+ */
 var win = window.opener; // 表示打开本window的那个页面的window 
-function listClick(value){
+function listClick(value,value1){
 	if(value == 1){
 		$("#crowdfunding_iframe", window.parent.document).attr("src","crowdfunding.center/my_info.jsp");
 		$("#crowdfunding_iframe", window.parent.document).attr("height",1045);
@@ -25,18 +36,29 @@ function listClick(value){
 		$("#listClick3", window.parent.document).attr("class","");
 		$("#listClick4", window.parent.document).attr("class","menu_list_on");
 	}
+	if(value == 5 ){
+		$("#crowdfunding_iframe", window.parent.document).attr("src","http://localhost:8080/software-engineering/mycontract.action");    
+		$("#crowdfunding_iframe", window.parent.document).attr("height",1045);
+		$("#listClick5", window.parent.document).attr("class","menu_list_on");
+		$("#listClick6", window.parent.document).attr("class","");
+		$("#listClick7", window.parent.document).attr("class","");
+		
+	}
 	if(value == 6){
 		$("#crowdfunding_iframe", window.parent.document).attr("src","http://localhost:8080/software-engineering/mypublish.action");    
 		$("#crowdfunding_iframe", window.parent.document).attr("height",1045);
+		$("#listClick5", window.parent.document).attr("class","");
 		$("#listClick6", window.parent.document).attr("class","menu_list_on");
 		$("#listClick7", window.parent.document).attr("class","");
+		
 	}
 	if(value == 7){
-		$("#crowdfunding_iframe", window.parent.document).attr("src","crowdfunding.center/touhou_manage.jsp");
+		$("#crowdfunding_iframe", window.parent.document).attr("src","http://localhost:8080/software-engineering/mybid.action");
 		$("#crowdfunding_iframe", window.parent.document).attr("height",1045);
+		$("#listClick5", window.parent.document).attr("class","");
 		$("#listClick6", window.parent.document).attr("class","");
 		$("#listClick7", window.parent.document).attr("class","menu_list_on");
-		/*$("#listClick4", window.parent.document).attr("class","");*/
+		
 	}
 	
 	if(value == 8){
@@ -68,18 +90,5 @@ function listClick(value){
 		$("#listClick12", window.parent.document).attr("class","");
 		$("#listClick13", window.parent.document).attr("class","");
 	}
-	if(value == 12){
-		$("#crowdfunding_iframe", window.parent.document).attr("src","http://localhost:8080/software-engineering/mycontract.action");
-		$("#crowdfunding_iframe", window.parent.document).attr("height",1045);
-		$("#listClick11", window.parent.document).attr("class","");
-		$("#listClick12", window.parent.document).attr("class","menu_list_on");
-		$("#listClick13", window.parent.document).attr("class","");
-	}
-	/*if(value == 13){
-		$("#crowdfunding_iframe", window.parent.document).attr("src","crowdfunding.center/integration_rule.jsp");
-		$("#crowdfunding_iframe", window.parent.document).attr("height",1045);
-		$("#listClick11", window.parent.document).attr("class","");
-		$("#listClick12", window.parent.document).attr("class","");
-		$("#listClick13", window.parent.document).attr("class","menu_list_on");
-	}*/
+
 }

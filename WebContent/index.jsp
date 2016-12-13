@@ -8,7 +8,7 @@
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> 
 <![endif]-->
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]> <html class="no-js" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
     <head>
 
         <title>软件众包</title>
@@ -42,23 +42,24 @@
 
         <!-- Header -->
         <header id="header" class="site-header" role="banner">
-	    <div class="container">
-		<div class="row">
-		    
-		    <div class="col-md-4 logo">
-			<a href="#">
-			    <img src="images/logo.png" alt="Impressum Template" title="Impressum Parallax Template">
-			</a>
-		    </div> <!-- //.logo -->
-		    
-		    <div class="col-md-8">
-			<nav id="navigation" class="hidden-sm hidden-xs">
-			    <ul id="main-nav" class="main-navigation">
-				<li class="current"><a href="personlist.jsp">找人 </a></li>
-				<li><a href="findproject.jsp">找项目</a></li>
-				<li><a href="#portfolio">合同</a></li>
-				<li><a href="checkfirmdata">发布需求</a></li>
-				 <s:if test="#session.username!=null" > 
+        <div class="container">
+        <div class="row">
+            
+            <div class="col-md-4 logo">
+            <a href="#">
+                <img src="images/logo.png" alt="Impressum Template" title="Impressum Parallax Template">
+            </a>
+            </div> <!-- //.logo -->
+            
+            <div class="col-md-8">
+            <nav id="navigation" class="hidden-sm hidden-xs">
+                <ul id="main-nav" class="main-navigation">
+                <li class="current"><a href="index.jsp">首页</a></li>
+                <li class="current"><a href="personlist.jsp">找人 </a></li>
+                <li><a href="findproject.jsp">找项目</a></li>
+                <li><a href="#portfolio">案例分享</a></li>
+                <li><a href="checkfirmdata">发布需求</a></li>
+                 <s:if test="#session.username!=null" > 
                     <!--欢迎你:<s:property value="#session.username"/>  --> 
                      <li><a href="personaldata.jsp">个人中心</a></li>
                     <li><a href="logout.action" >退出</a></li>
@@ -66,7 +67,7 @@
                     <s:else> 
                     <li ><a href="login.jsp" >登录/注册</a></li>
                     </s:else>
-                <li><a href="#contact">帮助</a></li>
+                <!-- <li><a href="#contact">帮助</a></li> -->
                 </ul>
             </nav>
             
@@ -146,7 +147,7 @@
         </div> <!-- //.flexslider -->
     </section>
     <!-- End Introduction Section -->
-    <div class="copyrights">Collect from <a href="http://www.17sucai.com/" title="17ç´ æç½">17ç´ æç½</a></div>
+    <div class="copyrights">Collect from <a href="http://www.17sucai.com/" title="17ç´ æç½">17ç´ æç½</a></div>
     <!-- About Section -->
     <section id="about" class="content-section clearfix">
         <div class="container">
@@ -185,41 +186,7 @@
         
         <hr class="solid">
         
-        <div class="row">
-            <div class="col-md-7 animated-item fadeInLeft" data-delay="200">
-            <h3>Our Skills</h3>
-            
-            <p>Impressum is <a rel="nofollow" href="#/page/1">free parallax template</a> from <b class="blue">template</b><b class="green">mo</b>. 
-            You can download, edit and use this responsive layout for any website. Credit goes to <a rel="nofollow" href="#">Unsplash</a> for images used in this template.
-            Donec fringilla iaculis nunc, non semper felis mattis a. Quisque tincidunt orci eu orci elementum laoreet nec non lectus.
-            Maecenas commodo purus sapien, ac adipiscing tortor tempor sed. Aenean ac facilisis augue, tempor pellentesque nisl. </p>
-            
-            <p>Aliquam porttitor aliquet arcu, et ornare sapien pharetra in. Aenean sit amet est, ut libero. Nunc at pulvinar velit.
-            Nunc pretium odio nibh, eget vehicula tellus sodales id.</p>
-            
-            </div>
-            <div class="col-md-5 skillbar-container animated-item fadeInRight" data-delay="400">
-            
-            <div class="skillbar clearfix anim" data-percent="94">
-                <div class="skillbar-title">Photoshop</div>
-                <div class="skillbar-bar"></div>
-                <div class="skillbar-percent">94%</div>
-            </div>
-            
-            <div class="skillbar clearfix anim" data-percent="88">
-                <div class="skillbar-title">Illustrator</div>
-                <div class="skillbar-bar"></div>
-                <div class="skillbar-percent">88%</div>
-            </div>
-            
-            <div class="skillbar clearfix anim" data-percent="66">
-                <div class="skillbar-title">Fireworks</div>
-                <div class="skillbar-bar"></div>
-                <div class="skillbar-percent">66%</div>
-            </div>
-            
-            </div>
-        </div> <!-- //.row -->
+        
         </div> <!-- //.container -->
     </section>
     <section id="counter" class="content-section content-overlay parallax-section clearfix">
@@ -289,7 +256,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="projectdetail.jsp?projectname=WMS仓库管理系统">WMS仓库管理系统</a></h4>
+                <h4><a href="#">WMS仓库管理系统</a></h4>
                 <h6>金额 ￥50,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -431,22 +398,23 @@
             </div>
             <div class="row no-margin">
             <div class="col-md-2 partner-logo">
-                <img data-toggle="tooltip" title="更多项目" src="images/partner-logo.png" alt="">
+                <a href="findproject.jsp"><img data-toggle="tooltip" title="更多项目" src="images/partner-logo.png" alt=""></a>
+        
             </div>
             <div class="col-md-2 partner-logo">
-                <img data-toggle="tooltip" title="更多人才" src="images/partner-logo.png" alt="">
+                <a href="personlist.jsp"><img data-toggle="tooltip" title="更多人才" src="images/partner-logo.png" alt=""> </a>
             </div>
             <div class="col-md-2 partner-logo">
-                <img data-toggle="tooltip" title="发布需求" src="images/partner-logo.png" alt="">
+                <a href="checkfirmdata"><img data-toggle="tooltip" title="发布需求" src="images/partner-logo.png" alt=""></a>
             </div>
             <div class="col-md-2 partner-logo">
-                <img data-toggle="tooltip" title="完善个人资料" src="images/partner-logo.png" alt="">
+                 <a href="personaldata.jsp"><img data-toggle="tooltip" title="完善个人资料" src="images/partner-logo.png" alt=""></a>
             </div>
             <div class="col-md-2 partner-logo">
-                <img data-toggle="tooltip" title="注意事项" src="images/partner-logo.png" alt="">
+                 <a href="personaldata.jsp"><img data-toggle="tooltip" title="个人中心" src="images/partner-logo.png" alt=""></a>
             </div>
             <div class="col-md-2 partner-logo">
-                <img data-toggle="tooltip" title="帮助" src="images/partner-logo.png" alt="">
+                <a href="tencent://message/?uin=1686290133&Site=&Menu=yes"><img data-toggle="tooltip" title="联系客服" src="images/partner-logo.png" alt=""></a>
             </div>
             </div>
         </div>
@@ -473,16 +441,6 @@
                 <div class="col-md-6 col-sm-6">
                     <div class="copyright-text">
                         <span>Copyright &copy; code beautifier <a href="https://github.com/qinzhewudao/software-engineering" target="_blank" title="软件众包">软件众包</a> - Collect from <a href="https://github.com/qinzhewudao/software-engineering" title="page" target="_blank">项目的github</a></span>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="social-icons">
-                        <ul>
-                            <li><a href="#" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-linkedin"></a></li>
-                            <li><a href="#" class="fa fa-rss"></a></li>
-                        </ul>
                     </div>
                 </div>
             </div>

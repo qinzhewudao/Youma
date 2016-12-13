@@ -1,91 +1,106 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib uri="/struts-tags" prefix="s" %>
-<%@page import="dao.ProjectDao"%>
-<%@page import="com.ProjectAction"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="zh-cn" class="no-js">
+
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-<meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>publishlist</title>
-        <meta name="description" content="A responsive, magazine-like website layout with a grid item animation effect when opening the content" />
-        <meta name="keywords" content="grid, layout, effect, animated, responsive, magazine, template, web design" />
-        <meta name="author" content="Codrops" />
-        <link rel="shortcut icon" href="../favicon.ico">
-        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-        <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/style4.css" />
-        <script src="js/modernizr.custom.js"></script>
-        <style>
-* { margin: 0; padding: 0;}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="revised" content="Ningxia Seasons, 2015/8/13/" />
+<!-- 定义页面的最新版本 -->
+<meta name="description" content="网站简介" />
+<!-- 网站简介 -->
+<meta name="keywords" content="搜索关键字，以半角英文逗号隔开" />
+<!-- 搜索关键字 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>发布的项目</title>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+.my_info_title{
+	color: #555;
+	font-size: 26px;
+	line-height: 26px;
+	margin-top:10px;
+	width:100%;
+	height:86px;
+	}
+	.my_info_title_3{
+	border-top:1px solid #CCC;
+	border-bottom:1px solid #CCC;
+	width:100%;
+	height:50px;
+	}
+.my_info_title_3 a{
+	text-decoration:none;
+	color:#666;
+	}
+.my_info_title_3 ul{
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+	}
+.my_info_title_3 ul li{
+	width:185px;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	display:block;
+	float:left;
+	font-size: 18px;
+	color: #666;
+	border-right:1px solid #CCC;
+	cursor:pointer;
+	}
+.my_info_title_3 ul li:hover{
+	border-bottom: 1px solid #C40521;
+	color: #C40521;
+	}
+table{border:solid 1px #D5D5D5;border-collapse:collapse;width:100%;}
+table td{border:1px solid #D5D5D5;font-size:12px;padding:7px 5px;}
+table th{background-color:#EEE;border-right:1px solid #D5D5D5;font-size:13.5px;line-height:120%;font-weight:bold;padding:8px 5px;text-align:left;}
 
-body,html{
-    height:100%;
-    overflow:hidden;
-}
-ul { list-style-type: none;}
-li{float:left;}
-
-.Header{width:100%;margin:0 auto;/*页面得一居中*/height:100px;}
-#menu li{font-size:24px;float:left;list-style:none;cursor: pointer;}
-#menu a{color:#000000;text-decoration:none;margin:10px;/*<!--text-decoration:none去掉下划线-->*/padding-top:20px;/*display:block;*/display:block;padding-right:60px;padding-bottom:0px;padding-left:30px;}
-#menu a:hover,a:active{color: #0000ff;}
-
+.demo{margin:0 auto;} 
 </style>
 
 </head>
-<body>
-<div class ="Header">
- 
-<div id="menu">
-            <li style ="padding-left:20%;"><a href="index1.jsp">作品与服务</a></li>
-            <li><a href="checkfirmdata">发布需求</a></li>
-            <s:if test="#session.username!=null" > 
-            <!--欢迎你:<s:property value="#session.username"/>  --> 
-            <li><a href="personaldata.jsp">个人中心</a></li>
-            <li><a href="logout.action" >退出</a></li>
-            </s:if>
-            <s:else> 
-            <li ><a href="login.jsp" >登录/注册</a></li>
-            </s:else>
-                 
-</div> 
-</div> 
-         
+<body>	
+<div class="my_info_title">我发布的项目</div>
+<div class="my_info_title_3">
+  <ul>
+    <li id="listClick_6" onClick="listClick(6)" style="border-bottom: 1px solid #C40521; color: #C40521;">发布的的项目</li>
+    <li id="listClick_7" onClick="listClick(7)">投标的项目</li>
+    <li id="listClick_5" onClick="listClick(5)">我的合同</li>
+  </ul>
+</div><br><br>
+		
 
- <div class="container">
-            <button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
-            <div id="theSidebar" class="sidebar">
-                <button class="close-button fa fa-fw fa-close"></button>
-                <h1><span>Explore<span> which I want</h1>
-                <nav class="codrops-demos">
-                    <h2><a href="Personlist">发现人才</a></h2>
-                    <h2><a class="current-demo"href="index.jsp">探索项目</a></h2>
-                </nav>
-            </div>
-            
-            <div id="theGrid" class="main">  
-                <div class="scroll-wrap">
-            <ul>
+		
+<div class="demo">
+		<table  width="100%" border="0" cellspacing="0" cellpadding="0">
+		<thead>
+		<tr>
+		<th>项目名称</th>
+		<th>发布时间</th>
+	    <th>查看该项目投标详情</th>
+	    </tr>
+	    </thead>
+	    <tbody>
+			<ul>
     <s:iterator value="lista" var="c"> 
-    <li><a class="grid__item" href = "mypublishbid?projectname=<s:property value="#c.projectname"/>">
-			<h2>项目名<s:property value="#c.projectname"/></h2>
-			<span class="category">发布者：<s:property value="#c.publisher"/></span>
-			<span class="category">投标详情</span>
-			<pr>
-			<pr>
-			</a></li>
-	</s:iterator>
-	</ul>
-	</div>
-	
-
-			</div>
-
-		</div><!-- /container -->
-
-        <script src="js/classie.js"></script>
-        <script src="js/main.js"></script>
+     <tr>
+    <td><s:property value="#c.projectname"/></td>
+						 <td><s:property value="#c.publishtime"/></td>
+						 <td><a href = "mypublishbid?projectname=<s:property value="#c.projectname"/>">投标详情
+						</a></td>
+					</s:iterator>
+					</ul>
+						</tr>
+	</tbody>	
+	</table>
+		
+<!-- 结束 --> 
+<script src="../js/jquery-2.1.1.min.js"></script>  
+<script src="../js/my_info.js"></script>
+</div>		
 </body>
 </html>

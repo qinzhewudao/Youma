@@ -16,10 +16,6 @@
 
 <!-- CSS公共部分 开始 -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 <link href="css/style.css" rel="stylesheet">
 <!-- CSS公共部分 结束 -->
 
@@ -47,7 +43,7 @@
   <div id="vertical_navigation" class="col-lg-3 background831312 nopadding">
     <div class="dead_pic"><img src="img/member_center/nopic.jpg.png"><br>
       <span class="username"><s:property value="#session.username"/></span></div><!-- 传用户名 -->
-    <!--  --><div class="usertype"><br>
+   <div class="usertype"><br>
             会员等级：<img style="margin-right:0px;" src="img/member_center/star.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> </div><br>
               <div class="menu">
       <div class="menu_title"> 我的信息 </div>
@@ -73,10 +69,10 @@
       <div class="menu_title"> 我相关的项目 </div>
       <div class="menu_list">
         <ul class="list-unstyled">
-          <li id="listClick6" class="" onClick="listClick(6)"><img src="img/member_center/left_icon_6.png"> 我发布的</li>
-          <li id="listClick7" class="" onClick="listClick(7)"> <img src="img/member_center/left_icon_6.png"> 我投标的</li>
-          <a href = "mycontract.action"><li id="listClick12" class=""> <img src="img/member_center/left_icon_6.png"> 我的合同</li><br>
-        </ul></a>
+          <li id="listClick6" class="" onClick="listClick(6)"><img src="img/member_center/left_icon_6.png"> 我发布的</li> 
+          <li id="listClick7" class="" onClick="listClick(7)"><img src="img/member_center/left_icon_6.png"> 我投标的</li>
+          <li id="listClick5" class="" onClick="listClick(5)"><img src="img/member_center/left_icon_6.png"> 我的合同</li></a><br>
+        </ul>
       </div>
     </div>
     <div class="menu">
@@ -84,21 +80,11 @@
       <div class="menu_list">
         <ul class="list-unstyled">
           <li id="listClick11" class="" onClick="listClick(11)"><img src="img/member_center/left_icon_9.png"> 星级和积分介绍</li>
-       <!--  <li id="listClick12" class="" onClick="listClick(12)"> <img src="img/member_center/left_icon_12.png"> 积分纪录</li> -->  
-          <li id="listClick13" class="" onClick="listClick(13)"> <img src="img/member_center/left_icon_13.png"> 积分规则</li><br>
+    
         </ul>
       </div>
     </div>
-  <!--  -->  <div class="menu">
-      <div class="menu_title"> 我的消息 </div>
-      <div class="menu_list">
-        <ul class="list-unstyled">
-          <li id="listClick14" class="" onClick="listClick(14)"><img src="img/member_center/left_icon_14.png"> 发送新消息</li>
-          <li id="listClick15" class="" onClick="listClick(15)"> <img src="img/member_center/left_icon_15.png"> 收件箱</li>
-          <li id="listClick16" class="" onClick="listClick(16)"> <img src="img/member_center/left_icon_16.png"> 发件箱</li>
-        </ul>
-      </div>
-    </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </div>
   <div class="col-lg-9">
   	<iframe name="left" id="crowdfunding_iframe" src="crowdfunding.center/my_account.jsp" frameborder="false" scrolling="no" style="border:none;" width="100%" height="1045" allowtransparency="true"></iframe>

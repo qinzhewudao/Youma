@@ -124,7 +124,7 @@ function listClick(value){
 		$("#listClick16").attr("class","");
 	}
 	if(value == 5){
-		$("#crowdfunding_iframe").attr("src","crowdfunding.center/apply_lingtou.jsp");
+		$("#crowdfunding_iframe").attr("src","http://localhost:8080/software-engineering/mycontract.action");
 		$("#crowdfunding_iframe").attr("height","1045");
 		$("#vertical_navigation").css("height","1050px");
 		
@@ -146,9 +146,11 @@ function listClick(value){
 		$("#listClick16").attr("class","");
 	}
 	if(value == 6){
-		$("#crowdfunding_iframe").attr("src","crowdfunding.center/project_manage.jsp");
+		$("#crowdfunding_iframe").attr("src","http://localhost:8080/software-engineering/mypublish.action");
 		$("#crowdfunding_iframe").attr("height","1045");
 		$("#vertical_navigation").css("height","1050px");
+	
+		
 		
 		$("#listClick1").attr("class","");
 		$("#listClick2").attr("class","");
@@ -168,7 +170,7 @@ function listClick(value){
 		$("#listClick16").attr("class","");
 	}
 	if(value == 7){
-		$("#crowdfunding_iframe").attr("src","crowdfunding.center/touhou_manage.jsp");
+		$("#crowdfunding_iframe").attr("src","http://localhost:8080/software-engineering/mybid.action");
 		$("#crowdfunding_iframe").attr("height","1045");
 		$("#vertical_navigation").css("height","1050px");
 		

@@ -19,10 +19,11 @@
 <link href="../css/summernote.css" rel="stylesheet">
 <link href="../css/crowdfunding.center/apply_lingtou.css" rel="stylesheet">
 
-       <style>
- .input_div{width:100%;}
+<style>
+.input_div{width:100%;}
 .input_div label{width:200px;float:left;text-align:left;}
-.input_div input{width:200px;float:left;}</style>
+.input_div input{width:200px;float:left;}
+</style>
 </head>
 <body>
 <!-- 开始 -->

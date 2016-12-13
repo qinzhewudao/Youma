@@ -113,6 +113,7 @@ public class BidAction
         conn = dao.GetConn();
         Statement stat = conn.createStatement();
         String sqlStatement = "SELECT * FROM project where publisher = '" + publisher + "'";
+        System.out.println(sqlStatement);
         ResultSet set = stat.executeQuery(sqlStatement);
         while (set.next())
         {
@@ -120,13 +121,12 @@ public class BidAction
             Bid.setProjectname(set.getString("projectname"));
             lista.add(Bid);
         }
+        conn.close(); // close the connection
         this.setLista(lista);
         if (lista.isEmpty())
         {
             return "emptypublish";
         }
-        conn.close(); // close the connection
-
         return "success";
     }
 

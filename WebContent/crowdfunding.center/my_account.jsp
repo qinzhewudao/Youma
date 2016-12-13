@@ -28,9 +28,9 @@
 
 <div class="my_info_title_3">
   <ul>
-    <li id="listClick_8" onClick="listClick(8)" style="border-bottom: 1px solid #C40521; color: #C40521;">我的资料</li>
+    <li id="listClick_8" onClick="listClick(8)"style="border-bottom: 1px solid #C40521; color: #C40521;">我的资料</li>
     <li id="listClick_9" onClick="listClick(9)">我是开发者</li>
-    <li id="listClick_10" onClick="listClick(10)">我是发布方</li>
+    <li id="listClick_10"onClick="listClick(10)">我是发布方</li>
   </ul>
 </div>
 <br><br>

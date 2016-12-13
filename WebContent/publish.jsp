@@ -10,6 +10,7 @@
 <title>发布需求</title> 
 <link href="css/login.css" type="text/css" rel="stylesheet"> 
 <script language="javascript">
+<<<<<<< HEAD
 function firm(form)
 
 {
@@ -42,6 +43,8 @@ function firm(form)
     }
  
 }
+=======
+>>>>>>> refs/remotes/origin/final_sy
 </script>
 </head> 
 <body> 
@@ -105,7 +108,12 @@ function firm(form)
     <tr></tr>
  
     <tr align="center">
+<<<<<<< HEAD
     <td colspan="2"><input type="submit" name="Submit2" value="发布需求" onclick="firm(usrform)" /></td>
+=======
+           <td colspan="2"><input type="submit" value="发布需求"/></td> 
+   
+>>>>>>> refs/remotes/origin/final_sy
     </tr>
     </table>
     </form>
