@@ -3,7 +3,7 @@
  * @Title: LoginAction.java
  * @Package com
  * @Description: TODO
- * @date 2016年11月5日 上午10:48:59
+ * @date 2016��11��5�� ����10:48:59
  * @version V1.0
  */
 package com;
@@ -17,18 +17,23 @@ import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import dao.Dao;;
+import dao.Dao;
 
 /**
  * @ClassName LoginAction
  * @Description TODO
- * @date 2016年11月5日
+ * @date 2016��11��5��
  */
 public class LoginAction extends ActionSupport
 {
-    private Dao    dao = new Dao();
-    private String username;
-    private String password;
+    /**
+     * @Fields serialVersionUID : TODO
+     */
+    private static final long serialVersionUID = 1L;
+    private Dao               dao              = new Dao();
+    private String            username;
+    private String            password;
+    private String            newpassword;
 
     public String getUsername()
     {
@@ -50,6 +55,16 @@ public class LoginAction extends ActionSupport
         this.password = password;
     }
 
+    public String getNewpassword()
+    {
+        return newpassword;
+    }
+
+    public void setNewpassword(String newpassword)
+    {
+        this.newpassword = newpassword;
+    }
+
     public String login()
     {
         String sql = "select * from user where username='" + getUsername() + "' and password ='" + getPassword() + "'";
@@ -63,8 +78,23 @@ public class LoginAction extends ActionSupport
                 HttpSession session = ServletActionContext.getRequest().getSession();
                 session.setAttribute("username", getUsername());
                 session.setAttribute("password", getPassword());
+                session.setAttribute("userid", rS.getString("userid"));
+                session.setAttribute("usersex", rS.getString("usersex"));
+                session.setAttribute("userrealname", rS.getString("userrealname"));
+                session.setAttribute("userrecommend", rS.getString("userrecommend"));
+                session.setAttribute("userrecommendphone", rS.getString("userrecommendphone"));
+                session.setAttribute("useremail", rS.getString("useremail"));
+                session.setAttribute("prov", rS.getString("prov"));
+                session.setAttribute("city", rS.getString("city"));
+                session.setAttribute("dist", rS.getString("dist"));
+                session.setAttribute("useraddress", rS.getString("useraddress"));
+                session.setAttribute("usermoneymax", rS.getString("usermoneymax"));
+                session.setAttribute("userphone", rS.getString("userphone"));
+                session.setAttribute("usermoneymin", rS.getString("usermoneymin"));
+                session.setAttribute("userinterest", rS.getString("userinterest"));
                 return "loginin";
             }
+            dao.close();
             return "error";
         }
         catch (SQLException e)
@@ -98,7 +128,31 @@ public class LoginAction extends ActionSupport
             session.setAttribute("password", getPassword());
             return "success";
         }
+        dao.close();
         return "error";
+    }
+
+    public String updatepassword()
+    {
+        HttpSession session = ServletActionContext.getRequest().getSession();
+        String username = session.getAttribute("username").toString();
+        String sql = "update user set password = '" + getNewpassword() + "' where username = '" + username + "'";
+        System.out.println(sql);
+        if (getPassword().equals(session.getAttribute("password").toString()))
+        {
+            int i = dao.executeUpdate(sql);
+            if (i > -1)
+            {
+                session.setAttribute("password", getNewpassword());
+                return "success";
+            }
+            dao.close();
+        }
+        else
+        {
+            return "unequalpassword";
+        }
+        return "success";
     }
 
 }

@@ -16,6 +16,13 @@ public class UserAction extends ActionSupport
 {
     private Dao    dao = new Dao();
     private String username;
+    private String userrealname;
+    private String usersex;
+    private String userinterest;
+    private String usermoneymin;
+    private String usermoneymax;
+    private String userrecommend;
+    private String userrecommendphone;
     private String password;
     private String firmname;
     private String firmtime;
@@ -25,8 +32,16 @@ public class UserAction extends ActionSupport
     private String useremail;
     private String userid;
     private String useraddress;
+    private String city;
+    private String prov;
+    private String dist;
     private String userskill;
     private String userphone;
+    private String userposition;
+    private String usercompany;
+    private int    userworkexperience;
+    private double userprice;
+    private String userdescribe;
 
     public String getUsername()
     {
@@ -36,6 +51,106 @@ public class UserAction extends ActionSupport
     public void setUsername(String username)
     {
         this.username = username;
+    }
+
+    public String getUserrecommendphone()
+    {
+        return userrecommendphone;
+    }
+
+    public void setUserrecommendphone(String userrecommendphone)
+    {
+        this.userrecommendphone = userrecommendphone;
+    }
+
+    public String getUserrecommend()
+    {
+        return userrecommend;
+    }
+
+    public void setUserrecommend(String userrecommend)
+    {
+        this.userrecommend = userrecommend;
+    }
+
+    public String getCity()
+    {
+        return city;
+    }
+
+    public void setCity(String city)
+    {
+        this.city = city;
+    }
+
+    public void setProv(String prov)
+    {
+        this.prov = prov;
+    }
+
+    public String getProv()
+    {
+        return prov;
+    }
+
+    public void setDist(String dist)
+    {
+        this.dist = dist;
+    }
+
+    public String getDist()
+    {
+        return dist;
+    }
+
+    public String getUsermoneymin()
+    {
+        return usermoneymin;
+    }
+
+    public void setUsermoneymin(String usermoneymin)
+    {
+        this.usermoneymin = usermoneymin;
+    }
+
+    public String getUsermoneymax()
+    {
+        return usermoneymax;
+    }
+
+    public void setUsermoneymax(String usermoneymax)
+    {
+        this.usermoneymax = usermoneymax;
+    }
+
+    public String getUserinterest()
+    {
+        return userinterest;
+    }
+
+    public void setUserinterest(String userinterest)
+    {
+        this.userinterest = userinterest;
+    }
+
+    public String getUsersex()
+    {
+        return usersex;
+    }
+
+    public void setUsersex(String usersex)
+    {
+        this.usersex = usersex;
+    }
+
+    public String getUserrealname()
+    {
+        return userrealname;
+    }
+
+    public void setUserrealname(String userrealname)
+    {
+        this.userrealname = userrealname;
     }
 
     public String getPassword()
@@ -148,6 +263,56 @@ public class UserAction extends ActionSupport
         this.userid = userid;
     }
 
+    public double getUserprice()
+    {
+        return userprice;
+    }
+
+    public void setUserprice(double userprice)
+    {
+        this.userprice = userprice;
+    }
+
+    public String getUserposition()
+    {
+        return userposition;
+    }
+
+    public void setUserposition(String userposition)
+    {
+        this.userposition = userposition;
+    }
+
+    public int getUserworkexperience()
+    {
+        return userworkexperience;
+    }
+
+    public void setUserworkexperience(int userworkexperience)
+    {
+        this.userworkexperience = userworkexperience;
+    }
+
+    public String getUsercompany()
+    {
+        return usercompany;
+    }
+
+    public void setUsercompany(String usercompany)
+    {
+        this.usercompany = usercompany;
+    }
+
+    public String getUserdescribe()
+    {
+        return userdescribe;
+    }
+
+    public void setUserdescribe(String userdescribe)
+    {
+        this.userdescribe = userdescribe;
+    }
+
     public String completefirm()
     {
         HttpSession session = ServletActionContext.getRequest().getSession();
@@ -159,9 +324,10 @@ public class UserAction extends ActionSupport
         System.out.println(getFirmtime());
         String sql = "update user set firmname = '" + getFirmname() + "',firmaddress = '" + getFirmaddress()
                 + "',firmcode = '" + getFirmcode() + "',firmmodel='" + getFirmmodel() + "',firmtime='" + getFirmtime()
-                + "' where username = " + "'" + username + "'";
+                + "' where username = '" + username + "'";
         System.out.println("bug is here");
         int i = dao.executeUpdate(sql);
+        dao.close();
         if (i > -1)
         {
             return "success";
@@ -171,16 +337,58 @@ public class UserAction extends ActionSupport
 
     public String completeperson()
     {
-        System.out.println(getUseremail());
-        System.out.println(getUserskill());
-        System.out.println(getUseraddress());
-        System.out.println(getUserphone());
-        System.out.println(getUserid());
-        String sql = "update user set useremail = '" + getUseremail() + "',userskill = '" + getUserskill()
-                + "',useraddress = '" + getUseraddress() + "',userphone='" + getUserphone() + "',userid='" + getUserid()
-                + "' where username = 'sy'";
-        System.out.println("bug is here");
+        HttpSession session = ServletActionContext.getRequest().getSession();
+        String username = session.getAttribute("username").toString();
+        String sql = "update user set usercompany = '" + getUsercompany() + "',userworkexperience = '"
+                + getUserworkexperience() + "',useremail = '" + getUseremail() + "',userposition = '"
+                + getUserposition() + "',userprice = '" + getUserprice() + "',userskill = '" + getUserskill()
+                + "',userdescribe = '" + getUserdescribe() + "' where username = '" + username + "'";
+        System.out.println(sql);
+        session.setAttribute("useremail", getUseremail());
         int i = dao.executeUpdate(sql);
+        dao.close();
+        if (i > -1)
+        {
+            return "success";
+        }
+        return "error";
+    }
+
+    public String updatemydata()
+    {
+        HttpSession session = ServletActionContext.getRequest().getSession();
+        String username = session.getAttribute("username").toString();
+        String sql = "update user set useremail = '" + getUseremail() + "',userphone = '" + getUserphone()
+                + "',useraddress = '" + getUseraddress() + "',userinterest = '" + getUserinterest() + "',userid = '"
+                + getUserid() + "',usersex = '" + getUsersex() + "',prov = '" + getProv() + "',dist = '" + getDist()
+                + "',city = '" + getCity() + "',usermoneymax = '" + getUsermoneymax() + "',usermoneymin = '"
+                + getUsermoneymin() + "',userrecommendphone = '" + getUserrecommendphone() + "',userrecommend = '"
+                + getUserrecommend() + "',userrealname = '" + getUserrealname() + "' where username = '" + username
+                + "'";
+        session.setAttribute("userid", getUserid());
+        session.setAttribute("usersex", getUsersex());
+        session.setAttribute("userphone", getUserphone());
+        session.setAttribute("userrealname", getUserrealname());
+        session.setAttribute("userrecommend", getUserrecommend());
+        session.setAttribute("userrecommendphone", getUserrecommendphone());
+        session.setAttribute("useremail", getUseremail());
+        session.setAttribute("city", getCity());
+        if (getDist().equals("null"))
+        {
+            session.setAttribute("dist", "");
+        }
+        else
+        {
+            session.setAttribute("dist", getDist());
+        }
+        session.setAttribute("prov", getProv());
+        session.setAttribute("useraddress", getUseraddress());
+        session.setAttribute("usermoneymax", getUsermoneymax());
+        session.setAttribute("usermoneymin", getUsermoneymin());
+        session.setAttribute("userinterest", getUserinterest());
+        System.out.println(sql);
+        int i = dao.executeUpdate(sql);
+        dao.close();
         if (i > -1)
         {
             return "success";
@@ -191,23 +399,25 @@ public class UserAction extends ActionSupport
     public String checkfirmdata()
     {
         HttpSession session = ServletActionContext.getRequest().getSession();
+        if (session.getAttribute("username") == null)
+        {
+            return "pleaselogin";
+        }
         String username = session.getAttribute("username").toString();
         String sql = "select user.firmname as firmname,user.firmaddress as firmaddress,user.firmcode as firmcode,user.firmmodel as firmmodel,user.firmtime as firmtime from user where user.username = "
                 + "'" + username + "'";
-        System.out.println("bug is here");
-        System.out.println(username);
         ResultSet rS = dao.executeQuery(sql);
         try
         {
             while (rS.next())
             {
-                System.out.println(rS.getString("firmname"));
+                // System.out.println(rS.getString("firmname"));
                 session.setAttribute("firmname", rS.getString("firmname"));
                 if (session.getAttribute("firmname") == null)
                 {
                     System.out.println("ming ming shi null le");
                 }
-                System.out.println(session.getAttribute("firmname"));
+                // System.out.println(session.getAttribute("firmname"));
                 session.setAttribute("firmcode", rS.getString("firmcode"));
                 session.setAttribute("firmmodel", rS.getString("firmmodel"));
                 session.setAttribute("firmtime", rS.getString("firmtime"));
@@ -223,6 +433,7 @@ public class UserAction extends ActionSupport
                     return "publish";
                 }
             }
+            dao.close();
         }
         catch (SQLException e)
         {
@@ -236,32 +447,48 @@ public class UserAction extends ActionSupport
 
     public String checkpersondata()
     {
-        String sql = "select user.useremail as useremail,user.userskill as userskill,user.userphone as userphone,user.userid as userid,useraddress as useraddress where user.username = '"
-                + getUsername() + "'";
+        HttpSession session = ServletActionContext.getRequest().getSession();
+        if (session.getAttribute("username") == null)
+        {
+            return "pleaselogin";
+        }
+        String username = session.getAttribute("username").toString();
+        System.out.println(username);
+        if (username == null)
+        {
+            return "pleaselogin";
+        }
+        String sql = "select user.useremail as useremail,user.userskill as userskill,usercompany as usercompany from user where user.username = '"
+                + username + "'";
         ResultSet rS = dao.executeQuery(sql);
         try
         {
-            if (rS.next())
+            while (rS.next())
             {
-                HttpSession session = ServletActionContext.getRequest().getSession();
+                System.out.println(rS.getString("useremail"));
+                session.setAttribute("useremail", rS.getString("useremail"));
+                if (session.getAttribute("useremail") == null)
+                {
+                    System.out.println("ming ming shi null le");
+                }
                 session.setAttribute("useremail", rS.getString("useremail"));
                 session.setAttribute("userskill", rS.getString("userskill"));
-                session.setAttribute("userphone", rS.getString("userphone"));
-                session.setAttribute("userid", rS.getString("userid"));
-                session.setAttribute("useraddress", rS.getString("useraddress"));
+                session.setAttribute("usercompany", rS.getString("usercompany"));
                 if ((session.getAttribute("useremail").toString() == null)
-                        || (session.getAttribute("userskil").toString() == null)
-                        || (session.getAttribute("userphone").toString() == null)
-                        || (session.getAttribute("userid").toString() == null)
-                        || (session.getAttribute("useraddress").toString() == null))
+                        || (session.getAttribute("userskill").toString() == null)
+                        || (session.getAttribute("usercompany").toString() == null))
                 {
+                    dao.close();
                     return "pleaseaddif";
                 }
                 else
                 {
+                    System.out.println("ming ming shi null le2");
+                    dao.close();
                     return "selectproject";
                 }
             }
+            dao.close();
         }
         catch (SQLException e)
         {
@@ -273,4 +500,41 @@ public class UserAction extends ActionSupport
 
     }
 
+    public String userdata()
+    {
+        HttpSession session = ServletActionContext.getRequest().getSession();
+        String username = session.getAttribute("username").toString();
+        String sql = "select * from user where username='" + username + "'";
+        ResultSet rS = dao.executeQuery(sql);
+        System.out.println(rS);
+        try
+        {
+            if (rS.next())
+            {
+                session.setAttribute("username", getUsername());
+                session.setAttribute("password", getPassword());
+                session.setAttribute("userid", rS.getString("userid"));
+                session.setAttribute("usersex", rS.getString("usersex"));
+                session.setAttribute("userrealname", rS.getString("userrealname"));
+                session.setAttribute("userrecommend", rS.getString("userrecommend"));
+                session.setAttribute("userrecommendphone", rS.getString("userrecommendphone"));
+                session.setAttribute("useremail", rS.getString("useremail"));
+                session.setAttribute("city", rS.getString("city"));
+                session.setAttribute("dist", rS.getString("dist"));
+                session.setAttribute("useraddress", rS.getString("useraddress"));
+                session.setAttribute("usermoneymax", rS.getString("usermoneymax"));
+                session.setAttribute("usermoneymin", rS.getString("usermoneymin"));
+                session.setAttribute("userinterest", rS.getString("userinterest"));
+                return "success";
+            }
+            dao.close();
+            return "error";
+        }
+        catch (SQLException e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            return "loginout";
+        }
+    }
 }
