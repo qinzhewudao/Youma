@@ -1,3 +1,51 @@
+
+<%@ page language="java" %>
+<%@ page contentType="text/html; charset=GB2312"%>
+<html>
+<head>
+<title>Hello World</title>
+<meta http-equiv="Content-Type" content="content=text/html; charset=gb2312">
+</head>
+<body bgcolor="#FFFFFF">
+<center>
+<font size= 5 color=blue>å¤šç§å­—ä½“å¤§å°æ˜¾ç¤º</font>
+<center>
+<br>
+<hr>
+<br>
+<div align="center">
+<% 
+//æ§åˆ¶æ–‡å­—å¤§å°çš„å¾ªç¯è¯­å¥
+for( int i=1; i<=6; i++ )
+out.println( "<h" + i + ">Hello World!</h" + i + ">" );
+%>
+</div>
+</body>
+</html>
+
+
+<%@ page contentType="text/html;charset=GB2312" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<html>
+<head>
+<title>CH3 - HelloJSP.jsp</title>
+</head>
+<body>
+<h2>JSP å°†ä¼šè¢«è½¬è¯‘ä¸º Servlet</h2>
+<%!
+int k = 0;
+%>
+
+<c:out value="Hi" />
+<%
+String name = "browser";
+
+out.println("å¤§å®¶å¥½ !!");
+%>
+<%= name %>
+</body>
+</html>
+
 <%@ page contentType="text/html;charset=gb2312" import="java.util.*" %>
 <HTML>
 <HEAD>
@@ -6,24 +54,42 @@
 <TITLE>Document Title</TITLE>
 </HEAD>
 <BODY>
-<center><font color=blue size=10 face="Á¥Êé">
+<center><font color=blue size=10 face="éš¶ä¹¦">
 <%
 Date today = new Date();
 int hours = today.getHours();
 int minute = today.getMinutes(); 
 if(hours>=0 && hours<12){
-out.println("ÔçÉÏºÃ!");
+out.println("æ—©ä¸Šå¥½!");
 }else{
-out.println("ÏÂÎçºÃ!");
+out.println("ä¸‹åˆå¥½!");
 }
 
-String[] weekdays = {"ÈÕ","Ò»","¶ş","Èı","ËÄ","Îå","Áù"};
-out.println("\n½ñÌìÊÇ" + (today.getYear()+1900) + "Äê" + (today.getMonth()+1) + "ÔÂ" + (today.getDate()) + "ÈÕĞÇÆÚ" + weekdays[today.getDay()]);
-//ÏÔÊ¾Ê±¼ä
+String[] weekdays = {"æ—¥","ä¸€","äºŒ","ä¸‰","å››","äº”","å…­"};
+out.println("\nä»Šå¤©æ˜¯" + (today.getYear()+1900) + "å¹´" + (today.getMonth()+1) + "æœˆ" + (today.getDate()) + "æ—¥æ˜ŸæœŸ" + weekdays[today.getDay()]);
 
 
+	
+Include.jsp
+<%@ page contentType="text/html;charset=GB2312" %> 
+<html>
+<head>
+<title>CH4 - Include_Html.jsp</title>
+</head>
+<body>
+<h2>include å‘½ä»¤</h2>
+<%@ include file="Hello.html" %>
+<% 
+out.println("æ¬¢è¿å¤§å®¶è¿›å…¥JSPçš„ä¸–ç•Œ");
+%>
+</body>
+</html>
+Hello.html:
+<html><body>
+JSP 2.0 Tech Reference<br>
+</html></body>
 
-//½¨Á¢´íÎó´¦ÀíÒ³ÃæµÄ·¶Àı³ÌĞò
+
 ErrorPage.jsp
 <%@ page contentType="text/html;charset=GB2312" errorPage="Error.jsp" %> 
 <html>
@@ -31,7 +97,7 @@ ErrorPage.jsp
 <title>CH4 - ErrorPage.jsp</title>
 </head>
 <body>
-<h2>errorPage µÄ·¶Àı³ÌĞò</h2>
+<h2>errorPage çš„èŒƒä¾‹ç¨‹åº</h2>
 <%! 
 private double toDouble(String value) 
 { 
@@ -43,8 +109,8 @@ return(Double.valueOf(value).doubleValue());
 double num1 = toDouble(request.getParameter("num1")); 
 double num2 = toDouble(request.getParameter("num2"));
 %>
-Äú´«ÈëµÄÁ½¸öÊı×ÖÎª£º<%= num1 %> ºÍ <%= num2 %><br>
-Á½ÊıÏà¼ÓÎª <%= (num1+num2) %>
+æ‚¨ä¼ å…¥çš„ä¸¤ä¸ªæ•°å­—ä¸ºï¼š<%= num1 %> å’Œ <%= num2 %><br>
+ä¸¤æ•°ç›¸åŠ ä¸º <%= (num1+num2) %>
 </body>
 </html>
 Error.jsp
@@ -55,68 +121,121 @@ Error.jsp
 <title>CH4 - Error.jsp</title>
 </head>
 <body>
-<h2>errorPage µÄ·¶Àı³ÌĞò</h2>
-<p>ErrorPage.jsp ´íÎó²úÉú£º<I><%= exception %></I></p><br>
+<h2>errorPage çš„èŒƒä¾‹ç¨‹åº</h2>
+<p>ErrorPage.jsp é”™è¯¯äº§ç”Ÿï¼š<I><%= exception %></I></p><br>
 <pre>
-ÎÊÌâÈçÏÂ£º<% exception.printStackTrace(new PrintWriter(out)); %>
+é—®é¢˜å¦‚ä¸‹ï¼š<% exception.printStackTrace(new PrintWriter(out)); %>
 </pre>
 </body>
 </html>
 
+6ã€jsp:forward 
+Forward.jsp
+<%
+out.println("ä¼šè¢«æ‰§è¡Œ !!! ");
+%>
+<jsp:forward page="Quoting2.jsp">
+<jsp:param name="username" value="Mike" />
+</jsp:forward> 
+<%
+out.println("ä¸ä¼šæ‰§è¡Œ !!!");
+%>
+Quoting2.jsp
+<%@ page contentType="text/html;charset=GB2312" %>
+<html>
+<head>
+<title>CH4 - Quoting2.jsp</title>
+</head>
+<body>
+<h2>Quoting èŒƒä¾‹ç¨‹åº 3</h2>
+<%
+out.println("JSPé‡åˆ° \'ã€\"ã€\\ã€&lt;%ã€%\> æ—¶éœ€è¦åšé€‚å½“çš„ä¿®æ”¹");
+%>
+</body>
+</html>
 
-//¼ÆÊıÆ÷ 
+
 <%@ page contentType="text/html; charset=gb2312" %>
 <%@ page language="java" %>
 <%
 Integer count = null; 
 
-//Í¬²½´¦Àí
+//åŒæ­¥å¤„ç†
 synchronized (application) {
-//´ÓÄÚ´æµ±ÖĞ¶ÁÈ¡·ÃÎÊÁ¿
+//ä»å†…å­˜å½“ä¸­è¯»å–è®¿é—®é‡
 count = (Integer) application.getAttribute("basic.counter"); 
 if (count == null) 
 count = new Integer(0); 
 count = new Integer(count.intValue() + 1);
-//½«·ÃÎÊÁ¿±£´æµ½ÄÚ´æµ±ÖĞ
+//å°†è®¿é—®é‡ä¿å­˜åˆ°å†…å­˜å½“ä¸­
 application.setAttribute("basic.counter", count);
 }
 %>
 <html>
 <head>
-<title>¼òµ¥¼ÆÊıÆ÷</title>
+<title>ç®€å•è®¡æ•°å™¨</title>
 </head> 
 <body> 
 <center>
-<font size=10 color=blue>¼òµ¥¼ÆÊıÆ÷</font>
+<font size=10 color=blue>ç®€å•è®¡æ•°å™¨</font>
 <br>
 <hr>
 <br>
-<font size=5 color=blue>ÄúºÃ£¡ÄúÊÇ±¾Õ¾µÄµÚ <%= count %> Î»¿ÍÈË</font>
+<font size=5 color=blue>æ‚¨å¥½ï¼æ‚¨æ˜¯æœ¬ç«™çš„ç¬¬ <%= count %> ä½å®¢äºº</font>
 </center>
 </body> 
 </html>
 
 
+<%@ page contentType="text/html; charset=GB2312" %>
+<%@ page language="java" %>
+<!-- è®¾ç½®é¡µé¢å±æ€§ -->
+<%@ page info="è¿™å°±æ˜¯æˆ‘ä»¬é¢„è®¾çš„ç½‘é¡µå±æ€§, è¿™é‡Œæˆ‘ä»¬å¯ä»¥
+å­¦ä¹ åˆ°pageå±æ€§çš„è®¾ç½®ä¸ä½¿ç”¨" %>
 
-//c:out±ê¼ÇÊä³ö
-<%@ page contentType="text/html;charset=GB2312" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<HTML>
+<HEAD>
+<TITLE>è®¾ç½®é¡µé¢å±æ€§</TITLE>
+</HEAD>
+<BODY>
+<CENTER>
+<FONT SIZE = 10 COLOR = BLUE>è®¾ç½®é¡µé¢å±æ€§</FONT>
+</CENTER>
+<br>
+<HR>
+<br>
+<!--è·å¾—è®¾ç½®çš„é¡µé¢å±æ€§-->
+<FONT SIZE = 5 COLOR = BLUE>
+<%= getServletInfo() %>
+</FONT>
+</BODY>
+</HTML> 
+
+
+<%@ page contentType="text/html;charset=GB2312" %> 
 <html>
 <head>
-<title>CH3 - HelloJSP.jsp</title>
+<title> GB2312.jsp</title>
 </head>
 <body>
-<h2>JSP ½«»á±»×ªÒëÎª Servlet</h2>
-<%!
-int k = 0;
-%>
-
-<c:out value="Hi" />
+<h2>ä½¿ç”¨GB2312ç¼–ç ï¼Œæ— æ³•æ­£ç¡®æ˜¾ç¤ºæŸäº›ä¸­æ–‡å­—</h2>
 <%
-String name = "browser";
-
-out.println("´ó¼ÒºÃ !!");
+out.println("ä¸€ä¸ªç”Ÿåƒ»çš„å­—ï¼š?");
 %>
-<%= name %>
 </body>
 </html>
+
+
+<%@ page contentType="text/html;charset=Big5" %>
+<html>
+<head>
+<title> Big5.jsp</title>
+</head>
+<body>
+<h2>ã„ãƒ Big5?????ã‚¿?é™ªãƒœ?ã„‡ã„ã‚…?</h2>
+<%
+out.println("Ğ©??ç¦ã?");
+%>
+</body>
+</html>
+
