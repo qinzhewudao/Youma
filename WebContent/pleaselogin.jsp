@@ -15,32 +15,32 @@ p{color:#fff;margin-top:40px;font-size:24px;}
 #num{margin:0 5px;font-weight:bold;}
 </style>
 <script type="text/javascript">
-	var num=6;
-	function redirect(){
-		num--;
-		document.getElementById("num").innerHTML=num;
-		if(num<0){
-			document.getElementById("num").innerHTML=0;
-			location.href="index。jsp";
-			}
-		}
-	setInterval("redirect()", 1000);
+    var num=5;
+    function redirect(){
+        num--;
+        document.getElementById("num").innerHTML=num;
+        if(num<0){
+            document.getElementById("num").innerHTML=0;
+            location.href="index。jsp";
+            }
+        }
+    setInterval("redirect()", 1000);
 </script>
 </head>
 
 <body onLoad="redirect();">
 <div class="whole">
-	<img src="images/back.jpg" />
+    <img src="images/back.jpg" />
     <div class="mask"></div>
 </div>
 <div class="b">
-		<img src="images/404.png" class="center"/>
-		<p>
-			暂时未能找到您查找的页面<br>
-			您尚未登陆请您登陆后再进行操作<br>
+        <img src="images/404.png" class="center"/>
+        <p>
+            暂时未能找到您查找的页面<br>
+            您尚未登陆请您登陆后再进行操作<br>
             <span id="num"></span>秒后自动跳转到主页您可以到个人中心联系客服咨询
-		</p>
-	</div>
+        </p>
+    </div>
 
 </body>
 </html>

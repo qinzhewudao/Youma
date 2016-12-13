@@ -15,34 +15,35 @@ p{color:#fff;margin-top:40px;font-size:24px;}
 #num{margin:0 5px;font-weight:bold;}
 </style>
 <script type="text/javascript">
-	var num=5;
-	function redirect(){
-		num--;
-		document.getElementById("num").innerHTML=num;
-		if(num<0){
-			document.getElementById("num").innerHTML=0;
-			location.href="index.jsp";
-			}
-		}
-	setInterval("redirect()", 1000);
+    var num=5;
+    function redirect(){
+        num--;
+        document.getElementById("num").innerHTML=num;
+        if(num<0){
+            document.getElementById("num").innerHTML=0;
+            location.href="index.jsp";
+            }
+        }
+    setInterval("redirect()", 1000);
 </script>
 </head>
 
 <body onLoad="redirect();">
 <div class="whole">
-	<img src="images/slides/slide1.jpg" />
+    <img src="images/slides/slide1.jpg" />
     <div class="mask"></div>
 </div>
 <div class="b">
-		<img src="images/404.png" class="center"/>
-		<p>
-			你尚未相关的项目&nbsp目前还不可以进行此操作<br>
-		             对您造成的不便敬请链接<br>
-			5妙后将为您跳转到主页<br>
-			感谢您的配合，若还有疑问可联系客服<br>
+        <img src="images/404.png" class="center"/>
+        <p>
+            你尚未有相关的项目&nbsp<br>
+            目前还不可以进行此操作<br>
+                     对您造成的不便敬请链接<br>
+            5秒后将为您跳转到主页<br>
+            感谢您的配合，<br>若还有疑问可联系客服<br>
             <span id="num"></span>秒后您可以联系客服咨询
-		</p>
-	</div>
+        </p>
+    </div>
 
 </body>
 </html>

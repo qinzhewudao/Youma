@@ -29,11 +29,11 @@
 </action>
 <action name="completeperson" class="com.UserAction" method="completeperson">
 <result name="error">/loginerror.jsp</result>
-<result name="success">/tocompletepersonaldata.jsp</result>
+<result name="success">/crowdfunding.center/my_account.jsp</result>
 </action>
 <action name="updatemydata" class="com.UserAction" method="updatemydata">
 <result name="error">/loginerror.jsp</result>
-<result name="success">/crowdfunding.center/my_info.jsp</result>
+<result name="success">/crowdfunding.center/my_account.jsp</result>
 </action>
 <action name="checkfirmdata" class="com.UserAction" method="checkfirmdata">
 <result name="pleaseaddif">/tocompletepersonaldata.jsp</result>
@@ -49,11 +49,11 @@
 <result name="error">/loginerror.jsp</result>
 </action>
 <action name="bid" class="com.BidAction" method="bid">
-<result name="success">/publishsuccess.jsp</result>
+<result name="success">/bidsuccess.jsp</result>
 <result name="error">/loginerror.jsp</result>
 </action>
 <action name="contract" class="com.ContractAction" method="contract">
-<result name="success">/publishsuccess.jsp</result>
+<result name="success">/contractsuccess.jsp</result>
 <result name="error">/smallerror.jsp</result>
 </action>
 <action name="contractdetail" class="com.ContractAction" method="contractdetail">

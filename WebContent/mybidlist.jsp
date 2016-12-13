@@ -57,8 +57,8 @@
 	color: #C40521;
 	}
 table{border:solid 1px #D5D5D5;border-collapse:collapse;width:100%;}
-table td{border:1px solid #D5D5D5;font-size:12px;padding:7px 5px;}
-table th{background-color:#EEE;border-right:1px solid #D5D5D5;font-size:13.5px;line-height:120%;font-weight:bold;padding:8px 5px;text-align:left;}
+table td{border:1px solid #D5D5D5;font-size:20px;padding:7px 5px;}
+table th{background-color:#EEE;border-right:1px solid #D5D5D5;font-size:16px;line-height:120%;font-weight:bold;padding:8px 5px;text-align:left;}
 
 .demo{margin:0 auto;} 
 </style>
@@ -95,8 +95,8 @@ table th{background-color:#EEE;border-right:1px solid #D5D5D5;font-size:13.5px;l
      <tr>
     <td><s:property value="#c.projectname"/></td>
 						 <td><s:property value="#c.publisher"/></td>
-						 <td> <a href = "projectdetail.jsp?projectname=<s:property value="#c.projectname"/>">
-						项目详情</a></td>
+						 <td> <a href = "projectdetail.jsp?projectname=<s:property value="#c.projectname"/>"target="_parent"><!-- 跳出iframe框架 -->
+						   项目详情</a></td>
 						 <td>进行中</td>
 					</s:iterator>
 					</ul>

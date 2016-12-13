@@ -189,7 +189,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/2889553">iOS开发工程师</a></h4>
+                <h4><a href="Information.action?username=qinzhewudao">iOS开发工程师</a></h4>
                 <h6>500/8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -205,7 +205,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/1380899">iOS主管</a></h4>
+                <h4><a href="Information.action?username=qinzhewudao">iOS主管</a></h4>
                 <h6>300/8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -221,7 +221,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/228341">iOS主管</a></h4>
+                <h4><a href="Information.action?username=qinzhewudao">iOS主管</a></h4>
                 <h6>400/8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -238,7 +238,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/1045846">全栈工程师</a></h4>
+                <h4><a href="Information.action?username=qinzhewudao">全栈工程师</a></h4>
                 <h6>800/8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -254,7 +254,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/2377487">android程序员</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">wenzhaoyang</a></h4>
                 <h6>300/8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -270,7 +270,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/1866689">Android 开发员</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">Android 开发员</a></h4>
                 <h6>1000/8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -286,7 +286,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/1426583">android移动平台研发</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">android移动平台研发</a></h4>
                 <h6>500/8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -304,7 +304,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/1377710">Android 高级工程师 </a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">Android 高级工程师 </a></h4>
                 <h6>800/8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -336,7 +336,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/2859415">研发部门-android工程师</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">研发部门-android工程师</a></h4>
                 <h6>500/8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -352,7 +352,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/2264138">前端开发部 苏宁易购  前端工程师</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">前端开发部 苏宁易购  前端工程师</a></h4>
                 <h6>300/8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -369,7 +369,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/2337744">前端工程师 开源中国 </a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">前端工程师 开源中国 </a></h4>
                 <h6>500/8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -385,7 +385,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/699171">web前端工程师</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">web前端工程师</a></h4>
                 <h6>800/8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -401,7 +401,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/2913989">Web前端工程师 </a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">Web前端工程师 </a></h4>
                 <h6>300/8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -417,7 +417,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/223744">前端工程师</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">前端工程师</a></h4>
                 <h6>600/8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -434,7 +434,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/125950">火车网前端工程师</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">火车网前端工程师</a></h4>
                 <h6>800/8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -450,7 +450,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/924832">Java高级工程师</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">Java高级工程师</a></h4>
                 <h6>500元/8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -483,7 +483,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/2483727">软件研发工程师 三星电子（中国）研发中心 8年工作经验</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">软件研发工程师 三星电子（中国）研发中心 8年工作经验</a></h4>
                 <h6>400 元 /8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -500,7 +500,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/241263">软件工程师 上海外高桥造船有限公司 8年工作经验</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">软件工程师 上海外高桥造船有限公司 8年工作经验</a></h4>
                 <h6>200 元 /8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -516,7 +516,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/2930192">大数据开发、python前后端开发</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">大数据开发、python前后端开发</a></h4>
                 <h6>400 元 /8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -532,7 +532,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/157853">高级系统架构师 上海复旦微电子集团股份有限公司 10年工作经验</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">高级系统架构师 上海复旦微电子集团股份有限公司 10年工作经验</a></h4>
                 <h6>2000 元 /8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -597,7 +597,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/2695545">UI设计师 北京喜事蜜科技有限公司 2年工作经验</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">UI设计师 北京喜事蜜科技有限公司 2年工作经验</a></h4>
                 <h6>300 元 /8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -614,7 +614,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/2668257">高级UI设计师 高德 7年工作经验</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">高级UI设计师 高德 7年工作经验</a></h4>
                 <h6>800 元 /8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -631,7 +631,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/3070249">网建经理 陕西畅通网络科技有限公司 10年工作经验</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">网建经理 陕西畅通网络科技有限公司 10年工作经验</a></h4>
                 <h6>300 元 /8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -647,7 +647,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/3078140">产品经理 阿里巴巴移动事业群 7年工作经验</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">产品经理 阿里巴巴移动事业群 7年工作经验</a></h4>
                 <h6>900 元 /8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -663,7 +663,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/3004121">产品经理 北京水牛科技有限公司 3年工作经验</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">产品经理 北京水牛科技有限公司 3年工作经验</a></h4>
                 <h6>800 元 /8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -679,7 +679,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="https://zb.oschina.net/developer/2932517">高级产品经理 搜房网 5年工作经验</a></h4>
+                <h4><a href="Information.action?username=wenzhaoyang">高级产品经理 搜房网 5年工作经验</a></h4>
                 <h6>700 元 /8小时</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->

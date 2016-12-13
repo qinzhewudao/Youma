@@ -18,6 +18,7 @@ public class Bid
     private String bidder;
     private String projectname;
     private String publisher;
+    private String publishdate;
 
     public String getBidder()
     {
@@ -47,5 +48,15 @@ public class Bid
     public void setPublisher(String publisher)
     {
         this.publisher = publisher;
+    }
+
+    public String getPublishdate()
+    {
+        return publishdate;
+    }
+
+    public void setPublishdate(String publishdate)
+    {
+        this.publishdate = publishdate;
     }
 }

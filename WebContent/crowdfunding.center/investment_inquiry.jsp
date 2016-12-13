@@ -39,9 +39,12 @@
     <li id="listClick_10" onClick="listClick(10)">我是发布方</li>
   </ul>
 </div>
-   <form action="completeperson"method="post">
-   <div class="input_div">       
-        <p style="padding-left:10%;"> 
+   <form action="completeperson" method = "post">
+   <div class="input_div">
+   
+       <br>
+            <p style="padding-left:10%;"> 
+            <br>
             <label for="userworkexperience" class="uname" data-icon="u" > 工作年限：</label>
             <input id="username" name="userworkexperience" required="required" type="text" placeholder="3年"/>
         </p><br><br>
@@ -50,14 +53,14 @@
             <input id="password" name="useremail" required="required" type="text" placeholder="469975732@qq。com" /> 
         </p><br><br>
          <p style="padding-left:10%;"> 
-            <label for="userposition" class="youpasswd" data-icon="p">     岗位       ： </label>
+            <label for="userposition" class="youpasswd" data-icon="p">岗位       ： </label>
                 <select name="userposition" id="select_k2" class="xla_k">
-			    <option value="IOS工程师">IOS工程师</option>
-			    <option value="Android工程师">Android工程师</option>
-			    <option value="前端工程师">前端工程师</option>
-			    <option value="后台工程师">后台工程师</option>
-			    <option value="产品经理">产品经理</option>
-			    <option value="UI设计师">UI设计师</option>
+                <option value="IOS工程师">IOS工程师</option>
+                <option value="Android工程师">Android工程师</option>
+                <option value="前端工程师">前端工程师</option>
+                <option value="后台工程师">后台工程师</option>
+                <option value="产品经理">产品经理</option>
+                <option value="UI设计师">UI设计师</option>
                 </select> 
         </p ><br>
          <p style="padding-left:10%;"> 
@@ -65,27 +68,28 @@
             <input id="password" name="userprice" required="required" type="text" placeholder="for 8 hours" /> 
         </p><br>
     <div class="make_head_lingtou_industry">请填写就业经历：</div>
-    <div class="make_head_concerned_industry">要求写明个人能力、工作、创业、项目经验。
+    <div class="make_head_concerned_industry">要求写明个人就业，创业经验请具体到年月，公司名称部门职务
         
-    <textarea name="usercompany" cols=130 rows=7></textarea>
+    <textarea name="usercompany" cols=130 rows=5></textarea>
      <br>
-    <div class="make_head_lingtou_industry">请填写擅长领域：</div>
-    <div class="make_head_concerned_industry">要求写明个人能力、工作、创业、项目经验。
-        
-    <textarea name="userskill" cols=130 rows=7></textarea>
-    </p>
-    <div class="make_head_lingtou_industry">请填写项目经验：</div>
-    <div class="make_head_concerned_industry">要求写明个人能力、工作、创业、项目经验。。
-    <div style="height:15px;"></div>
-    <textarea name="userdescribe" cols=130 rows=7></textarea>
-    <input type="submit" class="btn btn-primary" value=" 确  定 " >
      </div>
-    </div>
-	</div>
-	<div class="make_head_but text-center">
-	  
-	</div>                                     
-	</form>
+    <div class="make_head_lingtou_industry">请填写擅长领域：</div>
+    <div class="make_head_concerned_industry">要求写明个人擅长领域，或取得的成就或学历
+        
+    <textarea name="userskill" cols=130 rows=5></textarea>
+    <br>
+   </div>
+    <div class="make_head_lingtou_industry">请填写项目经验：</div>
+    <div class="make_head_concerned_industry">要求写明个人项目经验，建议填写完成过的项目或参与过的比较有代表性的项目
+  
+    <textarea name="userdescribe" cols=130 rows=4></textarea>
+     <div class="make_head_concerned_industry" clor = "red">当完善开发者资料后，您才具有对项目投标的功能！
+     </div>
+    
+    <div class="make_head_but text-center">
+      <input type="submit" class="btn btn-primary" value=" 确  定 " >
+    </div>                                      
+    </form>
     
  
 <script src="../js/jquery-2.1.1.min.js"></script>  

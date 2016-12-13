@@ -9,6 +9,7 @@
  */
 package com;
 
+import java.io.UnsupportedEncodingException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -91,20 +92,19 @@ public class ContractAction
         this.contractdate = contractdate;
     }
 
-    public String contract()
+    public String contract() throws UnsupportedEncodingException
     {
         Date utildate = new Date();
         java.sql.Date contractdate = new java.sql.Date(utildate.getTime());
         HttpSession session = ServletActionContext.getRequest().getSession();
         String publisher = session.getAttribute("username").toString();
-        System.out.println(publisher);
-        System.out.println(getProjectname());
         if (getProjectname() == null)
         {
             System.out.println("projectname is null");
             return "error";
         }
-        String sql = "insert into contract (projectname,bidder,publisher,contractdate) values ('" + getProjectname()
+        String newprojectname = new String(projectname.getBytes("ISO-8859-1"), "UTF-8");
+        String sql = "insert into contract (projectname,bidder,publisher,contractdate) values ('" + newprojectname
                 + "','" + getBidder() + "','" + publisher + "','" + contractdate + "')";
         int i = dao.executeUpdate(sql);
         dao.close();

@@ -194,7 +194,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">远程会诊系统</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=远程会诊系统">远程会诊系统</a></h4>
                 <h6>金额 ￥12,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -210,7 +210,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">Discuz论坛定制开发</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=Discuz论坛定制开发">Discuz论坛定制开发</a></h4>
                 <h6>金额 ￥1,500</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -226,7 +226,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">web应用开发</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=web应用开发">web应用开发</a></h4>
                 <h6>金额 ￥3,500</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -243,7 +243,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">广告销售管理平台</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=广告销售管理平台">广告销售管理平台</a></h4>
                 <h6>金额￥30,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -259,7 +259,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">微信网站</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=微信网站">微信网站</a></h4>
                 <h6>金额￥3,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -275,7 +275,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">视频直播应用</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=视频直播应用">视频直播应用</a></h4>
                 <h6>金额￥11,200</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -291,7 +291,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">网站美工UI</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=网站美工UI">网站美工UI</a></h4>
                 <h6>金额￥1,5000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -309,7 +309,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">基于Android，用来实现手机多媒体阅读</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=基于Android，用来实现手机多媒体阅读">基于Android，用来实现手机多媒体阅读</a></h4>
                 <h6>金额￥25,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -325,7 +325,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">基于Android的OCR识别功能</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=基于Android的OCR识别功能">基于Android的OCR识别功能</a></h4>
                 <h6>金额￥2,500</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -341,7 +341,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">APP 开发，安卓和IOS</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=APP 开发，安卓和IOS">APP 开发，安卓和IOS</a></h4>
                 <h6>金额￥15,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -357,7 +357,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">手机App界面软件设计</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=手机App界面软件设计">手机App界面软件设计</a></h4>
                 <h6>金额￥4,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -374,7 +374,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">微信淘宝客系统</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=微信淘宝客系统">微信淘宝客系统</a></h4>
                 <h6>金额￥40,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -390,7 +390,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">公众号前端二次开发</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=公众号前端二次开发">公众号前端二次开发</a></h4>
                 <h6>金额￥7,00</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -406,7 +406,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">微信商家管理</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=微信商家管理">微信商家管理</a></h4>
                 <h6>金额￥5,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -422,7 +422,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">微信公众平台lbs开发</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=微信公众平台lbs开发">微信公众平台lbs开发</a></h4>
                 <h6>金额￥4,00</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -439,7 +439,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">影视类工作协作网站</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=影视类工作协作网站">影视类工作协作网站</a></h4>
                 <h6>金额￥15,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -455,7 +455,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">寻找重构项目架构师</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=寻找重构项目架构师">寻找重构项目架构师</a></h4>
                 <h6>金额￥33,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -471,7 +471,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">对网站项目做长期持续的维护和开发</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=对网站项目做长期持续的维护和开发">对网站项目做长期持续的维护和开发</a></h4>
                 <h6>金额￥2,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -488,7 +488,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">大型综合门户平台</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=大型综合门户平台">大型综合门户平台</a></h4>
                 <h6>金额￥10,000 </h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -505,7 +505,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">HTML5 线上麻将</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=HTML5 线上麻将">HTML5 线上麻将</a></h4>
                 <h6>金额￥30,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -521,7 +521,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">H5即时聊天页面</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=H5即时聊天页面">H5即时聊天页面</a></h4>
                 <h6>金额￥5,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -537,7 +537,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">年会邀请函H5报名系统</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=年会邀请函H5报名系统">年会邀请函H5报名系统</a></h4>
                 <h6>金额￥1,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -553,7 +553,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">仿墨迹天气的html5页面</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=仿墨迹天气的html5页面">仿墨迹天气的html5页面</a></h4>
                 <h6>金额￥6,00</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -570,7 +570,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">医疗咨询问诊O2O应用</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=医疗咨询问诊O2O应用">医疗咨询问诊O2O应用</a></h4>
                 <h6>金额￥400,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -586,7 +586,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">七色方块app项目开发</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=七色方块app项目开发">七色方块app项目开发</a></h4>
                 <h6>金额￥49,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -602,7 +602,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">手机APP（Android&iOS）录制语音，变声、降噪、音频合并处理</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=手机APP（Android&iOS）录制语音，变声、降噪、音频合并处理">手机APP（Android&iOS）录制语音，变声、降噪、音频合并处理</a></h4>
                 <h6>金额￥60,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -619,7 +619,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">Android手机定位小系统</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=Android手机定位小系统">Android手机定位小系统</a></h4>
                 <h6>金额￥1,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -636,7 +636,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">微信前端设计出图</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=微信前端设计出图">微信前端设计出图</a></h4>
                 <h6>金额￥14,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -652,7 +652,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">微信企业号开发--项目管理系统对接</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=微信企业号开发--项目管理系统对接">微信企业号开发--项目管理系统对接</a></h4>
                 <h6>金额￥10,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -668,7 +668,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">企业内部订餐微信公众号开发</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=企业内部订餐微信公众号开发">企业内部订餐微信公众号开发</a></h4>
                 <h6>金额￥45,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->
@@ -684,7 +684,7 @@
                 </div> <!-- //.folio-thumb -->
                 <div class="folio-desc">
                 <span class="folio-tail"></span>
-                <h4><a href="#">运动微信服务号开发</a></h4>
+                <h4><a href="projectdetail.jsp?projectname=运动微信服务号开发">运动微信服务号开发</a></h4>
                 <h6>金额￥5,000</h6>
                 </div> <!-- //.folio-desc -->
             </div> <!-- folio-item -->

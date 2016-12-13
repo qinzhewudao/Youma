@@ -8,6 +8,7 @@
  */
 package com;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -34,6 +35,7 @@ public class BidAction
     private String     bidder;
     private String     projectname;
     private String     publisher;
+    private String     publishdate;
     List<Bid>          lista = new ArrayList<Bid>();
 
     public List<Bid> getLista()
@@ -76,20 +78,33 @@ public class BidAction
         this.publisher = publisher;
     }
 
+    public String getPublishdate()
+    {
+        return publishdate;
+    }
+
+    public void setPublishdate(String publishdate)
+    {
+        this.publishdate = publishdate;
+    }
+
     public String bid()
     {
         HttpSession session = ServletActionContext.getRequest().getSession();
         String bidder = session.getAttribute("username").toString();
         if (getProjectname() == null)
         {
+            System.out.println("projectname is null");
             return "error";
         }
         else if (getPublisher() == null)
         {
+            System.out.println("publisher is null");
             return "error";
         }
         else if (getPublisher().equals(bidder))
         {
+            System.out.println("bid mine project");
             return "error";
         }
         String sql = "insert into bid (projectname,bidder,publisher) values ('" + getProjectname() + "','" + bidder
@@ -119,6 +134,7 @@ public class BidAction
         {
             Bid Bid = new Bid();
             Bid.setProjectname(set.getString("projectname"));
+            Bid.setPublishdate(set.getString("publishdate"));
             lista.add(Bid);
         }
         conn.close(); // close the connection
@@ -157,14 +173,14 @@ public class BidAction
         return "success";
     }
 
-    public String mypublishbid()
+    public String mypublishbid() throws IOException
     {
         lista = new ArrayList<Bid>();
         HttpSession session = ServletActionContext.getRequest().getSession();
         String publisher = session.getAttribute("username").toString();
-
+        String newprojectname = new String(projectname.getBytes("ISO-8859-1"), "UTF-8");
         String sqlStatement = "SELECT bidder FROM bid where publisher = '" + publisher + "' and projectname = '"
-                + getProjectname() + "'";
+                + newprojectname + "'";
         System.out.println(sqlStatement);
         ResultSet rS = dao.executeQuery(sqlStatement);
         try
@@ -173,7 +189,7 @@ public class BidAction
             {
                 Bid Bid = new Bid();
                 Bid.setBidder(rS.getString("bidder"));
-                Bid.setProjectname(getProjectname());
+                Bid.setProjectname(newprojectname);
                 lista.add(Bid);
             }
             dao.close();

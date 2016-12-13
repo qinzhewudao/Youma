@@ -34,6 +34,7 @@ public class ProjectAction extends ActionSupport
     private int               projectprice;
     private Date              publishdate;
     private String            publisher;
+    private String            projecttime;
     private String            username;
     private String            projectdescribe;
     private String            ProjectName;
@@ -49,9 +50,6 @@ public class ProjectAction extends ActionSupport
         this.ProjectName = ProjectName;
     }
 
-    /**
-    */
-
     public String getProjectname()
     {
         return projectname;
@@ -60,6 +58,16 @@ public class ProjectAction extends ActionSupport
     public void setProjectname(String projectname)
     {
         this.projectname = projectname;
+    }
+
+    public String getProjecttime()
+    {
+        return projecttime;
+    }
+
+    public void setProjecttime(String projecttime)
+    {
+        this.projecttime = projecttime;
     }
 
     public String getProjectstyle()
@@ -139,9 +147,10 @@ public class ProjectAction extends ActionSupport
         HttpSession session = ServletActionContext.getRequest().getSession();
         String publisher = session.getAttribute("username").toString();
 
-        String sql = "insert into project (projectname,projectstyle,projectplat,projectprice,publishdate,publisher,projectdescribe) values ('"
+        String sql = "insert into project (projectname,projectstyle,projectplat,projectprice,publishdate,publisher,projectdescribe,projecttime) values ('"
                 + getProjectname() + "','" + getProjectstyle() + "','" + getProjectplat() + "','" + getProjectprice()
-                + "','" + publishdate + "','" + publisher + "','" + getProjectdescribe() + "')";
+                + "','" + publishdate + "','" + publisher + "','" + getProjectdescribe() + "','" + getProjecttime()
+                + "')";
         int i = dao.executeUpdate(sql);
         System.out.println(sql);
         dao.close();
@@ -169,6 +178,7 @@ public class ProjectAction extends ActionSupport
                 project.setProjectprice(set.getInt("projectpice"));
                 project.setPublishdate(set.getDate("publishdate"));
                 project.setPublisher(set.getString("publisher"));
+                project.setProjecttime(set.getString("projecttime"));
                 project.setProjectdescribe(set.getString("projectdescribe"));
                 list.add(project);
 

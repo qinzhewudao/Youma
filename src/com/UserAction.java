@@ -340,7 +340,6 @@ public class UserAction extends ActionSupport
                 + getUserposition() + "',userprice = '" + getUserprice() + "',userskill = '" + getUserskill()
                 + "',userdescribe = '" + getUserdescribe() + "' where username = '" + username + "'";
         System.out.println(sql);
-        session.setAttribute("useremail", getUseremail());
         int i = dao.executeUpdate(sql);
         dao.close();
         if (i > -1)
@@ -449,13 +448,14 @@ public class UserAction extends ActionSupport
             return "pleaselogin";
         }
         String username = session.getAttribute("username").toString();
-        System.out.println(username);
+
         if (username == null)
         {
             return "pleaselogin";
         }
         String sql = "select user.useremail as useremail,user.userskill as userskill,usercompany as usercompany from user where user.username = '"
                 + username + "'";
+        System.out.println(sql);
         ResultSet rS = dao.executeQuery(sql);
         try
         {
@@ -467,19 +467,16 @@ public class UserAction extends ActionSupport
                 {
                     System.out.println("ming ming shi null le");
                 }
-                session.setAttribute("useremail", rS.getString("useremail"));
-                session.setAttribute("userskill", rS.getString("userskill"));
-                session.setAttribute("usercompany", rS.getString("usercompany"));
-                if ((session.getAttribute("useremail").toString() == null)
-                        || (session.getAttribute("userskill").toString() == null)
-                        || (session.getAttribute("usercompany").toString() == null))
+                if (rS.getString("usercompany") == null || rS.getString("userskill") == null
+                        || rS.getString("useremail") == null)
                 {
                     dao.close();
                     return "pleaseaddif";
                 }
                 else
                 {
-                    System.out.println("ming ming shi null le2");
+                    session.setAttribute("userskill", rS.getString("userskill"));
+                    session.setAttribute("usercompany", rS.getString("usercompany"));
                     dao.close();
                     return "selectproject";
                 }

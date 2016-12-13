@@ -21,7 +21,7 @@ p{color:#fff;margin-top:40px;font-size:24px;}
         document.getElementById("num").innerHTML=num;
         if(num<0){
             document.getElementById("num").innerHTML=0;
-            location.href="personaldata.jsp";
+            location.href="index.jsp";
             }
         }
     setInterval("redirect()", 1000);
@@ -29,18 +29,19 @@ p{color:#fff;margin-top:40px;font-size:24px;}
 </head>
 
 <body onLoad="redirect();">
-<div class="whole">
-    <img src="images/slides/slide1.jpg" />
+ <div class="whole">
+    <img src="images/slides/slide1.jpg" /> 
     <div class="mask"></div>
 </div>
 <div class="b">
-        <img src="images/404.png" class="center"/>
+        <!-- <img src="images/404.png" class="center"/>  -->
         <p>
-            你尚未完善资料目前还不可以进行此操作请您完善资料后再操作<br>
-                     对您造成的不便敬请链接<br>
-            5秒后将为您跳转到个人中心，您可以在那完善资料<br>
+              投标成功，你可以到个人中心我投标的项目中查看<br><br>
+              当发布方同意您的投标后，系统会为您双方生成合同<br>  
+                       
+            5秒后将为您跳转到主页<br>
             感谢您的配合，若还有疑问可联系客服<br>
-            <span id="num"></span>秒后自动跳转到个人中心您可以联系客服咨询
+            <span id="num"></span>秒后您可以联系客服咨询
         </p>
     </div>
 

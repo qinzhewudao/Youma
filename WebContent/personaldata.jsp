@@ -41,7 +41,7 @@
 <!-- 核心 开始 --> 
 <div class="container border1 nopadding margin10">
   <div id="vertical_navigation" class="col-lg-3 background831312 nopadding">
-    <div class="dead_pic"><img src="img/member_center/nopic.jpg.png"><br>
+    <div class="dead_pic"><img src="img/authors/3.png"><br>
       <span class="username"><s:property value="#session.username"/></span></div><!-- 传用户名 -->
    <div class="usertype"><br>
             会员等级：<img style="margin-right:0px;" src="img/member_center/star.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> <img style="margin-right:0px;" src="img/member_center/xx2.png"></img> </div><br>
@@ -54,6 +54,7 @@
           <li id="listClick10" class="" onClick="listClick(10)"> <img src="img/member_center/left_icon_10.png">我是发布方</li><br>
         </ul>
       </div>
+      <br><br>
     </div>
     <div class="menu">
       <div class="menu_title"> 修改资料 </div>
@@ -64,6 +65,7 @@
         <!--   <li id="listClick5" class="" onClick="listClick(5)"> <img src="img/member_center/left_icon_5.png"> 申请发布资格</li><br> -->
         </ul>
       </div>
+      <br><br>
     </div>
     <div class="menu">
       <div class="menu_title"> 我相关的项目 </div>
@@ -74,6 +76,7 @@
           <li id="listClick5" class="" onClick="listClick(5)"><img src="img/member_center/left_icon_6.png"> 我的合同</li></a><br>
         </ul>
       </div>
+      <br><br>
     </div>
     <div class="menu">
       <div class="menu_title"> 我的星级和积分 </div>
@@ -84,7 +87,7 @@
         </ul>
       </div>
     </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
   </div>
   <div class="col-lg-9">
   	<iframe name="left" id="crowdfunding_iframe" src="crowdfunding.center/my_account.jsp" frameborder="false" scrolling="no" style="border:none;" width="100%" height="1045" allowtransparency="true"></iframe>

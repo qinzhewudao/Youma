@@ -1,26 +1,26 @@
 package entity;
 
-import java.util.ArrayList;
 import java.util.Date;
 
-public class Project {
-	private String            projectname;
-    private String            projectstyle;
-    private String            projectplat;
-    private int               projectprice;
-    private Date              publishdate;
-    private String            publisher;
- 
-    private String            projectdescribe;
-    
+public class Project
+{
+    private String projectname;
+    private String projectstyle;
+    private String projectplat;
+    private int    projectprice;
+    private Date   publishdate;
+    private String publisher;
+    private String projecttime;
+    private String projectdescribe;
+
     public Project()
     {
     }
 
-    public Project(String projectname, String  projectstyle, String projectplat, int projectprice, Date publishdate,
+    public Project(String projectname, String projectstyle, String projectplat, int projectprice, Date publishdate,
             String publisher, String projectdescribe)
     {
-       
+
         this.projectname = projectname;
         this.projectstyle = projectstyle;
         this.projectplat = projectplat;
@@ -30,6 +30,7 @@ public class Project {
         this.projectdescribe = projectdescribe;
 
     }
+
     public String getProjectname()
     {
         return projectname;
@@ -38,6 +39,16 @@ public class Project {
     public void setProjectname(String projectname)
     {
         this.projectname = projectname;
+    }
+
+    public String getProjecttime()
+    {
+        return projecttime;
+    }
+
+    public void setProjecttime(String projecttime)
+    {
+        this.projecttime = projecttime;
     }
 
     public String getProjectstyle()

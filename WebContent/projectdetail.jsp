@@ -42,7 +42,7 @@
           <div class="n_dispage_jm_in resetEditStyle"> 
     
     <!--编辑区域-->
-     <form action = "bid">
+     <form action = "checkpersondata" method = "post">
      <% 
              ProjectDao itemDao = new ProjectDao();
              String str = new String(request.getParameter("projectname").getBytes("iso-8859-1"), "utf-8"); 
@@ -51,7 +51,7 @@
              {
 
           %>   
-    <div class="baseStyle clearfix jm0203_j1" id="resume_body">
+        <div class="baseStyle clearfix jm0203_j1" id="resume_body">
               <div class="divLeft clearfix" id="bar"> 
         
         <!--头像-->
@@ -65,9 +65,10 @@
                  
                   <div class="baseAge baseMsg baseDel" id="resume_age"> 
                  <!--  就是这个div的位置 在这里写的数据 会出现在左边栏 -->
-                                                                                  发布者    : <%=item.getPublisher()%>><br><br>                                                                            
-                                                                                  开发平台:<%=item.getProjectplat()%><br><br>
-                                                                                  项目类型:<%=item.getProjectstyle()%><br><br>
+                
+                                                                                  发布者    :<br><input type="text"  name="publisher" readonly value = <%=item.getPublisher()%>><br><br>                                                                            
+                                                                                  开发平台:<br><%=item.getProjectplat()%><br><br>
+                                                                                  项目类型:<br><%=item.getProjectstyle()%><br><br>
           </div>
                 </div>
       
@@ -81,9 +82,9 @@
         <div class="nameDiv positonDiv" id="resume_name">
     <!--     项目名位置 -->
                   <h1>
-            <div class="resume_msg baseBorder resume_notice resume_lang_name" notice-key="msg" for-key="name" for-value="html" contenteditable="true">项目名：<%=item.getProjectname()%></div>
-          </h1>               
-                </div>
+          <div class="resume_msg baseBorder resume_notice resume_lang_name" notice-key="msg" for-key="name" for-value="html" contenteditable="true">项目名：<br><input type="text"  name="projectname" readonly value = <%=item.getProjectname()%>></div>
+          <input type="submit" value="投标"  style=" color:red;" /></h1>               
+          </div>
         <div id="foo_sort"></div>
         
      
@@ -136,11 +137,11 @@
              
                   <dl>
             <dt> <a class="resume_icon_diy icon wbdfont" for-id="self" style="font-size:none"></a> <span><!-- 加粗作用 -->
-              <div class="resume_lang_self">发布方介绍</div>
+              <div class="resume_lang_self">发布时间</div>
               <div class="Border resume_line" for-id="self" style="width:668px;border-top-style:solid;border-top-width:2px;"></div><!-- 下划线 -->
               </dt>
             <dd>
-                  <p>  <!-- 发布方介绍 --></p>
+                  <br><br><p>  发布日期:<%=item.getPublishdate()%><br><br> </p>
                 
                        
                        
@@ -149,7 +150,23 @@
           </dl>
                 </div>
            <!--END项目描述-->
-
+            <!--发布方介绍-->
+        
+        <div class="selfDiv baseItem positonDiv resume_item resume_sort resume_notice" notice-key="self" id="resume_self" for-key="self">
+             
+                  <dl>
+            <dt> <a class="resume_icon_diy icon wbdfont" for-id="self" style="font-size:none"></a> <span><!-- 加粗作用 -->
+              <div class="resume_lang_self">工期要求</div>
+              <div class="Border resume_line" for-id="self" style="width:668px;border-top-style:solid;border-top-width:2px;"></div><!-- 下划线 -->
+              </dt>
+            <dd>
+                  <br><br><p>  deadline :<%=item.getProjecttime()%><br><br> </p>
+                
+                                           
+                    </dd>
+          </dl>
+                </div>
+           <!--END项目描述-->
 
       </div>
           <% 

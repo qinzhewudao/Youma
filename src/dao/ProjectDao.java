@@ -47,6 +47,7 @@ public class ProjectDao
                 item.setProjectprice(rs.getInt("projectprice"));
                 item.setPublishdate(rs.getDate("publishdate"));
                 item.setPublisher(rs.getString("publisher"));
+                item.setProjecttime(rs.getString("projecttime"));
                 item.setProjectdescribe(rs.getString("projectdescribe"));
                 list.add(item);// 把一个商品加入集合
             }
@@ -113,6 +114,7 @@ public class ProjectDao
                 item.setProjectprice(rs.getInt("projectprice"));
                 item.setPublishdate(rs.getDate("publishdate"));
                 item.setPublisher(rs.getString("publisher"));
+                item.setProjecttime(rs.getString("projecttime"));
                 item.setProjectdescribe(rs.getString("projectdescribe"));
                 return item;
             }

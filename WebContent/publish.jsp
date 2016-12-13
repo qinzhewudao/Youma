@@ -10,7 +10,6 @@
 <title>发布需求</title> 
 <link href="css/login.css" type="text/css" rel="stylesheet"> 
 <script language="javascript">
-<<<<<<< HEAD
 function firm(form)
 
 {
@@ -43,8 +42,7 @@ function firm(form)
     }
  
 }
-=======
->>>>>>> refs/remotes/origin/final_sy
+
 </script>
 </head> 
 <body> 
@@ -95,29 +93,23 @@ function firm(form)
     <td><input type="text" name="projectprice" /></td>
     </tr>
     
-   
+    <tr>
+    <td>工期要求(天)： </td>
+    <td><input type="text" name="projecttime" /></td>
+    </tr>
     
     <tr>
     <td>项目描述   ： </td>
     <td >
-        <input type="text" name="projectdescribe" 
-        width="200" height="200"/>
+    <textarea name="projectdescribe" cols=40 rows=5></textarea>
     </td>
     </tr>
-    
     <tr></tr>
- 
     <tr align="center">
-<<<<<<< HEAD
     <td colspan="2"><input type="submit" name="Submit2" value="发布需求" onclick="firm(usrform)" /></td>
-=======
-           <td colspan="2"><input type="submit" value="发布需求"/></td> 
-   
->>>>>>> refs/remotes/origin/final_sy
     </tr>
     </table>
     </form>
-    <textarea rows="4" cols="50" name="comment" form="usrform">项目描述：</textarea>
 </div>
 
 <div class="copyright">Copyright by <a href="index.jsp" target="_blank">code beautifier</a></div>
