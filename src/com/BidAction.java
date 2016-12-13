@@ -79,10 +79,7 @@ public class BidAction
     public String bid()
     {
         HttpSession session = ServletActionContext.getRequest().getSession();
-        System.out.println(getProjectname());
-        System.out.println(getPublisher());
         String bidder = session.getAttribute("username").toString();
-        System.out.println(bidder);
         if (getProjectname() == null)
         {
             return "error";
@@ -91,12 +88,15 @@ public class BidAction
         {
             return "error";
         }
-
+        else if (getPublisher().equals(bidder))
+        {
+            return "error";
+        }
         String sql = "insert into bid (projectname,bidder,publisher) values ('" + getProjectname() + "','" + bidder
                 + "','" + getPublisher() + "')";
         int i = dao.executeUpdate(sql);
         dao.close();
-        System.out.println("bug is here");
+        System.out.println(sql);
         if (i > -1)
         {
             return "success";

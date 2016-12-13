@@ -28,16 +28,6 @@
 </head>
 <body>
 <!-- top + banner 开始 -->
-<div class="container-fluid cfh_top">
-  <div class="container"> code beautifier&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;官方咨询电话：131-1560-1178
-    <ul class="list-inline">
-      <li><a href="index.jsp" target="_self">有码</a></li>
-      <li><a href="https://nxseason.taobao.com/" target="_blank">软件众包</a></li>
-      <li id="register" onMouseMove="login_but_bg(1)" onMouseOut="login_but_bg(2)"><a href="" target="_blank">&nbsp;注册&nbsp;</a></li>
-      <li id="login" onMouseMove="login_but_bg(3)" onMouseOut="login_but_bg(4)"><a href="member_center.html" target="_blank">&nbsp;登录&nbsp;</a></li>
-    </ul>
-  </div>
-</div>
 <div class="container-fluid cfh_banner">
   <div class="container"> <img src="images/logo.png">
     <ul class="list-inline">

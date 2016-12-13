@@ -48,7 +48,7 @@ li{float:left;}
 <body>
 
 <div id="theGrid" class="main">
-        <form action = "bid">
+        <form action = "bid"  method="post">
       <h1 style="padding-left:20%">项目详情</h1><br><br>
       <br>
           <% 
@@ -60,14 +60,12 @@ li{float:left;}
           %>                
                             <h2 style="padding-left:20%">项目名： <input type="text" style="border:0px;BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none"  name="projectname" readonly value = <%=item.getProjectname()%>></h2><br>
                             <span style="padding-left:20%">开发平台:<%=item.getProjectplat()%></span><br><br>
-
-                                <img style="padding-left:20%" src="img/authors/1.png" alt="author01" />
-                                <span >发布者<input type="text" style="border:0px;BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none"  name="publisher"  readonly value   = <%=item.getPublisher()%>></span><br><br>
-                                <span style="padding-left:20%"><i class="fa fa-calendar-o"></i>预计价格:<%=item.getProjectprice()%>￥</span><br><br>
-                                <span style="padding-left:20%"><i class="fa fa-clock-o"></i>项目类型<%=item.getProjectstyle()%></span><br><br>
-                        <h2 style="padding-left:20%">项目描述： <input type="submit" value="投标"  style=" color:red;" /> </h2><br>
-                            <p style="padding-left:20%"><%=item.getProjectdescribe()%></p>
-                             
+                            <img style="padding-left:20%" src="img/authors/2.png" alt="author01" />
+                            <span >发布者<input type="text" style="border:0px;BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none"  name="publisher"  readonly value   = <%=item.getPublisher()%>></span><br><br>
+                            <span style="padding-left:20%"><i class="fa fa-calendar-o"></i>预计价格:<%=item.getProjectprice()%>￥</span><br><br>
+                            <span style="padding-left:20%"><i class="fa fa-clock-o"></i>项目类型<%=item.getProjectstyle()%></span><br><br>
+                            <h2 style="padding-left:20%">项目描述： <input type="submit" value="投标" style=" color:red;" /> </h2><br>
+                            <p style="padding-left:20%"><%=item.getProjectdescribe()%></p>                            
               <% 
             }
 

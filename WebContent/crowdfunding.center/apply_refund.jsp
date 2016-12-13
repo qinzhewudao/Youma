@@ -29,9 +29,9 @@
 <div class="my_info_title">完善发布方资料</div>
 <div class="my_info_title_3">
   <ul>
-    <li id="listClick_8" onClick="listClick(8)" style="border-bottom: 1px solid #C40521; color: #C40521;">我的资料</li>
+    <li id="listClick_8" onClick="listClick(8)">我的资料</li>
     <li id="listClick_9" onClick="listClick(9)">我是开发者</li>
-    <li id="listClick_10" onClick="listClick(10)">我是发布方</li>
+    <li id="listClick_10" onClick="listClick(10)"style="border-bottom: 1px solid #C40521; color: #C40521;">我是发布方</li>
   </ul>
 </div>
 <div class="my_info_content">
@@ -64,20 +64,20 @@
         </p><br><br>
            <p style="padding-left:10%;"> 
              <div class="make_head_lingtou_industry">请填写个人简介：</div>
-  <div class="make_head_concerned_industry">
-  <div class="make_head_concerned_industry"> 要求写明个人能力、工作、创业、项目经验。请具体到年月、学校专业学历、公司名称部门职务、完成过项目名称等，便于我们做真实性背景调查，否则将不予以受理。
-    <div style="height:15px;"></div>
-    <div id="editor"></div>
-    个人简介, 不少于100字
-  </div>
-</div>
-<div class="make_head_but text-center">
-  <input type="submit" class="btn btn-primary" value=" 确  定 " >
-</div>                               
-</div>        
-    </form>
+	  <div class="make_head_concerned_industry">
+	  <div class="make_head_concerned_industry"> 要求写明个人能力、工作、创业、项目经验。请具体到年月、学校专业学历、公司名称部门职务、完成过项目名称等，便于我们做真实性背景调查，否则将不予以受理。
+	    <div style="height:15px;"></div>
+	    <div id="editor"></div>  
+		    个人简介, 不少于100字
+	  </div>
+	</div>
+	
+	<div class="make_head_but text-center">
+	  <input type="submit" class="btn btn-primary" value=" 确  定 " >
+	</div>                               
+	</div>        
+	</form>
     
- 
 
 <!-- 结束 --> 
 <script src="../js/jquery-2.1.1.min.js"></script>  
@@ -85,6 +85,5 @@
 <script src="../js/bootstrap.js"></script> 
 <script src="../js/summernote.min.js"></script> 
 <script src="../js/apply_lingtou.js"></script>
-
 </body>
 </html>

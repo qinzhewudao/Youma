@@ -317,15 +317,11 @@ public class UserAction extends ActionSupport
     {
         HttpSession session = ServletActionContext.getRequest().getSession();
         String username = session.getAttribute("username").toString();
-        System.out.println(getFirmname());
-        System.out.println(getFirmaddress());
-        System.out.println(getFirmcode());
-        System.out.println(getFirmmodel());
-        System.out.println(getFirmtime());
+        System.out.println(getUserdescribe());
         String sql = "update user set firmname = '" + getFirmname() + "',firmaddress = '" + getFirmaddress()
                 + "',firmcode = '" + getFirmcode() + "',firmmodel='" + getFirmmodel() + "',firmtime='" + getFirmtime()
-                + "' where username = '" + username + "'";
-        System.out.println("bug is here");
+                + "',userdescribe = '" + getUserdescribe() + "' where username = '" + username + "'";
+        System.out.println(sql);
         int i = dao.executeUpdate(sql);
         dao.close();
         if (i > -1)

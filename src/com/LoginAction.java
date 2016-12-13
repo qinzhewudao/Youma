@@ -118,9 +118,9 @@ public class LoginAction extends ActionSupport
     {
         String sql = "insert into user (username,password,isCheck) values ('" + getUsername() + "','" + getPassword()
                 + "','0')";
-        System.out.println(getUsername());
-        System.out.println(getPassword());
+        System.out.println(sql);
         int i = dao.executeUpdate(sql);
+        dao.close();
         if (i > -1)
         {
             HttpSession session = ServletActionContext.getRequest().getSession();
@@ -128,7 +128,6 @@ public class LoginAction extends ActionSupport
             session.setAttribute("password", getPassword());
             return "success";
         }
-        dao.close();
         return "error";
     }
 

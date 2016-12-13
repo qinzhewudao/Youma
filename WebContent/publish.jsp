@@ -10,19 +10,23 @@
 <title>发布需求</title> 
 <link href="css/login.css" type="text/css" rel="stylesheet"> 
 <script language="javascript">
-function firm()
+function firm(form)
 
 {
  
         //利用对话框返回的值 （true 或者 false）
- 
+	if (form.projectname.value=="")
+	{
+	alert("项目名不能为空");
+	return false;
+	}
     if(confirm("你确信要发布该项目"))
  
     {
  
-            //如果是true ，那么就把页面转向thcjp.cnblogs.com
+            //如果是true ，那么就把页面转向
  
-        location.href="index。jsp";
+        location.href="index.jsp";
  
      }
  
@@ -33,6 +37,7 @@ function firm()
         //否则说明下了，赫赫
  
       alert("你按了取消，那就是返回false");
+      return false;
  
     }
  
@@ -45,7 +50,7 @@ function firm()
     <div class="message">发布需求</div>
     <div id="darkbannerwrap"></div>
     
-    <form action="publish" method="post">
+    <form action="publish" method="post" id = "usrform">
     <table align="center">
     <tr>
     <td>项目名称：</td>
@@ -100,10 +105,11 @@ function firm()
     <tr></tr>
  
     <tr align="center">
-    <td colspan="2"><input type="submit" name="Submit2" value="发布需求" onclick="firm()" /></td>
+    <td colspan="2"><input type="submit" name="Submit2" value="发布需求" onclick="firm(usrform)" /></td>
     </tr>
     </table>
     </form>
+    <textarea rows="4" cols="50" name="comment" form="usrform">项目描述：</textarea>
 </div>
 
 <div class="copyright">Copyright by <a href="index.jsp" target="_blank">code beautifier</a></div>

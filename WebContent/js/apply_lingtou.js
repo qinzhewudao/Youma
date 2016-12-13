@@ -5,6 +5,7 @@ $(document).ready(function(){
 	
 	$("#editor").summernote({
 		height: 300,                 // set editor height
+		name: userdescribe,
 		minHeight: null,             // set minimum height of editor
 		maxHeight: null,             // set maximum height of editor
 		focus: true
